@@ -2,6 +2,10 @@
 
 This folder is Napster's organization-level design system for Claude Design. Once published at `claude.ai/design`, every Claude Design project anyone at Napster creates will inherit it automatically.
 
+## After import — start here
+
+If you're importing this design system into Claude Design, read [**IMPORT-CHECKLIST.md**](IMPORT-CHECKLIST.md) first. Thirty-second post-import setup that resolves the four small things Claude Design doesn't auto-detect (fonts, full imagery library, AVIF, persona portraits).
+
 ## What this bundle is
 
 A synthesis of two source materials:
