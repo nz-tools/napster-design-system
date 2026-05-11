@@ -2,18 +2,18 @@
 
 const Pink = "#BE369D", Pulse = "#EA2DD2", PulseLite = "#FF7DF3", Cream = "#FDE5D5";
 const personas = [
-  { name: "Kai",     role: "Chief of Staff",     img: "../../imagery/people/portraits-thumb/napster-companion-kai-mercer-chiefofstaff.avif" },
-  { name: "Kevin",   role: "Finance",      img: "../../imagery/people/portraits-thumb/napster-companion-kevin-jones-finance.avif" },
-  { name: "Jordan",  role: "Fitness",      img: "../../imagery/people/portraits-thumb/napster-companion-jordan-carter-fitness.avif" },
-  { name: "May",     role: "Creative",    img: "../../imagery/people/portraits-thumb/napster-companion-may-li-creative.avif" },
-  { name: "JC",      role: "Code", img: "../../imagery/people/portraits-thumb/napster-companion-jc-mitchell-code.avif" },
-  { name: "Elena",   role: "Wellbeing",        img: "../../imagery/people/portraits-thumb/napster-companion-elena-garcia-wellbeing.avif" },
-  { name: "Amit",    role: "Tech Support",       img: "../../imagery/people/portraits-thumb/napster-companion-alyssa-reynolds-career.avif" },
-  { name: "Alyssa",  role: "Career",     img: "../../imagery/people/portraits-thumb/napster-companion-alyssa-reynolds-career.avif" },
+  { name: "Kai",     role: "Chief of Staff",     img: "../../imagery/people/portraits-hero/napster-companion-kai-mercer-chiefofstaff.avif" },
+  { name: "Kevin",   role: "Finance",      img: "../../imagery/people/portraits-hero/napster-companion-kevin-jones-finance.avif" },
+  { name: "Jordan",  role: "Fitness",      img: "../../imagery/people/portraits-hero/napster-companion-jordan-carter-fitness.avif" },
+  { name: "May",     role: "Creative",    img: "../../imagery/people/portraits-hero/napster-companion-may-li-creative.avif" },
+  { name: "JC",      role: "Code", img: "../../imagery/people/portraits-hero/napster-companion-jc-mitchell-code.avif" },
+  { name: "Elena",   role: "Wellbeing",        img: "../../imagery/people/portraits-hero/napster-companion-elena-garcia-wellbeing.avif" },
+  { name: "Amit",    role: "Tech Support",       img: "../../imagery/people/portraits-hero/napster-companion-alyssa-reynolds-career.avif" },
+  { name: "Alyssa",  role: "Career",     img: "../../imagery/people/portraits-hero/napster-companion-alyssa-reynolds-career.avif" },
 ];
 
 const Eyebrow = ({children, color=PulseLite}) => (
-  <div style={{fontSize:10, letterSpacing:".14em", textTransform:"uppercase", color, fontWeight:600, fontFamily:"var(--font-sans)"}}>{children}</div>
+  <div style={{fontSize:10, letterSpacing:".14em", textTransform:"uppercase", color, fontWeight:600, fontFamily:"var(--font-body)"}}>{children}</div>
 );
 
 const PrimaryBtn = ({children, w}) => (
@@ -138,7 +138,7 @@ window.Chat = function Chat() {
     <div style={{flex:1,display:"flex",flexDirection:"column"}}>
       <div style={{padding:"12px 18px",display:"flex",alignItems:"center",gap:10,borderBottom:"1px solid rgba(255,255,255,.06)"}}>
         <div style={{color:"rgba(255,255,255,.7)"}}>‹</div>
-        <div style={{width:32,height:32,borderRadius:"50%",overflow:"hidden",background:"#1A0918"}}><img src="../../imagery/people/portraits-thumb/napster-companion-kai-mercer-chiefofstaff.avif" style={{width:"100%",height:"100%",objectFit:"cover"}}/></div>
+        <div style={{width:32,height:32,borderRadius:"50%",overflow:"hidden",background:"#1A0918"}}><img src="../../imagery/people/portraits-hero/napster-companion-kai-mercer-chiefofstaff.avif" style={{width:"100%",height:"100%",objectFit:"cover"}}/></div>
         <div style={{flex:1}}>
           <div style={{fontFamily:"var(--font-display)",fontWeight:600,fontSize:14}}>Kai</div>
           <div style={{fontSize:10,color:PulseLite,letterSpacing:".1em",textTransform:"uppercase"}}>Learning · online</div>

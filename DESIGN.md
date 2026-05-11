@@ -4,7 +4,7 @@ description: >
   The unified Napster design system. Dark cinematic identity, circular visual
   backbone, Napster Pink accent. Audience-facing: this is the system Claude Design
   uses to generate all Napster-branded artifacts.
-version: 1.0.7
+version: 1.0.9
 sources:
   - napster.com (live audit, April 2026 — the customer-facing truth)
   - AKEO Brand Definition Proposal (Mateo Reyes, 2026 — structural framework)
@@ -617,7 +617,7 @@ Clean, intimate, 3/4 framing. Single-source rim light, naturalistic. Background 
 - **Folders:** `imagery/people/portraits-hero/` (large), `imagery/people/portraits-thumb/` (cards), `imagery/people/producers/` (music producers)
 - **Use for:** companion roster pages, persona cards, "Meet the team" treatments, Crew lineups.
 - **Filename convention:** `napster-companion-{firstname}-{surname}-{role}.{ext}`. See `imagery/people/persona-roster.md` for the canonical roster.
-- **Examples:** `imagery/people/portraits-hero/napster-companion-kai-mercer-chiefofstaff.avif`, `imagery/people/portraits-thumb/napster-companion-may-li-creative.avif`, `imagery/people/producers/napster-producer-luna-rnb.avif`.
+- **Examples:** `imagery/people/portraits-hero/napster-companion-kai-mercer-chiefofstaff.avif`, `imagery/people/portraits-hero/napster-companion-may-li-creative.avif`, `imagery/people/producers/napster-producer-luna-rnb.avif`.
 
 ### 9.4 Product on Pure Black — Product Clarity
 

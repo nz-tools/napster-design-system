@@ -6,16 +6,16 @@ The canonical persona roster, reconciled by Ziv Navoth on 2026-05-10. **Where th
 
 | First | Surname | Role | Hero portrait | Thumb portrait |
 |---|---|---|---|---|
-| **Alyssa** | Reynolds | Career | `portraits-hero/napster-companion-alyssa-reynolds-career.avif` | `portraits-thumb/napster-companion-alyssa-reynolds-career.avif` |
+| **Alyssa** | Reynolds | Career | `portraits-hero/napster-companion-alyssa-reynolds-career.avif` | `portraits-hero/napster-companion-alyssa-reynolds-career.avif` |
 | **Amit** | Pillai | Tech Support | `portraits-hero/napster-companion-amit-pillai-tech-support.avif` | — (no thumb in iterative) |
-| **Elena** | Garcia | Wellbeing | `portraits-hero/napster-companion-elena-garcia-wellbeing.avif` | `portraits-thumb/napster-companion-elena-garcia-wellbeing.avif` |
-| **Jane** | — | Chief of Staff (Operations) | — (no hero from AKEO) | `portraits-thumb/napster-companion-jane-chiefofstaff.avif` |
-| **JC** | Mitchell | Code | `portraits-hero/napster-companion-jc-mitchell-code.avif` | `portraits-thumb/napster-companion-jc-mitchell-code.avif` |
-| **Jordan** | Carter | Fitness | `portraits-hero/napster-companion-jordan-carter-fitness.avif` | `portraits-thumb/napster-companion-jordan-carter-fitness.avif` |
-| **Kai** | Mercer | Chief of Staff | `portraits-hero/napster-companion-kai-mercer-chiefofstaff.avif` | `portraits-thumb/napster-companion-kai-mercer-chiefofstaff.avif` |
-| **Kevin** | Jones | Finance | `portraits-hero/napster-companion-kevin-jones-finance.avif` | `portraits-thumb/napster-companion-kevin-jones-finance.avif` |
-| **May** | Li | Creative | `portraits-hero/napster-companion-may-li-creative.avif` | `portraits-thumb/napster-companion-may-li-creative.avif` |
-| **Richard** | Warnok | Learning | `portraits-hero/napster-companion-richard-warnok-learning.avif` | `portraits-thumb/napster-companion-richard-warnok-learning.avif` |
+| **Elena** | Garcia | Wellbeing | `portraits-hero/napster-companion-elena-garcia-wellbeing.avif` | `portraits-hero/napster-companion-elena-garcia-wellbeing.avif` |
+| **Jane** | — | Chief of Staff (Operations) | — (no hero from AKEO) | `portraits-hero/napster-companion-jane-chiefofstaff.avif` |
+| **JC** | Mitchell | Code | `portraits-hero/napster-companion-jc-mitchell-code.avif` | `portraits-hero/napster-companion-jc-mitchell-code.avif` |
+| **Jordan** | Carter | Fitness | `portraits-hero/napster-companion-jordan-carter-fitness.avif` | `portraits-hero/napster-companion-jordan-carter-fitness.avif` |
+| **Kai** | Mercer | Chief of Staff | `portraits-hero/napster-companion-kai-mercer-chiefofstaff.avif` | `portraits-hero/napster-companion-kai-mercer-chiefofstaff.avif` |
+| **Kevin** | Jones | Finance | `portraits-hero/napster-companion-kevin-jones-finance.avif` | `portraits-hero/napster-companion-kevin-jones-finance.avif` |
+| **May** | Li | Creative | `portraits-hero/napster-companion-may-li-creative.avif` | `portraits-hero/napster-companion-may-li-creative.avif` |
+| **Richard** | Warnok | Learning | `portraits-hero/napster-companion-richard-warnok-learning.avif` | `portraits-hero/napster-companion-richard-warnok-learning.avif` |
 
 ## Notes
 
