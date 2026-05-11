@@ -6,14 +6,26 @@ After importing this design system into Claude Design (from GitHub or local), ru
 
 Avantt (the display face) is not a Google Font, so Claude Design can't auto-resolve it from CSS. You need to upload it once per project.
 
-1. After import finishes, Claude Design will show a **"Missing brand fonts"** alert near the top of the Design System tab.
-2. Click **Upload fonts** on that alert.
-3. Unzip [`Avantt-for-Claude-Design.zip`](Avantt-for-Claude-Design.zip) (in this repo root) and upload the four `.woff2` files:
+> **Important:** You must use the **"Upload fonts" button on the alert**, NOT drag the font files into the chat input on the left.
+>
+> - The Upload fonts button registers the fonts in the project's font registry. This is what clears the alert and what makes the renderer use Avantt.
+> - Dragging into the chat input only attaches the files as context for the Claude assistant. The assistant will acknowledge them and may say "no further action needed," but the font registry doesn't get updated, the alert stays, and the typography keeps rendering with substitute web fonts.
+>
+> They look similar. They do completely different things. Use the button.
+
+**Steps:**
+
+1. After import finishes, Claude Design shows an orange **"Missing brand fonts"** alert near the top of the Design System tab.
+2. Click the **Upload fonts** button on the right side of that alert (NOT the chat input below).
+3. In the file picker that opens, navigate to the four Avantt `.woff2` files. Get them by unzipping [`Avantt-for-Claude-Design.zip`](Avantt-for-Claude-Design.zip) from this repo root:
    - `Avantt-Medium.woff2`
    - `Avantt-SemiBold.woff2`
    - `Avantt-Bold.woff2`
    - `Avantt-ExtraBold.woff2`
-4. The alert clears and Claude Design starts rendering typography with Avantt instead of a substitute web font.
+4. Select all four and confirm the upload.
+5. The orange alert disappears within a few seconds and Avantt starts rendering across the design system.
+
+If the alert doesn't clear after step 5, refresh the page and check again. If it still doesn't clear, you may have uploaded through the chat input by mistake; try the button again.
 
 Inter (the body face) is loaded from Google Fonts and resolves automatically. No upload needed.
 
