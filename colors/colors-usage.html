@@ -1,0 +1,25 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css"><style>
+html,body{margin:0;background:#000;color:#fff;font-family:var(--font-sans)}
+.card{padding:24px}
+.bar{display:flex;height:64px;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.seg{display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600;font-size:12px}
+.legend{display:flex;gap:16px;margin-top:14px;flex-wrap:wrap;font-size:11px;color:rgba(255,255,255,.7);letter-spacing:.04em;text-transform:uppercase}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle;border:1px solid rgba(255,255,255,.1)}
+.title{font-family:var(--font-display);font-weight:600;font-size:14px;margin-bottom:12px}
+</style></head><body class="napster"><div class="card">
+  <div class="title">Color usage ratio (per the deck)</div>
+  <div class="bar">
+    <div class="seg" style="flex:70;background:#000;color:rgba(255,255,255,.5);border-right:1px solid rgba(255,255,255,.06)">70%</div>
+    <div class="seg" style="flex:20;background:#1A0918;color:rgba(255,255,255,.7)">20%</div>
+    <div class="seg" style="flex:5;background:#BE369D">5%</div>
+    <div class="seg" style="flex:5;background:linear-gradient(135deg,#EA2DD2,#FF7DF3)">5%</div>
+    <div class="seg" style="flex:5;background:linear-gradient(135deg,#FF7DF3,#FDE5D5);color:#1A0918">5%</div>
+  </div>
+  <div class="legend">
+    <span><span class="dot" style="background:#000"></span>Jet Black</span>
+    <span><span class="dot" style="background:#1A0918"></span>Mulberry</span>
+    <span><span class="dot" style="background:#BE369D"></span>Pink</span>
+    <span><span class="dot" style="background:linear-gradient(135deg,#EA2DD2,#FF7DF3)"></span>Pulse</span>
+    <span><span class="dot" style="background:linear-gradient(135deg,#FF7DF3,#FDE5D5)"></span>Neon</span>
+  </div>
+</div></body></html>

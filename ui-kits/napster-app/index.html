@@ -1,0 +1,32 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Napster App — UI kit</title><link rel="stylesheet" href="../../colors_and_type.css"><style>
+html,body{margin:0;background:#0b0410;color:#fff;font-family:var(--font-sans);min-height:100%}
+.stage{display:flex;gap:32px;padding:48px;flex-wrap:wrap;justify-content:center;align-items:flex-start}
+.phone{width:360px;height:760px;border-radius:48px;background:#000;border:1px solid rgba(255,255,255,.12);position:relative;overflow:hidden;box-shadow:0 40px 120px rgba(0,0,0,.6),0 0 60px rgba(190,54,157,.18)}
+.phone::before{content:"";position:absolute;top:8px;left:50%;transform:translateX(-50%);width:120px;height:28px;background:#000;border-radius:9999px;z-index:50}
+.screen{position:absolute;inset:0;display:flex;flex-direction:column}
+.statusbar{height:40px;display:flex;align-items:center;justify-content:space-between;padding:6px 28px 0;font-size:12px;font-weight:600;color:#fff;font-family:var(--font-display);z-index:10;position:relative}
+.label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55);text-align:center;margin-top:14px;font-family:var(--font-sans)}
+.col{display:flex;flex-direction:column;align-items:center;gap:0}
+.beam{position:absolute;inset:-10% -10% auto -10%;height:55%;background:var(--napster-beam);filter:blur(60px);mix-blend-mode:screen;opacity:.65;pointer-events:none}
+.grain{position:absolute;inset:0;background:url("../../assets/grain-texture.jpg") center/cover;mix-blend-mode:screen;opacity:.12;pointer-events:none}
+</style></head><body class="napster">
+<div class="stage">
+  <div class="col"><div class="phone"><div class="beam"></div><div class="grain"></div><div class="screen" id="s1"></div></div><div class="label">01 · Welcome</div></div>
+  <div class="col"><div class="phone"><div class="beam" style="opacity:.45"></div><div class="grain"></div><div class="screen" id="s2"></div></div><div class="label">02 · Companions</div></div>
+  <div class="col"><div class="phone"><div class="beam" style="opacity:.35"></div><div class="grain"></div><div class="screen" id="s3"></div></div><div class="label">03 · Voice session</div></div>
+  <div class="col"><div class="phone"><div class="beam" style="opacity:.25"></div><div class="grain"></div><div class="screen" id="s4"></div></div><div class="label">04 · Chat</div></div>
+  <div class="col"><div class="phone"><div class="beam" style="opacity:.4"></div><div class="grain"></div><div class="screen" id="s5"></div></div><div class="label">05 · Profile</div></div>
+</div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="components.jsx"></script>
+<script type="text/babel">
+const StatusBar = () => (<div className="statusbar"><span>9:41</span><span style={{display:'flex',gap:6,opacity:.95}}><span>•••</span><span>▮</span></span></div>);
+ReactDOM.createRoot(document.getElementById('s1')).render(<><StatusBar/><Welcome/></>);
+ReactDOM.createRoot(document.getElementById('s2')).render(<><StatusBar/><CompanionsHome/></>);
+ReactDOM.createRoot(document.getElementById('s3')).render(<><StatusBar/><VoiceSession/></>);
+ReactDOM.createRoot(document.getElementById('s4')).render(<><StatusBar/><Chat/></>);
+ReactDOM.createRoot(document.getElementById('s5')).render(<><StatusBar/><Profile/></>);
+</script>
+</body></html>

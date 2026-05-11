@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Napster Asset Library</title>
+<link rel="stylesheet" href="../../colors_and_type.css">
+<style>
+  html, body { margin: 0; background: #0a0a0a; color: #fff; font-family: var(--font-body); }
+  .page { max-width: 1480px; margin: 0 auto; padding: 64px 48px 120px; }
+  .hdr { border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 32px; margin-bottom: 56px; }
+  .hdr h1 { font-family: var(--font-display); font-size: 56px; font-weight: 500; letter-spacing: -0.025em; margin: 0 0 12px; }
+  .hdr p { color: rgba(255,255,255,0.6); font-size: 16px; max-width: 680px; line-height: 1.55; margin: 0; }
+  .count { display: inline-block; background: rgba(232,77,159,0.15); color: var(--pink-bright); padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 500; margin-top: 16px; letter-spacing: 0.02em; }
+  .group { margin-bottom: 72px; }
+  .grp-hdr { display: flex; align-items: baseline; gap: 16px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .grp-hdr h2 { font-family: var(--font-display); font-size: 28px; font-weight: 500; letter-spacing: -0.015em; margin: 0; }
+  .grp-hdr .note { color: rgba(255,255,255,0.45); font-size: 14px; }
+  .grid { display: grid; gap: 20px; }
+  .grid.sq { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+  .grid.wide { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+  .grid.tall { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+  .card { background: #141414; border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; overflow: hidden; transition: transform 0.18s, border-color 0.18s; }
+  .card:hover { transform: translateY(-2px); border-color: rgba(232,77,159,0.4); }
+  .card .thumb { aspect-ratio: 1/1; background: #000; position: relative; overflow: hidden; }
+  .card.wide .thumb { aspect-ratio: 16/10; }
+  .card.tall .thumb { aspect-ratio: 3/4; }
+  .card .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .card .meta { padding: 12px 14px 14px; }
+  .card .name { font-size: 12px; font-family: var(--font-body); color: #fff; font-weight: 500; margin: 0 0 4px; letter-spacing: 0.01em; }
+  .card .cap { font-size: 11px; color: rgba(255,255,255,0.5); line-height: 1.4; margin: 0; }
+  .card .path { font-size: 10px; font-family: ui-monospace, monospace; color: rgba(232,77,159,0.7); margin-top: 6px; display: block; word-break: break-all; }
+  .toc { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+  .toc a { font-size: 12px; color: rgba(255,255,255,0.7); text-decoration: none; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.12); border-radius: 999px; transition: all 0.15s; }
+  .toc a:hover { border-color: var(--pink-bright); color: var(--pink-bright); }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hdr">
+    <h1>Asset Library</h1>
+    <p>Every product, companion, lifestyle, and device image pulled from napster.com (April 2026). Use as a visual menu when building one-pagers, decks, emails, and ads.</p>
+    <span class="count">85 assets · 10 groups</span>
+    <nav class="toc">
+      <a href="#producers">Music Producers</a>
+      <a href="#companions">Companions</a>
+      <a href="#session">Mobile App Session Flow</a>
+      <a href="#view">Napster View</a>
+      <a href="#station">Napster Station</a>
+      <a href="#mac">Mac App Scenes</a>
+      <a href="#learn">Napster Learn</a>
+      <a href="#twin">Digital Twin</a>
+      <a href="#lifestyle">Heroes & Lifestyle</a>
+      <a href="#elements">Brand Elements</a>
+    </nav>
+  </header>
+
+  <section class="group" id="producers">
+    <div class="grp-hdr"><h2>Music Producers</h2><span class="note">10 · circular portraits · best for crew grids, featured cards</span></div>
+    <div class="grid sq" id="g-producers"></div>
+  </section>
+
+  <section class="group" id="companions">
+    <div class="grp-hdr"><h2>Specialist Companions</h2><span class="note">9 · circular portraits · coaches, guides, chief-of-staff roles</span></div>
+    <div class="grid sq" id="g-companions"></div>
+  </section>
+
+  <section class="group" id="session">
+    <div class="grp-hdr"><h2>Napster Mobile App Session Flow</h2><span class="note">5 · step-by-step scenes for music creation story</span></div>
+    <div class="grid tall" id="g-session"></div>
+  </section>
+
+  <section class="group" id="view">
+    <div class="grp-hdr"><h2>Napster View (Hardware)</h2><span class="note">9 · device specs, angles, lifestyle shots</span></div>
+    <div class="grid wide" id="g-view"></div>
+  </section>
+
+  <section class="group" id="station">
+    <div class="grp-hdr"><h2>Napster Station (Hardware)</h2><span class="note">15 · AI concierge for physical spaces · in-context renders + spec cards</span></div>
+    <div class="grid wide" id="g-station"></div>
+  </section>
+
+  <section class="group" id="mac">
+    <div class="grp-hdr"><h2>Mac App Scenes</h2><span class="note">15 · UI screens, video stills, use-cases</span></div>
+    <div class="grid wide" id="g-mac"></div>
+  </section>
+
+  <section class="group" id="learn">
+    <div class="grp-hdr"><h2>Napster Learn</h2><span class="note">1 · turn expertise into AI agents that train, coach, and assess</span></div>
+    <div class="grid wide" id="g-learn"></div>
+  </section>
+
+  <section class="group" id="twin">
+    <div class="grp-hdr"><h2>Digital Twin</h2><span class="note">3 · scenes for multiplicity / presence narrative</span></div>
+    <div class="grid sq" id="g-twin"></div>
+  </section>
+
+  <section class="group" id="lifestyle">
+    <div class="grp-hdr"><h2>Heroes & Lifestyle</h2><span class="note">9 · full-bleed photography for hero sections and section openers</span></div>
+    <div class="grid wide" id="g-lifestyle"></div>
+  </section>
+
+  <section class="group" id="elements">
+    <div class="grp-hdr"><h2>Brand Elements</h2><span class="note">7 · textures, icons, gradient boxes, supporting marks</span></div>
+    <div class="grid sq" id="g-elements"></div>
+  </section>
+</div>
+
+<script>
+const LIB = {
+  producers: [
+    ['producer-nyx-hiphop.webp', 'Nyx', 'Brooklyn hip-hop producer'],
+    ['producer-mateo-latin.avif', 'Mateo Reyes', 'Latin fire, 30 years stripping records to truth'],
+    ['producer-billie-indie.avif', 'Billie Dunn', 'Indie dreamer, emotional soundscapes'],
+    ['producer-luna-rnb.avif', 'Luna Sinclair', 'R&B, groove-first'],
+    ['producer-voltage-electronic.avif', 'Voltage', 'Electronic alchemist, house/techno/dubstep'],
+    ['producer-sloane-pop.avif', 'Sloane Parker', 'Pop architect'],
+    ['producer-axel-rock.avif', 'Axel Storm', 'Rock rebel, distortion + dynamics'],
+    ['producer-jasper-jazz.avif', 'Jasper King', 'Jazz sophisticate'],
+    ['producer-rubymae-country.avif', 'Ruby Mae Tucker', 'Country storyteller'],
+    ['music-crew-group.png', 'Music Crew · group shot', 'Full Napster music producer crew lined up — for hero / collective imagery'],
+  ],
+  companions: [
+    ['companion-elena-wellbeing.avif', 'Elena', 'Wellbeing guide'],
+    ['companion-kevin-finance.avif', 'Kevin', 'Financial guide'],
+    ['companion-jordan-fitness.avif', 'Jordan', 'Fitness coach'],
+    ['companion-alyssa-career.avif', 'Alyssa', 'Career coach'],
+    ['companion-richard-learning.avif', 'Richard', 'Learning mentor'],
+    ['companion-may-creative.avif', 'May', 'Creative guru'],
+    ['companion-jane-chiefofstaff.avif', 'Jane', 'Chief of Staff (overnight email, briefings)'],
+    ['companion-kai-chiefofstaff.avif', 'Kai', 'Chief of Staff (team coordinator)'],
+    ['companion-jc-code.avif', 'JC', 'Code wizard'],
+  ],
+  session: [
+    ['session-step1-pick.avif', 'Step 1 · Pick a producer', 'Tap a face'],
+    ['session-step2-talk.avif', 'Step 2 · Talk about it', 'Mood, memory, moment'],
+    ['session-step3-shape.avif', 'Step 3 · Shape together', 'Change lyrics, tempo, feel'],
+    ['session-step4-yoursong.avif', 'Step 4 · Your song', 'Cover art with you in it'],
+    ['session-step5-share.avif', 'Step 5 · Share it', 'Your name, you own it'],
+  ],
+  station: [
+    ['station-hero.jpg', 'Station hero', 'AI concierge kiosk in a real-world lobby — voice-first, holographic display, 30″ touchscreen'],
+    ['station-full.png', 'Station · full unit', 'Full kiosk shot — walnut tower with speakers, holographic head, 30″ touchscreen showing the home UI'],
+    ['station-airport-gate.png', 'In context · airport gate', 'Station deployed at an airport gate area'],
+    ['station-hotel-lobby.png', 'In context · hotel lobby', 'Station in a hotel lobby setting'],
+    ['station-hotel-lobby-2.png', 'In context · hotel lobby (alt)', 'Alternate hotel lobby framing'],
+    ['station-hotel-lobby-3.png', 'In context · hotel lobby (alt 2)', 'Third hotel lobby framing'],
+    ['station-office-lobby.png', 'In context · office lobby', 'Station in a corporate office lobby'],
+    ['station-waiting-room.png', 'In context · waiting room', 'Station in a healthcare / waiting room setting'],
+    ['station-watch-store.png', 'In context · retail (watch store)', 'Station deployed in a luxury retail floor'],
+    ['station-living-room.png', 'In context · residential', 'Station in a living-room / hospitality residence setting'],
+    ['station-with-kai.png', 'Station with Kai', 'Station displaying Kai (Chief of Staff) on the holographic head'],
+    ['station-spec-voicefield.jpg', 'Spec · VoiceField™', 'Near-field mic array — 85dB+ ambient'],
+    ['station-spec-sight.jpg', 'Spec · Station Sight', '48MP camera · 120° FOV · on-device'],
+    ['station-spec-display.jpg', 'Spec · 30″ OLED + Hologram', 'Holographic AI presence'],
+    ['station-spec-chassis.jpg', 'Spec · Walnut + Aluminium', 'Zero plastic. Mac mini M4.'],
+  ],
+  view: [
+    ['view-hardware.avif', 'Hardware beauty shot', 'Lifestyle product shot on desk'],
+    ['view-banner-mac.avif', 'Banner on Mac', 'Wide shot of View device mounted above Mac'],
+    ['view-spec-display.avif', 'Spec · 2.1″ display', 'Lenticular hardware closeup'],
+    ['view-spec-65g.avif', 'Spec · 65g weight', 'Hardware closeup'],
+    ['view-spec-usbc.avif', 'Spec · USB-C', 'Hardware closeup'],
+    ['view-scene-5sec.avif', 'Scene · "Ready in 5 sec"', 'Device attached, ready state'],
+    ['view-scene-present.avif', 'Scene · "Fully present"', 'Device with companion visible'],
+    ['view-scene-3d.avif', 'Scene · "True 3D"', 'Device showing 3D effect'],
+    ['view-back.avif', 'Napster View · Back', 'Back of the View hardware — powered by your Mac'],
+  ],
+  mac: [
+    ['mac-scene-3dvideo.avif', 'Video conversations in 3D', 'Mac UI scene'],
+    ['mac-scene-sharescreen.avif', 'Share your screen', 'Mac UI scene'],
+    ['mac-scene-reviewfiles.avif', 'Review files without switching', 'Mac UI scene'],
+    ['mac-checkin-jane.avif', 'Check in with Jane', 'Mobile UI showing Jane briefing'],
+    ['mac-talk-any.avif', 'Talk to any companion', 'Mobile UI showing roster'],
+    ['mac-oneapp-scene.jpg', 'One app, infinite capabilities', 'Wide app scene'],
+    ['mac-app-ui.png', 'Napster for Mac · app UI', 'Full Mac app interface'],
+    ['mac-chat-ui.png', 'Napster for Mac · chat UI', 'Conversation view in the Mac app'],
+    ['mac-scene-01.png', 'Napster for Mac · scene 01', 'Marketing scene'],
+    ['mac-scene-02.png', 'Napster for Mac · scene 02', 'Marketing scene'],
+    ['mac-scene-03.png', 'Napster for Mac · scene 03', 'Marketing scene'],
+    ['mac-film-frame.avif', 'Film still', 'Lifestyle still'],
+    ['usecase-coding.avif', 'Use case · Coding', 'Desk scene with View in action'],
+    ['usecase-writing.avif', 'Use case · Writing', 'Desk scene'],
+    ['usecase-creative.avif', 'Use case · Creative work', 'Desk scene'],
+  ],
+  learn: [
+    ['learn-film-inner.avif', 'Learn · film inner image', 'Film video poster — turn expertise into AI agents'],
+  ],
+  twin: [
+    ['twin-meetings.avif', 'Takes meetings', 'Twin scene'],
+    ['twin-presence.avif', 'Manages presence', 'Twin scene'],
+    ['twin-always.avif', 'Always available', 'Twin scene'],
+  ],
+  lifestyle: [
+    ['hero-consumer-guitar.avif', 'Consumer hero · guitar', 'Wide lifestyle, musician with guitar'],
+    ['hero-consumer-mobile.avif', 'Consumer hero (mobile)', 'Portrait crop of same scene'],
+    ['hero-mac-abstract.avif', 'Mac hero · pink abstract', 'Abstract full-bleed background'],
+    ['lifestyle-girl-desk.avif', 'Girl at desk', 'Wide lifestyle — user working with app'],
+    ['lifestyle-girl-deskv2.avif', 'Girl at desk (alt)', 'Alternate angle of desk scene'],
+    ['lifestyle-peeps-crew.avif', 'Peeps · crew montage', 'Multi-person lifestyle composite'],
+    ['view-lifestyle-3d.avif', 'View · 3D lifestyle', 'Wide 3D effect background'],
+    ['productivity-crew-living-room.png', 'Productivity Crew · living room', 'Crew of specialists in a residential setting'],
+    ['productivity-crew-office.png', 'Productivity Crew · office', 'Crew of specialists in an office setting'],
+  ],
+  elements: [
+    ['element-box.avif', 'Box texture', 'Supporting brand texture'],
+    ['element-logo-box.avif', 'Logo box', 'N-mark corner element'],
+    ['element-right-box.avif', 'Right box', 'Corner element for composition'],
+    ['element-pink-gradient.avif', 'Pink gradient', 'Background gradient sheet'],
+    ['icon-wisdom-mic.webp', 'Wisdom · mic', 'Content library icon'],
+    ['icon-serenity-flower.webp', 'Serenity · flower', 'Content library icon'],
+    ['icon-connection-music.webp', 'Connection · music', 'Content library icon'],
+  ],
+};
+
+const SHAPE = { producers: 'sq', companions: 'sq', session: 'tall', view: 'wide', station: 'wide', mac: 'wide', learn: 'wide', twin: 'sq', lifestyle: 'wide', elements: 'sq' };
+
+for (const [group, items] of Object.entries(LIB)) {
+  const host = document.getElementById('g-' + group);
+  const shape = SHAPE[group];
+  host.innerHTML = items.map(([file, name, cap]) => `
+    <div class="card ${shape}">
+      <div class="thumb"><img src="assets/library/${file}" alt="${name}" loading="lazy"></div>
+      <div class="meta">
+        <p class="name">${name}</p>
+        <p class="cap">${cap}</p>
+        <code class="path">library/${file}</code>
+      </div>
+    </div>
+  `).join('');
+}
+</script>
+</body>
+</html>

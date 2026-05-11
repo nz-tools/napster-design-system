@@ -1,0 +1,563 @@
+/* ──────────────────────────────────────────────────────────────────
+   Napster One-Pager · Shared Base
+   ─────────────────────────────────────────────────────────────────
+   Canvas: US Letter portrait, 816×1056px. Pages stacked vertically.
+   On screen: centred on a #1a1a1a matte, scaled-to-fit < 900px wide.
+   On print: full-bleed black, one sheet per page.
+
+   Import after `../colors_and_type.css` so pink/Avantt tokens exist.
+
+   Section kit (class-based — not every page uses every block):
+
+     .stage > .sheet        → the 816×1056 page
+       .hero                  signature hero w/ optional .hero-img
+         .hero-head             logo + chip row
+         .logo-mark             "Napster." mark (pink period)
+         .meta-chip             pill label, top right
+         .eyebrow               pink uppercase lead-in
+         .h1 / .h1 .accent      Avantt 46px, gradient on the noun
+         .hero-sub              72%-white summary
+       .section                 generic interior band (28×48 pad)
+         .section-label         tiny uppercase pink-subtle label
+         .section-title         Avantt 22px white heading
+       .pill-row / .metric-bar / .metric
+       .workflow / .workflow-step
+       .verticals (table)
+       .hw-grid / .hw-item
+       .reason-grid / .reason
+       .pricing-row / .pricing-item
+       .security-bar
+       .footer-row (.proof, .cta)
+   ─────────────────────────────────────────────────────────────── */
+
+@page { size: letter portrait; margin: 0; }
+
+html, body { margin: 0; background: #1a1a1a; }
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+  box-sizing: border-box;
+  font-family: var(--font-body);
+  color: var(--fg);
+}
+
+.stage {
+  width: 816px;
+  transform-origin: top center;
+}
+
+/* On-screen responsive scale: squash to fit viewport width < 900px */
+@media (max-width: 900px) {
+  .stage { transform: scale(calc((100vw - 48px) / 816)); }
+}
+
+/* Print: native letter, no matte, no scale */
+@media print {
+  body { background: #000; padding: 0; display: block; }
+  .stage { transform: none !important; width: 816px; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+}
+
+.sheet {
+  width: 816px;
+  min-height: 1056px;
+  background: #000;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  page-break-after: always;
+}
+.sheet + .sheet { margin-top: 24px; }
+@media print { .sheet + .sheet { margin-top: 0; } }
+
+/* ─────────── LOGO + CHIP ─────────── */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-svg {
+  display: block;
+  height: 26px;
+  width: auto;
+}
+.logo-svg img,
+.logo-svg svg {
+  display: block;
+  height: 26px;
+  width: auto;
+}
+
+.meta-chip {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.65);
+  padding: 5px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--r-pill);
+  background: rgba(255, 255, 255, 0.02);
+}
+.meta-chip + .meta-chip { margin-left: 6px; }
+.meta-chip.azure {
+  color: var(--pink-rim);
+  border-color: rgba(255, 161, 243, 0.35);
+  background: rgba(234, 45, 210, 0.06);
+}
+
+/* ─────────── HERO ─────────── */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+.hero-img {
+  position: absolute; inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+.hero-img::after {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.55) 55%, #000 100%);
+}
+.hero-inner {
+  position: relative;
+  padding: 32px 48px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-height: 300px;
+  box-sizing: border-box;
+}
+.hero-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.hero-copy { max-width: 600px; }
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--pink);
+  margin: 0 0 14px;
+}
+.h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 46px;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin: 0;
+  color: #fff;
+  text-wrap: pretty;
+}
+.h1 .accent {
+  background: var(--gradient-hero);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.hero-sub {
+  margin: 14px 0 0;
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 540px;
+}
+
+/* ─────────── SECTIONS (generic) ─────────── */
+.section {
+  padding: 26px 48px;
+  position: relative;
+}
+.section + .section { padding-top: 4px; }
+.section-label {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin: 0 0 12px;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 0 14px;
+  color: #fff;
+  text-wrap: pretty;
+}
+.section-title .accent {
+  background: var(--gradient-hero);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+/* Problem / breakthrough text block */
+.prose {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 680px;
+  text-wrap: pretty;
+}
+.prose strong { color: #fff; font-weight: 600; }
+
+/* Thin pink accent rule above a band */
+.accent-rule {
+  position: relative;
+}
+.accent-rule::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 48px; right: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--pink-bright), var(--pink-rim) 70%, transparent);
+  border-radius: 2px;
+}
+
+/* ─────────── METRICS BAR ─────────── */
+.metric-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin: 16px 48px;
+  background: linear-gradient(135deg, rgba(234, 45, 210, 0.10) 0%, rgba(60, 24, 90, 0.35) 100%);
+  border: 1px solid rgba(255, 161, 243, 0.18);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+.metric {
+  padding: 16px 18px;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+.metric:last-child { border-right: none; }
+.metric-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  color: #fff;
+}
+.metric-value .accent {
+  background: var(--gradient-hero);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.metric-label {
+  margin-top: 6px;
+  font-size: 10px;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ─────────── WORKFLOW ─────────── */
+.workflow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.workflow-step {
+  position: relative;
+  padding: 14px 14px 14px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--r-md);
+}
+.workflow-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--pink);
+  margin-bottom: 6px;
+}
+.workflow-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+  letter-spacing: -0.01em;
+  margin-bottom: 5px;
+  line-height: 1.25;
+}
+.workflow-desc {
+  font-size: 10.5px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ─────────── VERTICALS TABLE ─────────── */
+.verticals {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11.5px;
+}
+.verticals th {
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pink);
+  padding: 0 16px 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.verticals td {
+  padding: 9px 16px 9px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  vertical-align: top;
+  line-height: 1.4;
+}
+.verticals td:first-child {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  width: 180px;
+  letter-spacing: -0.01em;
+}
+.verticals td:last-child {
+  color: rgba(255, 255, 255, 0.7);
+}
+.verticals tr:last-child td { border-bottom: none; }
+
+/* ─────────── HARDWARE / FEATURE GRID ─────────── */
+.hw-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.hw-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.hw-item {
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--r-md);
+  position: relative;
+  overflow: hidden;
+}
+.hw-item.featured {
+  background: linear-gradient(180deg, rgba(234, 45, 210, 0.16), rgba(234, 45, 210, 0.03));
+  border-color: rgba(234, 45, 210, 0.4);
+}
+.hw-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+  letter-spacing: -0.01em;
+  margin: 0 0 4px;
+  line-height: 1.2;
+}
+.hw-desc {
+  font-size: 11px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+/* ─────────── REASON GRID ─────────── */
+.reason-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 36px;
+}
+.reason-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: -0.01em;
+  color: #fff;
+  margin: 0 0 4px;
+}
+.reason-desc {
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ─────────── PRICING ─────────── */
+.pricing-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.pricing-row.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.pricing-row.cols-4 { grid-template-columns: repeat(4, 1fr); }
+.pricing-item {
+  padding: 14px 16px;
+  background: rgba(234, 45, 210, 0.05);
+  border: 1px solid rgba(255, 161, 243, 0.15);
+  border-radius: var(--r-md);
+}
+.pricing-label {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 6px;
+}
+.pricing-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+}
+.pricing-unit {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0;
+  margin-left: 2px;
+}
+.pricing-note {
+  font-size: 10.5px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.45;
+}
+
+/* ─────────── SECURITY BAR ─────────── */
+.security-bar {
+  margin: 12px 48px 14px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--r-md);
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  font-size: 9.5px;
+  line-height: 1.4;
+}
+.security-label {
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pink);
+  white-space: nowrap;
+  font-size: 9px;
+}
+.security-items {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ─────────── FOOTER ROW (proof + CTA) ─────────── */
+.footer-row {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: #000;
+  margin-top: auto;
+}
+.footer-left {
+  padding: 22px 40px 22px 48px;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+.footer-tagline {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: -0.015em;
+  margin-bottom: 10px;
+  line-height: 1.25;
+  text-wrap: pretty;
+}
+.footer-tagline .accent {
+  background: var(--gradient-hero);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.contact-line {
+  font-size: 10.5px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+}
+.contact-line a { color: inherit; text-decoration: none; }
+.contact-line a:hover { color: var(--pink-rim); }
+.contact-line strong { color: rgba(255, 255, 255, 0.85); font-weight: 600; }
+
+.footer-cta {
+  padding: 22px 48px 22px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background:
+    radial-gradient(120% 140% at 100% 100%, rgba(234,45,210,0.22), transparent 60%),
+    #000;
+}
+.cta-head {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0 0 8px;
+}
+.cta-head .accent {
+  background: var(--gradient-hero);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.cta-sub {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.45;
+  margin: 0;
+}
+.cta-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.btn-sm {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 9px 16px;
+  border-radius: var(--r-pill);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  transition: transform 120ms ease, background 120ms ease;
+  display: inline-block;
+}
+.btn-sm.primary {
+  background: var(--pink-deep);
+  color: #fff;
+  border-color: var(--pink-rim);
+}
+.btn-sm.primary:hover { background: var(--pink-bright); }
+.btn-sm.ghost {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.btn-sm.ghost:hover { background: rgba(255, 255, 255, 0.05); }
+.btn-sm:active { transform: scale(0.98); }
+
+/* ─────────── OVERFLOW LINT (debug=1) ───────────
+   Drop ?debug=1 on any one-pager URL and any clipped
+   text element gets a pink outline + a count badge. */
+.overflow-clipped {
+  outline: 2px solid var(--pink-bright);
+  outline-offset: 2px;
+}

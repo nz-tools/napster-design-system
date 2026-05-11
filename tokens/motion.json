@@ -1,0 +1,27 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "source": "napster.com observation + AKEO Brand Definition Proposal",
+  "motion": {
+    "duration": {
+      "fast":   { "$value": "120ms", "$type": "duration", "$description": "Hover state, opacity shift" },
+      "mid":    { "$value": "160ms", "$type": "duration", "$description": "Brightness shift, background fade" },
+      "slow":   { "$value": "200ms", "$type": "duration", "$description": "Cross-fades, larger surfaces" },
+      "press":  { "$value": "80ms",  "$type": "duration", "$description": "Press feedback" }
+    },
+    "easing": {
+      "standard": {
+        "$value": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+        "$type": "cubicBezier",
+        "$description": "Approx ease-out-cubic. The only easing the system uses."
+      }
+    },
+    "principle": {
+      "$description": "Fades and gentle scales only. No spring overshoot, no parallax, no cinematic motion in UI. Save motion for hero video.",
+      "hover-buttons":  "Background lightens ~5%, brightness ~1.08.",
+      "hover-cards":    "Border shifts from rgba(255,255,255,0.10) to rgba(255,255,255,0.20).",
+      "hover-links":    "Underline on hover; color shifts to pulse-1 (#EA2DD2).",
+      "press":          "transform: scale(0.98). Never color flip.",
+      "icons":          "Never rotate. Never color-cycle. Icons are product furniture, not animation hooks."
+    }
+  }
+}

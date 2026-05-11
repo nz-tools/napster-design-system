@@ -1,0 +1,41 @@
+---
+name: napster-design
+description: Use this skill to generate well-branded interfaces and assets for Napster — the AI companion platform. Dark cinematic identity, circular visual backbone, Napster Pink accent. Use for production work or throwaway prototypes/mocks/slides.
+user-invocable: true
+---
+
+Read `DESIGN.md` and `README.md` within this skill first. Then explore the rest.
+
+**Start here:**
+
+- `DESIGN.md` — the unified rationale layer (Overview, Colors, Typography, Layout, Elevation & Depth, Shapes, Components, Do's and Don'ts + Iconography, Motion, Imagery extensions). YAML front matter contains every token resolved.
+- `README.md` — what this bundle is, how to publish at claude.ai/design.
+- `colors_and_type.css` — single-import CSS with all tokens and semantic classes (`.eyebrow`, `.h-hero`, `.gradient-word`, `.btn`, `.btn-primary-pulse`, `.panel`, `.card`, `.card-glass`, `.beam-overlay`, `.grain`).
+- `tokens/` — DTCG-format JSON tokens: `colors.json`, `typography.json`, `spacing.json`, `motion.json`.
+- `brand/overview.md` — personality, audience, emotional target.
+- `brand/voice-and-tone.md` — banned words, preferred vocabulary, five copy patterns, casing rules.
+- `logos/` — all approved Napster logos (wordmark, n-mark in three fidelities, lockups).
+- `icons/` — 22 bundled SVG line icons.
+- `reference/napster-com-audit.md` — live-site computed-style audit (the source of truth for live tokens).
+- `compositions/one-pagers/` — 3 one-pagers (platform, station, view).
+- `imagery/` — organized by product, people, brand-life, scenes, decorative.
+
+If creating visual artifacts (slides, mocks, throwaway prototypes), copy assets out and create static HTML files for the user to view. Import `colors_and_type.css` and use the semantic classes.
+
+If working on production code, copy the tokens and read the rules to become an expert in designing with this brand.
+
+**Non-negotiable brand rules:**
+
+1. Pure `#000000` background. Not near-black, not gradient.
+2. Napster Pink (`#DD52CB`) appears on ONE element per composition — the load-bearing noun.
+3. Eyebrows are `.eyebrow` — Inter 700, 12px, uppercase, pink. Every section gets one.
+4. Hero headlines are Avantt 600 sentence case, end with a period.
+5. Wordmark top-left, clearspace ≥ logo-height.
+6. Never use: chatbot, leverage, AI-powered, revolutionize, solution, emoji.
+7. Round every corner you can. The circle is the visual backbone.
+8. Companions have full human names (Kai Mercer, Kevin Jones, May Li). Not "the AI". See `imagery/people/persona-roster.md`.
+9. **Fixed-size layouts declare a row budget.** One-pagers, slides, and any composition with a fixed outer height must define each row's height as a CSS custom property (`--row-hero`, `--row-specs`, etc.) and declare `--sheet-max`. The sum of rows must equal `--sheet-max`. When a fix adds vertical pixels to one band, re-total the rows in the same edit — never leave the math for later. Bottom imprints/footers need ≥24px padding below them; they are the canary for budget overflow.
+10. Default button radius is `10px`. Pill shape is reserved for chips and one designated hero CTA per page (`.btn-primary-pulse`).
+11. The Napster Beam gradient is overlay-only on imagery (`mix-blend-mode: screen`). Never directly behind text.
+
+If the user invokes this skill without any other guidance, ask them what they want to build or design, ask some questions, and act as an expert designer who outputs HTML artifacts _or_ production code, depending on the need.

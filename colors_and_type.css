@@ -1,0 +1,479 @@
+/* =====================================================================
+   Napster Design System — Colors & Type (unified)
+   Single-import token reference for AI design tools and code.
+   Values are live-verified against napster.com (April 2026) where the
+   live site speaks; AKEO Figma framework values where the live site is
+   silent. Where the two conflict, live wins.
+   ===================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Avantt — "Napster Sans". Licensed from Displaay Type Foundry. */
+@font-face {
+  font-family: 'Avantt';
+  src: url('typography/fonts/Avantt-Medium.ttf') format('truetype'),
+       url('typography/fonts/Avantt-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Avantt';
+  src: url('typography/fonts/Avantt-SemiBold.ttf') format('truetype'),
+       url('typography/fonts/Avantt-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Avantt';
+  src: url('typography/fonts/Avantt-Bold.ttf') format('truetype'),
+       url('typography/fonts/Avantt-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Avantt';
+  src: url('typography/fonts/Avantt-ExtraBold.ttf') format('truetype'),
+       url('typography/fonts/Avantt-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ─────────────────────────────────────────────────────────────
+     CORE BACKGROUND + FOREGROUND
+     ───────────────────────────────────────────────────────────── */
+  --bg:               #000000;   /* Pure black. Default canvas. */
+  --bg-mulberry:      #1A0918;   /* Secondary backdrop (AKEO; 20% of usage) */
+  --bg-plum:          #2E0833;   /* Atmospheric anchor */
+  --bg-purple:        #270A20;   /* Deep purple, near-black */
+  --bg-charcoal:      #202226;   /* Dark charcoal panel */
+  --bg-panel:         rgba(255, 255, 255, 0.04);
+  --surface-glass:    rgba(255, 255, 255, 0.08);
+
+  --fg:               #FFFFFF;   /* Primary text */
+  --fg-muted:         rgba(255, 255, 255, 0.5);
+  --fg-subtle:        rgba(255, 255, 255, 0.2);
+  --fg-disabled:      rgba(255, 255, 255, 0.2);
+
+  /* ─────────────────────────────────────────────────────────────
+     NAPSTER PINK + ACCENTS
+     Pink is precious. ONE element per composition carries it,
+     and that element is the load-bearing noun.
+     Usage ratio (target): 70% bg / 20% mulberry / 5% pink / 5% pulse / 5% neon.
+     ───────────────────────────────────────────────────────────── */
+  --pink:             #DD52CB;   /* Napster Pink — eyebrows, accent text (live-verified) */
+  --pink-deep:        #BE369D;   /* Primary button fill (live-verified) */
+  --pink-bright:      #EA2DD2;   /* Pulse-1 / gradient peak */
+  --pink-rim:         #FFA1F3;   /* Button rims, gradient endpoint */
+  --pink-glow:        #FF10E8;   /* Neon glow on logo hero treatments */
+
+  --plum-deep:        #601656;   /* Gradient anchor, dark plum */
+  --plum-panel:       #4E1640;   /* Pink-tinted panel fill */
+
+  --violet:           #3F236B;   /* Napster Violet (AKEO secondary) */
+  --violet-deep:      #3C185A;   /* Atmospheric gradient stop */
+  --violet-mid:       #370971;
+  --lilac:            #B79CD9;   /* AKEO secondary highlight */
+  --indigo:           #33295C;   /* Muted body text in some sections (live) */
+  --coral:            #FF4D6D;   /* Occasional accent (live, low frequency) */
+
+  /* Pulse + Neon (AKEO accents — used inside gradients) */
+  --pulse-1:          #EA2DD2;   /* Hot magenta */
+  --pulse-2:          #FF7DF3;   /* Light pink */
+  --neon-1:           #FFA1F3;   /* Peony */
+  --neon-2:           #FDE5D5;   /* Cream highlight */
+  --beam-yellow:      #FFF38A;   /* Beam signature highlight */
+
+  /* Neutrals */
+  --gray-100:         #F4F4F4;
+  --gray-200:         #D9D9D9;
+  --gray-400:         #C4C4C4;
+  --gray-700:         #3A3140;
+  --gray-900:         #130512;
+
+  /* Semantic (data viz) */
+  --good:             #34D399;
+  --bad:              #FF6B7A;
+  --neutral:          #C8C8E0;
+
+  /* Panel and border tokens */
+  --panel-fill:       rgba(255, 255, 255, 0.04);
+  --panel-fill-pink:  rgba(190, 54, 157, 0.08);
+  --border:           rgba(255, 255, 255, 0.10);   /* Default panel border (live) */
+  --border-strong:    rgba(255, 255, 255, 0.18);
+  --border-pink:      rgba(190, 54, 157, 0.35);
+  --hairline:         rgba(255, 255, 255, 0.05);
+
+  /* Semantic aliases */
+  --accent:           var(--pink);
+  --accent-hot:       var(--pulse-1);
+  --on-accent:        var(--fg);
+
+  /* ─────────────────────────────────────────────────────────────
+     SIGNATURE GRADIENTS
+     ───────────────────────────────────────────────────────────── */
+
+  /* Hero accent text — apply to the LOAD-BEARING NOUN only.
+     e.g. "A specialist for every [moment.]" */
+  --gradient-hero:
+    linear-gradient(90deg,
+      #FFFFFF 0%,
+      #EA2DD2 71.63%,
+      #FFA1F3 87.98%);
+
+  /* Small-label gradient — for eyebrow-scale callouts */
+  --gradient-label:
+    linear-gradient(91deg, #DD52CB 0%, #601656 100%);
+
+  /* Pulse + Neon — AKEO two-stop accent gradients */
+  --gradient-pulse:
+    linear-gradient(135deg, #EA2DD2 0%, #FF7DF3 100%);
+  --gradient-neon:
+    linear-gradient(135deg, #FF7DF3 0%, #FFA1F3 50%, #FDE5D5 100%);
+
+  /* The Napster Beam — signature multi-stop ribbon.
+     Apply as an OVERLAY on hero imagery with mix-blend-mode: screen.
+     NEVER directly behind text. */
+  --gradient-beam:
+    linear-gradient(100deg,
+      #FFF38A 0%,
+      #FFA1F3 22%,
+      #FF7DF3 42%,
+      #BE369D 62%,
+      #2E0833 82%,
+      #000000 100%);
+
+  /* Atmospheric background gradients — canvas remains #000 by default */
+  --gradient-bg-midnight: linear-gradient(180deg, #2E0833 0%, #000000 100%);
+  --gradient-bg-space:    linear-gradient(180deg, #3F236B 0%, #0C0107 100%);
+  --gradient-bg-dawn:     linear-gradient(180deg, #1A0918 0%, #000000 100%);
+  --gradient-bg-plum:     linear-gradient(180deg, #140627 0%, #3C185A 100%);
+  --gradient-bg-violet:   linear-gradient(180deg, #370971 0%, #591B5A 100%);
+  --gradient-bg-near:     linear-gradient(180deg, #130522 0%, #2C0C36 100%);
+  --gradient-bg-rose:     linear-gradient(180deg, #3D1226 0%, #040205 100%);
+
+  /* ─────────────────────────────────────────────────────────────
+     TYPOGRAPHY
+     ───────────────────────────────────────────────────────────── */
+  --font-display:     'Avantt', 'Helvetica Neue', Arial, sans-serif;   /* Napster Sans */
+  --font-body:        'Inter', 'Helvetica Neue', sans-serif;
+  --font-system:      Arial, 'Helvetica Neue', sans-serif;
+  --font-mono:        ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* Type scale — merged. Live-verified marketing sizes + AKEO semantic ramp. */
+  --fs-display-cover: 180px;   /* Section dividers, oversized cover stats */
+  --fs-display-1:     96px;    /* Cover slides */
+  --fs-display-2:     72px;    /* Display alt — same as hero */
+  --fs-hero:          72px;    /* Primary marketing hero (live) */
+  --fs-h1:            56px;    /* Document H1 */
+  --fs-section:       41px;    /* Section headlines on marketing (live) */
+  --fs-h2:            40px;    /* Document H2 */
+  --fs-title:         32px;    /* Card titles */
+  --fs-h3:            28px;    /* Subsection */
+  --fs-subtitle:      24px;
+  --fs-h4:            20px;
+  --fs-body-lg:       18px;
+  --fs-body:          16px;    /* Live default */
+  --fs-body-sm:       14px;    /* Buttons, small UI */
+  --fs-caption:       12px;
+  --fs-eyebrow:       12px;    /* Inter 700, uppercase, pink (live) */
+  --fs-meta:          11px;
+
+  /* Weights */
+  --fw-light:         300;
+  --fw-regular:       400;
+  --fw-medium:        500;
+  --fw-semibold:      600;
+  --fw-bold:          700;
+  --fw-extrabold:     800;
+
+  /* Letter spacing (tracking) */
+  --tracking-display: -0.025em;   /* Tight, mirrors wordmark */
+  --tracking-hero:    -0.02em;    /* -1.44px @ 72px (live) */
+  --tracking-section: -0.02em;    /* -0.82px @ 41px (live) */
+  --tracking-eyebrow: -0.01em;    /* -0.12px @ 12px (live; tight, not airy) */
+  --tracking-button:  0.02em;
+  --tracking-body:    0em;
+
+  /* Line heights */
+  --lh-tight:         0.95;
+  --lh-display:       1.02;
+  --lh-headline:      1.10;
+  --lh-body:          1.40;       /* Live default */
+  --lh-body-loose:    1.60;
+
+  /* ─────────────────────────────────────────────────────────────
+     RADII — The Circle is the visual backbone. Round everything.
+     ───────────────────────────────────────────────────────────── */
+  --r-xs:             4px;
+  --r-sm:             6px;
+  --r-md:             10px;    /* ⭐ buttons (live, 22 uses) */
+  --r-lg:             16px;    /* ⭐ cards (live, 15 uses) */
+  --r-xl:             24px;    /* Large cards, modals */
+  --r-2xl:            48px;    /* Hero panels, film frames (AKEO) */
+  --r-pill:           9999px;  /* Chips, tags, hero CTA variant */
+  --r-full:           9999px;  /* Avatars, the n-mark */
+
+  /* ─────────────────────────────────────────────────────────────
+     SPACING — 4px base. Px-derived keys for self-documentation.
+     ───────────────────────────────────────────────────────────── */
+  --space-0:          0;
+  --space-1:          4px;
+  --space-2:          8px;
+  --space-3:          12px;
+  --space-4:          16px;
+  --space-5:          20px;
+  --space-6:          24px;
+  --space-8:          32px;
+  --space-10:         40px;
+  --space-12:         48px;
+  --space-16:         64px;
+  --space-20:         80px;
+  --space-24:         96px;
+  --space-32:         128px;
+
+  /* ─────────────────────────────────────────────────────────────
+     SHADOWS + GLOWS
+     Napster lives on black. Shadows are rarely soft drops — they
+     are inner glows or coloured halos around the brand orb / CTAs.
+     ───────────────────────────────────────────────────────────── */
+  --shadow-sm:        0 1px 2px rgba(0, 0, 0, 0.45);
+  --shadow-md:        0 8px 24px rgba(0, 0, 0, 0.55);
+  --shadow-lg:        0 24px 64px rgba(0, 0, 0, 0.65);
+  --shadow-panel:     0 10px 40px rgba(0, 0, 0, 0.35);
+  --shadow-inset-light: inset 0 0 0 0.5px rgba(255, 255, 255, 0.35);
+  --inner-glow:       inset 0 1px 0 rgba(255, 255, 255, 0.10),
+                      inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  --glow-pink:        0 0 40px rgba(255, 16, 232, 0.35);   /* Live-verified intensity */
+  --glow-pulse:       0 0 80px rgba(234, 45, 210, 0.45);   /* AKEO hero CTA halo */
+
+  /* ─────────────────────────────────────────────────────────────
+     BLUR + TRANSPARENCY
+     ───────────────────────────────────────────────────────────── */
+  --blur-panel:           blur(20px) saturate(1.2);   /* Default glass panels */
+  --blur-card-glass:      blur(24px) saturate(140%);  /* Heavier glass over imagery */
+  --blur-atmospheric:     blur(100px);                /* Hero glow shapes, n-mark bloom */
+
+  /* Documented transparency steps. Don't invent fractional values. */
+  --opacity-1:        0.04;
+  --opacity-2:        0.10;
+  --opacity-3:        0.20;
+  --opacity-4:        0.35;
+  --opacity-5:        0.50;
+
+  /* ─────────────────────────────────────────────────────────────
+     MOTION
+     ───────────────────────────────────────────────────────────── */
+  --duration-fast:    120ms;
+  --duration-mid:     160ms;
+  --duration-slow:    200ms;
+  --easing:           cubic-bezier(0.22, 0.61, 0.36, 1);   /* Approx ease-out-cubic */
+
+  /* Borders shorthand */
+  --panel-border:        1px solid var(--border);
+  --panel-border-pink:   1px solid var(--border-pink);
+}
+
+/* =====================================================================
+   BASE — apply to <body> or any container that should be on-brand.
+   Wrap legacy or third-party content in .napster to scope.
+   ===================================================================== */
+html, body, .napster {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   SEMANTIC TYPE CLASSES
+   ───────────────────────────────────────────────────────────────── */
+
+/* Eyebrow — Inter 700, 12px, uppercase, pink. EVERY section gets one. */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-eyebrow);
+  color: var(--pink);
+}
+
+/* Hero — Avantt 600, 72px, sentence case, ends with a period. */
+.h-hero {
+  font-family: var(--font-display);
+  font-size: var(--fs-hero);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-headline);
+  letter-spacing: var(--tracking-hero);
+  color: var(--fg);
+}
+
+/* Section headline — Avantt 600, 41px. */
+.h-section {
+  font-family: var(--font-display);
+  font-size: var(--fs-section);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-headline);
+  letter-spacing: var(--tracking-section);
+}
+
+/* Document hierarchy — Avantt for h1–h4. */
+.h1 { font-family: var(--font-display); font-weight: var(--fw-bold);     font-size: var(--fs-h1); line-height: var(--lh-display);  letter-spacing: var(--tracking-display); margin: 0; }
+.h2 { font-family: var(--font-display); font-weight: var(--fw-bold);     font-size: var(--fs-h2); line-height: var(--lh-headline); letter-spacing: var(--tracking-display); margin: 0; }
+.h3 { font-family: var(--font-display); font-weight: var(--fw-semibold); font-size: var(--fs-h3); line-height: var(--lh-headline); letter-spacing: -0.01em; margin: 0; }
+.h4 { font-family: var(--font-display); font-weight: var(--fw-semibold); font-size: var(--fs-h4); line-height: var(--lh-headline); margin: 0; }
+
+.display-cover { font-family: var(--font-display); font-weight: var(--fw-bold); font-size: var(--fs-display-cover); line-height: var(--lh-tight);   letter-spacing: var(--tracking-display); }
+.display-1     { font-family: var(--font-display); font-weight: var(--fw-bold); font-size: var(--fs-display-1);     line-height: var(--lh-display); letter-spacing: var(--tracking-display); }
+.display-2     { font-family: var(--font-display); font-weight: var(--fw-bold); font-size: var(--fs-display-2);     line-height: var(--lh-display); letter-spacing: var(--tracking-display); }
+
+/* Gradient-clipped word — apply to the LOAD-BEARING NOUN only */
+.gradient-word {
+  background: var(--gradient-hero);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Body text */
+.body-lg  { font-size: var(--fs-body-lg); line-height: 1.5; }
+.body     { font-size: var(--fs-body);    line-height: var(--lh-body); }
+.body-sm  { font-size: var(--fs-body-sm); line-height: var(--lh-body); color: var(--fg-muted); }
+.caption  { font-size: var(--fs-caption); color: var(--fg-muted); }
+.muted    { color: var(--fg-muted); }
+.subtle   { color: var(--fg-subtle); }
+
+code, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.1em 0.35em;
+  border-radius: var(--r-xs);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   BUTTONS
+   Default radius 10px (live). Pill reserved for chips + one hero CTA.
+   ───────────────────────────────────────────────────────────────── */
+.btn {
+  font-family: var(--font-body);
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-semibold);
+  border-radius: var(--r-md);
+  padding: 18.5px 20px;
+  border: none;
+  cursor: pointer;
+  color: var(--fg);
+  transition: background var(--duration-fast) var(--easing),
+              transform var(--duration-fast) var(--easing),
+              filter var(--duration-mid) var(--easing);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.btn-primary             { background: var(--pink-deep); }
+.btn-primary:hover       { background: #CB42AC; }
+.btn-primary:active      { transform: scale(0.98); }
+
+.btn-secondary {
+  background: rgba(190, 54, 157, 0.02);
+  border: 1px solid rgba(255, 161, 243, 0.2);
+}
+.btn-secondary:hover     { background: rgba(190, 54, 157, 0.08); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--fg);
+  padding: 12px 16px;
+}
+.btn-ghost:hover         { color: var(--pulse-1); }
+
+/* Hero CTA variant — AKEO pulse gradient + halo. One per page max. */
+.btn-primary-pulse {
+  background: var(--gradient-pulse);
+  color: var(--on-accent);
+  box-shadow: var(--glow-pulse);
+  border-radius: var(--r-pill);
+  padding: 14px 20px;
+  font-family: var(--font-display);
+  letter-spacing: var(--tracking-button);
+}
+.btn-primary-pulse:hover  { filter: brightness(1.08); }
+.btn-primary-pulse:active { transform: scale(0.98); filter: brightness(0.95); }
+
+/* ─────────────────────────────────────────────────────────────────
+   PANELS / CARDS
+   ───────────────────────────────────────────────────────────────── */
+.panel {
+  background: var(--panel-fill);
+  border: var(--panel-border);
+  border-radius: var(--r-lg);
+  backdrop-filter: var(--blur-panel);
+  box-shadow: var(--shadow-inset-light), var(--shadow-panel);
+}
+.panel-pink {
+  background: var(--panel-fill-pink);
+  border: var(--panel-border-pink);
+  border-radius: var(--r-lg);
+}
+
+.card {
+  background: var(--bg-mulberry);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: var(--space-6);
+}
+.card-large {
+  background: var(--bg-mulberry);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: var(--space-8);
+}
+.card-hero {
+  background: var(--bg-mulberry);
+  border: 1px solid var(--border);
+  border-radius: var(--r-2xl);
+  padding: var(--space-10);
+}
+.card-glass {
+  background: var(--surface-glass);
+  backdrop-filter: var(--blur-card-glass);
+  -webkit-backdrop-filter: var(--blur-card-glass);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-2xl);
+  box-shadow: var(--inner-glow);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   BEAM + GRAIN — overlay utilities
+   ───────────────────────────────────────────────────────────────── */
+.beam-bg { background: var(--gradient-beam); }
+
+.beam-overlay { position: relative; }
+.beam-overlay::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: var(--gradient-beam);
+  mix-blend-mode: screen;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.grain { position: relative; }
+.grain::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: url("imagery/decorative/napster-grain-texture.jpg") center/cover;
+  mix-blend-mode: screen;
+  opacity: 0.18;
+  pointer-events: none;
+}

@@ -1,0 +1,13 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css"><style>
+html,body{margin:0;background:#000;color:#fff;font-family:var(--font-sans)}
+.card{padding:0;height:180px;display:flex}
+.s{flex:1;position:relative;display:flex;align-items:center;justify-content:center}
+.s+.s{border-left:1px solid rgba(255,255,255,.08)}
+.lbl{position:absolute;left:16px;bottom:12px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.orb{width:96px;height:96px;border-radius:50%}
+.glass{width:120px;height:60px;border-radius:30px;background:rgba(255,255,255,.06);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.18);box-shadow:inset 0 1px 0 rgba(255,255,255,.15)}
+</style></head><body class="napster"><div class="card">
+  <div class="s" style="background:#000"><div class="orb" style="background:#1A0918;border:1px solid rgba(255,255,255,.18)"></div><div class="lbl">Card on black</div></div>
+  <div class="s" style="background:#1A0918"><div class="orb" style="background:linear-gradient(180deg,#FFA1F3,#BE369D);box-shadow:0 0 60px rgba(190,54,157,.55)"></div><div class="lbl">Pink halo</div></div>
+  <div class="s" style="background:linear-gradient(135deg,#2E0833 0%,#000 100%)"><div class="glass"></div><div class="lbl">Glass on plum</div></div>
+</div></body></html>

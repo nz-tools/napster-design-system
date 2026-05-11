@@ -1,0 +1,110 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "source": "napster.com live audit (April 2026) + AKEO Brand Definition Proposal (Mateo Reyes, 2026)",
+  "color": {
+    "background": {
+      "default":   { "$value": "#000000", "$type": "color", "$description": "Primary background — pure black. 70% of any composition." },
+      "mulberry":  { "$value": "#1A0918", "$type": "color", "$description": "Secondary backdrop. 20% of any composition." },
+      "plum":      { "$value": "#2E0833", "$type": "color", "$description": "Atmospheric anchor" },
+      "purple":    { "$value": "#270A20", "$type": "color", "$description": "Deep purple, near-black" },
+      "charcoal":  { "$value": "#202226", "$type": "color", "$description": "Dark charcoal panel" }
+    },
+    "foreground": {
+      "default":  { "$value": "#FFFFFF", "$type": "color", "$description": "Primary text on dark" },
+      "muted":    { "$value": "rgba(255,255,255,0.5)", "$type": "color", "$description": "Secondary text" },
+      "subtle":   { "$value": "rgba(255,255,255,0.2)", "$type": "color", "$description": "Tertiary / placeholder / disabled" }
+    },
+    "pink": {
+      "primary": { "$value": "#DD52CB", "$type": "color", "$description": "Napster Pink — eyebrows, accent text (live-verified)" },
+      "deep":    { "$value": "#BE369D", "$type": "color", "$description": "Primary button background (live-verified)" },
+      "bright":  { "$value": "#EA2DD2", "$type": "color", "$description": "Gradient peak / pulse-1 hot magenta" },
+      "rim":     { "$value": "#FFA1F3", "$type": "color", "$description": "Button rims, gradient endpoint, neon-1" },
+      "glow":    { "$value": "#FF10E8", "$type": "color", "$description": "Neon glow on logo hero treatments" }
+    },
+    "plum": {
+      "deep":   { "$value": "#601656", "$type": "color", "$description": "Gradient anchor, dark plum" },
+      "panel":  { "$value": "#4E1640", "$type": "color", "$description": "Pink-tinted panel fill" }
+    },
+    "violet": {
+      "default":      { "$value": "#3F236B", "$type": "color", "$description": "Napster Violet (AKEO secondary)" },
+      "deep":         { "$value": "#3C185A", "$type": "color", "$description": "Atmospheric gradient stop" },
+      "mid":          { "$value": "#370971", "$type": "color" }
+    },
+    "lilac":   { "$value": "#B79CD9", "$type": "color", "$description": "AKEO secondary highlight" },
+    "indigo":  { "$value": "#33295C", "$type": "color", "$description": "Muted body text in some sections (live)" },
+    "coral":   { "$value": "#FF4D6D", "$type": "color", "$description": "Occasional accent (live, low frequency)" },
+    "pulse": {
+      "1": { "$value": "#EA2DD2", "$type": "color", "$description": "Hot magenta — pulse gradient anchor" },
+      "2": { "$value": "#FF7DF3", "$type": "color", "$description": "Light pink — pulse gradient terminus" }
+    },
+    "neon": {
+      "1": { "$value": "#FFA1F3", "$type": "color", "$description": "Peony" },
+      "2": { "$value": "#FDE5D5", "$type": "color", "$description": "Cream highlight" }
+    },
+    "beam": {
+      "yellow": { "$value": "#FFF38A", "$type": "color", "$description": "Napster Beam signature highlight" }
+    },
+    "gray": {
+      "100": { "$value": "#F4F4F4", "$type": "color" },
+      "200": { "$value": "#D9D9D9", "$type": "color" },
+      "400": { "$value": "#C4C4C4", "$type": "color" },
+      "700": { "$value": "#3A3140", "$type": "color" },
+      "900": { "$value": "#130512", "$type": "color" }
+    },
+    "semantic": {
+      "good":    { "$value": "#34D399", "$type": "color", "$description": "Favorable / positive in comparison tables" },
+      "bad":     { "$value": "#FF6B7A", "$type": "color", "$description": "Concern / negative in comparison tables" },
+      "neutral": { "$value": "#C8C8E0", "$type": "color", "$description": "Muted / unclear" }
+    },
+    "panel": {
+      "fill":        { "$value": "rgba(255,255,255,0.04)", "$type": "color" },
+      "fill-pink":   { "$value": "rgba(190,54,157,0.08)",  "$type": "color" },
+      "border":      { "$value": "rgba(255,255,255,0.10)", "$type": "color", "$description": "Default panel border (live)" },
+      "border-strong": { "$value": "rgba(255,255,255,0.18)", "$type": "color" },
+      "border-pink": { "$value": "rgba(190,54,157,0.35)",  "$type": "color" },
+      "hairline":    { "$value": "rgba(255,255,255,0.05)", "$type": "color" }
+    },
+    "usage-ratio": {
+      "$description": "Target distribution across any composition",
+      "jet-black": 0.70,
+      "mulberry":  0.20,
+      "pink":      0.05,
+      "pulse":     0.05,
+      "neon":      0.05
+    }
+  },
+  "gradient": {
+    "hero-text": {
+      "$value": "linear-gradient(90deg, #FFFFFF 0%, #EA2DD2 71.63%, #FFA1F3 87.98%)",
+      "$type": "gradient",
+      "$description": "Signature hero accent text treatment. Apply to the load-bearing noun. (Live-verified)"
+    },
+    "label-text": {
+      "$value": "linear-gradient(91deg, #DD52CB 0%, #601656 100%)",
+      "$type": "gradient",
+      "$description": "Small eyebrow-scale gradient for 12px callouts."
+    },
+    "pulse": {
+      "$value": "linear-gradient(135deg, #EA2DD2 0%, #FF7DF3 100%)",
+      "$type": "gradient",
+      "$description": "Pulse two-stop. Primary button (hero variant), accent surfaces."
+    },
+    "neon": {
+      "$value": "linear-gradient(135deg, #FF7DF3 0%, #FFA1F3 50%, #FDE5D5 100%)",
+      "$type": "gradient",
+      "$description": "Neon three-stop. Atmospheric surfaces."
+    },
+    "beam": {
+      "$value": "linear-gradient(100deg, #FFF38A 0%, #FFA1F3 22%, #FF7DF3 42%, #BE369D 62%, #2E0833 82%, #000000 100%)",
+      "$type": "gradient",
+      "$description": "The Napster Beam — multi-stop ribbon. Apply as overlay on hero imagery with mix-blend-mode: screen. NEVER directly behind text."
+    },
+    "bg-midnight": { "$value": "linear-gradient(180deg, #2E0833 0%, #000000 100%)", "$type": "gradient", "$description": "Mulberry → black" },
+    "bg-space":    { "$value": "linear-gradient(180deg, #3F236B 0%, #0C0107 100%)", "$type": "gradient", "$description": "Violet → near-black" },
+    "bg-dawn":     { "$value": "linear-gradient(180deg, #1A0918 0%, #000000 100%)", "$type": "gradient", "$description": "Mulberry → black, lighter top" },
+    "bg-plum":     { "$value": "linear-gradient(180deg, #140627 0%, #3C185A 100%)", "$type": "gradient", "$description": "Atmospheric — deep purple bloom" },
+    "bg-violet":   { "$value": "linear-gradient(180deg, #370971 0%, #591B5A 100%)", "$type": "gradient", "$description": "Atmospheric — violet to plum" },
+    "bg-near":     { "$value": "linear-gradient(180deg, #130522 0%, #2C0C36 100%)", "$type": "gradient", "$description": "Atmospheric — near-black to dark plum (most common)" },
+    "bg-rose":     { "$value": "linear-gradient(180deg, #3D1226 0%, #040205 100%)", "$type": "gradient", "$description": "Atmospheric — dark rose to near-black" }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "source": "napster.com live audit (April 2026) + AKEO Brand Definition Proposal",
+  "font": {
+    "family": {
+      "display": {
+        "$value": "Avantt, 'Helvetica Neue', Arial, sans-serif",
+        "$type": "fontFamily",
+        "$description": "Primary display face — 'Napster Sans'. Licensed from Displaay Type Foundry. Used for all headlines, stats, large accents."
+      },
+      "body": {
+        "$value": "Inter, 'Helvetica Neue', sans-serif",
+        "$type": "fontFamily",
+        "$description": "Primary body face. Used for all paragraphs, labels, buttons, UI text."
+      },
+      "system": {
+        "$value": "Arial, 'Helvetica Neue', sans-serif",
+        "$type": "fontFamily",
+        "$description": "System fallback"
+      },
+      "mono": {
+        "$value": "ui-monospace, 'SF Mono', Menlo, Consolas, monospace",
+        "$type": "fontFamily"
+      }
+    },
+    "weight": {
+      "light":     { "$value": 300, "$type": "fontWeight" },
+      "regular":   { "$value": 400, "$type": "fontWeight" },
+      "medium":    { "$value": 500, "$type": "fontWeight" },
+      "semibold":  { "$value": 600, "$type": "fontWeight" },
+      "bold":      { "$value": 700, "$type": "fontWeight" },
+      "extrabold": { "$value": 800, "$type": "fontWeight" }
+    },
+    "size": {
+      "display-cover": { "$value": "180px", "$type": "dimension", "$description": "Section dividers, oversized cover stats" },
+      "display-1":     { "$value": "96px",  "$type": "dimension", "$description": "Cover slides (AKEO)" },
+      "display-2":     { "$value": "72px",  "$type": "dimension", "$description": "Display alt" },
+      "hero":          { "$value": "72px",  "$type": "dimension", "$description": "Primary marketing hero (live-verified)" },
+      "h1":            { "$value": "56px",  "$type": "dimension", "$description": "Document H1" },
+      "section":       { "$value": "41px",  "$type": "dimension", "$description": "Section headlines on marketing (live-verified)" },
+      "h2":            { "$value": "40px",  "$type": "dimension", "$description": "Document H2" },
+      "title":         { "$value": "32px",  "$type": "dimension", "$description": "Card titles" },
+      "h3":            { "$value": "28px",  "$type": "dimension", "$description": "Subsection" },
+      "subtitle":      { "$value": "24px",  "$type": "dimension" },
+      "h4":            { "$value": "20px",  "$type": "dimension" },
+      "body-lg":       { "$value": "18px",  "$type": "dimension" },
+      "body":          { "$value": "16px",  "$type": "dimension" },
+      "body-sm":       { "$value": "14px",  "$type": "dimension", "$description": "Buttons, small UI" },
+      "caption":       { "$value": "12px",  "$type": "dimension" },
+      "eyebrow":       { "$value": "12px",  "$type": "dimension", "$description": "Inter 700, uppercase, pink (live-verified)" },
+      "meta":          { "$value": "11px",  "$type": "dimension" }
+    },
+    "tracking": {
+      "display":  { "$value": "-0.025em", "$type": "dimension", "$description": "Tight, mirrors wordmark" },
+      "hero":     { "$value": "-0.02em",  "$type": "dimension", "$description": "-1.44px at 72px (live)" },
+      "section":  { "$value": "-0.02em",  "$type": "dimension", "$description": "-0.82px at 41px (live)" },
+      "eyebrow":  { "$value": "-0.01em",  "$type": "dimension", "$description": "-0.12px at 12px (live; tight, not airy)" },
+      "button":   { "$value": "0.02em",   "$type": "dimension" },
+      "body":     { "$value": "0em",      "$type": "dimension" }
+    },
+    "line-height": {
+      "tight":      { "$value": 0.95, "$type": "number" },
+      "display":    { "$value": 1.02, "$type": "number" },
+      "headline":   { "$value": 1.10, "$type": "number" },
+      "body":       { "$value": 1.40, "$type": "number", "$description": "Live default" },
+      "body-loose": { "$value": 1.60, "$type": "number" }
+    }
+  },
+  "textStyle": {
+    "hero": {
+      "$value": {
+        "fontFamily": "Avantt, 'Helvetica Neue', Arial, sans-serif",
+        "fontSize": "72px",
+        "fontWeight": 600,
+        "letterSpacing": "-1.44px",
+        "lineHeight": 1.1,
+        "textTransform": "none",
+        "color": "#FFFFFF"
+      },
+      "$type": "typography",
+      "$description": "Hero headline — sentence case, white, ends with a period"
+    },
+    "section-headline": {
+      "$value": {
+        "fontFamily": "Avantt, 'Helvetica Neue', Arial, sans-serif",
+        "fontSize": "41px",
+        "fontWeight": 600,
+        "letterSpacing": "-0.82px",
+        "lineHeight": 1.1,
+        "color": "#FFFFFF"
+      },
+      "$type": "typography"
+    },
+    "eyebrow": {
+      "$value": {
+        "fontFamily": "Inter, 'Helvetica Neue', sans-serif",
+        "fontSize": "12px",
+        "fontWeight": 700,
+        "letterSpacing": "-0.12px",
+        "textTransform": "uppercase",
+        "color": "#DD52CB"
+      },
+      "$type": "typography",
+      "$description": "Universal eyebrow label — uppercase Inter Bold in Napster Pink"
+    },
+    "button": {
+      "$value": {
+        "fontFamily": "Inter, 'Helvetica Neue', sans-serif",
+        "fontSize": "14px",
+        "fontWeight": 600,
+        "color": "#FFFFFF"
+      },
+      "$type": "typography"
+    },
+    "body": {
+      "$value": {
+        "fontFamily": "Inter, 'Helvetica Neue', sans-serif",
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "lineHeight": 1.4,
+        "color": "#FFFFFF"
+      },
+      "$type": "typography"
+    }
+  }
+}

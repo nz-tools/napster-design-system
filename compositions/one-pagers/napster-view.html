@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Napster View — One-Pager</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  @page { size: letter portrait; margin: 0; }
+  html, body { margin: 0; background: #1a1a1a; }
+  body { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 24px; box-sizing: border-box; }
+  .stage { width: 816px; height: 1056px; transform-origin: center; }
+  @media (max-width: 900px) { .stage { transform: scale(calc((100vw - 48px) / 816)); } body { height: calc(100vw * 1056 / 816 + 48px); } }
+  @media print { body { background: #000; padding: 0; } .stage { transform: none; } }
+
+  .sheet {
+    width: 816px; height: 1056px;
+    background: #000;
+    color: #fff;
+    font-family: var(--font-body);
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 298px 80px 306px 198px 174px;
+  }
+
+  /* ─────────── HERO ─────────── */
+  .hero {
+    position: relative;
+    background: #000;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(80% 100% at 80% 50%, rgba(156,43,172,0.5) 0%, rgba(30,8,45,0.3) 45%, transparent 75%),
+      radial-gradient(60% 60% at 15% 75%, rgba(234,45,210,0.18) 0%, transparent 60%),
+      #000;
+  }
+  .hero-device {
+    position: absolute;
+    right: -60px; top: 44px;
+    width: 500px; aspect-ratio: 1000/500;
+    background: url('../ui_kits/napster-com/assets/library/view-hardware.avif') center/cover no-repeat;
+  }
+  .hero-device::before {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(90deg, #000 0%, rgba(0,0,0,0.55) 14%, transparent 42%);
+  }
+  .hero-inner {
+    position: relative; height: 100%;
+    padding: 26px 48px 22px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+  .hero-head { display: flex; justify-content: space-between; align-items: center; }
+  .logo-wm { height: 32px; display: block; }
+  .meta-chip {
+    font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.6);
+    padding: 6px 10px;
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: var(--r-pill);
+  }
+  .hero-copy { max-width: 440px; }
+  .eyebrow-xs {
+    font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--pink);
+    margin: 0 0 14px;
+  }
+  .h1 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    margin: 0;
+    color: #fff;
+    text-wrap: pretty;
+  }
+  .h1 .accent {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .hero-sub {
+    margin: 14px 0 0;
+    font-size: 13.5px;
+    line-height: 1.45;
+    color: rgba(255,255,255,0.72);
+    max-width: 410px;
+  }
+  .hero-ship {
+    margin-top: 14px;
+    font-size: 10.5px;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .hero-ship::before {
+    content: "";
+    display: inline-block;
+    width: 6px; height: 6px;
+    background: var(--pink-bright);
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 8px; margin-bottom: 2px;
+    box-shadow: 0 0 8px var(--pink-bright);
+  }
+
+  /* ─────────── PROMISE ─────────── */
+  .promise {
+    padding: 10px 48px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: #050505;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+  .promise-label {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+  .promise-body {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1.4;
+    color: rgba(255,255,255,0.92);
+    letter-spacing: -0.015em;
+  }
+  .promise-body strong { color: #fff; font-weight: 600; }
+
+  /* ─────────── SPECS ─────────── */
+  .specs {
+    padding: 18px 48px 16px;
+    background: #000;
+  }
+  .section-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 12px; }
+  .section-title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: -0.02em;
+    margin: 0;
+    line-height: 1.08;
+  }
+  .section-title .accent {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .section-sub { font-size: 11px; color: rgba(255,255,255,0.55); font-weight: 500; letter-spacing: 0.04em; }
+
+  .spec-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .spec {
+    position: relative;
+    border-radius: var(--r-md);
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+    aspect-ratio: 5/4;
+    display: flex; align-items: flex-end;
+    background:
+      radial-gradient(140% 100% at 30% 20%, rgba(234,45,210,0.10) 0%, transparent 55%),
+      linear-gradient(180deg, #100612 0%, #060309 100%);
+  }
+  .spec-body {
+    position: relative; z-index: 2;
+    padding: 16px;
+    width: 100%;
+  }
+  .spec-viz {
+    position: absolute; top: 8px; left: 0; right: 0; bottom: 38%;
+    display: grid; place-items: center;
+    pointer-events: none;
+  }
+  .spec-body {
+    position: relative; z-index: 2;
+    padding: 12px 14px 14px;
+    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.9) 55%, #000 100%);
+  }
+  .spec-body {
+    position: relative; z-index: 2;
+    padding: 16px;
+    width: 100%;
+    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.85) 45%, #000 100%);
+  }
+  .spec-num {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    color: #fff;
+    margin: 0 0 2px;
+  }
+  .spec-lbl {
+    font-size: 10px;
+    color: rgba(255,255,255,0.62);
+    font-weight: 500;
+    line-height: 1.35;
+    margin: 0;
+  }
+
+  /* supporting detail strip */
+  .spec-detail {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .d-cell {
+    padding: 10px 0 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .d-num {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 17px;
+    color: #fff;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0 0 2px;
+  }
+  .d-lbl {
+    font-size: 9.5px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.3;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  /* ─────────── SCENES ─────────── */
+  .scenes {
+    padding: 10px 48px 12px;
+    background: linear-gradient(180deg, #0a0308 0%, #000 100%);
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .scene-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .scene {
+    position: relative;
+    border-radius: var(--r-md);
+    overflow: hidden;
+    height: 118px;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .scene-img {
+    position: absolute; inset: 0;
+    background-size: cover; background-position: center;
+  }
+  .scene-grad {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.18) 30%, transparent 50%, rgba(0,0,0,0.95) 100%);
+  }
+  .scene-body {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 0 12px 12px;
+  }
+  .scene-step {
+    position: absolute; top: 10px; left: 12px;
+    font-size: 9px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.16em;
+    color: var(--pink-bright);
+    margin: 0;
+    z-index: 2;
+  }
+  .scene-name {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin: 0 0 3px;
+  }
+  .scene-desc {
+    font-size: 10px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.35;
+    margin: 0;
+  }
+
+  /* ─────────── CTA ─────────── */
+  .footer-row {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    background: #000;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .proof {
+    padding: 20px 40px 22px 48px;
+    border-right: 1px solid rgba(255,255,255,0.06);
+  }
+  .proof-label {
+    font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--pink);
+    margin: 0 0 12px;
+  }
+  .proof-quote {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.38;
+    letter-spacing: -0.015em;
+    color: rgba(255,255,255,0.9);
+    text-wrap: pretty;
+    margin: 0;
+  }
+  .proof-attr {
+    display: block;
+    margin-top: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+  }
+  .cta {
+    padding: 20px 48px 22px 40px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    background:
+      radial-gradient(120% 140% at 100% 100%, rgba(234,45,210,0.22), transparent 60%),
+      #000;
+  }
+  .cta-head {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin: 0 0 6px;
+  }
+  .cta-head .accent {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .cta-sub { font-size: 11px; color: rgba(255,255,255,0.68); line-height: 1.45; margin: 0; }
+  .cta-actions { display: flex; gap: 10px; margin-top: 10px; }
+  .btn {
+    font-size: 11px; font-weight: 600;
+    padding: 9px 16px;
+    border-radius: var(--r-pill);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    border: 1px solid transparent;
+  }
+  .btn.primary { background: var(--pink-deep); color: #fff; border-color: var(--pink-rim); }
+  .btn.ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,0.25); }
+  .imprint {
+    font-size: 10.5px; color: rgba(255,255,255,0.5);
+    letter-spacing: 0.1em; text-transform: uppercase;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+<div class="stage"><div class="sheet">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-device"></div>
+    <div class="hero-inner">
+      <div class="hero-head">
+        <img class="logo-wm" src="../ui_kits/napster-com/assets/logos/horizontal/horizontal-white.svg" alt="Napster">
+        <span class="meta-chip">Hardware · 2026</span>
+      </div>
+      <div class="hero-copy">
+        <h1 class="h1">A 3D holographic display for <span class="accent">your AI.</span></h1>
+        <p class="hero-sub">Companions step out of the screen. No headset. No glasses. Just presence, clipped to your Mac.</p>
+        <p class="hero-ship">Shipping summer 2026 · $399 reservable now</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMISE -->
+  <section class="promise">
+    <div class="promise-label">The promise</div>
+    <div class="promise-body">
+      A lenticular 2.1″ display above your laptop turns your companion into <strong>a face in the room</strong>, not a tab on your screen. Glance up. Make eye contact. Keep working.
+    </div>
+  </section>
+
+  <!-- SPECS -->
+  <section class="specs">
+    <header class="section-head">
+      <h2 class="section-title">Small enough to forget.</h2>
+      <span class="section-sub">Built for Apple Silicon</span>
+    </header>
+    <div class="spec-grid">
+      <div class="spec">
+        <div class="spec-viz" aria-hidden="true">
+          <svg viewBox="0 0 120 120" width="116" height="116" style="opacity:.95">
+            <defs>
+              <radialGradient id="v1" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#EA2DD2" stop-opacity=".95"/>
+                <stop offset="55%" stop-color="#6B1A7A" stop-opacity=".55"/>
+                <stop offset="100%" stop-color="#0a0310" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <circle cx="60" cy="50" r="48" fill="url(#v1)"/>
+            <circle cx="60" cy="50" r="34" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.6"/>
+            <circle cx="60" cy="50" r="20" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.3"/>
+            <circle cx="60" cy="50" r="8" fill="rgba(255,255,255,0.85)"/>
+          </svg>
+        </div>
+        <div class="spec-body">
+          <p class="spec-num">2.1″</p>
+          <p class="spec-lbl">Lenticular 3D display</p>
+        </div>
+      </div>
+      <div class="spec">
+        <div class="spec-viz" aria-hidden="true">
+          <svg viewBox="0 0 120 120" width="116" height="116" style="opacity:.95">
+            <g fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.8" stroke-linecap="round">
+              <path d="M60 10 L60 92"/>
+              <path d="M22 92 L98 92"/>
+              <path d="M48 24 L72 24"/>
+              <path d="M43 36 L77 36"/>
+              <path d="M39 48 L81 48"/>
+              <path d="M35 60 L85 60"/>
+              <path d="M30 72 L90 72"/>
+              <path d="M26 84 L94 84"/>
+            </g>
+            <circle cx="60" cy="10" r="5" fill="#EA2DD2"/>
+          </svg>
+        </div>
+        <div class="spec-body">
+          <p class="spec-num">65 g</p>
+          <p class="spec-lbl">Clip-on weight</p>
+        </div>
+      </div>
+      <div class="spec">
+        <div class="spec-viz" aria-hidden="true">
+          <svg viewBox="0 0 120 120" width="116" height="116" style="opacity:.95">
+            <rect x="14" y="22" width="92" height="68" rx="9" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.8"/>
+            <g stroke="rgba(255,255,255,0.5)" stroke-width="1.3" stroke-linecap="round">
+              <path d="M22 22 L22 14"/><path d="M38 22 L38 14"/><path d="M54 22 L54 14"/><path d="M66 22 L66 14"/><path d="M82 22 L82 14"/><path d="M98 22 L98 14"/>
+              <path d="M22 90 L22 98"/><path d="M38 90 L38 98"/><path d="M54 90 L54 98"/><path d="M66 90 L66 98"/><path d="M82 90 L82 98"/><path d="M98 90 L98 98"/>
+              <path d="M14 34 L6 34"/><path d="M14 50 L6 50"/><path d="M14 66 L6 66"/><path d="M14 78 L6 78"/>
+              <path d="M106 34 L114 34"/><path d="M106 50 L114 50"/><path d="M106 66 L114 66"/><path d="M106 78 L114 78"/>
+            </g>
+            <rect x="38" y="44" width="44" height="24" rx="3" fill="rgba(234,45,210,0.18)" stroke="rgba(234,45,210,0.95)" stroke-width="1.8"/>
+            <text x="60" y="62" text-anchor="middle" font-family="Avantt, system-ui" font-weight="700" font-size="14" fill="#ffffff" letter-spacing="0.06em">M1</text>
+          </svg>
+        </div>
+        <div class="spec-body">
+          <p class="spec-num">M1+</p>
+          <p class="spec-lbl">Apple Silicon required</p>
+        </div>
+      </div>
+      <div class="spec">
+        <div class="spec-viz" aria-hidden="true">
+          <svg viewBox="0 0 120 80" width="140" height="94" style="opacity:.95">
+            <g fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+              <path d="M6 40 L40 40 L48 32 L62 32 L70 40 L114 40"/>
+              <rect x="40" y="32" width="30" height="16" rx="2.5" fill="rgba(234,45,210,0.15)"/>
+            </g>
+            <circle cx="6" cy="40" r="4.5" fill="#EA2DD2"/>
+            <circle cx="114" cy="40" r="4.5" fill="rgba(255,255,255,0.75)"/>
+          </svg>
+        </div>
+        <div class="spec-body">
+          <p class="spec-num">USB-C</p>
+          <p class="spec-lbl">Single-cable connection</p>
+        </div>
+      </div>
+    </div>
+    <div class="spec-detail">
+      <div class="d-cell"><p class="d-num">Glasses-free</p><p class="d-lbl">No headsets, no calibration</p></div>
+      <div class="d-cell"><p class="d-num">Magnet mount</p><p class="d-lbl">Clips onto any MacBook lid</p></div>
+      <div class="d-cell"><p class="d-num">Zero setup</p><p class="d-lbl">No drivers, no config screens</p></div>
+      <div class="d-cell"><p class="d-num">Mac app native</p><p class="d-lbl">Your full crew, lifted up</p></div>
+    </div>
+  </section>
+
+  <!-- SCENES -->
+  <section class="scenes">
+    <header class="section-head">
+      <h2 class="section-title">Clipped on in five seconds. Present from then on.</h2>
+    </header>
+    <div class="scene-grid">
+      <div class="scene">
+        <div class="scene-img" style="background-image:url('../ui_kits/napster-com/assets/library/view-scene-5sec.avif')"></div>
+        <div class="scene-grad"></div>
+        <p class="scene-step">One · Clip</p>
+        <div class="scene-body">
+          <h3 class="scene-name">Ready in 5 seconds.</h3>
+          <p class="scene-desc">Magnet-mount to any MacBook lid. Single USB-C.</p>
+        </div>
+      </div>
+      <div class="scene">
+        <div class="scene-img" style="background-image:url('../ui_kits/napster-com/assets/library/view-scene-3d.avif')"></div>
+        <div class="scene-grad"></div>
+        <p class="scene-step">Two · Look</p>
+        <div class="scene-body">
+          <h3 class="scene-name">True 3D.</h3>
+          <p class="scene-desc">Depth you can see at a glance — no head tracking.</p>
+        </div>
+      </div>
+      <div class="scene">
+        <div class="scene-img" style="background-image:url('../ui_kits/napster-com/assets/library/view-scene-present.avif')"></div>
+        <div class="scene-grad"></div>
+        <p class="scene-step">Three · Work</p>
+        <div class="scene-body">
+          <h3 class="scene-name">Fully present.</h3>
+          <p class="scene-desc">Your crew stays above your work, not inside it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="footer-row">
+    <div class="proof">
+      <p class="proof-label">In the wild</p>
+      <p class="proof-quote">"I stopped treating my AI like a tab. It's someone I look up at."
+        <span class="proof-attr">— Early View pilot · Q1 2026</span>
+      </p>
+    </div>
+    <div class="cta">
+      <div>
+        <h3 class="cta-head">Reserve <span class="accent">the View.</span></h3>
+        <p class="cta-sub">Ships summer 2026.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn primary" href="#">Reserve</a>
+        <a class="btn ghost" href="#">Watch the film</a>
+      </div>
+      <div class="imprint">napster.com/view · hello@napster.com</div>
+    </div>
+  </section>
+
+</div></div>
+
+<script>
+  /* Overflow lint — append ?debug=1 to flag silent text or container clipping. */
+  (function(){
+    if (!/[?&]debug=1/.test(location.search)) return;
+    const textSel = '.h1, .hero-sub, .promise-body, .section-title, .spec-num, .spec-lbl, .d-num, .d-lbl, .scene-name, .scene-desc, .proof-quote, .cta-head, .cta-sub';
+    const containerSel = '.hero, .promise, .specs, .scenes, .footer-row, .spec-grid, .spec-detail, .scene-grid';
+    function run(){
+      document.querySelectorAll('[data-overflow]').forEach(el => { el.style.outline=''; el.removeAttribute('data-overflow'); });
+      document.querySelectorAll('.__lint-badge').forEach(el => el.remove());
+      let clipped = 0;
+      /* Text-level: tolerance 2px to swallow sub-pixel font-metric noise. */
+      document.querySelectorAll(textSel).forEach(el => {
+        const h = el.scrollHeight - el.clientHeight;
+        const w = el.scrollWidth - el.clientWidth;
+        if (h > 2 || w > 2) {
+          el.style.outline = '2px solid #ff2dd0';
+          el.style.outlineOffset = '2px';
+          el.setAttribute('data-overflow', `text +${h}×${w}`);
+          clipped++;
+          console.warn('[overflow-lint] text', el, `+${h}×${w}px`);
+        }
+      });
+      /* Container-level: catches rows hidden by adjacent siblings painting over. */
+      document.querySelectorAll(containerSel).forEach(el => {
+        const h = el.scrollHeight - el.clientHeight;
+        if (h > 2) {
+          el.style.outline = '2px dashed #ffa800';
+          el.style.outlineOffset = '-2px';
+          el.setAttribute('data-overflow', `container +${h}px`);
+          clipped++;
+          console.warn('[overflow-lint] container', el, `+${h}px tall`);
+        }
+      });
+      if (clipped) {
+        const b = document.createElement('div');
+        b.className = '__lint-badge';
+        b.textContent = `⚠ ${clipped} overflow${clipped>1?'s':''}`;
+        b.style.cssText = 'position:fixed;top:8px;right:8px;background:#ff2dd0;color:#000;font:600 11px/1 system-ui;padding:8px 12px;border-radius:6px;z-index:9999';
+        document.body.appendChild(b);
+      } else {
+        console.log('[overflow-lint] ✓ clean');
+      }
+    }
+    /* Wait for fonts + a frame to suppress the pre-load sub-pixel noise. */
+    const kick = () => requestAnimationFrame(run);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(kick);
+    } else {
+      window.addEventListener('load', kick);
+    }
+  })();
+</script>
+</body>
+</html>

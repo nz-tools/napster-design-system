@@ -1,0 +1,130 @@
+{
+  "slug": "napster-station",
+  "url": "https://napster.com/station",
+  "fetchedAt": "2026-04-17",
+  "title": "Napster Station",
+  "pageTitle": "Napster Station | AI Browser for the Physical World",
+  "hero": {
+    "eyebrow": "HI-FI MEETS AI",
+    "headline": "Meet Napster Station.",
+    "cta": { "label": "Book a Demo", "url": "https://napster.com/contact" },
+    "imageDesktop": "https://cdn.prod.website-files.com/69ae6251111a514c4038172a/69d4f170e310779c45446d67_station-bg-hero-desktop.avif",
+    "imageMobile": "https://cdn.prod.website-files.com/69ae6251111a514c4038172a/69d4f170a815e9438b89f407_station-bg-hero-mobile.avif"
+  },
+  "sections": [
+    {
+      "id": "real-world-impact",
+      "label": "Real-World Impact",
+      "headline": "Just say what you need.",
+      "body": "Watch how natural conversation replaces complex interfaces across every industry.",
+      "stat": { "value": "81%", "label": "FASTER SERVICE", "sub": "Save 2.8 min per interaction", "before": "3-4m Traditional", "after": "40s Napster Station" },
+      "image": "https://cdn.prod.website-files.com/69ae6251111a514c4038172a/69de2f1298f17ed66fa6f1fd_STATION-EXPORT-Real%20world%20impact.avif"
+    },
+    {
+      "id": "measurable-impact",
+      "label": "MEASURABLE IMPACT",
+      "headline": "Up to 40% shorter queue times.",
+      "body": "Voice-enabled interactions transform minutes into seconds, saving time for customers and reducing operational costs.",
+      "metrics": [
+        { "vertical": "Food Ordering", "faster": "83%", "before": "3-5 min", "after": "30 sec" },
+        { "vertical": "Flight Rebooking", "faster": "80%", "before": "5+ min", "after": "<1 min" },
+        { "vertical": "Appointments", "faster": "95%", "before": "5+ min", "after": "5 seconds" },
+        { "vertical": "Ticket Purchase", "faster": "75%", "before": "3-4 min", "after": "45 sec" }
+      ],
+      "image": "https://cdn.prod.website-files.com/69ae6251111a514c4038172a/69d8a4bd623383aaa6a8b309_measurable_impact_exp.avif",
+      "footnote": "Performance metrics are based on internal testing and simulated deployment scenarios. Actual results may vary depending on implementation, environment, and use case."
+    },
+    {
+      "id": "film",
+      "label": "Napster Station",
+      "headline": "Watch the film.",
+      "body": "See Napster Station in action. The future of AI-powered kiosks.",
+      "duration": "1:15",
+      "image": "https://cdn.prod.website-files.com/69ae6251111a514c4038172a/69d8875b43ce7d7ddbd8d150_station_videoframe_1181.avif"
+    },
+    {
+      "id": "built-different",
+      "label": "Built Different",
+      "headline": "Engineered for impossible spaces.",
+      "body": "Where ordinary voice assistants fail, Napster Station thrives.",
+      "features": [
+        {
+          "title": "Premium Design",
+          "desc": "Craftsmanship that belongs in your space. Walnut. Aluminum. Zero plastic.",
+          "image": "https://cdn.prod.website-files.com/69ae6251111a514c4038172a/69cb89f6f4577a018fa35ae6_nbd-grid-01.avif"
+        },
+        {
+          "title": "Multimodal Sensing",
+          "desc": "Vision and audio create context-aware responses.",
+          "image": "https://cdn.prod.website-files.com/69ae6251111a514c4038172a/69cb89f5fcb1292c2afeee48_nbd-grid-03.avif"
+        },
+        {
+          "title": "VoiceField™ Array",
+          "desc": "Isolates your voice in chaotic, high-decibel environments.",
+          "image": "https://cdn.prod.website-files.com/69ae6251111a514c4038172a/69cb89f63a0684d40704b157_nbd-grid-04.avif"
+        },
+        {
+          "title": "Audiophile-grade Sound",
+          "desc": "Studio-grade 7-driver system with dedicated bass, delivering 280W of room-filling sound.",
+          "image": "https://cdn.prod.website-files.com/69ae6251111a514c4038172a/69cb89f5d90ea973ce92b8ed_nbd-grid-05.avif"
+        }
+      ]
+    },
+    {
+      "id": "deploy-anywhere",
+      "label": "Deploy Anywhere",
+      "headline": "Designed for every space.",
+      "body": "Premium walnut and aluminum construction elevates any environment.",
+      "environments": [
+        {
+          "name": "Country Clubs",
+          "image": "https://cdn.prod.website-files.com/69ae6251111a514c4038172a/69b7fedb04276424c0a1f73d_deploy-mockup-1.avif"
+        },
+        {
+          "name": "Hotels & Resorts",
+          "image": "https://cdn.prod.website-files.com/69ae6251111a514c4038172a/69b7fedb10d4e2727aba5518_deploy-mockup-3.avif"
+        },
+        {
+          "name": "Shops & Businesses",
+          "image": "https://cdn.prod.website-files.com/69ae6251111a514c4038172a/69b7fedbed8a0a3aa48b1fdb_deploy-mockup-2.avif"
+        }
+      ]
+    },
+    {
+      "id": "first-contact",
+      "label": "FIRST CONTACT",
+      "headline": "The greeting.",
+      "body": "Napster Station creates the most humanlike interaction in any environment.",
+      "steps": [
+        { "n": 1, "title": "Detects Presence", "desc": "Station Sight recognizes someone approaching from up to 3 meters away." },
+        { "n": 2, "title": "Reads Intent", "desc": "Distinguishes between someone walking by and someone stepping up to engage." },
+        { "n": 3, "title": "Initiates Contact", "desc": "Delivers a warm, natural greeting that feels genuinely welcoming." }
+      ],
+      "image": "https://cdn.prod.website-files.com/69ae6251111a514c4038172a/69c5300ddcc090ebf8039189_station-fc-the-greeting.avif"
+    },
+    {
+      "id": "voicefield",
+      "label": "Vision Capability",
+      "headline": "Station VoiceField™.",
+      "body": "VoiceField™ creates the most human-like interaction capabilities in self-service technology.",
+      "steps": [
+        { "n": 1, "title": "Natural Conversations", "desc": "Voice interactions feel natural and intuitive, adapting tone and pace based on visual cues about the user's state." },
+        { "n": 2, "title": "Contextual Awareness", "desc": "The system understands not just what you say, but how you look while saying it — reading hesitation, confusion, or confidence." },
+        { "n": 3, "title": "Seamless Adaptation", "desc": "Real-time adjustments to interface, language, and interaction style create truly personalized experiences for every visitor." }
+      ],
+      "image": "https://cdn.prod.website-files.com/69ae6251111a514c4038172a/69c5300de13a6a6677733963_station-fc-voicefield.avif"
+    }
+  ],
+  "cta": {
+    "headline": "Ready to transform your customer experience?",
+    "body": "Deploy the world's first AI-native concierge kiosk. Schedule a demonstration today.",
+    "action": { "label": "Contact Sales", "url": "https://napster.com/contact" },
+    "image": "https://cdn.prod.website-files.com/69ae6251111a514c4038172a/69b9007f319b5c3d5cc62199_station-cta-img.avif"
+  },
+  "trustedBy": {
+    "note": "Row of customer logos on the live site",
+    "logos": [
+      "https://cdn.prod.website-files.com/69ae6251111a514c4038172a/69e5e584a521d142dbe6e6f8_Lenovo-new.svg"
+    ]
+  }
+}

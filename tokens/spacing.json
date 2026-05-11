@@ -1,0 +1,75 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "source": "napster.com live audit (April 2026) + AKEO Brand Definition Proposal",
+  "spacing": {
+    "0":  { "$value": "0",     "$type": "dimension" },
+    "1":  { "$value": "4px",   "$type": "dimension" },
+    "2":  { "$value": "8px",   "$type": "dimension" },
+    "3":  { "$value": "12px",  "$type": "dimension" },
+    "4":  { "$value": "16px",  "$type": "dimension" },
+    "5":  { "$value": "20px",  "$type": "dimension" },
+    "6":  { "$value": "24px",  "$type": "dimension" },
+    "8":  { "$value": "32px",  "$type": "dimension" },
+    "10": { "$value": "40px",  "$type": "dimension" },
+    "12": { "$value": "48px",  "$type": "dimension" },
+    "16": { "$value": "64px",  "$type": "dimension" },
+    "20": { "$value": "80px",  "$type": "dimension" },
+    "24": { "$value": "96px",  "$type": "dimension" },
+    "32": { "$value": "128px", "$type": "dimension", "$description": "Largest gutter — section breaks in long-form documents" }
+  },
+  "radius": {
+    "xs":   { "$value": "4px",    "$type": "dimension" },
+    "sm":   { "$value": "6px",    "$type": "dimension" },
+    "md":   { "$value": "10px",   "$type": "dimension", "$description": "⭐ Buttons and most UI (live-verified, 22 uses on napster.com)" },
+    "lg":   { "$value": "16px",   "$type": "dimension", "$description": "⭐ Cards (live-verified, 15 uses)" },
+    "xl":   { "$value": "24px",   "$type": "dimension", "$description": "Large cards, modals" },
+    "2xl":  { "$value": "48px",   "$type": "dimension", "$description": "Hero panels, film frames" },
+    "pill": { "$value": "9999px", "$type": "dimension", "$description": "Chips, tags, hero CTA variant" },
+    "full": { "$value": "9999px", "$type": "dimension", "$description": "Avatars, the n-mark" }
+  },
+  "component": {
+    "button": {
+      "padding":       { "$value": "18.5px 20px", "$type": "dimension", "$description": "Live primary/secondary button padding" },
+      "borderRadius":  { "$value": "10px",        "$type": "dimension" }
+    },
+    "button-pill": {
+      "padding":       { "$value": "14px 20px",   "$type": "dimension", "$description": "Hero CTA variant" },
+      "borderRadius":  { "$value": "9999px",      "$type": "dimension" }
+    },
+    "panel": {
+      "borderRadius":  { "$value": "16px", "$type": "dimension" },
+      "padding":       { "$value": "24px", "$type": "dimension" }
+    },
+    "card": {
+      "borderRadius":  { "$value": "16px", "$type": "dimension" },
+      "padding":       { "$value": "24px", "$type": "dimension" }
+    },
+    "card-large": {
+      "borderRadius":  { "$value": "24px", "$type": "dimension" },
+      "padding":       { "$value": "32px", "$type": "dimension" }
+    },
+    "card-hero": {
+      "borderRadius":  { "$value": "48px", "$type": "dimension" },
+      "padding":       { "$value": "40px", "$type": "dimension" }
+    }
+  },
+  "breakpoint": {
+    "mobile":  { "$value": "360px",  "$type": "dimension" },
+    "tablet":  { "$value": "768px",  "$type": "dimension" },
+    "desktop": { "$value": "1440px", "$type": "dimension" }
+  },
+  "slide": {
+    "widescreen": {
+      "width":  { "$value": "10in",    "$type": "dimension" },
+      "height": { "$value": "5.625in", "$type": "dimension" }
+    },
+    "wide": {
+      "width":  { "$value": "13.33in", "$type": "dimension" },
+      "height": { "$value": "7.5in",   "$type": "dimension" }
+    },
+    "margin-left":    { "$value": "0.3in", "$type": "dimension" },
+    "header-top":     { "$value": "0.3in", "$type": "dimension" },
+    "text-padding":   { "$value": "0.1in", "$type": "dimension" },
+    "corner-radius":  { "$value": "0.1in", "$type": "dimension" }
+  }
+}

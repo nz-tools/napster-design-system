@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Napster Station — One-Pager</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="_base.css">
+<style>
+  /* Body: stack the two pages vertically without forcing 100vh centering,
+     which produced large dead space above and below on tall viewports. */
+  html, body { margin: 0; background: #1a1a1a; }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 0;
+    padding: 24px 24px;
+    gap: 24px;
+    box-sizing: border-box;
+  }
+  .stage { width: 816px; height: 1056px; transform-origin: top center; }
+  @media (max-width: 900px) {
+    .stage { transform: scale(calc((100vw - 48px) / 816)); height: calc((100vw - 48px) * 1056 / 816); }
+    body { padding: 16px; gap: 16px; }
+  }
+  @media print {
+    body { background: #000; padding: 0; gap: 0; display: block; }
+    .stage { transform: none !important; height: 1056px; }
+  }
+
+  /* Override the flexible _base sheet with a locked 2-page layout matching napster-view.html */
+  .sheet {
+    width: 816px;
+    height: 1056px;
+    min-height: 1056px;
+    overflow: hidden;
+    display: grid;
+  }
+  /* Page 1: hero · problem strip · metrics · workflow · verticals */
+  .sheet.page-1 { grid-template-rows: 336px 78px 108px 220px 314px; }
+  /* Page 2: hero · hardware · why · pricing · security · footer */
+  .sheet.page-2 { grid-template-rows: 208px 272px 206px 150px 46px 174px; }
+
+  /* Station hero has a desaturated, cinematic lobby/stadium feel */
+  .station-hero .hero-img {
+    background-image: url('../assets/product/napster-station.jpg');
+    background-position: right center;
+    background-size: cover;
+  }
+  .station-hero .hero-img::after {
+    background:
+      radial-gradient(100% 100% at 0% 50%, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.15) 75%, transparent 100%),
+      linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.4) 65%, rgba(0,0,0,0.72) 100%);
+  }
+  .station-hero .hero-inner {
+    padding: 28px 48px 28px;
+    min-height: 336px;
+  }
+  .station-hero .hero-copy { max-width: 440px; }
+  .station-hero .h1 { font-size: 44px; line-height: 1.04; }
+  .station-hero .hero-sub { font-size: 13px; max-width: 420px; }
+
+  /* Problem strip — tight, one-liner band */
+  .problem-strip {
+    padding: 14px 48px;
+    background: #050505;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 28px;
+    align-items: center;
+  }
+  .problem-label {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+  .problem-body {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.4;
+    color: rgba(255,255,255,0.9);
+    letter-spacing: -0.015em;
+    text-wrap: pretty;
+  }
+  .problem-body strong { color: #fff; font-weight: 600; }
+
+  /* Compact metric bar — fits in 108px row */
+  .station-metrics {
+    margin: 14px 48px;
+    padding: 0;
+  }
+  .station-metrics .metric { padding: 14px 16px; }
+  .station-metrics .metric-value { font-size: 22px; }
+  .station-metrics .metric-label { font-size: 9.5px; margin-top: 4px; line-height: 1.3; }
+
+  /* Workflow — keep 4-col but with imagery strip */
+  .station-workflow {
+    padding: 18px 48px 12px;
+  }
+  .station-workflow .workflow { gap: 10px; }
+  .station-workflow .workflow-step {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .workflow-img {
+    height: 84px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .workflow-img::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.75) 100%);
+  }
+  .workflow-body {
+    padding: 12px 14px 14px;
+    flex: 1;
+  }
+
+  /* Verticals section with image thumbnails */
+  .station-verticals {
+    padding: 18px 48px 24px;
+    display: grid;
+    grid-template-columns: 1fr 228px;
+    gap: 24px;
+    align-items: start;
+  }
+  .station-verticals .section-label { margin-bottom: 10px; }
+  .station-verticals .verticals { font-size: 10.5px; }
+  .station-verticals .verticals td { padding: 7px 12px 7px 0; }
+  .station-verticals .verticals td:first-child { font-size: 11.5px; width: 160px; }
+  .station-verticals .verticals th { font-size: 9px; padding-bottom: 6px; }
+
+  .context-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .context-img {
+    width: 100%;
+    height: 72px;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--r-md);
+    border: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+  }
+  .context-img::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.75) 100%);
+  }
+  .context-img .caption {
+    position: absolute;
+    bottom: 7px; left: 10px;
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+    z-index: 2;
+  }
+
+  /* ═══════════ PAGE 2 ═══════════ */
+
+  /* Page 2 hero — shorter continuation band with device close-up */
+  .station-hero-p2 {
+    position: relative;
+    overflow: hidden;
+  }
+  .station-hero-p2 .hero-bg-img {
+    position: absolute; inset: 0;
+    background: url('../assets/product/napster-station.jpg') center 35%/cover;
+    transform: scaleX(-1);
+  }
+  .station-hero-p2 .hero-bg-img::after {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(120% 100% at 100% 50%, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.1) 85%, transparent 100%),
+      linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.85) 100%);
+  }
+  .station-hero-p2 .hero-inner {
+    padding: 22px 48px 20px;
+    min-height: 208px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  .station-hero-p2 .hero-copy { max-width: 440px; }
+  .station-hero-p2 .h1 { font-size: 38px; }
+  .station-hero-p2 .hero-sub { font-size: 12.5px; max-width: 400px; }
+
+  /* Hardware grid with images */
+  .station-hw {
+    padding: 20px 48px 16px;
+  }
+  .station-hw .hw-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .station-hw .hw-item {
+    padding: 0;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 98px 1fr;
+  }
+  .station-hw .hw-item.featured { grid-template-columns: 98px 1fr; }
+  .hw-thumb {
+    background-size: cover;
+    background-position: center;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+  }
+  .hw-thumb::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, transparent 50%, rgba(0,0,0,0.4) 100%);
+  }
+  .hw-body {
+    padding: 14px 16px;
+  }
+  .station-hw .hw-title { font-size: 12.5px; margin-bottom: 4px; }
+  .station-hw .hw-desc { font-size: 10.5px; line-height: 1.4; }
+
+  /* Reason section — keep generic */
+  .station-reasons { padding: 18px 48px 14px; }
+  .station-reasons .reason-grid { gap: 14px 32px; }
+  .station-reasons .reason-title { font-size: 12.5px; }
+  .station-reasons .reason-desc { font-size: 11px; line-height: 1.45; }
+
+  /* Pricing — compact */
+  .station-pricing {
+    padding: 14px 48px 8px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    align-items: end;
+  }
+  .station-pricing .pricing-row { margin: 0; }
+  .station-pricing .pricing-note {
+    font-size: 10px;
+    text-align: right;
+    margin: 0;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.04em;
+  }
+  .station-pricing .pricing-item { padding: 11px 14px; }
+  .station-pricing .pricing-value { font-size: 18px; }
+  .station-pricing .pricing-unit { font-size: 11px; }
+  .station-pricing .pricing-label { font-size: 8.5px; margin-bottom: 4px; }
+
+  /* Security + footer overrides for page 2 */
+  .station-footer {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    background: #000;
+  }
+  .station-footer .footer-left,
+  .station-footer .footer-cta { padding: 18px 40px 18px 48px; }
+  .station-footer .footer-cta { padding: 18px 48px 18px 40px; }
+  .station-footer .footer-tagline { font-size: 16px; line-height: 1.2; margin-bottom: 10px; }
+  .station-footer .cta-head { font-size: 22px; }
+  .station-footer .cta-sub { font-size: 10.5px; }
+  .station-footer .cta-actions { margin-top: 10px; }
+  .station-footer .contact-line { font-size: 10.5px; line-height: 1.6; }
+  .security-bar.inline {
+    margin: 6px 48px 6px;
+    padding: 7px 14px;
+    font-size: 9px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ PAGE 1 ═══════════════════ -->
+<div class="stage"><div class="sheet page-1">
+
+  <section class="hero station-hero">
+    <div class="hero-img"></div>
+    <div class="hero-inner">
+      <div class="hero-head">
+        <div class="logo"><a class="logo-svg" href="../index.html" aria-label="Napster home"><img src="../assets/logos/horizontal/horizontal-white.svg" alt="Napster"></a></div>
+        <div>
+          <span class="meta-chip azure">Azure Marketplace</span>
+          <span class="meta-chip">MACC Eligible</span>
+        </div>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Napster Station</p>
+        <h1 class="h1">AI service.<br>In the <span class="accent">real world.</span></h1>
+        <p class="hero-sub">A voice-first AI kiosk built for noisy, high-traffic spaces — where ordinary assistants break down and customers still expect instant, personal service.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="problem-strip">
+    <div class="problem-label">The problem</div>
+    <div class="problem-body">
+      Physical spaces are loud, understaffed, and full of people who need help now. Traditional kiosks bury customers in menus. Voice assistants collapse in ambient noise. <strong>Customers still expect instant, personal service.</strong>
+    </div>
+  </section>
+
+  <div class="metric-bar station-metrics">
+    <div class="metric">
+      <div class="metric-value">15<span style="font-size:13px;font-weight:500;color:rgba(255,255,255,0.55);">s</span></div>
+      <div class="metric-label">Tasks completed vs. 15 clicks on touchscreen kiosks</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">24/7</div>
+      <div class="metric-label">Availability — no shifts, breaks, or turnover</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">100+</div>
+      <div class="metric-label">Languages — no hiring, no flag menus</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value"><span class="accent">$5</span><span style="font-size:12px;font-weight:500;color:rgba(255,255,255,0.55);">/hr</span></div>
+      <div class="metric-label">To operate, vs. $25+/hr staffed service</div>
+    </div>
+  </div>
+
+  <section class="section station-workflow" style="padding-top: 8px;">
+    <div class="section-label">How it works</div>
+    <div class="workflow">
+      <div class="workflow-step">
+        <div class="workflow-img" style="background-image:url('../ui_kits/napster-com/assets/library/lifestyle-peeps-crew.avif')"></div>
+        <div class="workflow-body">
+          <div class="workflow-num">01 · Detect & greet</div>
+          <div class="workflow-title">See the customer arrive.</div>
+          <div class="workflow-desc">Station Sight detects presence at 10 ft. VoiceField™ isolates the speaker from ambient noise.</div>
+        </div>
+      </div>
+      <div class="workflow-step">
+        <div class="workflow-img" style="background-image:url('../ui_kits/napster-com/assets/library/view-back.avif')"></div>
+        <div class="workflow-body">
+          <div class="workflow-num">02 · Understand & act</div>
+          <div class="workflow-title">Drive the browser.</div>
+          <div class="workflow-desc">The agent controls the 30″ touchscreen — navigating, clicking, completing tasks live.</div>
+        </div>
+      </div>
+      <div class="workflow-step">
+        <div class="workflow-img" style="background-image:url('../ui_kits/napster-com/assets/library/mac-talk-any.avif')"></div>
+        <div class="workflow-body">
+          <div class="workflow-num">03 · Adapt in real time</div>
+          <div class="workflow-title">Change course, live.</div>
+          <div class="workflow-desc">Change your mind, switch language, add a request. The agent adapts instantly.</div>
+        </div>
+      </div>
+      <div class="workflow-step">
+        <div class="workflow-img" style="background-image:url('../ui_kits/napster-com/assets/library/mac-checkin-jane.avif')"></div>
+        <div class="workflow-body">
+          <div class="workflow-num">04 · Close or escalate</div>
+          <div class="workflow-title">Hand off cleanly.</div>
+          <div class="workflow-desc">Transactions close on-screen. Complex cases escalate to a live agent with full context.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section station-verticals">
+    <div>
+      <div class="section-label">Where it deploys</div>
+      <table class="verticals">
+        <thead><tr><th>Industry</th><th>Example use cases</th></tr></thead>
+        <tbody>
+          <tr><td>Hotels & hospitality</td><td>Local recommendations, amenities, check-in, upgrades</td></tr>
+          <tr><td>Airports & transit</td><td>Wayfinding, gate changes, lounge access</td></tr>
+          <tr><td>Retail & malls</td><td>Product discovery, store locator, loyalty enrollment</td></tr>
+          <tr><td>Healthcare</td><td>Department navigation, FAQs, visitor check-in</td></tr>
+          <tr><td>Events & venues</td><td>Schedule lookup, exhibitor info, activations</td></tr>
+          <tr><td>Corporate & co-working</td><td>Visitor management, room booking, facility requests</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="context-stack">
+      <div class="context-img" style="background-image:url('../ui_kits/napster-com/assets/library/lifestyle-girl-desk.avif')">
+        <span class="caption">Lobbies</span>
+      </div>
+      <div class="context-img" style="background-image:url('../ui_kits/napster-com/assets/library/hero-consumer-mobile.avif')">
+        <span class="caption">Retail</span>
+      </div>
+      <div class="context-img" style="background-image:url('../ui_kits/napster-com/assets/library/view-lifestyle-holographic.avif')">
+        <span class="caption">Terminals</span>
+      </div>
+    </div>
+  </section>
+
+</div></div>
+
+<!-- ═══════════════════ PAGE 2 ═══════════════════ -->
+<div class="stage"><div class="sheet page-2">
+
+  <section class="hero station-hero-p2">
+    <div class="hero-bg-img"></div>
+    <div class="hero-inner">
+      <div class="hero-head">
+        <div class="logo"><a class="logo-svg" href="../index.html" aria-label="Napster home"><img src="../assets/logos/horizontal/horizontal-white.svg" alt="Napster"></a></div>
+        <div>
+          <span class="meta-chip azure">Azure Marketplace</span>
+          <span class="meta-chip">MACC Eligible</span>
+        </div>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Napster Station · continued</p>
+        <h1 class="h1">Service that <span class="accent">scales.</span></h1>
+        <p class="hero-sub">AI that people approach, not avoid. Purpose-built hardware. Configured once, deployed everywhere.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section station-hw">
+    <div class="section-label">Purpose-built hardware</div>
+    <div class="hw-grid">
+      <div class="hw-item featured">
+        <div class="hw-thumb" style="background-image:url('../ui_kits/napster-com/assets/library/view-spec-display.avif')"></div>
+        <div class="hw-body">
+          <div class="hw-title">VoiceField™ microphone array</div>
+          <div class="hw-desc">Proprietary near-field array that prioritises the speaker's voice in food courts, lobbies, and retail floors. Validated at 85 dB+ ambient noise.</div>
+        </div>
+      </div>
+      <div class="hw-item">
+        <div class="hw-thumb" style="background-image:url('../ui_kits/napster-com/assets/library/view-spec-m1.avif')"></div>
+        <div class="hw-body">
+          <div class="hw-title">Station Sight</div>
+          <div class="hw-desc">48 MP camera, 120° FOV. Detects presence, attention, and body language. Processed on-device, fully anonymised.</div>
+        </div>
+      </div>
+      <div class="hw-item">
+        <div class="hw-thumb" style="background-image:url('../ui_kits/napster-com/assets/library/view-hardware.avif')"></div>
+        <div class="hw-body">
+          <div class="hw-title">30″ OLED + holographic AI</div>
+          <div class="hw-desc">A transparent 3D holographic display brings the AI to life. The 30″ touchscreen handles navigation, checkout, and secure payment.</div>
+        </div>
+      </div>
+      <div class="hw-item">
+        <div class="hw-thumb" style="background-image:url('../ui_kits/napster-com/assets/library/view-spec-usbc.avif')"></div>
+        <div class="hw-body">
+          <div class="hw-title">Walnut. Aluminium. Zero plastic.</div>
+          <div class="hw-desc">Purpose-built for public spaces, not repurposed consumer hardware. Mac mini M4 compute. Belongs next to a concierge desk.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section station-reasons">
+    <div class="section-label">Why it matters</div>
+    <div class="reason-grid">
+      <div>
+        <div class="reason-title">Always on, multilingual by default</div>
+        <div class="reason-desc">24/7 service in any language, without staffing constraints, shift changes, or hiring language-specific teams.</div>
+      </div>
+      <div>
+        <div class="reason-title">Build once, deploy everywhere</div>
+        <div class="reason-desc">Configure your agent in Napster Spaces, then push it to every Station across every property.</div>
+      </div>
+      <div>
+        <div class="reason-title">Persistent memory across channels</div>
+        <div class="reason-desc">A customer who chats with your web agent, then walks up to a Station, picks up right where they left off.</div>
+      </div>
+      <div>
+        <div class="reason-title">Enterprise-ready</div>
+        <div class="reason-desc">Connects to your APIs, CMS, booking systems, and knowledge base. Deploys securely on Azure. MACC eligible.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="station-pricing">
+    <div>
+      <div class="section-label" style="margin-bottom:8px;">Pricing</div>
+      <div class="pricing-row">
+        <div class="pricing-item">
+          <div class="pricing-label">Buy</div>
+          <div class="pricing-value">$30,000<span class="pricing-unit">/unit</span></div>
+        </div>
+        <div class="pricing-item">
+          <div class="pricing-label">Lease</div>
+          <div class="pricing-value">$1,699<span class="pricing-unit">/mo</span></div>
+        </div>
+        <div class="pricing-item">
+          <div class="pricing-label">AI consumption</div>
+          <div class="pricing-value">$5<span class="pricing-unit">/hour</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="pricing-note">Available on Azure Marketplace.<br>MACC eligible.</p>
+  </section>
+
+  <div class="security-bar inline">
+    <span class="security-label">Security & compliance</span>
+    <span class="security-items">GDPR · CCPA · SOC 2 Type II · SAML/OAuth SSO · AES at rest, TLS 1.2+ in transit</span>
+  </div>
+
+  <section class="station-footer">
+    <div class="footer-left">
+      <div class="footer-tagline">Finally, a kiosk <span class="accent">worth talking to.</span></div>
+      <div class="contact-line"><a href="https://napster.com/station">napster.com/station</a></div>
+      <div class="contact-line"><a href="mailto:partnerships@napster.com">partnerships@napster.com</a></div>
+    </div>
+    <div class="footer-cta">
+      <div>
+        <h3 class="cta-head">Schedule a <span class="accent">demo.</span></h3>
+        <p class="cta-sub">See Station in a real-world lobby, not a product video. 20 minutes, live.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn-sm primary" href="mailto:partnerships@napster.com?subject=Napster%20Station%20Demo">Request demo</a>
+        <a class="btn-sm ghost" href="https://napster.com/station">Learn more</a>
+      </div>
+    </div>
+  </section>
+
+</div></div>
+
+<script>
+  // Overflow lint. Add ?debug=1 to flag clipped text.
+  (function(){
+    if (!/[?&]debug=1/.test(location.search)) return;
+    const sel = '.h1,.hero-sub,.section-title,.prose,.metric-value,.metric-label,.workflow-title,.workflow-desc,.hw-title,.hw-desc,.reason-title,.reason-desc,.pricing-value,.cta-head,.cta-sub,.footer-tagline,.problem-body';
+    let n = 0;
+    document.querySelectorAll(sel).forEach(el => {
+      const oh = el.scrollHeight - el.clientHeight;
+      const ow = el.scrollWidth - el.clientWidth;
+      if (oh > 2 || ow > 2) { el.classList.add('overflow-clipped'); n++; console.warn('[lint]', el, '+'+oh+'h/+'+ow+'w'); }
+    });
+    if (n) {
+      const b = document.createElement('div');
+      b.textContent = '⚠ '+n+' clipped';
+      b.style.cssText = 'position:fixed;top:8px;right:8px;background:#EA2DD2;color:#000;font:600 11px/1 system-ui;padding:8px 12px;border-radius:6px;z-index:9999';
+      document.body.appendChild(b);
+    } else { console.log('[lint] ✓ clean'); }
+  })();
+</script>
+<script src="_launcher.js"></script>
+</body>
+</html>

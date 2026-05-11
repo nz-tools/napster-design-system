@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Napster — The Crew Platform (One-Pager)</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  /* Page: US Letter 8.5×11, scaled to fit viewport on screen, native size for print */
+  @page { size: letter portrait; margin: 0; }
+  html, body { margin: 0; background: #1a1a1a; }
+  body { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 24px; box-sizing: border-box; }
+  .stage { width: 816px; height: 1056px; transform-origin: center; }
+  @media (max-width: 900px) { .stage { transform: scale(calc((100vw - 48px) / 816)); } body { height: calc(100vw * 1056 / 816 + 48px); } }
+
+  .sheet {
+    width: 816px; height: 1056px;
+    background: #000;
+    color: #fff;
+    font-family: var(--font-body);
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 320px 94px 262px 220px 160px;
+  }
+  @media print { body { background: #000; padding: 0; } .stage { transform: none; } }
+
+  /* ─────────── HERO ─────────── */
+  .hero {
+    position: relative;
+    background: #000;
+    overflow: hidden;
+  }
+  .hero-img {
+    position: absolute; inset: 0;
+    background: url('../ui_kits/napster-com/assets/library/lifestyle-peeps-crew.avif') center 30%/cover no-repeat;
+  }
+  .hero-img::after {
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(120% 110% at 15% 50%, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.82) 60%, rgba(0,0,0,0.96) 100%),
+      linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.55) 60%, #000 100%);
+  }
+  .hero-inner {
+    position: relative; height: 100%;
+    padding: 28px 48px 34px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    box-sizing: border-box;
+  }
+  .hero-head { display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: baseline; gap: 10px; }
+  .logo-mark { font-family: var(--font-display); font-weight: 700; font-size: 24px; letter-spacing: -0.02em; color: #fff; }
+  .logo-mark::after { content: "."; color: var(--pink-bright); }
+  .meta-chip {
+    font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.6);
+    padding: 6px 10px;
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: var(--r-pill);
+  }
+  .hero-copy { max-width: 580px; }
+  .eyebrow-xs {
+    font-family: var(--font-body);
+    font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--pink);
+    margin: 0 0 12px;
+  }
+  .h1 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 1.04;
+    letter-spacing: -0.025em;
+    margin: 0;
+    color: #fff;
+    text-wrap: pretty;
+  }
+  .h1 .accent {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .hero-sub {
+    margin: 12px 0 0;
+    font-family: var(--font-body);
+    font-size: 13.5px;
+    line-height: 1.45;
+    color: rgba(255,255,255,0.72);
+    max-width: 460px;
+  }
+
+  /* ─────────── THESIS ROW ─────────── */
+  .thesis {
+    padding: 20px 48px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: #050505;
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+  .thesis-label {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--fg-subtle);
+  }
+  .thesis-body {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 1.35;
+    color: rgba(255,255,255,0.92);
+    letter-spacing: -0.015em;
+  }
+  .thesis-body strong { color: #fff; font-weight: 600; }
+
+  /* ─────────── CREW ─────────── */
+  .crew {
+    padding: 28px 48px 20px;
+    background: #000;
+  }
+  .section-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 18px; }
+  .section-title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: -0.02em;
+    margin: 0;
+    color: #fff;
+  }
+  .section-title .accent {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .section-sub { font-size: 11px; color: rgba(255,255,255,0.55); font-weight: 500; letter-spacing: 0.04em; }
+
+  .crew-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 12px;
+  }
+  .crew-card { text-align: center; }
+  .crew-avatar {
+    width: 100%; aspect-ratio: 1/1;
+    border-radius: var(--r-full);
+    background-size: cover; background-position: center;
+    border: 1.5px solid rgba(255,255,255,0.1);
+    box-shadow: inset 0 0 0 0.5px rgba(255,255,255,0.18);
+  }
+  .crew-name { font-family: var(--font-display); font-weight: 600; font-size: 12px; margin: 8px 0 2px; letter-spacing: -0.01em; }
+  .crew-role { font-size: 9.5px; color: rgba(255,255,255,0.5); font-weight: 500; line-height: 1.25; }
+
+  /* ─────────── SURFACES ─────────── */
+  .surfaces {
+    padding: 20px 48px 20px;
+    background: linear-gradient(180deg, #0a0308 0%, #000 100%);
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .surface-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .surface {
+    background: rgba(255,255,255,0.035);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--r-md);
+    padding: 14px 12px 12px;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1/1.25;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .surface.featured {
+    background: linear-gradient(180deg, rgba(234,45,210,0.16), rgba(234,45,210,0.03));
+    border-color: rgba(234,45,210,0.35);
+  }
+  .surface-icon {
+    width: 34px; height: 34px;
+    border-radius: var(--r-sm);
+    background: rgba(255,255,255,0.06);
+    display: grid; place-items: center;
+    font-family: var(--font-display); font-weight: 700; font-size: 14px;
+    color: rgba(255,255,255,0.85);
+  }
+  .surface.featured .surface-icon { background: var(--pink-deep); color: #fff; }
+  .surface-name {
+    font-family: var(--font-display); font-weight: 600; font-size: 12px;
+    color: #fff; margin: 0 0 2px; letter-spacing: -0.01em;
+  }
+  .surface-desc { font-size: 9.5px; color: rgba(255,255,255,0.55); line-height: 1.3; }
+
+  /* ─────────── PROOF + CTA ─────────── */
+  .footer-row {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    background: #000;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .proof {
+    padding: 22px 40px 22px 48px;
+    border-right: 1px solid rgba(255,255,255,0.06);
+  }
+  .proof-label {
+    font-family: var(--font-body);
+    font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--pink);
+    margin: 0 0 14px;
+  }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .proof-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 22px;
+    align-items: center;
+  }
+  .stat-num {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+    color: #fff;
+  }
+  .proof-quote {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.35;
+    letter-spacing: -0.015em;
+    color: rgba(255,255,255,0.88);
+    text-wrap: pretty;
+  }
+  .proof-attr {
+    display: block;
+    margin-top: 8px;
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+  }
+  .stat-num .accent {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+    .stat-lbl {
+    font-size: 10.5px; color: rgba(255,255,255,0.6);
+    margin-top: 10px; line-height: 1.4; font-weight: 500;
+    max-width: 180px;
+  }
+
+  .cta {
+    padding: 22px 48px 22px 40px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    background:
+      radial-gradient(120% 140% at 100% 100%, rgba(234,45,210,0.22), transparent 60%),
+      #000;
+  }
+  .cta-head {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin: 0 0 8px;
+  }
+  .cta-head .accent {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .cta-sub { font-size: 11px; color: rgba(255,255,255,0.65); line-height: 1.45; margin: 0; }
+  .cta-actions { display: flex; gap: 10px; margin-top: 14px; }
+  .btn {
+    font-family: var(--font-body);
+    font-size: 11px; font-weight: 600;
+    padding: 9px 16px;
+    border-radius: var(--r-pill);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    border: 1px solid transparent;
+  }
+  .btn.primary { background: var(--pink-deep); color: #fff; border-color: var(--pink-rim); }
+  .btn.ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,0.25); }
+
+  .imprint {
+    font-size: 10.5px; color: rgba(255,255,255,0.5);
+    letter-spacing: 0.1em; text-transform: uppercase;
+    margin-top: auto;
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+<div class="stage"><div class="sheet">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-img"></div>
+    <div class="hero-inner">
+      <div class="hero-head">
+        <div class="logo"><span class="logo-mark">Napster</span></div>
+        <span class="meta-chip">The Crew Platform · 2026</span>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow-xs">Meet your crew</p>
+        <h1 class="h1">Software just became <span class="accent">labor.</span></h1>
+        <p class="hero-sub">A crew of AI specialists you can see, talk to, and create with — everywhere work actually happens.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THESIS -->
+  <section class="thesis">
+    <div class="thesis-label">The shift</div>
+    <div class="thesis-body">
+      For forty years we used software. <strong>Now we work with it.</strong> Napster turns expertise into companions with memory, voice, and presence.
+    </div>
+  </section>
+
+  <!-- CREW -->
+  <section class="crew">
+    <header class="section-head">
+      <h2 class="section-title"><span class="accent">Your crew is already here.</span></h2>
+      <span class="section-sub">Specialists across every domain</span>
+    </header>
+    <div class="crew-grid">
+      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../ui_kits/napster-com/assets/library/companion-jane-chiefofstaff.avif')"></div><div class="crew-name">Jane</div><div class="crew-role">Chief of staff</div></div>
+      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../ui_kits/napster-com/assets/library/companion-kevin-finance.avif')"></div><div class="crew-name">Kevin</div><div class="crew-role">Finance guide</div></div>
+      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../ui_kits/napster-com/assets/library/companion-jordan-fitness.avif')"></div><div class="crew-name">Jordan</div><div class="crew-role">Fitness coach</div></div>
+      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../ui_kits/napster-com/assets/library/companion-elena-wellbeing.avif')"></div><div class="crew-name">Elena</div><div class="crew-role">Wellbeing</div></div>
+      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../ui_kits/napster-com/assets/library/companion-alyssa-career.avif')"></div><div class="crew-name">Alyssa</div><div class="crew-role">Career coach</div></div>
+      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../ui_kits/napster-com/assets/library/companion-richard-learning.avif')"></div><div class="crew-name">Richard</div><div class="crew-role">Learning</div></div>
+      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../ui_kits/napster-com/assets/library/companion-jc-code.avif')"></div><div class="crew-name">JC</div><div class="crew-role">Code wizard</div></div>
+      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../ui_kits/napster-com/assets/library/companion-may-creative.avif')"></div><div class="crew-name">May</div><div class="crew-role">Creative guru</div></div>
+    </div>
+  </section>
+
+  <!-- SURFACES -->
+  <section class="surfaces">
+    <header class="section-head">
+      <h2 class="section-title">One platform. <span class="accent">Seven doors.</span></h2>
+      <span class="section-sub">Same crew · same memory · every surface</span>
+    </header>
+    <div class="surface-grid">
+      <div class="surface featured"><div class="surface-icon">A</div><div><p class="surface-name">App</p><p class="surface-desc">iOS, Android, web</p></div></div>
+      <div class="surface"><div class="surface-icon">M</div><div><p class="surface-name">Mac</p><p class="surface-desc">Native desktop</p></div></div>
+      <div class="surface"><div class="surface-icon">V</div><div><p class="surface-name">View</p><p class="surface-desc">Holographic display</p></div></div>
+      <div class="surface"><div class="surface-icon">S</div><div><p class="surface-name">Station</p><p class="surface-desc">Always-on concierge</p></div></div>
+      <div class="surface"><div class="surface-icon">L</div><div><p class="surface-name">Learn</p><p class="surface-desc">Training &amp; coaching</p></div></div>
+      <div class="surface"><div class="surface-icon">W</div><div><p class="surface-name">Spaces</p><p class="surface-desc">Agents for websites</p></div></div>
+      <div class="surface"><div class="surface-icon">D</div><div><p class="surface-name">API</p><p class="surface-desc">For developers</p></div></div>
+    </div>
+  </section>
+
+  <!-- PROOF + CTA -->
+  <section class="footer-row">
+    <div class="proof">
+      <p class="proof-label">Why it lands</p>
+      <div class="proof-grid">
+        <div class="proof-stat">
+          <div class="stat-num"><span class="accent">$0.01</span></div>
+          <div class="stat-lbl">Per minute of lifelike video presence on the Napster API.</div>
+        </div>
+        <div class="proof-quote">
+          “Your next hire might not be a person. It might be a crew.”
+          <span class="proof-attr">— Napster team</span>
+        </div>
+      </div>
+    </div>
+    <div class="cta">
+      <div>
+        <h3 class="cta-head">Get your <span class="accent">crew.</span></h3>
+        <p class="cta-sub">Start free with the Napster app, or talk to us about deploying crew across your org.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn primary" href="#">Get started</a>
+        <a class="btn ghost" href="#">Talk to sales</a>
+      </div>
+      <div class="imprint">napster.com · hello@napster.com</div>
+    </div>
+  </section>
+
+</div></div>
+<script>
+  /* Overflow lint — only active with ?debug=1
+     Flags any text element whose scrollHeight exceeds its clientHeight,
+     which is the class of bug that shipped "THE SHIFT" past the verifier.
+     Reusable: drop this <script> into any one-pager/slide to catch silent
+     text clipping during template retuning. */
+  (function(){
+    if (!/[?&]debug=1/.test(location.search)) return;
+    const watch = document.querySelectorAll('.thesis-body, .hero-sub, .h1, .section-title, .crew-role, .surface-desc, .stat-lbl, .proof-quote, .cta-sub');
+    let clipped = 0;
+    watch.forEach(el => {
+      const overflowH = el.scrollHeight - el.clientHeight;
+      const overflowW = el.scrollWidth  - el.clientWidth;
+      if (overflowH > 2 || overflowW > 2) {
+        el.style.outline = '2px solid #ff2dd0';
+        el.style.outlineOffset = '2px';
+        el.setAttribute('data-overflow', `+${overflowH}px×${overflowW}px`);
+        clipped++;
+        console.warn('[overflow-lint] clipped:', el, `+${overflowH}px high, +${overflowW}px wide`);
+      }
+    });
+    if (clipped) {
+      const badge = document.createElement('div');
+      badge.textContent = `⚠  ${clipped} text block${clipped>1?'s':''} clipped`;
+      badge.style.cssText = 'position:fixed;top:8px;right:8px;background:#ff2dd0;color:#000;font:600 11px/1 system-ui;padding:8px 12px;border-radius:6px;z-index:9999;';
+      document.body.appendChild(badge);
+    } else {
+      console.log('[overflow-lint] ✓ no clipped text blocks');
+    }
+  })();
+</script>
+</body>
+</html>
