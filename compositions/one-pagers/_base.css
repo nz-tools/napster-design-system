@@ -5,7 +5,7 @@
    On screen: centred on a #1a1a1a matte, scaled-to-fit < 900px wide.
    On print: full-bleed black, one sheet per page.
 
-   Import after `../colors_and_type.css` so pink/Avantt tokens exist.
+   Import after `../../colors_and_type.css` so pink/Avantt tokens exist.
 
    Section kit (class-based — not every page uses every block):
 

@@ -40,7 +40,7 @@ function DigitalTwin() {
                 color: 'rgba(255,255,255,0.82)',
                 display: 'flex', gap: 12, alignItems: 'flex-start',
               }}>
-                <img src="../../assets/product/twin-icon.avif" alt="" style={{ width: 18, height: 18, marginTop: 3, opacity: 0.9, flexShrink: 0 }} />
+                <img src="../../imagery/scenes/twin/napster-twin-icon.avif" alt="" style={{ width: 18, height: 18, marginTop: 3, opacity: 0.9, flexShrink: 0 }} />
                 {t}
               </li>
             ))}
@@ -53,7 +53,7 @@ function DigitalTwin() {
         <div style={{
           position: 'relative', borderRadius: 20, overflow: 'hidden',
           aspectRatio: '16/10',
-          backgroundImage: `url(../../assets/product/digital-twin-poster.avif)`,
+          backgroundImage: `url(../../imagery/scenes/twin/napster-twin-poster.avif)`,
           backgroundSize: 'cover', backgroundPosition: 'center',
           boxShadow: '0 40px 120px rgba(0,0,0,0.6)',
           border: '1px solid rgba(255,255,255,0.08)',

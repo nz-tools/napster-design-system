@@ -8,50 +8,35 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* Avantt — "Napster Sans". Licensed from Displaay Type Foundry.
- *
- * Hosted via jsDelivr CDN (pinned to v1.0.5) so that any rendering
- * environment (Claude Design preview, generated HTML opened outside the
- * bundle, etc.) can resolve the font without local file access. Local
- * relative paths are listed as fallback so the CSS still works when
- * loaded directly from the bundle root.
- */
+/* Avantt — "Napster Sans". Licensed from Displaay Type Foundry. */
 @font-face {
   font-family: 'Avantt';
-  src: url('https://cdn.jsdelivr.net/gh/nz-tools/napster-design-system@v1.0.5/typography/fonts/Avantt-Medium.woff2') format('woff2'),
-       url('https://cdn.jsdelivr.net/gh/nz-tools/napster-design-system@v1.0.5/typography/fonts/Avantt-Medium.ttf') format('truetype'),
-       url('typography/fonts/Avantt-Medium.woff2') format('woff2'),
-       url('typography/fonts/Avantt-Medium.ttf') format('truetype');
+  src: url('typography/fonts/Avantt-Medium.ttf') format('truetype'),
+       url('typography/fonts/Avantt-Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Avantt';
-  src: url('https://cdn.jsdelivr.net/gh/nz-tools/napster-design-system@v1.0.5/typography/fonts/Avantt-SemiBold.woff2') format('woff2'),
-       url('https://cdn.jsdelivr.net/gh/nz-tools/napster-design-system@v1.0.5/typography/fonts/Avantt-SemiBold.ttf') format('truetype'),
-       url('typography/fonts/Avantt-SemiBold.woff2') format('woff2'),
-       url('typography/fonts/Avantt-SemiBold.ttf') format('truetype');
+  src: url('typography/fonts/Avantt-SemiBold.ttf') format('truetype'),
+       url('typography/fonts/Avantt-SemiBold.otf') format('opentype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Avantt';
-  src: url('https://cdn.jsdelivr.net/gh/nz-tools/napster-design-system@v1.0.5/typography/fonts/Avantt-Bold.woff2') format('woff2'),
-       url('https://cdn.jsdelivr.net/gh/nz-tools/napster-design-system@v1.0.5/typography/fonts/Avantt-Bold.ttf') format('truetype'),
-       url('typography/fonts/Avantt-Bold.woff2') format('woff2'),
-       url('typography/fonts/Avantt-Bold.ttf') format('truetype');
+  src: url('typography/fonts/Avantt-Bold.ttf') format('truetype'),
+       url('typography/fonts/Avantt-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Avantt';
-  src: url('https://cdn.jsdelivr.net/gh/nz-tools/napster-design-system@v1.0.5/typography/fonts/Avantt-ExtraBold.woff2') format('woff2'),
-       url('https://cdn.jsdelivr.net/gh/nz-tools/napster-design-system@v1.0.5/typography/fonts/Avantt-ExtraBold.ttf') format('truetype'),
-       url('typography/fonts/Avantt-ExtraBold.woff2') format('woff2'),
-       url('typography/fonts/Avantt-ExtraBold.ttf') format('truetype');
+  src: url('typography/fonts/Avantt-ExtraBold.ttf') format('truetype'),
+       url('typography/fonts/Avantt-ExtraBold.otf') format('opentype');
   font-weight: 800;
   font-style: normal;
   font-display: swap;

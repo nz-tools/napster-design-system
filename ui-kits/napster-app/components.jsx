@@ -2,14 +2,14 @@
 
 const Pink = "#BE369D", Pulse = "#EA2DD2", PulseLite = "#FF7DF3", Cream = "#FDE5D5";
 const personas = [
-  { name: "Kai",     role: "Learning",     img: "../../assets/persona-kai-mercer.png" },
-  { name: "Kevin",   role: "Finance",      img: "../../assets/persona-kevin-jones.png" },
-  { name: "Jordan",  role: "Fitness",      img: "../../assets/persona-jordan-carter.png" },
-  { name: "May",     role: "Lifestyle",    img: "../../assets/persona-may-li.png" },
-  { name: "JC",      role: "Productivity", img: "../../assets/persona-jc-mitchell.png" },
-  { name: "Ellena",  role: "Sport",        img: "../../assets/persona-ellena-garcia.png" },
-  { name: "Amit",    role: "Coding",       img: "../../assets/persona-amit-pillai.png" },
-  { name: "Alyssa",  role: "Wellness",     img: "../../assets/persona-alyssa-reynolds.png" },
+  { name: "Kai",     role: "Chief of Staff",     img: "../../imagery/people/portraits-thumb/napster-companion-kai-mercer-chiefofstaff.avif" },
+  { name: "Kevin",   role: "Finance",      img: "../../imagery/people/portraits-thumb/napster-companion-kevin-jones-finance.avif" },
+  { name: "Jordan",  role: "Fitness",      img: "../../imagery/people/portraits-thumb/napster-companion-jordan-carter-fitness.avif" },
+  { name: "May",     role: "Creative",    img: "../../imagery/people/portraits-thumb/napster-companion-may-li-creative.avif" },
+  { name: "JC",      role: "Code", img: "../../imagery/people/portraits-thumb/napster-companion-jc-mitchell-code.avif" },
+  { name: "Elena",   role: "Wellbeing",        img: "../../imagery/people/portraits-thumb/napster-companion-elena-garcia-wellbeing.avif" },
+  { name: "Amit",    role: "Tech Support",       img: "../../imagery/people/portraits-thumb/napster-companion-alyssa-reynolds-career.avif" },
+  { name: "Alyssa",  role: "Career",     img: "../../imagery/people/portraits-thumb/napster-companion-alyssa-reynolds-career.avif" },
 ];
 
 const Eyebrow = ({children, color=PulseLite}) => (
@@ -30,7 +30,7 @@ const PrimaryBtn = ({children, w}) => (
 window.Welcome = function Welcome() {
   return (
     <div style={{flex:1, position:"relative", display:"flex", flexDirection:"column", padding:"24px 24px 28px"}}>
-      <img src="../../assets/napster-icon.svg" style={{width:32,height:32,filter:"brightness(0) invert(1)",opacity:.85}}/>
+      <img src="../../logos/icon/napster-icon-white.svg" style={{width:32,height:32,filter:"brightness(0) invert(1)",opacity:.85}}/>
       <div style={{flex:1}}/>
       <div style={{position:"relative", marginBottom:16}}>
         <div style={{position:"absolute", left:"50%", top:-160, transform:"translateX(-50%)", width:240,height:240, borderRadius:"50%",
@@ -113,11 +113,11 @@ window.VoiceSession = function VoiceSession() {
         </div>
       </div>
       <div style={{padding:"24px",display:"flex",alignItems:"center",justifyContent:"center",gap:18}}>
-        <button style={iconBtn()}><img src="../../assets/icon-microphone.svg" style={ico()}/></button>
+        <button style={iconBtn()}><img src="../../icons/icon-microphone.svg" style={ico()}/></button>
         <button style={{...iconBtn(),width:64,height:64,background:"linear-gradient(135deg,#EA2DD2,#FF7DF3)",boxShadow:"0 0 40px rgba(234,45,210,.5)"}}>
           <div style={{width:18,height:18,borderRadius:4,background:"#fff"}}/>
         </button>
-        <button style={iconBtn()}><img src="../../assets/icon-message.svg" style={ico()}/></button>
+        <button style={iconBtn()}><img src="../../icons/icon-message.svg" style={ico()}/></button>
       </div>
     </div>
   );
@@ -138,7 +138,7 @@ window.Chat = function Chat() {
     <div style={{flex:1,display:"flex",flexDirection:"column"}}>
       <div style={{padding:"12px 18px",display:"flex",alignItems:"center",gap:10,borderBottom:"1px solid rgba(255,255,255,.06)"}}>
         <div style={{color:"rgba(255,255,255,.7)"}}>‹</div>
-        <div style={{width:32,height:32,borderRadius:"50%",overflow:"hidden",background:"#1A0918"}}><img src="../../assets/persona-kai-mercer.png" style={{width:"100%",height:"100%",objectFit:"cover"}}/></div>
+        <div style={{width:32,height:32,borderRadius:"50%",overflow:"hidden",background:"#1A0918"}}><img src="../../imagery/people/portraits-thumb/napster-companion-kai-mercer-chiefofstaff.avif" style={{width:"100%",height:"100%",objectFit:"cover"}}/></div>
         <div style={{flex:1}}>
           <div style={{fontFamily:"var(--font-display)",fontWeight:600,fontSize:14}}>Kai</div>
           <div style={{fontSize:10,color:PulseLite,letterSpacing:".1em",textTransform:"uppercase"}}>Learning · online</div>
@@ -155,7 +155,7 @@ window.Chat = function Chat() {
         <div style={{display:"flex",alignItems:"center",gap:10,background:"rgba(255,255,255,.06)",backdropFilter:"blur(12px)",border:"1px solid rgba(255,255,255,.12)",borderRadius:9999,padding:"10px 14px"}}>
           <div style={{flex:1,fontSize:13,color:"rgba(255,255,255,.5)"}}>Ask Mateo anything…</div>
           <div style={{width:32,height:32,borderRadius:"50%",background:"linear-gradient(135deg,#EA2DD2,#FF7DF3)",display:"flex",alignItems:"center",justifyContent:"center",boxShadow:"0 0 24px rgba(234,45,210,.45)"}}>
-            <img src="../../assets/icon-microphone.svg" style={{width:14,height:14,filter:"brightness(0) invert(1)"}}/>
+            <img src="../../icons/icon-microphone.svg" style={{width:14,height:14,filter:"brightness(0) invert(1)"}}/>
           </div>
         </div>
       </div>

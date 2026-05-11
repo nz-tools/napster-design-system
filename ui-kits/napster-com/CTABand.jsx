@@ -12,7 +12,7 @@ function CTABand() {
         borderRadius: 24,
         overflow: 'hidden',
         minHeight: 620,
-        backgroundImage: `url(../../assets/product/footer-cta.avif)`,
+        backgroundImage: `url(../../imagery/decorative/napster-footer-cta.avif)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}>
@@ -76,7 +76,7 @@ function Footer() {
       <div style={{ maxWidth: 1400, margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1.4fr repeat(4, 1fr)', gap: 48, marginBottom: 64 }}>
           <div>
-            <img src="../../assets/logos/horizontal/horizontal-white.svg" alt="Napster" style={{ height: 26, marginBottom: 28 }} />
+            <img src="../../logos/horizontal/napster-horizontal-white.svg" alt="Napster" style={{ height: 26, marginBottom: 28 }} />
             <p style={{
               fontFamily: 'var(--font-body)', fontSize: 14, lineHeight: 1.5,
               color: 'rgba(255,255,255,0.6)', margin: 0, maxWidth: 260,
