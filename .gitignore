@@ -11,3 +11,5 @@
 # OS / archives
 Thumbs.db
 *.zip
+!Avantt-for-Claude-Design.zip
+# (the Avantt font bundle is shipped with the repo for Claude Design users)
