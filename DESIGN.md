@@ -4,7 +4,7 @@ description: >
   The unified Napster design system. Dark cinematic identity, circular visual
   backbone, Napster Pink accent. Audience-facing: this is the system Claude Design
   uses to generate all Napster-branded artifacts.
-version: 1.0.0
+version: 1.0.4
 sources:
   - napster.com (live audit, April 2026 — the customer-facing truth)
   - AKEO Brand Definition Proposal (Mateo Reyes, 2026 — structural framework)
@@ -86,6 +86,39 @@ tokens:
     inner-glow:       "inset 0 1px 0 rgba(255,255,255,0.10), inset 0 0 0 1px rgba(255,255,255,0.06)"
     glow-pink:        "0 0 40px rgba(255,16,232,0.35)"
     glow-pulse:       "0 0 80px rgba(234,45,210,0.45)"
+  imagery:
+    warm-lifestyle:
+      description: Humans in real environments. Warm amber-to-magenta grade. Customer in the scene, never modeling.
+      role: User Value
+      paths:
+        - imagery/people/crew/*
+        - imagery/brand-life/*
+    atmospheric:
+      description: Abstract light, motion blur, purple atmospheric wash. The Beam gradient rides on top.
+      role: Brand Feeling
+      paths:
+        - imagery/scenes/twin/*
+        - imagery/decorative/*
+        - imagery/scenes/sessions/*
+    isolated-portraits:
+      description: Companion portraits, 3/4 framing, rim-lit, persona environment behind. Darken pass over dark canvas.
+      role: Companion Character
+      paths:
+        - imagery/people/portraits-hero/*
+        - imagery/people/portraits-thumb/*
+        - imagery/people/producers/*
+    product-on-black:
+      description: "Hardware shots, product UI captures, spec details. Background is pure #000000."
+      role: Product Clarity
+      paths:
+        - imagery/product/api/*
+        - imagery/product/app/*
+        - imagery/product/learn/*
+        - imagery/product/mac/*
+        - imagery/product/spaces/*
+        - imagery/product/station/*
+        - imagery/product/view/*
+        - imagery/scenes/usecases/*
   motion:
     duration-fast:    "120ms"
     duration-mid:     "160ms"
@@ -99,7 +132,7 @@ tokens:
 
 Napster is the AI companion platform. Where ordinary voice assistants fail, Napster Companions remember. A chatbot answers questions. A companion mentors.
 
-This document is the system. Eight sections plus three extensions. Every token resolves to the YAML above. The tone of the prose is the tone of the brand: declarative, unhedged, no marketing hedges, no emoji.
+This document is the system. Nine sections plus two extensions. Every token resolves to the YAML above. The tone of the prose is the tone of the brand: declarative, unhedged, no marketing hedges, no emoji.
 
 ---
 
@@ -334,7 +367,7 @@ Every section follows: **Eyebrow → Title → Subtitle → Body → Action.** S
 
 ### Composition rules
 
-- **Wordmark top-left** on every composition. Clearspace ≥ logo-height on all sides.
+- **Horizontal lockup top-left** on every composition. The lockup is `logos/horizontal/napster-horizontal-{black|white}.svg` — the wordmark and n-mark together. This is what we call "the logo" in everyday usage, and it is the default mark on virtually every surface. The standalone wordmark (`logos/wordmark/napster-wordmark.svg`) is included for completeness and used only in deep-brand contexts where the n-mark would feel redundant; treat it as the exception, not the default. Clearspace ≥ lockup-height on all sides.
 - **Pink lands on the load-bearing noun**, not verbs, not modifiers. One pink element per composition.
 - Generous whitespace. If a slide has wall-to-wall text, the voice is also broken.
 - Orbital compositions when content permits (user at center, companions surrounding).
@@ -489,7 +522,7 @@ Every section starts with an eyebrow: Inter 700 / 12px / uppercase / `-0.12px` t
 ### Do's
 
 1. **Start every section with an eyebrow.** Inter 700, 12px, uppercase, `#DD52CB`. Single line.
-2. **Put the wordmark top-left.** Clearspace ≥ logo-height on all sides.
+2. **Put the horizontal lockup top-left.** (`logos/horizontal/`). The lockup, not the bare wordmark, is the default mark. Clearspace ≥ lockup-height on all sides.
 3. **Use sentence case for headlines.** End hero lines with a period.
 4. **Name companions.** Full human names: Kai Mercer. Kevin Jones. Never "your AI" or "the assistant".
 5. **Be specific with numbers.** `$5/hour`, `under an hour`, `2 million`, `1.5MW`. Never `industry-leading`, never `at scale`.
@@ -500,7 +533,7 @@ Every section starts with an eyebrow: Inter 700 / 12px / uppercase / `-0.12px` t
 ### Don'ts
 
 1. **Use Napster Pink on the load-bearing noun only.** One pink element per composition. If pink occupies more than 5%, the composition is wrong.
-2. **Never set the wordmark below 24px wide.** Below that the cat ears disappear.
+2. **Never set the horizontal lockup below 24px wide.** Below that the n-mark's cat-headphone detail disappears. If you need a mark smaller than that, switch to the standalone n-mark (`logos/icon/`).
 3. **Backgrounds are pure `#000000`.** Not `#111`, not `#0a0a0a`, not gradient.
 4. **Default button radius is `10px`.** Pill shape is reserved for chips, tags, and one designated hero CTA per page.
 5. **Never pair display weights heavier than 600 within the same composition.** ExtraBold reads as shouting; Bold and Semibold side-by-side compete.
@@ -557,41 +590,70 @@ Motion is restrained. The product is calm; the motion is calm.
 
 ---
 
-## Imagery & Photography (extension)
+## 9. Imagery & Photography
 
-Napster's image vocabulary is four-part. Every image in this bundle fits one of these slots.
+Napster's image vocabulary is four-part. Every image in this bundle fits one of these slots. The folder layout under `imagery/` matches these categories one-to-one, so a Claude Design composition only needs to know the slot to find the right asset.
 
-### 1. Warm lifestyle (User Value)
+### 9.1 Warm Lifestyle — User Value
 
 Humans in real environments. Warm amber-to-magenta color grade. Living rooms, studios, kitchens, offices, gyms. The customer in the scene, not modeling. **No stock photography.** **No B&W.**
 
-Examples: `imagery/people/crew/napster-productivity-crew-living-room.png`, `imagery/people/crew/napster-lifestyle-girl-desk.avif`, `imagery/brand-life/napster-brand-about-creator-workstation-multimodal-artifacts.png`.
+- **Folders:** `imagery/people/crew/`, `imagery/brand-life/`
+- **Use for:** product page heroes that need a human anchor, "About" pages, consumer storytelling, social posts.
+- **Examples:** `imagery/people/crew/napster-productivity-crew-living-room.png`, `imagery/people/crew/napster-lifestyle-girl-desk.avif`, `imagery/brand-life/napster-brand-about-creator-workstation-multimodal-artifacts.png`.
 
-### 2. Atmospheric / cinematic (Brand Feeling)
+### 9.2 Atmospheric / Cinematic — Brand Feeling
 
 Abstract light, motion blur, purple atmospheric wash. The Beam gradient rides on top. Used in opening slides, dividers, hero film moments.
 
-Examples: `imagery/scenes/twin/napster-twin-poster.avif`, `imagery/decorative/napster-element-pink-gradient.avif`.
+- **Folders:** `imagery/scenes/twin/`, `imagery/decorative/`, `imagery/scenes/sessions/`
+- **Use for:** opening slides, section dividers, brand films, atmospheric headers, backgrounds when no product or person belongs.
+- **Examples:** `imagery/scenes/twin/napster-twin-poster.avif`, `imagery/decorative/napster-element-pink-gradient.avif`, `imagery/decorative/napster-hero-bg.avif`.
 
-### 3. Isolated portraits (Companion Character)
+### 9.3 Isolated Portraits — Companion Character
 
 Clean, intimate, 3/4 framing. Single-source rim light, naturalistic. Background is the persona's environment (studio, kitchen, gym), not a void. When portraits sit over the dark canvas they receive a `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))` darken pass, optionally a Beam overlay.
 
-Examples: `imagery/people/portraits-hero/napster-companion-*.avif` (hero), `imagery/people/portraits-thumb/napster-companion-*.avif` (small / card use).
+- **Folders:** `imagery/people/portraits-hero/` (large), `imagery/people/portraits-thumb/` (cards), `imagery/people/producers/` (music producers)
+- **Use for:** companion roster pages, persona cards, "Meet the team" treatments, Crew lineups.
+- **Filename convention:** `napster-companion-{firstname}-{surname}-{role}.{ext}`. See `imagery/people/persona-roster.md` for the canonical roster.
+- **Examples:** `imagery/people/portraits-hero/napster-companion-kai-mercer-chiefofstaff.avif`, `imagery/people/portraits-thumb/napster-companion-may-li-creative.avif`, `imagery/people/producers/napster-producer-luna-rnb.avif`.
 
-### 4. Product on pure black (Product Clarity)
+### 9.4 Product on Pure Black — Product Clarity
 
 Hardware shots, product UI captures, spec details. Background is pure `#000000`. No environmental clutter.
 
-Examples: `imagery/product/station/napster-station-spec-voicefield.jpg`, `imagery/product/view/napster-view-spec-display.avif`, `imagery/product/mac/napster-mac-chat-ui.png`.
+- **Folders:** `imagery/product/{api,app,learn,mac,spaces,station,view}/`, `imagery/scenes/usecases/`
+- **Use for:** product one-pagers, hero imagery on product landing pages, spec callouts, comparison panels. **When a user says "create a one-pager on Napster Station," reach for `imagery/product/station/`.** Same shape applies to Mac, View, Spaces, App, Learn, API.
+- **Examples:** `imagery/product/station/napster-station-spec-voicefield.jpg`, `imagery/product/view/napster-view-spec-display.avif`, `imagery/product/mac/napster-mac-chat-ui.png`, `imagery/product/spaces/napster-spaces-hero.avif`.
 
-### Treatments
+### 9.5 Asset Map (where to look first)
+
+| Prompt mentions… | Reach for |
+|---|---|
+| Napster Station, hardware, lobby, hotel, airport | `imagery/product/station/` |
+| Napster View, glasses, stereoscopic, 3D headset | `imagery/product/view/` |
+| Napster for Mac, desktop, macOS, the app on a laptop | `imagery/product/mac/` |
+| Napster Spaces, conversational AI, video agent | `imagery/product/spaces/` |
+| Napster Learn, education, higher-ed, L&D | `imagery/product/learn/` |
+| Napster App (consumer mobile/tablet), music app | `imagery/product/app/` |
+| Napster API, platform, developers | `imagery/product/api/` |
+| A specific companion (Kai, May, JC, Elena, Kevin, Alyssa, Jordan, Richard, Jane, Amit) | `imagery/people/portraits-hero/` (large) or `portraits-thumb/` (cards) |
+| Music producers (Luna, Axel, Billie, Jasper, Mateo, Nyx, Ruby Mae, Sloane, Voltage) | `imagery/people/producers/` |
+| Crew, lifestyle, customer-in-scene, family room, studio | `imagery/people/crew/` |
+| About page, creator portraits, designer at workstation | `imagery/brand-life/` |
+| Brand film, atmospheric background, opening slide | `imagery/scenes/twin/`, `imagery/decorative/` |
+| Session flow, "pick → talk → shape → share" | `imagery/scenes/sessions/` |
+| Use cases (coding, writing, creative) | `imagery/scenes/usecases/` |
+| Decorative element, gradient panel, footer CTA, grain texture | `imagery/decorative/` |
+
+### 9.6 Treatments
 
 - **Grain overlay.** Apply `imagery/decorative/napster-grain-texture.jpg` with `mix-blend-mode: screen` at ~18% opacity over solid panels for tactile depth.
 - **Beam overlay.** `mix-blend-mode: screen`, opacity ~0.55. Hero imagery only. **Never behind text.**
 - **Darken pass.** Portraits over dark canvas get `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))` on top to seat them.
 
-### Never
+### 9.7 Never
 
 - Stock iconography.
 - Illustration-style humans.

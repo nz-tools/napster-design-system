@@ -8,7 +8,7 @@ Read `DESIGN.md` and `README.md` within this skill first. Then explore the rest.
 
 **Start here:**
 
-- `DESIGN.md` — the unified rationale layer (Overview, Colors, Typography, Layout, Elevation & Depth, Shapes, Components, Do's and Don'ts + Iconography, Motion, Imagery extensions). YAML front matter contains every token resolved.
+- `DESIGN.md` — the unified rationale layer. Nine canonical sections (Overview, Colors, Typography, Layout, Elevation & Depth, Shapes, Components, Do's and Don'ts, Imagery & Photography) plus two extensions (Iconography, Motion). YAML front matter contains every token resolved, plus the `imagery:` block enumerating the four photographic slots and the folders that hold them.
 - `README.md` — what this bundle is, how to publish at claude.ai/design.
 - `colors_and_type.css` — single-import CSS with all tokens and semantic classes (`.eyebrow`, `.h-hero`, `.gradient-word`, `.btn`, `.btn-primary-pulse`, `.panel`, `.card`, `.card-glass`, `.beam-overlay`, `.grain`).
 - `tokens/` — DTCG-format JSON tokens: `colors.json`, `typography.json`, `spacing.json`, `motion.json`.
@@ -18,7 +18,7 @@ Read `DESIGN.md` and `README.md` within this skill first. Then explore the rest.
 - `icons/` — 22 bundled SVG line icons.
 - `reference/napster-com-audit.md` — live-site computed-style audit (the source of truth for live tokens).
 - `compositions/one-pagers/` — 3 one-pagers (platform, station, view).
-- `imagery/` — organized by product, people, brand-life, scenes, decorative.
+- `imagery/` — four photographic slots: **Warm Lifestyle** (`people/crew/`, `brand-life/`), **Atmospheric** (`scenes/twin/`, `decorative/`, `scenes/sessions/`), **Isolated Portraits** (`people/portraits-hero/`, `people/portraits-thumb/`, `people/producers/`), and **Product on Pure Black** (`product/{api,app,learn,mac,spaces,station,view}/`, `scenes/usecases/`). When a user names a product ("create a one-pager on Napster Station"), reach for `imagery/product/{product}/` first. Every subfolder has its own README.
 
 If creating visual artifacts (slides, mocks, throwaway prototypes), copy assets out and create static HTML files for the user to view. Import `colors_and_type.css` and use the semantic classes.
 
@@ -30,7 +30,7 @@ If working on production code, copy the tokens and read the rules to become an e
 2. Napster Pink (`#DD52CB`) appears on ONE element per composition — the load-bearing noun.
 3. Eyebrows are `.eyebrow` — Inter 700, 12px, uppercase, pink. Every section gets one.
 4. Hero headlines are Avantt 600 sentence case, end with a period.
-5. Wordmark top-left, clearspace ≥ logo-height.
+5. Horizontal lockup top-left (`logos/horizontal/`), clearspace ≥ lockup-height. The lockup is the default mark — wordmark + n-mark together — not the bare wordmark. For small contexts (favicon, avatar, app icon), use the standalone n-mark from `logos/icon/`.
 6. Never use: chatbot, leverage, AI-powered, revolutionize, solution, emoji.
 7. Round every corner you can. The circle is the visual backbone.
 8. Companions have full human names (Kai Mercer, Kevin Jones, May Li). Not "the AI". See `imagery/people/persona-roster.md`.

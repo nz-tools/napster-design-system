@@ -79,7 +79,8 @@ napster-design-system-unified/
 │   │   ├── twin/                   # Digital Twin compositions
 │   │   ├── sessions/               # 5-step music creation flow
 │   │   └── usecases/               # Coding / Creative / Writing
-│   └── decorative/                 # Boxes, gradients, hero backgrounds, grain texture
+│   ├── decorative/                 # Boxes, gradients, hero backgrounds, grain texture
+│   └── README.md                   # Slot vocabulary + asset map (read first)
 ├── icons/                          # 22 SVG line icons (microphone, user, book, code, …)
 ├── ui-kits/
 │   ├── napster-com/                # Marketing site React kit (Nav, Hero, FeatureSection, …)
@@ -101,8 +102,17 @@ napster-design-system-unified/
 | Verify against the live site | `reference/napster-com-audit.md` |
 | Build a slide deck | `DESIGN.md` + the tokens. Claude Design infers slide structure from the system. |
 | Build a one-pager | `compositions/one-pagers/` |
-| Find the right product image | `imagery/product/{product}/` |
-| Find the right persona portrait | `imagery/people/portraits-hero/` |
+| Find imagery — start here | `imagery/README.md` (slot vocabulary + asset map) |
+| Find product imagery for Napster Station | `imagery/product/station/` |
+| Find product imagery for Napster View | `imagery/product/view/` |
+| Find product imagery for Napster for Mac | `imagery/product/mac/` |
+| Find product imagery for Napster Spaces | `imagery/product/spaces/` |
+| Find product imagery for Napster Learn | `imagery/product/learn/` |
+| Find product imagery for Napster App | `imagery/product/app/` |
+| Find product imagery for Napster API | `imagery/product/api/` |
+| Find a Companion portrait (Kai, May, JC, Elena, …) | `imagery/people/portraits-hero/` (hero) or `portraits-thumb/` (cards) |
+| Find a Music Producer portrait (Luna, Axel, Billie, …) | `imagery/people/producers/` |
+| Find atmospheric / cinematic background | `imagery/scenes/twin/` or `imagery/decorative/` |
 | Audit a generated artifact | `DESIGN.md` § Do's and Don'ts |
 
 ## Non-negotiable rules
