@@ -17,13 +17,15 @@ Avantt (the display face) is not a Google Font, so Claude Design can't auto-reso
 
 1. After import finishes, Claude Design shows an orange **"Missing brand fonts"** alert near the top of the Design System tab.
 2. Click the **Upload fonts** button on the right side of that alert (NOT the chat input below).
-3. In the file picker that opens, navigate to the four Avantt `.woff2` files. Get them by unzipping [`Avantt-for-Claude-Design.zip`](Avantt-for-Claude-Design.zip) from this repo root:
-   - `Avantt-Medium.woff2`
-   - `Avantt-SemiBold.woff2`
-   - `Avantt-Bold.woff2`
-   - `Avantt-ExtraBold.woff2`
+3. Unzip [`Avantt-for-Claude-Design.zip`](Avantt-for-Claude-Design.zip) from this repo root. The zip contains the four Avantt weights in both TTF and WOFF2 formats. **Upload the TTF files** — Claude Design's font registry currently accepts TTF (and OTF), but not WOFF2:
+   - `Avantt-Medium.ttf`
+   - `Avantt-SemiBold.ttf`
+   - `Avantt-Bold.ttf`
+   - `Avantt-ExtraBold.ttf`
 4. Select all four and confirm the upload.
-5. The orange alert disappears within a few seconds and Avantt starts rendering across the design system.
+5. The orange alert should disappear within a few seconds and Avantt should start rendering across the design system.
+
+The WOFF2 files in the same zip are bundled for non-Claude-Design contexts (production HTML, generated artifacts, marketing sites). You don't need to upload them to Claude Design.
 
 If the alert doesn't clear after step 5, refresh the page and check again. If it still doesn't clear, you may have uploaded through the chat input by mistake; try the button again.
 
