@@ -10,7 +10,7 @@ Read `DESIGN.md` and `README.md` within this skill first. Then explore the rest.
 
 - `DESIGN.md` — the unified rationale layer. Nine canonical sections (Overview, Colors, Typography, Layout, Elevation & Depth, Shapes, Components, Do's and Don'ts, Imagery & Photography) plus two extensions (Iconography, Motion). YAML front matter contains every token resolved, plus the `imagery:` block enumerating the four photographic slots and the folders that hold them.
 - `README.md` — what this bundle is, how to publish at claude.ai/design.
-- `colors_and_type.css` — single-import CSS with all tokens and semantic classes (`.eyebrow`, `.h-hero`, `.gradient-word`, `.btn`, `.btn-primary-pulse`, `.panel`, `.card`, `.card-glass`, `.beam-overlay`, `.grain`).
+- `colors_and_type.css` — single-import CSS with all tokens and semantic classes. Avantt is hosted via jsDelivr CDN (pinned to the current version tag) so font loads work in any rendering environment, with local-path fallbacks for offline use. Inter is loaded from Google Fonts. (`.eyebrow`, `.h-hero`, `.gradient-word`, `.btn`, `.btn-primary-pulse`, `.panel`, `.card`, `.card-glass`, `.beam-overlay`, `.grain`).
 - `tokens/` — DTCG-format JSON tokens: `colors.json`, `typography.json`, `spacing.json`, `motion.json`.
 - `brand/overview.md` — personality, audience, emotional target.
 - `brand/voice-and-tone.md` — banned words, preferred vocabulary, five copy patterns, casing rules.
