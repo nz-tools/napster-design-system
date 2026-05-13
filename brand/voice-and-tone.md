@@ -100,8 +100,8 @@ We talk about them like colleagues. Never *"Kai the AI"*. Never *"your AI assist
 
 A canonical Napster hero is three parts:
 
-1. **Eyebrow** — UPPERCASE / Inter 700 / 12px / `#DD52CB`. Single line. 1–3 words.
-2. **Hero headline** — Avantt 600 / 72px / sentence case / ends with a period.
+1. **Eyebrow** — UPPERCASE / IBM Plex Mono 500 / 12px / `+0.48px` tracking / `#DD52CB`. Single line. 1–3 words.
+2. **Hero headline** — Inter 700 / 72px / sentence case / ends with a period.
 3. **Subtitle** — Inter 400 / 18px / `rgba(255,255,255,0.5)` / one sentence.
 
 Example:
@@ -112,7 +112,18 @@ AI companions you can see, talk to, and create with.
 A specialist for every moment, available in seconds.
 ```
 
-Within the hero, **the load-bearing noun gets the gradient treatment** (`.gradient-word`). In the example above, that's "create with" or "every moment" — the place the eye must go.
+Within the hero, the load-bearing noun gets an accent treatment. Two options, never both on the same word:
+
+- **`.gradient-word`** — the white-to-pink gradient. The default treatment. *"…create with."* / *"…every moment."*
+- **`.accent-serif`** — Instrument Serif italic. The editorial alternative. Use when the headline already carries its own visual weight, or when the accent word is a name or noun that wants a literary register. *"Meet [Kai Mercer]."* with the name in italic serif.
+
+## Companion names in prose
+
+Companions are introduced with full human names in Instrument Serif italic — *Kai Mercer*, *Kevin Jones*, *May Li* — at first mention in any editorial passage. Subsequent mentions use the first name only and stay in the surrounding type. Never set the role label in italic serif; the serif gear is reserved for the name itself.
+
+## Metadata register
+
+Page numbers (`02 / 14`), timestamps (`14:32 UTC`), footer markers (`DESIGN SYSTEM · 2026 · v1.1.0`), spec values inside dense charts — all sit in IBM Plex Mono. The mono signals "this is a fact, not a claim." Body prose stays in Inter; the mono is reserved for what the eye scans, not what the eye reads.
 
 ## When in doubt
 

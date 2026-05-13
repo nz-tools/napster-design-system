@@ -4,10 +4,11 @@ description: >
   The unified Napster design system. Dark cinematic identity, circular visual
   backbone, Napster Pink accent. Audience-facing: this is the system Claude Design
   uses to generate all Napster-branded artifacts.
-version: 1.0.14
+version: 1.1.0
 sources:
   - napster.com (live audit, April 2026 — the customer-facing truth)
   - AKEO Brand Definition Proposal (Mateo Reyes, 2026 — structural framework)
+  - Three-font system migration (May 2026 — Avantt retired from the design system; the live napster.com site keeps Avantt as its display face)
 tokens:
   color:
     bg:               "#000000"
@@ -38,8 +39,10 @@ tokens:
     border-strong:    "rgba(255,255,255,0.18)"
     border-pink:      "rgba(190,54,157,0.35)"
   font:
-    family-display:   "Avantt, 'Helvetica Neue', Arial, sans-serif"
+    family-display:   "Inter, 'Helvetica Neue', Arial, sans-serif"
     family-body:      "Inter, 'Helvetica Neue', sans-serif"
+    family-serif:     "'Instrument Serif', 'Times New Roman', Georgia, serif"
+    family-mono:      "'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace"
     size-display-cover: "180px"
     size-display-1:   "96px"
     size-hero:        "72px"
@@ -54,10 +57,14 @@ tokens:
     size-body:        "16px"
     size-body-sm:     "14px"
     size-eyebrow:     "12px"
+    size-meta:        "11px"
+    weight-light:     300
+    weight-regular:   400
     weight-medium:    500
     weight-semibold:  600
     weight-bold:      700
     weight-extrabold: 800
+    weight-black:     900
   radius:
     xs:               "4px"
     sm:               "6px"
@@ -142,7 +149,7 @@ This document is the system. Nine sections plus two extensions. Every token reso
 
 Napster is dark, cinematic, and quietly confident. Late-night studio rather than glossy product launch. Architectural before playful. The brand is built on three load-bearing ideas:
 
-1. **The Circle.** The OG headphone-monk n-mark is circular. Avantt was chosen for its circular letterforms. Every surface rounds its corners. If a corner can be rounded without breaking meaning, round it.
+1. **The Circle.** The OG headphone-monk n-mark is circular. The brand's geometry — rounded letterforms on napster.com, every n-mark contour, every component radius — repeats the same circle. Every surface rounds its corners. If a corner can be rounded without breaking meaning, round it.
 2. **The Black Canvas.** Pure `#000000` is the default backdrop. Not `#0a0a0a`, not gradient, not warm-black. Pure. Black always dominates. The product is the music; the canvas is the silence around it.
 3. **Pink is Precious.** Napster Pink (`#DD52CB`) carries one element per composition, and that element is the load-bearing noun. Pink is not a decoration. It is the place the eye must go.
 
@@ -263,68 +270,81 @@ White on `#BE369D` button: contrast 4.6:1. AA.
 
 ## 3. Typography
 
-### Type families
+### Type families — three, all Google Fonts
 
-| Family | Use | Source |
+The design system uses three Google Fonts. Nothing self-hosted. Nothing to upload. They resolve automatically the moment `colors_and_type.css` loads.
+
+| Family | Role | Notes |
 |---|---|---|
-| **Avantt** | Display, headlines, stats, large accents | Licensed from Displaay Type Foundry. Self-hosted in `typography/fonts/`. |
-| **Inter** | Body, buttons, labels, UI chrome | Open source. Loaded via Google Fonts CDN. |
+| **Inter** | Display, headlines, body, buttons, labels, UI chrome | Weights 300–900. Single face owns everything from `display-cover` down to `body-sm`. |
+| **Instrument Serif** *(italic)* | Editorial accents | Italic only. Companion names, pull quotes, accent words inside headlines. The serif provides one editorial gear that sans typography can't reach. |
+| **IBM Plex Mono** | Metadata | Eyebrows, timestamps, page numbers, slide chrome, footer markers. The mono is the brand's quiet narrator — never a headline voice. |
 | Arial | System fallback only | — |
+
+**A note on Avantt.** Avantt remains the display face on napster.com. It is no longer part of the design system. The reasons: (1) anyone at Napster using Claude Design shouldn't have to install a self-hosted commercial font; (2) the system has to cover product apps that can't ship Avantt. Google Fonts solves both. `reference/napster-com-audit.md` documents the live napster.com state, Avantt included, as a factual record of the marketing site.
 
 ### Type scale
 
-Two ramps coexist. **Marketing** sizes are live-verified from napster.com. **Document** sizes (h1–h4) extend the system for prose-heavy artifacts (PRDs, white papers, internal comms).
+Two ramps coexist. **Marketing** sizes are live-verified from napster.com. **Document** sizes (h1–h4) extend the system for prose-heavy artifacts (PRDs, white papers, internal comms). Sizes do not change in v1.1.0; only the face assigned to each size does.
 
 | Token | px | Role |
 |---|---:|---|
-| `display-cover` | 180 | Section dividers; oversized cover stats. |
-| `display-1`     | 96  | Cover slides. |
-| `display-2`     | 72  | Display alt. |
-| `hero`          | 72  | Primary marketing hero. *Live: Avantt 600.* |
-| `h1`            | 56  | Document H1. |
-| `section`       | 41  | Section headline on marketing. *Live: Avantt 600.* |
-| `h2`            | 40  | Document H2. |
-| `title`         | 32  | Card titles. |
-| `h3`            | 28  | Subsection. |
-| `subtitle`      | 24  | Subtitle below hero. |
-| `h4`            | 20  | Document H4. |
-| `body-lg`       | 18  | Lead paragraph. |
-| `body`          | 16  | Body default. |
-| `body-sm`       | 14  | Buttons, small UI. |
-| `eyebrow`       | 12  | Eyebrow label. *Live: Inter 700.* |
-| `caption`       | 12  | Captions, footnotes. |
-| `meta`          | 11  | Page numbers, slide chrome. |
+| `display-cover` | 180 | Section dividers; oversized cover stats. *Inter 800.* |
+| `display-1`     | 96  | Cover slides. *Inter 800.* |
+| `display-2`     | 72  | Display alt. *Inter 700.* |
+| `hero`          | 72  | Primary marketing hero. *Inter 700.* |
+| `h1`            | 56  | Document H1. *Inter 700.* |
+| `section`       | 41  | Section headline on marketing. *Inter 700.* |
+| `h2`            | 40  | Document H2. *Inter 700.* |
+| `title`         | 32  | Card titles. *Inter 600.* |
+| `h3`            | 28  | Subsection. *Inter 600.* |
+| `subtitle`      | 24  | Subtitle below hero. *Inter 400.* |
+| `h4`            | 20  | Document H4. *Inter 600.* |
+| `body-lg`       | 18  | Lead paragraph. *Inter 400.* |
+| `body`          | 16  | Body default. *Inter 400.* |
+| `body-sm`       | 14  | Buttons, small UI. *Inter 600 for buttons.* |
+| `eyebrow`       | 12  | Eyebrow label. *IBM Plex Mono 500, uppercase, pink.* |
+| `caption`       | 12  | Captions, footnotes. *Inter 400.* |
+| `meta`          | 11  | Page numbers, slide chrome, footer markers. *IBM Plex Mono 400.* |
 
 ### Weights
 
-300 (Light), 400 (Regular), 500 (Medium), 600 (Semibold), 700 (Bold), 800 (Extrabold).
+Inter ships at every step: 300 (Light), 400 (Regular), 500 (Medium), 600 (Semibold), 700 (Bold), 800 (Extrabold), 900 (Black). Most work lives between 400 and 800. 900 is reserved for the very largest display sizes. Instrument Serif italic ships at 400 only. IBM Plex Mono uses 400 (meta) and 500 (eyebrow).
 
 ### Tracking
 
 | Token | Value | Use |
 |---|---|---|
 | `tracking-display` | `-0.025em` | Tight; mirrors the wordmark geometry |
-| `tracking-hero`    | `-0.02em`  | `-1.44px` at 72px (live) |
-| `tracking-section` | `-0.02em`  | `-0.82px` at 41px (live) |
-| `tracking-eyebrow` | `-0.01em`  | `-0.12px` at 12px (live; **tight, not airy**) |
+| `tracking-hero`    | `-0.025em` | Inter at 72px needs slightly more compression than Avantt did |
+| `tracking-section` | `-0.02em`  | Section headlines |
+| `tracking-eyebrow` | `+0.04em`  | Plex Mono uppercase needs breathing room. The eyebrow's old `-0.01em` tightness was an Inter-specific value — mono inverts the rule. |
+| `tracking-mono`    | `+0.02em`  | Default mono tracking (page numbers, timestamps) |
 | `tracking-button`  | `+0.02em`  | Slight breathing room |
 | `tracking-body`    | `0em`      | — |
 
 ### Line heights
 
-`tight` 0.95 / `display` 1.02 / `headline` 1.10 / `body` 1.40 (live default) / `body-loose` 1.60.
+`tight` 0.95 / `display` 1.02 / `headline` 1.10 / `body` 1.40 (default) / `body-loose` 1.60.
 
 ### Canonical text styles
 
-**Hero headline.** Avantt 600 / 72px / `-1.44px` / 1.10 / sentence case / `#FFFFFF`. Ends with a period. *"A specialist for every moment."*
+**Hero headline.** Inter 700 / 72px / `-1.80px` / 1.10 / sentence case / `#FFFFFF`. Ends with a period. *"A specialist for every moment."*
 
-**Section headline.** Avantt 600 / 41px / `-0.82px` / 1.10 / sentence case / `#FFFFFF`.
+**Section headline.** Inter 700 / 41px / `-0.82px` / 1.10 / sentence case / `#FFFFFF`.
 
-**Eyebrow label.** Inter 700 / 12px / `-0.12px` / **UPPERCASE** / `#DD52CB`. **Every section starts with an eyebrow.**
+**Eyebrow label.** IBM Plex Mono 500 / 12px / `+0.48px` / **UPPERCASE** / `#DD52CB`. **Every section starts with an eyebrow.** The mono character — quiet, technical, telegraphic — replaces the previous Inter Bold treatment.
 
 **Body.** Inter 400 / 16px / 1.40 / `#FFFFFF`.
 
 **Button.** Inter 600 / 14px / `#FFFFFF`.
+
+**Editorial accent.** Instrument Serif italic 400. Inline use only. Three places live here:
+- **Companion names** in prose. *"Meet [Kai Mercer]." [Kai Mercer] in italic serif.*
+- **Accent words inside headlines.** Alternative to `.gradient-word` on the load-bearing noun. Use one or the other, never both.
+- **Pull quotes.** `.pull-quote` class — 24px / 1.35 / italic / pink left rule.
+
+**Meta.** IBM Plex Mono 400 / 11px / `+0.22px` / `rgba(255,255,255,0.5)`. Page numbers (`02 / 14`), timestamps (`14:32 UTC`), footer markers (`DESIGN SYSTEM · 2026 · v1.1.0`), spec values inside dense charts.
 
 ### Casing
 
@@ -473,7 +493,7 @@ Napster lives on black. True drop shadows are rare. Depth comes from inner glows
 - Border-radius `9999px` (pill).
 - `box-shadow: var(--glow-pulse)`.
 - Padding `14px 20px`.
-- Font Avantt 16px 600.
+- Font Inter 700 16px.
 - Hover: `filter: brightness(1.08)`.
 
 ### Cards
@@ -503,7 +523,7 @@ Anatomy of a default card: Mulberry surface (`#1A0918`) · 1px hairline border (
 
 ### Eyebrow
 
-Every section starts with an eyebrow: Inter 700 / 12px / uppercase / `-0.12px` tracking / `#DD52CB`. Single line. No more than 3 words ideally. Examples: **MEET YOUR CREW.** **WHAT WE BUILT.** **PRICING.**
+Every section starts with an eyebrow: IBM Plex Mono 500 / 12px / uppercase / `+0.48px` tracking / `#DD52CB`. Single line. No more than 3 words ideally. Examples: **MEET YOUR CREW.** **WHAT WE BUILT.** **PRICING.**
 
 ### State variants summary
 
@@ -521,14 +541,15 @@ Every section starts with an eyebrow: Inter 700 / 12px / uppercase / `-0.12px` t
 
 ### Do's
 
-1. **Start every section with an eyebrow.** Inter 700, 12px, uppercase, `#DD52CB`. Single line.
+1. **Start every section with an eyebrow.** IBM Plex Mono 500, 12px, uppercase, `+0.48px` tracking, `#DD52CB`. Single line.
 2. **Put the horizontal lockup top-left.** (`logos/horizontal/`). The lockup, not the bare wordmark, is the default mark. Clearspace ≥ lockup-height on all sides.
 3. **Use sentence case for headlines.** End hero lines with a period.
-4. **Name companions.** Full human names: Kai Mercer. Kevin Jones. Never "your AI" or "the assistant".
+4. **Name companions.** Full human names: Kai Mercer. Kevin Jones. Never "your AI" or "the assistant". Set names in Instrument Serif italic when they appear in editorial prose ("Meet *Kai Mercer*.").
 5. **Be specific with numbers.** `$5/hour`, `under an hour`, `2 million`, `1.5MW`. Never `industry-leading`, never `at scale`.
 6. **Reserve the Beam for imagery.** It rides on top of hero photography at `mix-blend-mode: screen`.
 7. **Round every corner you can.** The circle is the visual backbone.
 8. **Re-total row budgets** in the same edit when you change a band's height. Bottom-imprint padding is the canary.
+9. **Set metadata in IBM Plex Mono.** Page numbers, timestamps, footer markers, slide chrome. The mono signals "this is a fact, not a claim."
 
 ### Don'ts
 
@@ -536,16 +557,18 @@ Every section starts with an eyebrow: Inter 700 / 12px / uppercase / `-0.12px` t
 2. **Never set the horizontal lockup below 24px wide.** Below that the n-mark's cat-headphone detail disappears. If you need a mark smaller than that, switch to the standalone n-mark (`logos/icon/`).
 3. **Backgrounds are pure `#000000`.** Not `#111`, not `#0a0a0a`, not gradient.
 4. **Default button radius is `10px`.** Pill shape is reserved for chips, tags, and one designated hero CTA per page.
-5. **Never pair display weights heavier than 600 within the same composition.** ExtraBold reads as shouting; Bold and Semibold side-by-side compete.
-6. **No emoji.** Not in product. Not in marketing. Not in decks. Substitute with the bundled icon set or Lucide.
-7. **Banned words:** *revolutionize, disrupt, game-changing, AI-powered, leverage, solution, seamlessly, effortlessly, powerful, unlock, empower, industry-leading, world-class, chatbot, assistant, bot, users.* Name the people: students, operators, counselors, fans.
-8. **Never put the Napster Beam directly behind text.** Beam is overlay-only, `mix-blend-mode: screen` on imagery.
-9. **Borders are 1px.** Never 2px, never dashed, never full-color solid (except the deep-pink rim on `btn-secondary`).
-10. **Avoid Material Symbols** for UI icons. The geometric fill style fights Napster's circular line vocabulary. Use the bundled 22-icon set; Lucide is the fallback.
-11. **Don't animate icons.** No rotation, no color-cycle, no spring overshoot. Icons are product furniture.
-12. **Hover by opacity or brightness, never by scale.** Press is the only place scale lives (`0.98`).
-13. **No exclamation marks at the end of CTAs.** No "Try Napster!" Use "Try Napster for free" — the declarative carries its own emphasis.
-14. **Never use Title Case for editorial copy.** Title case is reserved for proposal titles and section chrome.
+5. **One headline weight per composition.** Inter 700 is the default for hero and section headlines. Inter 800/900 is reserved for the largest display sizes (`display-1`, `display-cover`). Don't mix 700 and 800 in the same composition — the rhythm breaks.
+6. **Never set Instrument Serif upright.** The serif is italic-only in this system. Use it for editorial accents; never for an entire headline or paragraph.
+7. **Never set body or headlines in IBM Plex Mono.** The mono is for metadata. A mono headline reads as a code sample, not a brand statement.
+8. **No emoji.** Not in product. Not in marketing. Not in decks. Substitute with the bundled icon set or Lucide.
+9. **Banned words:** *revolutionize, disrupt, game-changing, AI-powered, leverage, solution, seamlessly, effortlessly, powerful, unlock, empower, industry-leading, world-class, chatbot, assistant, bot, users.* Name the people: students, operators, counselors, fans.
+10. **Never put the Napster Beam directly behind text.** Beam is overlay-only, `mix-blend-mode: screen` on imagery.
+11. **Borders are 1px.** Never 2px, never dashed, never full-color solid (except the deep-pink rim on `btn-secondary`).
+12. **Avoid Material Symbols** for UI icons. The geometric fill style fights Napster's circular line vocabulary. Use the bundled 22-icon set; Lucide is the fallback.
+13. **Don't animate icons.** No rotation, no color-cycle, no spring overshoot. Icons are product furniture.
+14. **Hover by opacity or brightness, never by scale.** Press is the only place scale lives (`0.98`).
+15. **No exclamation marks at the end of CTAs.** No "Try Napster!" Use "Try Napster for free" — the declarative carries its own emphasis.
+16. **Never use Title Case for editorial copy.** Title case is reserved for proposal titles and section chrome.
 
 ---
 

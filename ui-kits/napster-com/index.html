@@ -7,11 +7,12 @@
 <link rel="stylesheet" href="../../colors_and_type.css">
 <style>
   html, body { margin: 0; background: #000; }
-  /* Override the global token so EVERY reference to var(--font-body)
-     within this UI kit (including inline styles in the JSX components)
-     resolves to Avantt — Napster's brand sans. */
-  :root { --font-body: 'Avantt', 'Arial', sans-serif; }
-  body { font-family: 'Avantt', 'Arial', sans-serif; color: #fff; -webkit-font-smoothing: antialiased; }
+  /* This kit models the napster.com marketing surface. The live site uses
+     Avantt (Displaay Type Foundry); the design system has retired Avantt
+     in favour of three Google Fonts and uses Inter here. Visual rhythm
+     stays close — Inter's circular letterforms carry the Circle motif —
+     but the live site is the authoritative reference for napster.com
+     typography. See reference/napster-com-audit.md. */
   section { position: relative; }
   ::selection { background: var(--pink-bright); color: #fff; }
 </style>

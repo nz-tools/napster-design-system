@@ -32,7 +32,7 @@ That line is not marketing copy. It is the central frame for every Napster surfa
 
 ## Three load-bearing visual ideas
 
-1. **The Circle.** The OG headphone-monk n-mark is circular. Avantt was chosen for its circular letterforms. Every UI corner that can round, rounds.
+1. **The Circle.** The OG headphone-monk n-mark is circular. The brand repeats that geometry — rounded letterforms on napster.com, the n-mark's contour, every component radius. Every UI corner that can round, rounds.
 2. **The Black Canvas.** Pure `#000000` dominates. The product is the music; the canvas is the silence around it.
 3. **Pink is Precious.** `#DD52CB` lands on the load-bearing noun, never on chrome, never on multiple elements per composition.
 

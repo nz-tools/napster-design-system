@@ -1,12 +1,72 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../colors_and_type.css">
 <style>
-body{margin:0;padding:24px;background:#000;color:#fff;}
+body{margin:0;padding:32px;background:#000;color:#fff;max-width:920px;}
+h1.title{font-family:var(--font-display);font-weight:700;font-size:32px;letter-spacing:-0.02em;margin:0 0 4px;}
+p.sub{font-family:var(--font-body);font-size:14px;color:rgba(255,255,255,.6);margin:0 0 28px;}
+.group{margin-bottom:32px;border-top:1px solid rgba(255,255,255,.08);padding-top:18px;}
+.group-label{font-family:var(--font-mono);font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.04em;color:var(--pink);margin-bottom:14px;}
 .row{display:flex;align-items:baseline;gap:20px;margin-bottom:14px;border-bottom:1px solid rgba(255,255,255,.06);padding-bottom:12px;}
-.meta{font-family:var(--font-body);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--pink);width:130px;flex-shrink:0;}
-.specimen{font-family:var(--font-display);font-weight:600;line-height:1;letter-spacing:-0.02em;}
+.meta-col{font-family:var(--font-mono);font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.04em;color:rgba(255,255,255,.5);width:170px;flex-shrink:0;}
+.note{font-family:var(--font-body);font-size:11px;color:rgba(255,255,255,.5);}
 </style></head><body>
-<div class="row"><div class="meta">Display / 180</div><div class="specimen" style="font-size:72px;">Napster.</div></div>
-<div class="row"><div class="meta">Hero / 72</div><div class="specimen" style="font-size:48px;">Meet your crew.</div></div>
-<div class="row"><div class="meta">Section / 41</div><div class="specimen" style="font-size:36px;font-weight:600;">A new category.</div></div>
-<div class="row"><div class="meta">Avantt 600</div><div style="font-family:var(--font-body);font-size:11px;color:rgba(255,255,255,.5);">Sentence case · ends with period · -2% letter-spacing</div></div>
+
+<h1 class="title">Napster type specimen.</h1>
+<p class="sub">Three Google Fonts. Inter for everything sans. Instrument Serif italic for editorial accents. IBM Plex Mono for metadata.</p>
+
+<div class="group">
+  <div class="group-label">Inter — display + body</div>
+
+  <div class="row"><div class="meta-col">Display-cover / 180 / 800</div>
+    <div style="font-family:var(--font-display);font-weight:800;font-size:80px;line-height:0.95;letter-spacing:-0.025em;">Napster.</div></div>
+
+  <div class="row"><div class="meta-col">Display-1 / 96 / 800</div>
+    <div style="font-family:var(--font-display);font-weight:800;font-size:64px;line-height:1.02;letter-spacing:-0.025em;">A new category.</div></div>
+
+  <div class="row"><div class="meta-col">Hero / 72 / 700</div>
+    <div style="font-family:var(--font-display);font-weight:700;font-size:52px;line-height:1.1;letter-spacing:-0.025em;">A specialist for every moment.</div></div>
+
+  <div class="row"><div class="meta-col">Section / 41 / 700</div>
+    <div style="font-family:var(--font-display);font-weight:700;font-size:36px;line-height:1.1;letter-spacing:-0.02em;">Meet your crew.</div></div>
+
+  <div class="row"><div class="meta-col">Title / 32 / 600</div>
+    <div style="font-family:var(--font-display);font-weight:600;font-size:28px;line-height:1.1;">Card title</div></div>
+
+  <div class="row"><div class="meta-col">Body / 16 / 400</div>
+    <div style="font-family:var(--font-body);font-weight:400;font-size:16px;line-height:1.4;">Napster Companions remember. A chatbot answers questions. A companion mentors.</div></div>
+
+  <div class="row"><div class="meta-col">Button / 14 / 600</div>
+    <div style="font-family:var(--font-body);font-weight:600;font-size:14px;letter-spacing:0.02em;">Get started now</div></div>
+</div>
+
+<div class="group">
+  <div class="group-label">Instrument Serif italic — editorial accents</div>
+
+  <div class="row"><div class="meta-col">Headline accent</div>
+    <div style="font-family:var(--font-display);font-weight:700;font-size:36px;line-height:1.1;letter-spacing:-0.025em;">Meet <span class="accent-serif" style="font-size:1em;">Kai Mercer</span>.</div></div>
+
+  <div class="row"><div class="meta-col">Pull quote / 24 / 400 italic</div>
+    <p class="pull-quote" style="margin:0;">Software just became labor. The interface gets out of the way of the companion.</p></div>
+
+  <div class="row"><div class="meta-col">Companion name in body</div>
+    <div style="font-family:var(--font-body);font-weight:400;font-size:16px;line-height:1.4;">First mention: <span class="accent-serif">May Li</span>. Subsequent mentions: May.</div></div>
+</div>
+
+<div class="group">
+  <div class="group-label">IBM Plex Mono — metadata register</div>
+
+  <div class="row"><div class="meta-col">Eyebrow / 12 / 500</div>
+    <div class="eyebrow">MEET YOUR CREW</div></div>
+
+  <div class="row"><div class="meta-col">Page number / 11 / 400</div>
+    <div class="meta">02 / 14</div></div>
+
+  <div class="row"><div class="meta-col">Footer marker / 11 / 400</div>
+    <div class="meta">DESIGN SYSTEM · 2026 · v1.1.0</div></div>
+
+  <div class="row"><div class="meta-col">Timestamp / 11 / 400</div>
+    <div class="meta">14:32 UTC · build 4f2a91d</div></div>
+</div>
+
+<p class="note" style="margin-top:32px;">Notes — Hero: sentence case · ends with a period · `-0.025em` letter-spacing. Eyebrow: uppercase · `+0.04em` letter-spacing. Pull quote: pink left rule · 24px italic. The serif is italic-only; the mono never carries a headline.</p>
+
 </body></html>

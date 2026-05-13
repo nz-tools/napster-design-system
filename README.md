@@ -28,8 +28,9 @@ That's it. From that point, every Claude Design project anyone at Napster opens 
 
 Run the five test prompts in `validation/test-prompts.md` inside Claude Design. Each should produce output that:
 - Uses pure `#000000` backgrounds, Napster Pink `#DD52CB` on the load-bearing noun only.
-- Sets headlines in Avantt 600, sentence case, ending with a period.
-- Uses the Inter 700 eyebrow at 12px uppercase, color `#DD52CB`.
+- Sets headlines in Inter 700, sentence case, ending with a period.
+- Uses the IBM Plex Mono 500 eyebrow at 12px uppercase, `+0.48px` tracking, color `#DD52CB`.
+- Sets companion names and accent words in Instrument Serif italic where editorial gear is called for.
 - Retrieves the right product imagery by filename (Station for Station prompts, View for View prompts).
 - Honors the row-budget rule on fixed-height layouts.
 
@@ -57,8 +58,7 @@ napster-design-system-unified/
 │   └── wordmark/                   # Wordmark, vertical white, vertical black
 ├── colors/                         # Color specimen HTML (Design System tab)
 ├── typography/
-│   ├── fonts/                      # Avantt 500/600/700/800 (TTF + OTF)
-│   └── specimens/                  # Type ramp specimen HTML
+│   └── specimens/                  # Type ramp specimen HTML (the three Google Fonts in use)
 ├── layout/                         # Spacing + radii + glow specimens
 ├── components/                     # Button/card/input/footer/personas specimens
 ├── compositions/
@@ -125,14 +125,16 @@ These rules override everything else, including style intuition.
 
 1. Pure `#000000` backgrounds. Not `#111`, not gradient.
 2. Napster Pink `#DD52CB` on the load-bearing noun only. One pink element per composition.
-3. Eyebrows are Inter 700, 12px, uppercase, `#DD52CB`. Every section gets one.
-4. Hero headlines are Avantt 600, sentence case, ending with a period.
-5. Wordmark top-left, clearspace ≥ logo-height.
-6. Banned words: *revolutionize, disrupt, leverage, solution, seamlessly, effortlessly, powerful, unlock, empower, industry-leading, world-class, chatbot, assistant, bot, users, AI-powered, game-changing.*
-7. Round every corner you can. The circle is the visual backbone.
-8. Companions have full human names. Never "the AI".
-9. No emoji. Anywhere.
-10. Fixed-size layouts declare a row budget and re-total when any band grows.
+3. Eyebrows are IBM Plex Mono 500, 12px, uppercase, `+0.48px` tracking, `#DD52CB`. Every section gets one.
+4. Hero headlines are Inter 700, sentence case, ending with a period.
+5. Companion names and accent words use Instrument Serif italic. Pull quotes, the same.
+6. Metadata (page numbers, timestamps, footer markers, slide chrome) sits in IBM Plex Mono.
+7. Wordmark top-left, clearspace ≥ logo-height.
+8. Banned words: *revolutionize, disrupt, leverage, solution, seamlessly, effortlessly, powerful, unlock, empower, industry-leading, world-class, chatbot, assistant, bot, users, AI-powered, game-changing.*
+9. Round every corner you can. The circle is the visual backbone.
+10. Companions have full human names. Never "the AI".
+11. No emoji. Anywhere.
+12. Fixed-size layouts declare a row budget and re-total when any band grows.
 
 ## Maintainer
 
@@ -140,4 +142,6 @@ Ziv Navoth (`zivnavoth@gmail.com`). For questions on the visual system, see the 
 
 ## Version
 
-`v1.0.0` — first unified bundle, May 2026.
+`v1.1.0` — three-font system. Avantt retired from the design system; Inter (display + body), Instrument Serif italic (editorial accents), and IBM Plex Mono (metadata) now carry everything. The live napster.com site continues to use Avantt and is documented as such in `reference/napster-com-audit.md`.
+
+Previous: `v1.0.14` — final Avantt-based release. Self-hosted Avantt across all four weights, jsDelivr CDN delivery, font-registry upload required at import time.

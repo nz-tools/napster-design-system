@@ -5,7 +5,7 @@
    On screen: centred on a #1a1a1a matte, scaled-to-fit < 900px wide.
    On print: full-bleed black, one sheet per page.
 
-   Import after `../../colors_and_type.css` so pink/Avantt tokens exist.
+   Import after `../../colors_and_type.css` so pink/type tokens exist.
 
    Section kit (class-based — not every page uses every block):
 
@@ -14,12 +14,12 @@
          .hero-head             logo + chip row
          .logo-mark             "Napster." mark (pink period)
          .meta-chip             pill label, top right
-         .eyebrow               pink uppercase lead-in
-         .h1 / .h1 .accent      Avantt 46px, gradient on the noun
+         .eyebrow               IBM Plex Mono 500 uppercase, pink
+         .h1 / .h1 .accent      Inter 700 46px, gradient on the noun
          .hero-sub              72%-white summary
        .section                 generic interior band (28×48 pad)
          .section-label         tiny uppercase pink-subtle label
-         .section-title         Avantt 22px white heading
+         .section-title         Inter 700 22px white heading
        .pill-row / .metric-bar / .metric
        .workflow / .workflow-step
        .verticals (table)

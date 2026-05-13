@@ -10,7 +10,7 @@ Read `DESIGN.md` and `README.md` within this skill first. Then explore the rest.
 
 - `DESIGN.md` — the unified rationale layer. Nine canonical sections (Overview, Colors, Typography, Layout, Elevation & Depth, Shapes, Components, Do's and Don'ts, Imagery & Photography) plus two extensions (Iconography, Motion). YAML front matter contains every token resolved, plus the `imagery:` block enumerating the four photographic slots and the folders that hold them.
 - `README.md` — what this bundle is, how to publish at claude.ai/design.
-- `colors_and_type.css` — single-import CSS with all tokens and semantic classes. Inter is loaded from Google Fonts; Avantt is bundled at typography/fonts/ and referenced locally. (`.eyebrow`, `.h-hero`, `.gradient-word`, `.btn`, `.btn-primary-pulse`, `.panel`, `.card`, `.card-glass`, `.beam-overlay`, `.grain`).
+- `colors_and_type.css` — single-import CSS with all tokens and semantic classes. Three Google Fonts auto-load (Inter, Instrument Serif italic, IBM Plex Mono) — nothing to upload. (`.eyebrow`, `.h-hero`, `.h-section`, `.gradient-word`, `.accent-serif`, `.pull-quote`, `.meta`, `.btn`, `.btn-primary-pulse`, `.panel`, `.card`, `.card-glass`, `.beam-overlay`, `.grain`).
 - `tokens/` — DTCG-format JSON tokens: `colors.json`, `typography.json`, `spacing.json`, `motion.json`.
 - `brand/overview.md` — personality, audience, emotional target.
 - `brand/voice-and-tone.md` — banned words, preferred vocabulary, five copy patterns, casing rules.
@@ -28,14 +28,16 @@ If working on production code, copy the tokens and read the rules to become an e
 
 1. Pure `#000000` background. Not near-black, not gradient.
 2. Napster Pink (`#DD52CB`) appears on ONE element per composition — the load-bearing noun.
-3. Eyebrows are `.eyebrow` — Inter 700, 12px, uppercase, pink. Every section gets one.
-4. Hero headlines are Avantt 600 sentence case, end with a period.
-5. Horizontal lockup top-left (`logos/horizontal/`), clearspace ≥ lockup-height. The lockup is the default mark — wordmark + n-mark together — not the bare wordmark. For small contexts (favicon, avatar, app icon), use the standalone n-mark from `logos/icon/`.
-6. Never use: chatbot, leverage, AI-powered, revolutionize, solution, emoji.
-7. Round every corner you can. The circle is the visual backbone.
-8. Companions have full human names (Kai Mercer, Kevin Jones, May Li). Not "the AI". See `imagery/people/persona-roster.md`.
-9. **Fixed-size layouts declare a row budget.** One-pagers, slides, and any composition with a fixed outer height must define each row's height as a CSS custom property (`--row-hero`, `--row-specs`, etc.) and declare `--sheet-max`. The sum of rows must equal `--sheet-max`. When a fix adds vertical pixels to one band, re-total the rows in the same edit — never leave the math for later. Bottom imprints/footers need ≥24px padding below them; they are the canary for budget overflow.
-10. Default button radius is `10px`. Pill shape is reserved for chips and one designated hero CTA per page (`.btn-primary-pulse`).
-11. The Napster Beam gradient is overlay-only on imagery (`mix-blend-mode: screen`). Never directly behind text.
+3. Eyebrows are `.eyebrow` — IBM Plex Mono 500, 12px, uppercase, `+0.48px` tracking, pink. Every section gets one.
+4. Hero headlines are Inter 700 sentence case, end with a period.
+5. Companion names and editorial accents use Instrument Serif italic (`.accent-serif`). Pull quotes, the same (`.pull-quote`).
+6. Page numbers, timestamps, footer markers, slide chrome use IBM Plex Mono (`.meta`).
+7. Horizontal lockup top-left (`logos/horizontal/`), clearspace ≥ lockup-height. The lockup is the default mark — wordmark + n-mark together — not the bare wordmark. For small contexts (favicon, avatar, app icon), use the standalone n-mark from `logos/icon/`.
+8. Never use: chatbot, leverage, AI-powered, revolutionize, solution, emoji.
+9. Round every corner you can. The circle is the visual backbone.
+10. Companions have full human names (Kai Mercer, Kevin Jones, May Li). Not "the AI". See `imagery/people/persona-roster.md`.
+11. **Fixed-size layouts declare a row budget.** One-pagers, slides, and any composition with a fixed outer height must define each row's height as a CSS custom property (`--row-hero`, `--row-specs`, etc.) and declare `--sheet-max`. The sum of rows must equal `--sheet-max`. When a fix adds vertical pixels to one band, re-total the rows in the same edit — never leave the math for later. Bottom imprints/footers need ≥24px padding below them; they are the canary for budget overflow.
+12. Default button radius is `10px`. Pill shape is reserved for chips and one designated hero CTA per page (`.btn-primary-pulse`).
+13. The Napster Beam gradient is overlay-only on imagery (`mix-blend-mode: screen`). Never directly behind text.
 
 If the user invokes this skill without any other guidance, ask them what they want to build or design, ask some questions, and act as an expert designer who outputs HTML artifacts _or_ production code, depending on the need.

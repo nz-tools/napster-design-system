@@ -1,35 +1,12 @@
 # Import Checklist
 
-After importing this design system into Claude Design (from GitHub or local), run through this 30-second checklist. It covers the four small things Claude Design's importer doesn't do automatically.
+After importing this design system into Claude Design (from GitHub or local), run through this 30-second checklist. It covers the few small things Claude Design's importer doesn't do automatically.
 
-## 1. Upload the brand fonts
+## 1. Fonts — nothing to upload
 
-Avantt (the display face) is not a Google Font, so Claude Design can't auto-resolve it from CSS. You need to upload it once per project.
+As of v1.1.0 the system uses three Google Fonts only — **Inter**, **Instrument Serif** *(italic)*, and **IBM Plex Mono**. They auto-resolve from the `@import` at the top of `colors_and_type.css`. No font registry alert, no upload step.
 
-> **Important:** You must use the **"Upload fonts" button on the alert**, NOT drag the font files into the chat input on the left.
->
-> - The Upload fonts button registers the fonts in the project's font registry. This is what clears the alert and what makes the renderer use Avantt.
-> - Dragging into the chat input only attaches the files as context for the Claude assistant. The assistant will acknowledge them and may say "no further action needed," but the font registry doesn't get updated, the alert stays, and the typography keeps rendering with substitute web fonts.
->
-> They look similar. They do completely different things. Use the button.
-
-**Steps:**
-
-1. After import finishes, Claude Design shows an orange **"Missing brand fonts"** alert near the top of the Design System tab.
-2. Click the **Upload fonts** button on the right side of that alert (NOT the chat input below).
-3. Unzip [`Avantt-for-Claude-Design.zip`](Avantt-for-Claude-Design.zip) from this repo root. The zip contains the four Avantt weights in both TTF and WOFF2 formats. **Upload the TTF files** — Claude Design's font registry currently accepts TTF (and OTF), but not WOFF2:
-   - `Avantt-Medium.ttf`
-   - `Avantt-SemiBold.ttf`
-   - `Avantt-Bold.ttf`
-   - `Avantt-ExtraBold.ttf`
-4. Select all four and confirm the upload.
-5. The orange alert should disappear within a few seconds and Avantt should start rendering across the design system.
-
-The WOFF2 files in the same zip are bundled for non-Claude-Design contexts (production HTML, generated artifacts, marketing sites). You don't need to upload them to Claude Design.
-
-If the alert doesn't clear after step 5, refresh the page and check again. If it still doesn't clear, you may have uploaded through the chat input by mistake; try the button again.
-
-Inter (the body face) is loaded from Google Fonts and resolves automatically. No upload needed.
+> **Previous versions** (v1.0.x) required uploading four Avantt weights via the "Upload fonts" button on the missing-brand-fonts alert. That alert no longer appears in v1.1.0 because Avantt has been retired from the design system. The live napster.com site continues to use Avantt — `reference/napster-com-audit.md` documents that — but Claude Design does not need it.
 
 ## 2. Pull in the full imagery library
 
@@ -55,7 +32,7 @@ Roughly half the imagery library is in AVIF format (modern, web-native, compress
 
 ## 5. Validation prompt
 
-Once the four steps above are done, paste this prompt to confirm everything is wired:
+Once the steps above are done, paste this prompt to confirm everything is wired:
 
 ```
 Create a one-pager for Napster Station targeting hub airport operators.
@@ -63,7 +40,7 @@ Use the imagery from imagery/product/station/. Apply the design system's
 type, color, and layout tokens. Sentence-case headlines with periods.
 ```
 
-The result should render with Avantt headlines, Inter body, the right product imagery, the lockup top-left, and a single pink accent on the load-bearing noun. If any of those are missing, walk back through the checklist.
+The result should render with **Inter 700 headlines**, **Inter 400 body**, **IBM Plex Mono uppercase eyebrows in `#DD52CB`**, the right product imagery, the lockup top-left, and a single pink accent on the load-bearing noun. If any of those are missing, walk back through the checklist.
 
 ---
 

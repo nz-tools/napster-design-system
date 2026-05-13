@@ -11,5 +11,7 @@
 # OS / archives
 Thumbs.db
 *.zip
-!Avantt-for-Claude-Design.zip
-# (the Avantt font bundle is shipped with the repo for Claude Design users)
+# v1.1.0: Avantt retired from the design system. No font bundle to ship —
+# the three Google Fonts (Inter, Instrument Serif, IBM Plex Mono) load
+# from Google's CDN via colors_and_type.css. No exception to the *.zip
+# rule is needed any more.

@@ -13,8 +13,9 @@ For each prompt, score the output against the **Pass criteria**. A bundle that p
 ### Pass criteria
 
 - Background pure `#000000`.
-- Hero uses Avantt 600, 72px, sentence case, period-terminated.
-- Eyebrow at the top of every section: Inter 700, 12px, UPPERCASE, color `#DD52CB`.
+- Hero uses Inter 700, 72px, sentence case, period-terminated.
+- Eyebrow at the top of every section: IBM Plex Mono 500, 12px, UPPERCASE, `+0.48px` tracking, color `#DD52CB`.
+- Page numbers and footer chrome render in IBM Plex Mono.
 - Pink lands on **one** load-bearing noun in the hero, not on multiple elements.
 - Hero imagery retrieves from `imagery/product/station/` — preferably `napster-station-airport-gate.png`, `napster-station-hotel-lobby*.png`, `napster-station-lobby-device-ai-concierge-hero.png`, or `napster-station-hero-background.avif`. **Filename match is the success signal.**
 - Primary button `#BE369D`, radius `10px`, padding `18.5px 20px`. No pill button except for one hero CTA (optional).
@@ -23,6 +24,8 @@ For each prompt, score the output against the **Pass criteria**. A bundle that p
 
 ### Failure modes to watch
 
+- Eyebrow rendered in Inter rather than IBM Plex Mono → v1.1.0 typography migration not retrieved.
+- Avantt anywhere in the output → stale token cache; re-publish.
 - Eyebrow in wrong color (`#EA2DD2` instead of `#DD52CB`) → token retrieval miss.
 - Buttons in pill shape by default → AKEO leaked through.
 - Generic stock photography instead of Station library → imagery folder not indexed.

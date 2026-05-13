@@ -1,6 +1,10 @@
 # napster.com live audit — April 2026
 
-Findings from a computed-style audit of the live production site at https://napster.com, performed while building the v1.0.0 design system repo. All tokens in [`../../tokens/`](../../tokens/) reflect these values.
+Findings from a computed-style audit of the live production site at https://napster.com, performed while building the v1.0.0 design system repo. This document records what napster.com itself uses; it is no longer the authoritative source for the design system's own typography.
+
+> **Scope note (v1.1.0).** As of May 2026 the design system uses three Google Fonts — Inter, Instrument Serif italic, IBM Plex Mono — and has retired Avantt. The live napster.com marketing site continues to use Avantt and is the only place Avantt appears. Everything below describes the live marketing site as audited. For the system's own typography, see [`../DESIGN.md`](../DESIGN.md) §3.
+
+Color, spacing, radius, and shadow tokens from this audit remain authoritative — those didn't change in v1.1.0. Only the typography lineage diverged.
 
 ## Typography (confirmed live)
 

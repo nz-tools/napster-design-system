@@ -17,7 +17,7 @@ thread with a companion, and the profile/settings page.
   glow. Secondary action is a translucent stroked pill.
 - Floating tab bar (capsule + blur) is the canonical app shell. The voice
   orb is a radial pink-to-deep-magenta gradient with an inner highlight.
-- Type: **Avantt** (self-hosted) for display/headings, **Inter** for body and UI.
+- Type: **Inter** (Google Fonts, weights 300–900) for display, body, and UI. **IBM Plex Mono** for any in-app metadata (timestamps, message receipts, session counters). The app surface is the cleanest place in the system — no editorial italic serif inside product chrome.
 
 ## Out of scope
 This is a UI kit, not a working app. State is static; navigation is visual.

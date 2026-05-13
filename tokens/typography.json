@@ -1,26 +1,32 @@
 {
   "$schema": "https://design-tokens.github.io/community-group/format/",
-  "source": "napster.com live audit (April 2026) + AKEO Brand Definition Proposal",
+  "source": "napster.com live audit (April 2026) + AKEO Brand Definition Proposal. v1.1.0 retires Avantt from the design system; the live napster.com site continues to use Avantt and is the only place it appears.",
   "font": {
     "family": {
       "display": {
-        "$value": "Avantt, 'Helvetica Neue', Arial, sans-serif",
+        "$value": "Inter, 'Helvetica Neue', Arial, sans-serif",
         "$type": "fontFamily",
-        "$description": "Primary display face — 'Napster Sans'. Licensed from Displaay Type Foundry. Used for all headlines, stats, large accents."
+        "$description": "Display + body. Inter spans the full 300–900 weight range. Loaded from Google Fonts."
       },
       "body": {
         "$value": "Inter, 'Helvetica Neue', sans-serif",
         "$type": "fontFamily",
-        "$description": "Primary body face. Used for all paragraphs, labels, buttons, UI text."
+        "$description": "Same family as display. Used for paragraphs, labels, buttons, UI chrome."
+      },
+      "serif": {
+        "$value": "'Instrument Serif', 'Times New Roman', Georgia, serif",
+        "$type": "fontFamily",
+        "$description": "Editorial accent face, italic only. Used for companion names, pull quotes, accent words inside headlines. Loaded from Google Fonts."
+      },
+      "mono": {
+        "$value": "'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace",
+        "$type": "fontFamily",
+        "$description": "Metadata face. Used for eyebrows, timestamps, page numbers, slide chrome. Loaded from Google Fonts."
       },
       "system": {
         "$value": "Arial, 'Helvetica Neue', sans-serif",
         "$type": "fontFamily",
         "$description": "System fallback"
-      },
-      "mono": {
-        "$value": "ui-monospace, 'SF Mono', Menlo, Consolas, monospace",
-        "$type": "fontFamily"
       }
     },
     "weight": {
@@ -29,15 +35,16 @@
       "medium":    { "$value": 500, "$type": "fontWeight" },
       "semibold":  { "$value": 600, "$type": "fontWeight" },
       "bold":      { "$value": 700, "$type": "fontWeight" },
-      "extrabold": { "$value": 800, "$type": "fontWeight" }
+      "extrabold": { "$value": 800, "$type": "fontWeight" },
+      "black":     { "$value": 900, "$type": "fontWeight" }
     },
     "size": {
       "display-cover": { "$value": "180px", "$type": "dimension", "$description": "Section dividers, oversized cover stats" },
-      "display-1":     { "$value": "96px",  "$type": "dimension", "$description": "Cover slides (AKEO)" },
+      "display-1":     { "$value": "96px",  "$type": "dimension", "$description": "Cover slides" },
       "display-2":     { "$value": "72px",  "$type": "dimension", "$description": "Display alt" },
-      "hero":          { "$value": "72px",  "$type": "dimension", "$description": "Primary marketing hero (live-verified)" },
+      "hero":          { "$value": "72px",  "$type": "dimension", "$description": "Primary marketing hero" },
       "h1":            { "$value": "56px",  "$type": "dimension", "$description": "Document H1" },
-      "section":       { "$value": "41px",  "$type": "dimension", "$description": "Section headlines on marketing (live-verified)" },
+      "section":       { "$value": "41px",  "$type": "dimension", "$description": "Section headlines on marketing" },
       "h2":            { "$value": "40px",  "$type": "dimension", "$description": "Document H2" },
       "title":         { "$value": "32px",  "$type": "dimension", "$description": "Card titles" },
       "h3":            { "$value": "28px",  "$type": "dimension", "$description": "Subsection" },
@@ -47,14 +54,15 @@
       "body":          { "$value": "16px",  "$type": "dimension" },
       "body-sm":       { "$value": "14px",  "$type": "dimension", "$description": "Buttons, small UI" },
       "caption":       { "$value": "12px",  "$type": "dimension" },
-      "eyebrow":       { "$value": "12px",  "$type": "dimension", "$description": "Inter 700, uppercase, pink (live-verified)" },
-      "meta":          { "$value": "11px",  "$type": "dimension" }
+      "eyebrow":       { "$value": "12px",  "$type": "dimension", "$description": "IBM Plex Mono 500, uppercase, pink" },
+      "meta":          { "$value": "11px",  "$type": "dimension", "$description": "IBM Plex Mono 400 — page numbers, timestamps, footer markers" }
     },
     "tracking": {
       "display":  { "$value": "-0.025em", "$type": "dimension", "$description": "Tight, mirrors wordmark" },
-      "hero":     { "$value": "-0.02em",  "$type": "dimension", "$description": "-1.44px at 72px (live)" },
-      "section":  { "$value": "-0.02em",  "$type": "dimension", "$description": "-0.82px at 41px (live)" },
-      "eyebrow":  { "$value": "-0.01em",  "$type": "dimension", "$description": "-0.12px at 12px (live; tight, not airy)" },
+      "hero":     { "$value": "-0.025em", "$type": "dimension", "$description": "Inter at 72px — slightly more compression than Avantt needed" },
+      "section":  { "$value": "-0.02em",  "$type": "dimension" },
+      "eyebrow":  { "$value": "0.04em",   "$type": "dimension", "$description": "Plex Mono uppercase needs breathing room" },
+      "mono":     { "$value": "0.02em",   "$type": "dimension", "$description": "Default mono spacing — timestamps, page numbers" },
       "button":   { "$value": "0.02em",   "$type": "dimension" },
       "body":     { "$value": "0em",      "$type": "dimension" }
     },
@@ -62,29 +70,29 @@
       "tight":      { "$value": 0.95, "$type": "number" },
       "display":    { "$value": 1.02, "$type": "number" },
       "headline":   { "$value": 1.10, "$type": "number" },
-      "body":       { "$value": 1.40, "$type": "number", "$description": "Live default" },
+      "body":       { "$value": 1.40, "$type": "number", "$description": "Default body line-height" },
       "body-loose": { "$value": 1.60, "$type": "number" }
     }
   },
   "textStyle": {
     "hero": {
       "$value": {
-        "fontFamily": "Avantt, 'Helvetica Neue', Arial, sans-serif",
+        "fontFamily": "Inter, 'Helvetica Neue', Arial, sans-serif",
         "fontSize": "72px",
-        "fontWeight": 600,
-        "letterSpacing": "-1.44px",
+        "fontWeight": 700,
+        "letterSpacing": "-1.80px",
         "lineHeight": 1.1,
         "textTransform": "none",
         "color": "#FFFFFF"
       },
       "$type": "typography",
-      "$description": "Hero headline — sentence case, white, ends with a period"
+      "$description": "Hero headline — sentence case, white, ends with a period. Inter 700."
     },
     "section-headline": {
       "$value": {
-        "fontFamily": "Avantt, 'Helvetica Neue', Arial, sans-serif",
+        "fontFamily": "Inter, 'Helvetica Neue', Arial, sans-serif",
         "fontSize": "41px",
-        "fontWeight": 600,
+        "fontWeight": 700,
         "letterSpacing": "-0.82px",
         "lineHeight": 1.1,
         "color": "#FFFFFF"
@@ -93,15 +101,15 @@
     },
     "eyebrow": {
       "$value": {
-        "fontFamily": "Inter, 'Helvetica Neue', sans-serif",
+        "fontFamily": "'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace",
         "fontSize": "12px",
-        "fontWeight": 700,
-        "letterSpacing": "-0.12px",
+        "fontWeight": 500,
+        "letterSpacing": "0.48px",
         "textTransform": "uppercase",
         "color": "#DD52CB"
       },
       "$type": "typography",
-      "$description": "Universal eyebrow label — uppercase Inter Bold in Napster Pink"
+      "$description": "Universal eyebrow label — uppercase IBM Plex Mono Medium in Napster Pink"
     },
     "button": {
       "$value": {
@@ -121,6 +129,41 @@
         "color": "#FFFFFF"
       },
       "$type": "typography"
+    },
+    "accent-serif": {
+      "$value": {
+        "fontFamily": "'Instrument Serif', 'Times New Roman', Georgia, serif",
+        "fontSize": "inherit",
+        "fontWeight": 400,
+        "fontStyle": "italic",
+        "letterSpacing": "-0.01em"
+      },
+      "$type": "typography",
+      "$description": "Inline editorial accent — companion names, pull-quote phrases, accent words in headlines. Use either accent-serif OR gradient-word on a noun, never both."
+    },
+    "pull-quote": {
+      "$value": {
+        "fontFamily": "'Instrument Serif', 'Times New Roman', Georgia, serif",
+        "fontSize": "24px",
+        "fontWeight": 400,
+        "fontStyle": "italic",
+        "lineHeight": 1.35,
+        "letterSpacing": "-0.005em",
+        "color": "#FFFFFF"
+      },
+      "$type": "typography",
+      "$description": "Pull quote — Instrument Serif italic 24px with a left pink rule."
+    },
+    "meta": {
+      "$value": {
+        "fontFamily": "'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace",
+        "fontSize": "11px",
+        "fontWeight": 400,
+        "letterSpacing": "0.22px",
+        "color": "rgba(255,255,255,0.5)"
+      },
+      "$type": "typography",
+      "$description": "Page numbers, timestamps, footer markers, slide chrome."
     }
   }
 }

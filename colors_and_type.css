@@ -6,41 +6,13 @@
    silent. Where the two conflict, live wins.
    ===================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-/* Avantt — "Napster Sans". Licensed from Displaay Type Foundry. */
-@font-face {
-  font-family: 'Avantt';
-  src: url('typography/fonts/Avantt-Medium.ttf') format('truetype'),
-       url('typography/fonts/Avantt-Medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Avantt';
-  src: url('typography/fonts/Avantt-SemiBold.ttf') format('truetype'),
-       url('typography/fonts/Avantt-SemiBold.otf') format('opentype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Avantt';
-  src: url('typography/fonts/Avantt-Bold.ttf') format('truetype'),
-       url('typography/fonts/Avantt-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Avantt';
-  src: url('typography/fonts/Avantt-ExtraBold.ttf') format('truetype'),
-       url('typography/fonts/Avantt-ExtraBold.otf') format('opentype');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
+/* Three Google Fonts. Everything resolves automatically — nothing to upload.
+   Inter is the system face (display, body, labels, UI chrome).
+   Instrument Serif italic is the editorial accent (companion names,
+   pull quotes, accent words in headlines).
+   IBM Plex Mono is the metadata face (eyebrows, timestamps, page
+   numbers, slide chrome). */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@1&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
   /* ─────────────────────────────────────────────────────────────
@@ -158,11 +130,14 @@
 
   /* ─────────────────────────────────────────────────────────────
      TYPOGRAPHY
+     Three Google Fonts. No self-hosted faces. Avantt lives on
+     napster.com only — see reference/napster-com-audit.md.
      ───────────────────────────────────────────────────────────── */
-  --font-display:     'Avantt', 'Helvetica Neue', Arial, sans-serif;   /* Napster Sans */
+  --font-display:     'Inter', 'Helvetica Neue', Arial, sans-serif;   /* Display, body, UI */
   --font-body:        'Inter', 'Helvetica Neue', sans-serif;
+  --font-serif:       'Instrument Serif', 'Times New Roman', Georgia, serif;  /* Editorial accents — italic only */
+  --font-mono:        'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
   --font-system:      Arial, 'Helvetica Neue', sans-serif;
-  --font-mono:        ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 
   /* Type scale — merged. Live-verified marketing sizes + AKEO semantic ramp. */
   --fs-display-cover: 180px;   /* Section dividers, oversized cover stats */
@@ -180,22 +155,24 @@
   --fs-body:          16px;    /* Live default */
   --fs-body-sm:       14px;    /* Buttons, small UI */
   --fs-caption:       12px;
-  --fs-eyebrow:       12px;    /* Inter 700, uppercase, pink (live) */
+  --fs-eyebrow:       12px;    /* IBM Plex Mono 500, uppercase, pink */
   --fs-meta:          11px;
 
-  /* Weights */
+  /* Weights — Inter spans the full range now that it owns display. */
   --fw-light:         300;
   --fw-regular:       400;
   --fw-medium:        500;
   --fw-semibold:      600;
   --fw-bold:          700;
   --fw-extrabold:     800;
+  --fw-black:         900;
 
   /* Letter spacing (tracking) */
   --tracking-display: -0.025em;   /* Tight, mirrors wordmark */
-  --tracking-hero:    -0.02em;    /* -1.44px @ 72px (live) */
-  --tracking-section: -0.02em;    /* -0.82px @ 41px (live) */
-  --tracking-eyebrow: -0.01em;    /* -0.12px @ 12px (live; tight, not airy) */
+  --tracking-hero:    -0.025em;   /* Inter at 72px needs slightly more compression than Avantt did */
+  --tracking-section: -0.02em;
+  --tracking-eyebrow: 0.04em;     /* Plex Mono needs breathing room at uppercase 12px */
+  --tracking-mono:    0.02em;     /* Default mono spacing — page numbers, timestamps */
   --tracking-button:  0.02em;
   --tracking-body:    0em;
 
@@ -296,52 +273,88 @@ html, body, .napster {
    SEMANTIC TYPE CLASSES
    ───────────────────────────────────────────────────────────────── */
 
-/* Eyebrow — Inter 700, 12px, uppercase, pink. EVERY section gets one. */
+/* Eyebrow — IBM Plex Mono 500, 12px, uppercase, pink. EVERY section gets one. */
 .eyebrow {
-  font-family: var(--font-body);
+  font-family: var(--font-mono);
   font-size: var(--fs-eyebrow);
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-medium);
   text-transform: uppercase;
   letter-spacing: var(--tracking-eyebrow);
   color: var(--pink);
 }
 
-/* Hero — Avantt 600, 72px, sentence case, ends with a period. */
+/* Hero — Inter 700, 72px, sentence case, ends with a period. */
 .h-hero {
   font-family: var(--font-display);
   font-size: var(--fs-hero);
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-bold);
   line-height: var(--lh-headline);
   letter-spacing: var(--tracking-hero);
   color: var(--fg);
 }
 
-/* Section headline — Avantt 600, 41px. */
+/* Section headline — Inter 700, 41px. */
 .h-section {
   font-family: var(--font-display);
   font-size: var(--fs-section);
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-bold);
   line-height: var(--lh-headline);
   letter-spacing: var(--tracking-section);
 }
 
-/* Document hierarchy — Avantt for h1–h4. */
+/* Document hierarchy — Inter for h1–h4. */
 .h1 { font-family: var(--font-display); font-weight: var(--fw-bold);     font-size: var(--fs-h1); line-height: var(--lh-display);  letter-spacing: var(--tracking-display); margin: 0; }
 .h2 { font-family: var(--font-display); font-weight: var(--fw-bold);     font-size: var(--fs-h2); line-height: var(--lh-headline); letter-spacing: var(--tracking-display); margin: 0; }
 .h3 { font-family: var(--font-display); font-weight: var(--fw-semibold); font-size: var(--fs-h3); line-height: var(--lh-headline); letter-spacing: -0.01em; margin: 0; }
 .h4 { font-family: var(--font-display); font-weight: var(--fw-semibold); font-size: var(--fs-h4); line-height: var(--lh-headline); margin: 0; }
 
-.display-cover { font-family: var(--font-display); font-weight: var(--fw-bold); font-size: var(--fs-display-cover); line-height: var(--lh-tight);   letter-spacing: var(--tracking-display); }
-.display-1     { font-family: var(--font-display); font-weight: var(--fw-bold); font-size: var(--fs-display-1);     line-height: var(--lh-display); letter-spacing: var(--tracking-display); }
-.display-2     { font-family: var(--font-display); font-weight: var(--fw-bold); font-size: var(--fs-display-2);     line-height: var(--lh-display); letter-spacing: var(--tracking-display); }
+.display-cover { font-family: var(--font-display); font-weight: var(--fw-extrabold); font-size: var(--fs-display-cover); line-height: var(--lh-tight);   letter-spacing: var(--tracking-display); }
+.display-1     { font-family: var(--font-display); font-weight: var(--fw-extrabold); font-size: var(--fs-display-1);     line-height: var(--lh-display); letter-spacing: var(--tracking-display); }
+.display-2     { font-family: var(--font-display); font-weight: var(--fw-bold);      font-size: var(--fs-display-2);     line-height: var(--lh-display); letter-spacing: var(--tracking-display); }
 
-/* Gradient-clipped word — apply to the LOAD-BEARING NOUN only */
+/* Gradient-clipped word — apply to the LOAD-BEARING NOUN only.
+   Use EITHER this OR .accent-serif within a headline. Never both on the same word. */
 .gradient-word {
   background: var(--gradient-hero);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
+}
+
+/* Editorial accent — Instrument Serif italic. Use for:
+   – companion names ("Meet Kai Mercer.")
+   – accent words in headlines (alternate to .gradient-word)
+   – pull quotes
+   Never stack with .gradient-word on the same word. */
+.accent-serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* Pull quote — Instrument Serif italic, larger than body, indented. */
+.pull-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--fs-subtitle);
+  line-height: 1.35;
+  letter-spacing: -0.005em;
+  color: var(--fg);
+  border-left: 2px solid var(--pink);
+  padding-left: var(--space-4);
+  margin: var(--space-6) 0;
+}
+
+/* Metadata — IBM Plex Mono. Timestamps, page numbers, slide chrome, footer markers. */
+.meta {
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--tracking-mono);
+  color: var(--fg-muted);
 }
 
 /* Body text */
