@@ -1,0 +1,124 @@
+/* Tailwind v4 namespace adapter.
+   Import colors_and_type.css first; this file only aliases existing Napster
+   custom properties into Tailwind's @theme namespaces. */
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-mulberry: var(--bg-mulberry);
+  --color-bg-plum: var(--bg-plum);
+  --color-bg-purple: var(--bg-purple);
+  --color-bg-charcoal: var(--bg-charcoal);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-subtle: var(--fg-subtle);
+  --color-pink: var(--pink);
+  --color-pink-deep: var(--pink-deep);
+  --color-pink-bright: var(--pink-bright);
+  --color-pink-rim: var(--pink-rim);
+  --color-pink-glow: var(--pink-glow);
+  --color-plum-deep: var(--plum-deep);
+  --color-plum-panel: var(--plum-panel);
+  --color-violet: var(--violet);
+  --color-violet-deep: var(--violet-deep);
+  --color-violet-mid: var(--violet-mid);
+  --color-lilac: var(--lilac);
+  --color-indigo: var(--indigo);
+  --color-coral: var(--coral);
+  --color-pulse-1: var(--pulse-1);
+  --color-pulse-2: var(--pulse-2);
+  --color-neon-1: var(--neon-1);
+  --color-neon-2: var(--neon-2);
+  --color-beam-yellow: var(--beam-yellow);
+  --color-good: var(--good);
+  --color-bad: var(--bad);
+  --color-neutral: var(--neutral);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-border-pink: var(--border-pink);
+  --color-focus-ring: var(--focus-ring);
+  --color-btn-primary-hover: var(--btn-primary-hover);
+
+  --font-display: var(--napster-font-display);
+  --font-body: var(--napster-font-body);
+  --font-serif: var(--napster-font-serif);
+  --font-mono: var(--napster-font-mono);
+
+  --text-hero: var(--fs-hero);
+  --text-hero--line-height: var(--lh-headline);
+  --text-hero--letter-spacing: var(--tracking-hero);
+  --text-hero--font-weight: var(--fw-bold);
+  --text-section: var(--fs-section);
+  --text-section--line-height: var(--lh-headline);
+  --text-section--letter-spacing: var(--tracking-section);
+  --text-section--font-weight: var(--fw-bold);
+  --text-eyebrow: var(--fs-eyebrow);
+  --text-eyebrow--line-height: var(--lh-body);
+  --text-eyebrow--letter-spacing: var(--tracking-eyebrow);
+  --text-eyebrow--font-weight: var(--fw-medium);
+  --text-body: var(--fs-body);
+  --text-body-sm: var(--fs-body-sm);
+  --text-meta: var(--fs-meta);
+
+  --font-weight-light: var(--fw-light);
+  --font-weight-regular: var(--fw-regular);
+  --font-weight-medium: var(--fw-medium);
+  --font-weight-semibold: var(--fw-semibold);
+  --font-weight-bold: var(--fw-bold);
+  --font-weight-extrabold: var(--fw-extrabold);
+  --font-weight-black: var(--fw-black);
+
+  --tracking-display: var(--napster-tracking-display);
+  --tracking-hero: var(--napster-tracking-hero);
+  --tracking-section: var(--napster-tracking-section);
+  --tracking-eyebrow: var(--napster-tracking-eyebrow);
+  --tracking-mono: var(--napster-tracking-mono);
+  --tracking-button: var(--napster-tracking-button);
+
+  --leading-tight: var(--lh-tight);
+  --leading-display: var(--lh-display);
+  --leading-headline: var(--lh-headline);
+  --leading-body: var(--lh-body);
+  --leading-body-loose: var(--lh-body-loose);
+
+  --radius-xs: var(--r-xs);
+  --radius-sm: var(--r-sm);
+  --radius-md: var(--r-md);
+  --radius-lg: var(--r-lg);
+  --radius-xl: var(--r-xl);
+  --radius-2xl: var(--r-2xl);
+  --radius-pill: var(--r-pill);
+  --radius-full: var(--r-full);
+
+  --spacing-0: var(--space-0);
+  --spacing-1: var(--space-1);
+  --spacing-2: var(--space-2);
+  --spacing-3: var(--space-3);
+  --spacing-4: var(--space-4);
+  --spacing-5: var(--space-5);
+  --spacing-6: var(--space-6);
+  --spacing-8: var(--space-8);
+  --spacing-10: var(--space-10);
+  --spacing-12: var(--space-12);
+  --spacing-16: var(--space-16);
+  --spacing-20: var(--space-20);
+  --spacing-24: var(--space-24);
+  --spacing-32: var(--space-32);
+
+  --shadow-sm: var(--napster-shadow-sm);
+  --shadow-md: var(--napster-shadow-md);
+  --shadow-lg: var(--napster-shadow-lg);
+  --shadow-panel: var(--napster-shadow-panel);
+  --shadow-inset-light: var(--napster-shadow-inset-light);
+  --shadow-inner-glow: var(--napster-inner-glow);
+  --shadow-glow-pink: var(--napster-glow-pink);
+  --shadow-glow-pulse: var(--napster-glow-pulse);
+
+  --background-image-hero: var(--gradient-hero);
+  --background-image-label: var(--gradient-label);
+  --background-image-pulse: var(--gradient-pulse);
+  --background-image-pulse-button: var(--gradient-pulse-button);
+  --background-image-neon: var(--gradient-neon);
+  --background-image-beam: var(--gradient-beam);
+
+  --ease-napster: var(--easing);
+}

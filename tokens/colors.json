@@ -87,7 +87,12 @@
     "pulse": {
       "$value": "linear-gradient(135deg, #EA2DD2 0%, #FF7DF3 100%)",
       "$type": "gradient",
-      "$description": "Pulse two-stop. Primary button (hero variant), accent surfaces."
+      "$description": "Pulse two-stop. Accent surfaces. Do not place white normal-size text across the bright endpoint."
+    },
+    "pulse-button": {
+      "$value": "linear-gradient(135deg, #EA2DD2 0%, #E65AD5 100%)",
+      "$type": "gradient",
+      "$description": "Accessible pulse-button variant. White text clears large-text AA across both stops."
     },
     "neon": {
       "$value": "linear-gradient(135deg, #FF7DF3 0%, #FFA1F3 50%, #FDE5D5 100%)",

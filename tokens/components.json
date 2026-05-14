@@ -1,0 +1,297 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "version": "1.2.0",
+  "source": "colors_and_type.css + DESIGN.md §7",
+  "component": {
+    "button": {
+      "primary": {
+        "background": {
+          "default": {
+            "$value": "var(--btn-primary-bg)",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "var(--btn-primary-hover)",
+            "$type": "color",
+            "$description": "AA with white text at normal button sizes."
+          }
+        },
+        "foreground": {
+          "$value": "var(--fg)",
+          "$type": "color"
+        },
+        "radius": {
+          "$value": "var(--r-md)",
+          "$type": "dimension"
+        },
+        "padding": {
+          "$value": "18.5px 20px",
+          "$type": "dimension"
+        },
+        "pressScale": {
+          "$value": 0.98,
+          "$type": "number"
+        },
+        "focusRing": {
+          "$value": "var(--focus-ring)",
+          "$type": "color"
+        }
+      },
+      "secondary": {
+        "background": {
+          "default": {
+            "$value": "rgba(190, 54, 157, 0.02)",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "var(--btn-secondary-hover)",
+            "$type": "color"
+          }
+        },
+        "border": {
+          "$value": "1px solid rgba(255, 161, 243, 0.20)",
+          "$type": "strokeStyle"
+        },
+        "focusRing": {
+          "$value": "var(--focus-ring)",
+          "$type": "color"
+        }
+      },
+      "ghost": {
+        "background": {
+          "$value": "transparent",
+          "$type": "color"
+        },
+        "foreground": {
+          "default": {
+            "$value": "var(--fg)",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "var(--btn-ghost-hover)",
+            "$type": "color"
+          }
+        },
+        "padding": {
+          "$value": "12px 16px",
+          "$type": "dimension"
+        },
+        "focusRing": {
+          "$value": "var(--focus-ring)",
+          "$type": "color"
+        }
+      },
+      "primaryPulse": {
+        "background": {
+          "$value": "var(--gradient-pulse-button)",
+          "$type": "gradient"
+        },
+        "foreground": {
+          "$value": "var(--fg)",
+          "$type": "color"
+        },
+        "radius": {
+          "$value": "var(--r-pill)",
+          "$type": "dimension"
+        },
+        "padding": {
+          "$value": "14px 20px",
+          "$type": "dimension"
+        },
+        "minFontSize": {
+          "$value": "24px",
+          "$type": "dimension",
+          "$description": "Required because white text over the pulse gradient only clears AA at large-text threshold."
+        },
+        "minFontWeight": {
+          "$value": 600,
+          "$type": "fontWeight"
+        },
+        "hoverFilter": {
+          "$value": "none",
+          "$type": "string"
+        },
+        "pressScale": {
+          "$value": 0.98,
+          "$type": "number"
+        },
+        "focusRing": {
+          "$value": "var(--focus-ring)",
+          "$type": "color"
+        },
+        "reducedMotion": {
+          "$value": "remove transition and glow halo",
+          "$type": "string"
+        }
+      }
+    },
+    "card": {
+      "default": {
+        "background": {
+          "$value": "var(--bg-mulberry)",
+          "$type": "color"
+        },
+        "border": {
+          "$value": "1px solid var(--border)",
+          "$type": "strokeStyle"
+        },
+        "radius": {
+          "$value": "var(--r-lg)",
+          "$type": "dimension"
+        },
+        "padding": {
+          "$value": "var(--space-6)",
+          "$type": "dimension"
+        },
+        "hoverBorder": {
+          "$value": "var(--card-hover-border)",
+          "$type": "color"
+        },
+        "focusRing": {
+          "$value": "var(--focus-ring)",
+          "$type": "color"
+        }
+      },
+      "large": {
+        "radius": {
+          "$value": "var(--r-xl)",
+          "$type": "dimension"
+        },
+        "padding": {
+          "$value": "var(--space-8)",
+          "$type": "dimension"
+        }
+      },
+      "hero": {
+        "radius": {
+          "$value": "var(--r-2xl)",
+          "$type": "dimension"
+        },
+        "padding": {
+          "$value": "var(--space-10)",
+          "$type": "dimension"
+        }
+      },
+      "glass": {
+        "background": {
+          "$value": "var(--surface-glass)",
+          "$type": "color"
+        },
+        "border": {
+          "$value": "1px solid var(--border-strong)",
+          "$type": "strokeStyle"
+        },
+        "radius": {
+          "$value": "var(--r-2xl)",
+          "$type": "dimension"
+        },
+        "blur": {
+          "$value": "var(--blur-card-glass)",
+          "$type": "blur"
+        },
+        "shadow": {
+          "$value": "var(--inner-glow)",
+          "$type": "shadow"
+        }
+      }
+    },
+    "panel": {
+      "default": {
+        "background": {
+          "$value": "var(--panel-fill)",
+          "$type": "color"
+        },
+        "border": {
+          "$value": "var(--panel-border)",
+          "$type": "strokeStyle"
+        },
+        "radius": {
+          "$value": "var(--r-lg)",
+          "$type": "dimension"
+        },
+        "blur": {
+          "$value": "var(--blur-panel)",
+          "$type": "blur"
+        }
+      },
+      "pink": {
+        "background": {
+          "$value": "var(--panel-fill-pink)",
+          "$type": "color"
+        },
+        "border": {
+          "$value": "var(--panel-border-pink)",
+          "$type": "strokeStyle"
+        }
+      }
+    },
+    "input": {
+      "background": {
+        "$value": "rgba(255, 255, 255, 0.04)",
+        "$type": "color"
+      },
+      "border": {
+        "default": {
+          "$value": "var(--border)",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "var(--input-focus-border)",
+          "$type": "color"
+        }
+      },
+      "placeholder": {
+        "$value": "var(--fg-subtle)",
+        "$type": "color"
+      },
+      "radius": {
+        "$value": "var(--r-md)",
+        "$type": "dimension"
+      },
+      "padding": {
+        "$value": "14px 18px",
+        "$type": "dimension"
+      }
+    },
+    "link": {
+      "hover": {
+        "foreground": {
+          "$value": "var(--link-hover)",
+          "$type": "color"
+        },
+        "textDecoration": {
+          "$value": "underline",
+          "$type": "string"
+        }
+      },
+      "focus": {
+        "textDecoration": {
+          "$value": "underline",
+          "$type": "string"
+        }
+      }
+    },
+    "eyebrow": {
+      "fontFamily": {
+        "$value": "var(--font-mono)",
+        "$type": "fontFamily"
+      },
+      "fontSize": {
+        "$value": "var(--fs-eyebrow)",
+        "$type": "dimension"
+      },
+      "fontWeight": {
+        "$value": 500,
+        "$type": "fontWeight"
+      },
+      "letterSpacing": {
+        "$value": "var(--tracking-eyebrow)",
+        "$type": "dimension"
+      },
+      "foreground": {
+        "$value": "var(--pink)",
+        "$type": "color"
+      }
+    }
+  }
+}

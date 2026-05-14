@@ -1,4 +1,6 @@
-/* Napster App — companion screens */
+/* Napster App — companion screens.
+   Prototype/reference only; production apps should use DEVELOPER-GUIDE.md and
+   components/reference.md as the canonical implementation path. */
 
 const Pink = "#BE369D", Pulse = "#EA2DD2", PulseLite = "#FF7DF3", Cream = "#FDE5D5";
 const personas = [

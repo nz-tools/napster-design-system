@@ -6,6 +6,8 @@ This folder is Napster's organization-level design system for Claude Design. Onc
 
 If you're importing this design system into Claude Design, read [**IMPORT-CHECKLIST.md**](IMPORT-CHECKLIST.md) first. Thirty-second post-import setup that resolves the four small things Claude Design doesn't auto-detect (fonts, full imagery library, AVIF, persona portraits).
 
+If you're using this system inside a production app, read [**DEVELOPER-GUIDE.md**](DEVELOPER-GUIDE.md) first. App teams should consume a pinned release tag, not float on `main`.
+
 ## What this bundle is
 
 A synthesis of two source materials:
@@ -42,6 +44,7 @@ If any of the five fails one of those, the bundle did not ingest correctly — r
 napster-design-system-unified/
 ├── DESIGN.md                       # ⭐ The rationale layer — read this first.
 ├── README.md                       # ← you are here
+├── DEVELOPER-GUIDE.md              # App integration guide for Claude Code and engineers.
 ├── SKILL.md                        # Skill descriptor (cross-tool portable)
 ├── colors_and_type.css             # ⭐ Single-import CSS with all tokens + semantic classes.
 ├── brand/
@@ -51,7 +54,12 @@ napster-design-system-unified/
 │   ├── colors.json                 # DTCG-format color tokens + gradients + usage ratio
 │   ├── typography.json             # Type tokens + text styles
 │   ├── spacing.json                # Spacing + radii + components + breakpoints + slide dims
-│   └── motion.json                 # Duration + easing + motion principles
+│   ├── motion.json                 # Duration + easing + motion principles
+│   ├── components.json             # DTCG-format component state tokens
+│   ├── theme.json                  # Plain CSS-var-backed tooling surface
+│   ├── theme.ts                    # Typed wrapper around theme.json
+│   ├── tailwind-v4.css             # Tailwind v4 @theme alias adapter
+│   └── tailwind-v3.config.cjs      # Tailwind v3 preset config
 ├── logos/
 │   ├── horizontal/                 # Horizontal lockup (white, black, 256w raster)
 │   ├── icon/                       # n-mark in 3 fidelities + favicons
@@ -60,7 +68,7 @@ napster-design-system-unified/
 ├── typography/
 │   └── specimens/                  # Type ramp specimen HTML (the three Google Fonts in use)
 ├── layout/                         # Spacing + radii + glow specimens
-├── components/                     # Button/card/input/footer/personas specimens
+├── components/                     # Button/card/input/footer/personas specimens + reference.md
 ├── compositions/
 │   ├── one-pagers/                 # napster-platform, napster-station, napster-view
 │   └── landing-pages/              # napster-view landing page
@@ -101,8 +109,9 @@ napster-design-system-unified/
 | If you want to … | Read |
 |---|---|
 | Understand the system end-to-end | `DESIGN.md` |
+| Integrate into a production app | `DEVELOPER-GUIDE.md` |
 | Write copy that sounds Napster | `brand/voice-and-tone.md` |
-| Pull tokens into code | `colors_and_type.css` (single-import) or `tokens/*.json` |
+| Pull tokens into code | `colors_and_type.css`, `tokens/theme.json`, `tokens/theme.ts`, or Tailwind adapters |
 | Verify against the live site | `reference/napster-com-audit.md` |
 | Build a slide deck | `DESIGN.md` + the tokens. Claude Design infers slide structure from the system. |
 | Build a one-pager | `compositions/one-pagers/` |
@@ -142,7 +151,9 @@ Ziv Navoth (`zivnavoth@gmail.com`). For questions on the visual system, see the 
 
 ## Version
 
-`v1.1.1` — hygiene patch. Adds missing focus-visible states, reconciles component specimens with canonical radii/focus treatment, fixes the Napster App prototype's Amit portrait and eyebrow tokens, and corrects the WCAG contrast notes.
+`v1.2.0` — developer-experience cut. Adds Tailwind v4/v3 adapters, `theme.json` / `theme.ts`, DTCG component state tokens, a production app integration guide, a canonical component reference, asset URL override hooks, and expanded accessibility guidance.
+
+Previous: `v1.1.1` — hygiene patch. Adds missing focus-visible states, reconciles component specimens with canonical radii/focus treatment, fixes the Napster App prototype's Amit portrait and eyebrow tokens, and corrects the WCAG contrast notes.
 
 Previous: `v1.1.0` — three-font system. Avantt retired from the design system; Inter (display + body), Instrument Serif italic (editorial accents), and IBM Plex Mono (metadata) now carry everything. The live napster.com site continues to use Avantt and is documented as such in `reference/napster-com-audit.md`.
 

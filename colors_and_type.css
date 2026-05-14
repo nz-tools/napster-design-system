@@ -104,6 +104,8 @@
   /* Pulse + Neon — AKEO two-stop accent gradients */
   --gradient-pulse:
     linear-gradient(135deg, #EA2DD2 0%, #FF7DF3 100%);
+  --gradient-pulse-button:
+    linear-gradient(135deg, #EA2DD2 0%, #E65AD5 100%); /* White text clears large-text AA across both stops */
   --gradient-neon:
     linear-gradient(135deg, #FF7DF3 0%, #FFA1F3 50%, #FDE5D5 100%);
 
@@ -133,11 +135,16 @@
      Three Google Fonts. No self-hosted faces. Avantt lives on
      napster.com only — see reference/napster-com-audit.md.
      ───────────────────────────────────────────────────────────── */
-  --font-display:     'Inter', 'Helvetica Neue', Arial, sans-serif;   /* Display, body, UI */
-  --font-body:        'Inter', 'Helvetica Neue', sans-serif;
-  --font-serif:       'Instrument Serif', 'Times New Roman', Georgia, serif;  /* Editorial accents — italic only */
-  --font-mono:        'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
-  --font-system:      Arial, 'Helvetica Neue', sans-serif;
+  --napster-font-display: 'Inter', 'Helvetica Neue', Arial, sans-serif;   /* Display, body, UI */
+  --napster-font-body:    'Inter', 'Helvetica Neue', sans-serif;
+  --napster-font-serif:   'Instrument Serif', 'Times New Roman', Georgia, serif;  /* Editorial accents — italic only */
+  --napster-font-mono:    'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --napster-font-system:  Arial, 'Helvetica Neue', sans-serif;
+  --font-display:         var(--napster-font-display);
+  --font-body:            var(--napster-font-body);
+  --font-serif:           var(--napster-font-serif);
+  --font-mono:            var(--napster-font-mono);
+  --font-system:          var(--napster-font-system);
 
   /* Type scale — merged. Live-verified marketing sizes + AKEO semantic ramp. */
   --fs-display-cover: 180px;   /* Section dividers, oversized cover stats */
@@ -168,13 +175,20 @@
   --fw-black:         900;
 
   /* Letter spacing (tracking) */
-  --tracking-display: -0.025em;   /* Tight, mirrors wordmark */
-  --tracking-hero:    -0.025em;   /* Inter at 72px needs slightly more compression than Avantt did */
-  --tracking-section: -0.02em;
-  --tracking-eyebrow: 0.04em;     /* Plex Mono needs breathing room at uppercase 12px */
-  --tracking-mono:    0.02em;     /* Default mono spacing — page numbers, timestamps */
-  --tracking-button:  0.02em;
-  --tracking-body:    0em;
+  --napster-tracking-display: -0.025em;   /* Tight, mirrors wordmark */
+  --napster-tracking-hero:    -0.025em;   /* Inter at 72px needs slightly more compression than Avantt did */
+  --napster-tracking-section: -0.02em;
+  --napster-tracking-eyebrow: 0.04em;     /* Plex Mono needs breathing room at uppercase 12px */
+  --napster-tracking-mono:    0.02em;     /* Default mono spacing — page numbers, timestamps */
+  --napster-tracking-button:  0.02em;
+  --napster-tracking-body:    0em;
+  --tracking-display:         var(--napster-tracking-display);
+  --tracking-hero:            var(--napster-tracking-hero);
+  --tracking-section:         var(--napster-tracking-section);
+  --tracking-eyebrow:         var(--napster-tracking-eyebrow);
+  --tracking-mono:            var(--napster-tracking-mono);
+  --tracking-button:          var(--napster-tracking-button);
+  --tracking-body:            var(--napster-tracking-body);
 
   /* Line heights */
   --lh-tight:         0.95;
@@ -218,15 +232,23 @@
      Napster lives on black. Shadows are rarely soft drops — they
      are inner glows or coloured halos around the brand orb / CTAs.
      ───────────────────────────────────────────────────────────── */
-  --shadow-sm:        0 1px 2px rgba(0, 0, 0, 0.45);
-  --shadow-md:        0 8px 24px rgba(0, 0, 0, 0.55);
-  --shadow-lg:        0 24px 64px rgba(0, 0, 0, 0.65);
-  --shadow-panel:     0 10px 40px rgba(0, 0, 0, 0.35);
-  --shadow-inset-light: inset 0 0 0 0.5px rgba(255, 255, 255, 0.35);
-  --inner-glow:       inset 0 1px 0 rgba(255, 255, 255, 0.10),
-                      inset 0 0 0 1px rgba(255, 255, 255, 0.06);
-  --glow-pink:        0 0 40px rgba(255, 16, 232, 0.35);   /* Live-verified intensity */
-  --glow-pulse:       0 0 80px rgba(234, 45, 210, 0.45);   /* AKEO hero CTA halo */
+  --napster-shadow-sm:        0 1px 2px rgba(0, 0, 0, 0.45);
+  --napster-shadow-md:        0 8px 24px rgba(0, 0, 0, 0.55);
+  --napster-shadow-lg:        0 24px 64px rgba(0, 0, 0, 0.65);
+  --napster-shadow-panel:     0 10px 40px rgba(0, 0, 0, 0.35);
+  --napster-shadow-inset-light: inset 0 0 0 0.5px rgba(255, 255, 255, 0.35);
+  --napster-inner-glow:       inset 0 1px 0 rgba(255, 255, 255, 0.10),
+                              inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  --napster-glow-pink:        0 0 40px rgba(255, 16, 232, 0.35);   /* Live-verified intensity */
+  --napster-glow-pulse:       0 0 80px rgba(234, 45, 210, 0.45);   /* AKEO hero CTA halo */
+  --shadow-sm:                var(--napster-shadow-sm);
+  --shadow-md:                var(--napster-shadow-md);
+  --shadow-lg:                var(--napster-shadow-lg);
+  --shadow-panel:             var(--napster-shadow-panel);
+  --shadow-inset-light:       var(--napster-shadow-inset-light);
+  --inner-glow:               var(--napster-inner-glow);
+  --glow-pink:                var(--napster-glow-pink);
+  --glow-pulse:               var(--napster-glow-pulse);
 
   /* ─────────────────────────────────────────────────────────────
      BLUR + TRANSPARENCY
@@ -253,6 +275,21 @@
   /* Borders shorthand */
   --panel-border:        1px solid var(--border);
   --panel-border-pink:   1px solid var(--border-pink);
+
+  /* Component state aliases */
+  --btn-primary-bg:       var(--pink-deep);
+  --btn-primary-hover:    #C33DA2;   /* AA with white text at normal button sizes */
+  --btn-secondary-hover:  rgba(190, 54, 157, 0.08);
+  --btn-ghost-hover:      var(--pulse-1);
+  --link-hover:           var(--pulse-1);
+  --card-hover-border:    rgba(255, 255, 255, 0.20);
+  --focus-ring:           var(--pink-rim);
+  --input-focus-border:   var(--pink-rim);
+
+  /* Asset URL hooks for apps that import this CSS from another repo/package.
+     Override --napster-grain-texture with a full url(...) value in the app. */
+  --napster-asset-base:   "";
+  --napster-grain-texture: url("imagery/decorative/napster-grain-texture.jpg");
 }
 
 /* =====================================================================
@@ -398,42 +435,45 @@ code, .mono {
 .btn-secondary:focus-visible,
 .btn-ghost:focus-visible,
 .btn-primary-pulse:focus-visible {
-  outline: 2px solid var(--pink-rim);
+  outline: 2px solid var(--focus-ring);
   outline-offset: 3px;
 }
-.btn-primary             { background: var(--pink-deep); }
-.btn-primary:hover       { background: #CB42AC; }
+.btn-primary             { background: var(--btn-primary-bg); }
+.btn-primary:hover       { background: var(--btn-primary-hover); }
 .btn-primary:active      { transform: scale(0.98); }
 
 .btn-secondary {
   background: rgba(190, 54, 157, 0.02);
   border: 1px solid rgba(255, 161, 243, 0.2);
 }
-.btn-secondary:hover     { background: rgba(190, 54, 157, 0.08); }
+.btn-secondary:hover     { background: var(--btn-secondary-hover); }
 
 .btn-ghost {
   background: transparent;
   color: var(--fg);
   padding: 12px 16px;
 }
-.btn-ghost:hover         { color: var(--pulse-1); }
+.btn-ghost:hover         { color: var(--btn-ghost-hover); }
 
 /* Hero CTA variant — AKEO pulse gradient + halo. One per page max. */
 .btn-primary-pulse {
-  background: var(--gradient-pulse);
+  background: var(--gradient-pulse-button);
   color: var(--on-accent);
   box-shadow: var(--glow-pulse);
   border-radius: var(--r-pill);
   padding: 14px 20px;
   font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-headline);
   letter-spacing: var(--tracking-button);
 }
-.btn-primary-pulse:hover  { filter: brightness(1.08); }
+.btn-primary-pulse:hover  { box-shadow: var(--glow-pulse), 0 0 0 1px rgba(255, 255, 255, 0.18); }
 .btn-primary-pulse:active { transform: scale(0.98); filter: brightness(0.95); }
 
 a:hover,
 a:focus-visible {
-  color: var(--pulse-1);
+  color: var(--link-hover, var(--pulse-1));
   text-decoration: underline;
   text-underline-offset: 0.18em;
 }
@@ -444,9 +484,15 @@ a:focus-visible {
   border-radius: var(--r-md);
   color: var(--fg);
   font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  padding: 14px 18px;
+}
+.input::placeholder {
+  color: var(--fg-subtle);
 }
 .input:focus-visible {
-  border-color: var(--pink-rim);
+  border-color: var(--input-focus-border);
   outline: none;
 }
 
@@ -472,11 +518,17 @@ a:focus-visible {
   border-radius: var(--r-lg);
   padding: var(--space-6);
 }
+.card:hover,
+.card-large:hover,
+.card-hero:hover,
+.card-glass:hover {
+  border-color: var(--card-hover-border);
+}
 .card:focus-visible,
 .card-large:focus-visible,
 .card-hero:focus-visible,
 .card-glass:focus-visible {
-  outline: 2px solid var(--pink-rim);
+  outline: 2px solid var(--focus-ring);
   outline-offset: 3px;
 }
 .card-large {
@@ -519,8 +571,18 @@ a:focus-visible {
 .grain::before {
   content: "";
   position: absolute; inset: 0;
-  background: url("imagery/decorative/napster-grain-texture.jpg") center/cover;
+  background: var(--napster-grain-texture) center/cover;
   mix-blend-mode: screen;
   opacity: 0.18;
   pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .btn-primary-pulse {
+    transition: none;
+  }
+  .btn-primary-pulse {
+    box-shadow: none;
+  }
 }

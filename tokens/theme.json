@@ -1,0 +1,166 @@
+{
+  "version": "1.2.0",
+  "source": "../colors_and_type.css",
+  "description": "Plain tooling surface for app teams. Values are CSS custom-property references so colors_and_type.css remains the source of truth.",
+  "color": {
+    "bg": "var(--bg)",
+    "bg-mulberry": "var(--bg-mulberry)",
+    "bg-plum": "var(--bg-plum)",
+    "bg-purple": "var(--bg-purple)",
+    "bg-charcoal": "var(--bg-charcoal)",
+    "fg": "var(--fg)",
+    "fg-muted": "var(--fg-muted)",
+    "fg-subtle": "var(--fg-subtle)",
+    "pink": "var(--pink)",
+    "pink-deep": "var(--pink-deep)",
+    "pink-bright": "var(--pink-bright)",
+    "pink-rim": "var(--pink-rim)",
+    "pink-glow": "var(--pink-glow)",
+    "plum-deep": "var(--plum-deep)",
+    "plum-panel": "var(--plum-panel)",
+    "violet": "var(--violet)",
+    "violet-deep": "var(--violet-deep)",
+    "violet-mid": "var(--violet-mid)",
+    "lilac": "var(--lilac)",
+    "indigo": "var(--indigo)",
+    "coral": "var(--coral)",
+    "pulse-1": "var(--pulse-1)",
+    "pulse-2": "var(--pulse-2)",
+    "neon-1": "var(--neon-1)",
+    "neon-2": "var(--neon-2)",
+    "beam-yellow": "var(--beam-yellow)",
+    "good": "var(--good)",
+    "bad": "var(--bad)",
+    "neutral": "var(--neutral)",
+    "border": "var(--border)",
+    "border-strong": "var(--border-strong)",
+    "border-pink": "var(--border-pink)",
+    "focus-ring": "var(--focus-ring)"
+  },
+  "fontFamily": {
+    "display": "var(--font-display)",
+    "body": "var(--font-body)",
+    "serif": "var(--font-serif)",
+    "mono": "var(--font-mono)",
+    "system": "var(--font-system)"
+  },
+  "fontSize": {
+    "display-cover": "var(--fs-display-cover)",
+    "display-1": "var(--fs-display-1)",
+    "display-2": "var(--fs-display-2)",
+    "hero": "var(--fs-hero)",
+    "h1": "var(--fs-h1)",
+    "section": "var(--fs-section)",
+    "h2": "var(--fs-h2)",
+    "title": "var(--fs-title)",
+    "h3": "var(--fs-h3)",
+    "subtitle": "var(--fs-subtitle)",
+    "h4": "var(--fs-h4)",
+    "body-lg": "var(--fs-body-lg)",
+    "body": "var(--fs-body)",
+    "body-sm": "var(--fs-body-sm)",
+    "caption": "var(--fs-caption)",
+    "eyebrow": "var(--fs-eyebrow)",
+    "meta": "var(--fs-meta)"
+  },
+  "fontWeight": {
+    "light": "var(--fw-light)",
+    "regular": "var(--fw-regular)",
+    "medium": "var(--fw-medium)",
+    "semibold": "var(--fw-semibold)",
+    "bold": "var(--fw-bold)",
+    "extrabold": "var(--fw-extrabold)",
+    "black": "var(--fw-black)"
+  },
+  "letterSpacing": {
+    "display": "var(--tracking-display)",
+    "hero": "var(--tracking-hero)",
+    "section": "var(--tracking-section)",
+    "eyebrow": "var(--tracking-eyebrow)",
+    "mono": "var(--tracking-mono)",
+    "button": "var(--tracking-button)",
+    "body": "var(--tracking-body)"
+  },
+  "lineHeight": {
+    "tight": "var(--lh-tight)",
+    "display": "var(--lh-display)",
+    "headline": "var(--lh-headline)",
+    "body": "var(--lh-body)",
+    "body-loose": "var(--lh-body-loose)"
+  },
+  "radius": {
+    "xs": "var(--r-xs)",
+    "sm": "var(--r-sm)",
+    "md": "var(--r-md)",
+    "lg": "var(--r-lg)",
+    "xl": "var(--r-xl)",
+    "2xl": "var(--r-2xl)",
+    "pill": "var(--r-pill)",
+    "full": "var(--r-full)"
+  },
+  "spacing": {
+    "0": "var(--space-0)",
+    "1": "var(--space-1)",
+    "2": "var(--space-2)",
+    "3": "var(--space-3)",
+    "4": "var(--space-4)",
+    "5": "var(--space-5)",
+    "6": "var(--space-6)",
+    "8": "var(--space-8)",
+    "10": "var(--space-10)",
+    "12": "var(--space-12)",
+    "16": "var(--space-16)",
+    "20": "var(--space-20)",
+    "24": "var(--space-24)",
+    "32": "var(--space-32)"
+  },
+  "shadow": {
+    "sm": "var(--shadow-sm)",
+    "md": "var(--shadow-md)",
+    "lg": "var(--shadow-lg)",
+    "panel": "var(--shadow-panel)",
+    "inset-light": "var(--shadow-inset-light)",
+    "inner-glow": "var(--inner-glow)",
+    "glow-pink": "var(--glow-pink)",
+    "glow-pulse": "var(--glow-pulse)"
+  },
+  "gradient": {
+    "hero": "var(--gradient-hero)",
+    "label": "var(--gradient-label)",
+    "pulse": "var(--gradient-pulse)",
+    "pulse-button": "var(--gradient-pulse-button)",
+    "neon": "var(--gradient-neon)",
+    "beam": "var(--gradient-beam)",
+    "bg-midnight": "var(--gradient-bg-midnight)",
+    "bg-space": "var(--gradient-bg-space)",
+    "bg-dawn": "var(--gradient-bg-dawn)",
+    "bg-plum": "var(--gradient-bg-plum)",
+    "bg-violet": "var(--gradient-bg-violet)",
+    "bg-near": "var(--gradient-bg-near)",
+    "bg-rose": "var(--gradient-bg-rose)"
+  },
+  "motion": {
+    "duration": {
+      "fast": "var(--duration-fast)",
+      "mid": "var(--duration-mid)",
+      "slow": "var(--duration-slow)"
+    },
+    "easing": "var(--easing)"
+  },
+  "component": {
+    "button": {
+      "primary-bg": "var(--btn-primary-bg)",
+      "primary-hover": "var(--btn-primary-hover)",
+      "secondary-hover": "var(--btn-secondary-hover)",
+      "ghost-hover": "var(--btn-ghost-hover)",
+      "focus-ring": "var(--focus-ring)"
+    },
+    "card": {
+      "hover-border": "var(--card-hover-border)",
+      "focus-ring": "var(--focus-ring)"
+    },
+    "input": {
+      "focus-border": "var(--input-focus-border)"
+    }
+  }
+}

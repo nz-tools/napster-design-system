@@ -10,8 +10,10 @@ Read `DESIGN.md` and `README.md` within this skill first. Then explore the rest.
 
 - `DESIGN.md` — the unified rationale layer. Nine canonical sections (Overview, Colors, Typography, Layout, Elevation & Depth, Shapes, Components, Do's and Don'ts, Imagery & Photography) plus two extensions (Iconography, Motion). YAML front matter contains every token resolved, plus the `imagery:` block enumerating the four photographic slots and the folders that hold them.
 - `README.md` — what this bundle is, how to publish at claude.ai/design.
+- `DEVELOPER-GUIDE.md` — how production app teams consume a pinned release tag, import CSS, use Tailwind v4/v3, and configure Claude Code in the consumer repo.
 - `colors_and_type.css` — single-import CSS with all tokens and semantic classes. Three Google Fonts auto-load (Inter, Instrument Serif italic, IBM Plex Mono) — nothing to upload. (`.eyebrow`, `.h-hero`, `.h-section`, `.gradient-word`, `.accent-serif`, `.pull-quote`, `.meta`, `.btn`, `.btn-primary-pulse`, `.panel`, `.card`, `.card-glass`, `.beam-overlay`, `.grain`).
-- `tokens/` — DTCG-format JSON tokens: `colors.json`, `typography.json`, `spacing.json`, `motion.json`.
+- `components/reference.md` — copy-paste HTML and JSX reference for the canonical component variants.
+- `tokens/` — DTCG-format JSON tokens plus app adapters: `colors.json`, `typography.json`, `spacing.json`, `motion.json`, `components.json`, `theme.json`, `theme.ts`, `tailwind-v4.css`, `tailwind-v3.config.cjs`.
 - `brand/overview.md` — personality, audience, emotional target.
 - `brand/voice-and-tone.md` — banned words, preferred vocabulary, five copy patterns, casing rules.
 - `logos/` — all approved Napster logos (wordmark, n-mark in three fidelities, lockups).
@@ -22,7 +24,7 @@ Read `DESIGN.md` and `README.md` within this skill first. Then explore the rest.
 
 If creating visual artifacts (slides, mocks, throwaway prototypes), copy assets out and create static HTML files for the user to view. Import `colors_and_type.css` and use the semantic classes.
 
-If working on production code, copy the tokens and read the rules to become an expert in designing with this brand.
+If working on production code, use a pinned release tag and start with `DEVELOPER-GUIDE.md`. Do not float on `main`.
 
 **Non-negotiable brand rules:**
 

@@ -4,7 +4,7 @@ description: >
   The unified Napster design system. Dark cinematic identity, circular visual
   backbone, Napster Pink accent. Audience-facing: this is the system Claude Design
   uses to generate all Napster-branded artifacts.
-version: 1.1.1
+version: 1.2.0
 sources:
   - napster.com (live audit, April 2026 — the customer-facing truth)
   - AKEO Brand Definition Proposal (Mateo Reyes, 2026 — structural framework)
@@ -242,6 +242,11 @@ linear-gradient(91deg, #DD52CB 0%, #601656 100%)
 linear-gradient(135deg, #EA2DD2 0%, #FF7DF3 100%)
 ```
 
+**Pulse button** — accessible large-text CTA variant:
+```
+linear-gradient(135deg, #EA2DD2 0%, #E65AD5 100%)
+```
+
 **Neon** (three-stop atmospheric):
 ```
 linear-gradient(135deg, #FF7DF3 0%, #FFA1F3 50%, #FDE5D5 100%)
@@ -265,8 +270,26 @@ Muted text `rgba(255,255,255,0.5)` composited on `#000000`: contrast ratio ~5.32
 Pink `#DD52CB` on `#000000`: contrast ratio ~6.14:1. AA for normal text; use sparingly, never below 14px.
 Pink-deep `#BE369D` on `#000000`: contrast ratio ~4.20:1. AA for large text and non-text UI only. Reserved for fills, not body copy.
 White on `#BE369D` button: contrast ratio ~5.00:1. AA for normal text.
-White on `#CB42AC` primary-button hover: contrast ratio ~4.27:1. **Known v1.1.1 issue**: fails AA for normal-size button text; resolve in v1.2.0.
-White text over `.btn-primary-pulse` gradient: fails AA over the bright `#FF7DF3` / `#FFA1F3` stops. **Known v1.1.1 issue**: resolve in v1.2.0.
+White on `#C33DA2` primary-button hover: contrast ratio ~4.66:1. AA for normal text.
+White on `.btn-primary-pulse`'s button-specific gradient (`#EA2DD2` → `#E65AD5`): minimum contrast ratio ~3.09:1. AA for large text only. Use at ≥24px and weight ≥600.
+
+### Accessibility implementation
+
+Text over fixed solid surfaces must use the measured pairings above. Text over imagery is not measurable from tokens alone: add a darken pass (`linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55))`) until the text clears AA in the actual composition. The Napster Beam is overlay-only on imagery and never sits directly behind live text.
+
+Napster is dark-canonical. Do not add `prefers-color-scheme: light` plumbing. If a product must embed a light third-party surface, isolate that surface and keep Napster navigation, chrome, and primary CTAs dark.
+
+For motion reduction, disable transitions and the pulse-button halo:
+
+```css
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .btn-primary-pulse { transition: none; }
+  .btn-primary-pulse { box-shadow: none; }
+}
+```
+
+Bundled line icons are decorative unless they are the only visible label for a control. Decorative icons and orbs use `aria-hidden="true"`. Icon-only controls need an `aria-label` that names the action.
 
 ---
 
@@ -477,7 +500,7 @@ Napster lives on black. True drop shadows are rare. Depth comes from inner glows
 - Border-radius `10px`.
 - Padding `18.5px 20px`.
 - Font Inter 14px 600.
-- Hover: lighten background ~5% to `#CB42AC`.
+- Hover: accessible lighten to `#C33DA2`.
 - Press: `transform: scale(0.98)`.
 
 **`btn-secondary`** (live-verified):
@@ -491,12 +514,12 @@ Napster lives on black. True drop shadows are rare. Depth comes from inner glows
 - Hover: color shifts to `pulse-1` `#EA2DD2`.
 
 **`btn-primary-pulse`** — the hero CTA variant. **One per page maximum.**
-- Background `var(--gradient-pulse)`.
+- Background `var(--gradient-pulse-button)` (`#EA2DD2` → `#E65AD5`).
 - Border-radius `9999px` (pill).
 - `box-shadow: var(--glow-pulse)`.
 - Padding `14px 20px`.
-- Font Inter 700 16px.
-- Hover: `filter: brightness(1.08)`.
+- Font Inter, at least 24px and weight 600. This is a large-text-only CTA because white text over pulse gradients cannot clear normal-text AA.
+- Hover: add rim emphasis; do not brighten the gradient.
 
 ### Cards
 
