@@ -108,12 +108,16 @@ tokens:
         - imagery/decorative/*
         - imagery/scenes/sessions/*
     isolated-portraits:
-      description: Companion portraits, 3/4 framing, rim-lit, persona environment behind. Darken pass over dark canvas.
+      description: Companion portraits, 3/4 framing, rim-lit, persona environment behind. Darken pass over dark canvas. One file per companion; CSS sizes for hero or card use.
       role: Companion Character
       paths:
         - imagery/people/portraits-hero/*
-        - imagery/people/portraits-thumb/*
         - imagery/people/producers/*
+    companion-environments:
+      description: Atmospheric scenes representing where each companion role works (offices, classroom, atrium, lounge). No person in frame. Pairs with the portrait set for layered hero compositions.
+      role: Brand Feeling
+      paths:
+        - imagery/scenes/companion-environments/*
     product-on-black:
       description: "Hardware shots, product UI captures, spec details. Background is pure #000000."
       role: Product Clarity
@@ -662,10 +666,11 @@ Abstract light, motion blur, purple atmospheric wash. The Beam gradient rides on
 
 Clean, intimate, 3/4 framing. Single-source rim light, naturalistic. Background is the persona's environment (studio, kitchen, gym), not a void. When portraits sit over the dark canvas they receive a `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))` darken pass, optionally a Beam overlay.
 
-- **Folders:** `imagery/people/portraits-hero/` (large), `imagery/people/portraits-thumb/` (cards), `imagery/people/producers/` (music producers)
+- **Folders:** `imagery/people/portraits-hero/` (companion portraits — one file per companion; CSS sizes for hero or card use), `imagery/people/producers/` (music producers).
+- **Companion role environments:** `imagery/scenes/companion-environments/` — atmospheric "where this role works" scenes (no person in frame). Pairs with the portrait set for layered hero compositions.
 - **Use for:** companion roster pages, persona cards, "Meet the team" treatments, Crew lineups.
-- **Filename convention:** `napster-companion-{firstname}-{surname}-{role}.{ext}`. See `imagery/people/persona-roster.md` for the canonical roster.
-- **Examples:** `imagery/people/portraits-hero/napster-companion-kai-mercer-chiefofstaff.avif`, `imagery/people/portraits-hero/napster-companion-may-li-creative.avif`, `imagery/people/producers/napster-producer-luna-rnb.avif`.
+- **Filename convention:** `napster-companion-{firstname}-{surname}-{role}.{ext}` for portraits; `napster-companion-environment-{role}.{ext}` for environments. See `imagery/people/persona-roster.md` for the canonical roster (Amit's portrait is currently unsourced — environment-only).
+- **Examples:** `imagery/people/portraits-hero/napster-companion-kai-mercer-chiefofstaff.avif`, `imagery/scenes/companion-environments/napster-companion-environment-creative.avif`, `imagery/people/producers/napster-producer-luna-rnb.avif`.
 
 ### 9.4 Product on Pure Black — Product Clarity
 
@@ -686,7 +691,8 @@ Hardware shots, product UI captures, spec details. Background is pure `#000000`.
 | Napster Learn, education, higher-ed, L&D | `imagery/product/learn/` |
 | Napster App (consumer mobile/tablet), music app | `imagery/product/app/` |
 | Napster API, platform, developers | `imagery/product/api/` |
-| A specific companion (Kai, May, JC, Elena, Kevin, Alyssa, Jordan, Richard, Jane, Amit) | `imagery/people/portraits-hero/` (large) or `portraits-thumb/` (cards) |
+| A specific companion (Kai, May, JC, Elena, Kevin, Alyssa, Jordan, Richard, Jane) | `imagery/people/portraits-hero/` (one file each; CSS handles hero/card sizing). Amit has no portrait in the repo yet. |
+| "Where this companion's role works" atmospheric scene | `imagery/scenes/companion-environments/napster-companion-environment-{role}.avif` |
 | Music producers (Luna, Axel, Billie, Jasper, Mateo, Nyx, Ruby Mae, Sloane, Voltage) | `imagery/people/producers/` |
 | Crew, lifestyle, customer-in-scene, family room, studio | `imagery/people/crew/` |
 | About page, creator portraits, designer at workstation | `imagery/brand-life/` |

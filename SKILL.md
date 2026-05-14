@@ -20,7 +20,7 @@ Read `DESIGN.md` and `README.md` within this skill first. Then explore the rest.
 - `icons/` — 22 bundled SVG line icons.
 - `reference/napster-com-audit.md` — live-site computed-style audit (the source of truth for live tokens).
 - `compositions/one-pagers/` — 3 one-pagers (platform, station, view).
-- `imagery/` — four photographic slots: **Warm Lifestyle** (`people/crew/`, `brand-life/`), **Atmospheric** (`scenes/twin/`, `decorative/`, `scenes/sessions/`), **Isolated Portraits** (`people/portraits-hero/`, `people/portraits-thumb/`, `people/producers/`), and **Product on Pure Black** (`product/{api,app,learn,mac,spaces,station,view}/`, `scenes/usecases/`). When a user names a product ("create a one-pager on Napster Station"), reach for `imagery/product/{product}/` first. Every subfolder has its own README.
+- `imagery/` — four photographic slots: **Warm Lifestyle** (`people/crew/`, `brand-life/`), **Atmospheric** (`scenes/twin/`, `decorative/`, `scenes/sessions/`, `scenes/companion-environments/`), **Isolated Portraits** (`people/portraits-hero/`, `people/producers/`), and **Product on Pure Black** (`product/{api,app,learn,mac,spaces,station,view}/`, `scenes/usecases/`). When a user names a product ("create a one-pager on Napster Station"), reach for `imagery/product/{product}/` first. Every subfolder has its own README.
 
 If creating visual artifacts (slides, mocks, throwaway prototypes), copy assets out and create static HTML files for the user to view. Import `colors_and_type.css` and use the semantic classes.
 

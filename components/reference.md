@@ -146,7 +146,7 @@ export function HeroBlock() {
 
 ```html
 <article class="card">
-  <img src="imagery/people/portraits-thumb/napster-companion-kai-mercer-chiefofstaff.avif" alt="Kai Mercer" />
+  <img src="imagery/people/portraits-hero/napster-companion-kai-mercer-chiefofstaff.avif" alt="Kai Mercer" />
   <p class="eyebrow">Chief of Staff</p>
   <h3 class="h3"><span class="accent-serif">Kai Mercer</span></h3>
 </article>
@@ -157,7 +157,7 @@ export function PersonaTile() {
   return (
     <article className="card">
       <img
-        src="/assets/napster/imagery/people/portraits-thumb/napster-companion-kai-mercer-chiefofstaff.avif"
+        src="/assets/napster/imagery/people/portraits-hero/napster-companion-kai-mercer-chiefofstaff.avif"
         alt="Kai Mercer"
       />
       <p className="eyebrow">Chief of Staff</p>

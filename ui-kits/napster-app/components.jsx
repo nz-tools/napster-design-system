@@ -3,15 +3,17 @@
    components/reference.md as the canonical implementation path. */
 
 const Pink = "#BE369D", Pulse = "#EA2DD2", PulseLite = "#FF7DF3", Cream = "#FDE5D5";
+// Amit Pillai (Tech Support) is in the canonical roster but has no portrait
+// file in the repo yet — omitted from this visual specimen until sourced.
+// See imagery/people/persona-roster.md for the full roster.
 const personas = [
-  { name: "Kai",     role: "Chief of Staff",     img: "../../imagery/people/portraits-hero/napster-companion-kai-mercer-chiefofstaff.avif" },
-  { name: "Kevin",   role: "Finance",      img: "../../imagery/people/portraits-hero/napster-companion-kevin-jones-finance.avif" },
-  { name: "Jordan",  role: "Fitness",      img: "../../imagery/people/portraits-hero/napster-companion-jordan-carter-fitness.avif" },
-  { name: "May",     role: "Creative",    img: "../../imagery/people/portraits-hero/napster-companion-may-li-creative.avif" },
-  { name: "JC",      role: "Code", img: "../../imagery/people/portraits-hero/napster-companion-jc-mitchell-code.avif" },
-  { name: "Elena",   role: "Wellbeing",        img: "../../imagery/people/portraits-hero/napster-companion-elena-garcia-wellbeing.avif" },
-  { name: "Amit",    role: "Tech Support",       img: "../../imagery/people/portraits-hero/napster-companion-amit-pillai-tech-support.avif" },
-  { name: "Alyssa",  role: "Career",     img: "../../imagery/people/portraits-hero/napster-companion-alyssa-reynolds-career.avif" },
+  { name: "Kai",     role: "Chief of Staff",  img: "../../imagery/people/portraits-hero/napster-companion-kai-mercer-chiefofstaff.avif" },
+  { name: "Kevin",   role: "Finance",         img: "../../imagery/people/portraits-hero/napster-companion-kevin-jones-finance.avif" },
+  { name: "Jordan",  role: "Fitness",         img: "../../imagery/people/portraits-hero/napster-companion-jordan-carter-fitness.avif" },
+  { name: "May",     role: "Creative",        img: "../../imagery/people/portraits-hero/napster-companion-may-li-creative.avif" },
+  { name: "JC",      role: "Code",            img: "../../imagery/people/portraits-hero/napster-companion-jc-mitchell-code.avif" },
+  { name: "Elena",   role: "Wellbeing",       img: "../../imagery/people/portraits-hero/napster-companion-elena-garcia-wellbeing.avif" },
+  { name: "Alyssa",  role: "Career",          img: "../../imagery/people/portraits-hero/napster-companion-alyssa-reynolds-career.avif" },
 ];
 
 const Eyebrow = ({children, color="#DD52CB"}) => (

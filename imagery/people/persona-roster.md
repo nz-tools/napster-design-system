@@ -4,18 +4,20 @@ The canonical persona roster, reconciled by Ziv Navoth on 2026-05-10. **Where th
 
 ## Roster
 
-| First | Surname | Role | Hero portrait | Thumb portrait |
+`portraits-hero/` lives at `imagery/people/portraits-hero/`. `companion-environments/` lives at `imagery/scenes/companion-environments/`.
+
+| First | Surname | Role | Portrait | Environment (role scene) |
 |---|---|---|---|---|
-| **Alyssa** | Reynolds | Career | `portraits-hero/napster-companion-alyssa-reynolds-career.avif` | `portraits-hero/napster-companion-alyssa-reynolds-career.avif` |
-| **Amit** | Pillai | Tech Support | `portraits-hero/napster-companion-amit-pillai-tech-support.avif` | — (no thumb in iterative) |
-| **Elena** | Garcia | Wellbeing | `portraits-hero/napster-companion-elena-garcia-wellbeing.avif` | `portraits-hero/napster-companion-elena-garcia-wellbeing.avif` |
-| **Jane** | — | Chief of Staff (Operations) | — (no hero from AKEO) | `portraits-hero/napster-companion-jane-chiefofstaff.avif` |
-| **JC** | Mitchell | Code | `portraits-hero/napster-companion-jc-mitchell-code.avif` | `portraits-hero/napster-companion-jc-mitchell-code.avif` |
-| **Jordan** | Carter | Fitness | `portraits-hero/napster-companion-jordan-carter-fitness.avif` | `portraits-hero/napster-companion-jordan-carter-fitness.avif` |
-| **Kai** | Mercer | Chief of Staff | `portraits-hero/napster-companion-kai-mercer-chiefofstaff.avif` | `portraits-hero/napster-companion-kai-mercer-chiefofstaff.avif` |
-| **Kevin** | Jones | Finance | `portraits-hero/napster-companion-kevin-jones-finance.avif` | `portraits-hero/napster-companion-kevin-jones-finance.avif` |
-| **May** | Li | Creative | `portraits-hero/napster-companion-may-li-creative.avif` | `portraits-hero/napster-companion-may-li-creative.avif` |
-| **Richard** | Warnok | Learning | `portraits-hero/napster-companion-richard-warnok-learning.avif` | `portraits-hero/napster-companion-richard-warnok-learning.avif` |
+| **Alyssa** | Reynolds | Career | `portraits-hero/napster-companion-alyssa-reynolds-career.avif` | `companion-environments/napster-companion-environment-career.avif` |
+| **Amit** | Pillai | Tech Support | — *(no portrait sourced yet — placeholder pending)* | `companion-environments/napster-companion-environment-tech-support.avif` |
+| **Elena** | Garcia | Wellbeing | `portraits-hero/napster-companion-elena-garcia-wellbeing.avif` | `companion-environments/napster-companion-environment-wellbeing.avif` |
+| **Jane** | — | Chief of Staff (Operations) | `portraits-hero/napster-companion-jane-chiefofstaff.avif` | — *(no environment scene for Jane)* |
+| **JC** | Mitchell | Code | `portraits-hero/napster-companion-jc-mitchell-code.avif` | `companion-environments/napster-companion-environment-code.avif` |
+| **Jordan** | Carter | Fitness | `portraits-hero/napster-companion-jordan-carter-fitness.avif` | `companion-environments/napster-companion-environment-fitness.avif` |
+| **Kai** | Mercer | Chief of Staff | `portraits-hero/napster-companion-kai-mercer-chiefofstaff.avif` | `companion-environments/napster-companion-environment-chiefofstaff.avif` |
+| **Kevin** | Jones | Finance | `portraits-hero/napster-companion-kevin-jones-finance.avif` | `companion-environments/napster-companion-environment-finance.avif` |
+| **May** | Li | Creative | `portraits-hero/napster-companion-may-li-creative.avif` | `companion-environments/napster-companion-environment-creative.avif` |
+| **Richard** | Warnok | Learning | `portraits-hero/napster-companion-richard-warnok-learning.avif` | `companion-environments/napster-companion-environment-learning.avif` |
 
 ## Notes
 
@@ -25,7 +27,7 @@ The canonical persona roster, reconciled by Ziv Navoth on 2026-05-10. **Where th
 - **May's role.** Creative (iterative). AKEO had labelled May as Lifestyle; reassigned.
 - **Richard's role.** Learning (iterative). AKEO had labelled Richard as Training; reassigned.
 - **Elena's role.** Wellbeing (iterative). AKEO had labelled her as Sport; reassigned.
-- **Amit Pillai.** Tech Support. Net-new role per Ziv (2026-05-10); AKEO had labelled him Coding. Amit does not appear in the iterative bundle, so only the AKEO hero portrait is available.
+- **Amit Pillai.** Tech Support. Net-new role per Ziv (2026-05-10); AKEO had labelled him Coding. Amit does not appear in the iterative bundle. As of v1.2.2 no actual portrait file exists in the repo — only an environment scene (`companion-environments/napster-companion-environment-tech-support.avif`). Source a portrait or document a placeholder treatment when needed.
 - **Jane.** Has no AKEO surname; the iterative bundle named her only by first name + role. Carry forward as-is. If a surname is assigned later, rename to `napster-companion-jane-{surname}-chiefofstaff.avif`.
 
 ## Mac-at-desk variants

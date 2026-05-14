@@ -82,8 +82,7 @@ napster-design-system-unified/
 │   │   ├── spaces/                 # 6 files — Spaces hero + lifestyle
 │   │   └── learn/                  # 4 files — Learn enterprise + cards
 │   ├── people/
-│   │   ├── portraits-hero/         # 9 high-res AVIF companion portraits (~150 KB each)
-│   │   ├── portraits-thumb/        # 9 small AVIF thumbnails for card use
+│   │   ├── portraits-hero/         # 9 AVIF companion portraits (vertical 3:4.6). One file per companion; CSS sizes them for both hero and card use. (Amit's portrait pending sourcing.)
 │   │   ├── producers/              # 9 music-line producer portraits (Axel, Billie, Jasper, …)
 │   │   └── crew/                   # Group / lifestyle compositions
 │   ├── brand-life/                 # Studio life, creator workstation photography
@@ -123,7 +122,8 @@ napster-design-system-unified/
 | Find product imagery for Napster Learn | `imagery/product/learn/` |
 | Find product imagery for Napster App | `imagery/product/app/` |
 | Find product imagery for Napster API | `imagery/product/api/` |
-| Find a Companion portrait (Kai, May, JC, Elena, …) | `imagery/people/portraits-hero/` (hero) or `portraits-thumb/` (cards) |
+| Find a Companion portrait (Kai, May, JC, Elena, …) | `imagery/people/portraits-hero/` (one file per companion; CSS sizes for hero or card use) |
+| Find a Companion environment scene ("where this role works") | `imagery/scenes/companion-environments/` (atmospheric, no person — for background plates and layered hero compositions) |
 | Find a Music Producer portrait (Luna, Axel, Billie, …) | `imagery/people/producers/` |
 | Find atmospheric / cinematic background | `imagery/scenes/twin/` or `imagery/decorative/` |
 | Audit a generated artifact | `DESIGN.md` § Do's and Don'ts |

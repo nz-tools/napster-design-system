@@ -7,8 +7,8 @@ Napster's image library, organized by the four-part vocabulary defined in `DESIG
 | Slot | Role | Where it lives |
 |---|---|---|
 | Warm Lifestyle | User Value | `people/crew/`, `brand-life/` |
-| Atmospheric / Cinematic | Brand Feeling | `scenes/twin/`, `decorative/`, `scenes/sessions/` |
-| Isolated Portraits | Companion Character | `people/portraits-hero/`, `people/portraits-thumb/`, `people/producers/` |
+| Atmospheric / Cinematic | Brand Feeling | `scenes/twin/`, `decorative/`, `scenes/sessions/`, `scenes/companion-environments/` |
+| Isolated Portraits | Companion Character | `people/portraits-hero/`, `people/producers/` |
 | Product on Pure Black | Product Clarity | `product/api/`, `product/app/`, `product/learn/`, `product/mac/`, `product/spaces/`, `product/station/`, `product/view/`, `scenes/usecases/` |
 
 ## Where to look first
@@ -23,7 +23,7 @@ When a prompt mentions a specific Napster product, go straight to `product/{prod
 - "Napster App" → `product/app/`
 - "Napster API" → `product/api/`
 
-When the prompt names a Companion (Kai, May, JC, Elena, Kevin, Alyssa, Jordan, Richard, Jane, Amit) → `people/portraits-hero/` for hero use, `people/portraits-thumb/` for cards.
+When the prompt names a Companion (Kai, May, JC, Elena, Kevin, Alyssa, Jordan, Richard, Jane, Amit) → `people/portraits-hero/`. One file per companion; CSS sizes them for both hero and card contexts. For "where this companion's role works" atmospheric scenes (no person in frame), reach for `scenes/companion-environments/`. Amit currently has no portrait — see `people/persona-roster.md` for the workaround.
 
 When the prompt names a Music Producer (Axel, Billie, Jasper, Luna, Mateo, Nyx, Ruby Mae, Sloane, Voltage) → `people/producers/`.
 

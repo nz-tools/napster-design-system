@@ -1,10 +1,10 @@
-# Companion Portraits — Hero
+# Companion Portraits
 
 **Slot:** Isolated Portraits — Companion Character
 
 ## What's in this folder
 
-Large 3/4-framed portraits of each named Napster Companion. Background is the persona's environment (studio, kitchen, gym), never a void. Hero size — use as the primary visual on a companion page or persona card.
+3/4-framed portraits of each named Napster Companion. Background is the persona's environment (studio, kitchen, gym), never a void. These files are used for *all* companion portrait contexts — hero use on landing pages, smaller use in roster grids and cards. CSS handles sizing.
 
 ## Treatment
 
@@ -12,15 +12,23 @@ Filename convention: `napster-companion-{firstname}-{surname}-{role}.{ext}`. Can
 
 ## Contents
 
-- Alyssa Reynolds — Career
-- Amit Pillai — Tech Support
-- Elena Garcia — Wellbeing
-- JC Mitchell — Code
-- Jordan Carter — Fitness
-- Kai Mercer — Chief of Staff
-- Kevin Jones — Finance
-- May Li — Creative
-- Richard Warnok — Learning
+| Companion | Role | Dimensions |
+|---|---|---|
+| Alyssa Reynolds | Career | 1088×1680 |
+| Elena Garcia | Wellbeing | 1088×1680 |
+| Jane | Chief of Staff (Operations) | 1088×1680 |
+| JC Mitchell | Code | 1088×1680 |
+| Jordan Carter | Fitness | 1088×1680 |
+| Kai Mercer | Chief of Staff | 816×1260 |
+| Kevin Jones | Finance | 1088×1680 |
+| May Li | Creative | 1088×1680 |
+| Richard Warnok | Learning | 1088×1680 |
+
+**Not in this folder:** Amit Pillai (Tech Support) — no portrait file has been sourced. See `../persona-roster.md` for the workaround.
+
+## History
+
+Until v1.2.1, this folder held square 1200×1200 environment scenes that were mistakenly documented as portraits. The actual portrait set lived at `portraits-thumb/`. v1.2.2 moved the environment scenes out to `imagery/scenes/companion-environments/` (where they belong) and promoted the real portraits here. The separate `portraits-thumb/` folder was removed; one portrait per companion is enough — CSS sizes them down for card use.
 
 ---
 
