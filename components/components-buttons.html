@@ -1,10 +1,24 @@
 <!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css"><style>
 html,body{margin:0;background:#000;color:#fff;font-family:var(--font-body)}
-.card{padding:24px 28px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
-button{font-family:var(--font-display)}
+.card{padding:24px 28px;display:flex;flex-direction:column;gap:18px}
+.row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
 </style></head><body class="napster"><div class="card">
-  <button class="btn btn-primary">Try Napster for free <span style="margin-left:4px">→</span></button>
-  <button class="btn btn-secondary">Learn more</button>
-  <button class="btn btn-ghost">Sign in</button>
-  <button class="btn btn-primary" style="opacity:.4;cursor:not-allowed">Disabled</button>
+
+  <div>
+    <div class="eyebrow" style="margin-bottom:8px;">Variants</div>
+    <div class="row">
+      <button class="btn btn-primary">Try Napster for free <span style="margin-left:4px">→</span></button>
+      <button class="btn btn-secondary">Learn more</button>
+      <button class="btn btn-ghost">Sign in</button>
+      <button class="btn btn-primary" style="opacity:.4;cursor:not-allowed">Disabled</button>
+    </div>
+  </div>
+
+  <div>
+    <div class="eyebrow" style="margin-bottom:8px;">Hero CTA · pulse gradient</div>
+    <div class="row">
+      <button class="btn btn-primary-pulse">Start a session</button>
+    </div>
+  </div>
+
 </div></body></html>

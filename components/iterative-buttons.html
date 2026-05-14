@@ -1,22 +1,41 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
 <style>
-body{margin:0;padding:28px;background:#000;color:#fff;font-family:var(--font-body);display:flex;flex-direction:column;gap:16px;}
-.lbl{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--pink);font-weight:700;margin-bottom:6px;}
-.stack{display:flex;gap:12px;align-items:center;flex-wrap:wrap;}
+body{margin:0;padding:28px;background:#000;color:#fff;font-family:var(--font-body);display:flex;flex-direction:column;gap:20px;}
+.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;}
+.section .eyebrow{margin-bottom:8px;}
+.section + .section{margin-top:4px;}
+/* Demonstrate state visuals on top of the canonical .btn classes by
+   overriding the relevant pseudo-class result inline. Real consumers should
+   use :hover / :active / :focus-visible directly. */
+.demo-hover.btn-primary{background:var(--btn-primary-hover);}
+.demo-active.btn-primary{transform:scale(.98);}
+.demo-focus.btn-primary{outline:2px solid var(--pink-rim);outline-offset:2px;}
 </style></head><body>
-<div>
-  <div class="lbl">Primary</div>
-  <div class="stack">
+
+<div class="section">
+  <div class="eyebrow">Primary · state coverage</div>
+  <div class="row">
     <button class="btn btn-primary">Get started now</button>
-    <button class="btn btn-primary" style="background:#C33DA2;">:hover</button>
-    <button class="btn btn-primary" style="transform:scale(.98);">:active</button>
+    <button class="btn btn-primary demo-hover">:hover</button>
+    <button class="btn btn-primary demo-active">:active</button>
+    <button class="btn btn-primary demo-focus">:focus-visible</button>
   </div>
 </div>
-<div>
-  <div class="lbl">Secondary (glass)</div>
-  <div class="stack">
+
+<div class="section">
+  <div class="eyebrow">Secondary · glass</div>
+  <div class="row">
     <button class="btn btn-secondary">Watch the film</button>
     <button class="btn btn-secondary">For Business →</button>
   </div>
 </div>
+
+<div class="section">
+  <div class="eyebrow">Hero CTA · pulse gradient</div>
+  <div class="row">
+    <button class="btn btn-primary-pulse">Try Napster for free</button>
+  </div>
+  <p class="meta" style="margin-top:10px;">One per page. Locked to ≥24px / weight 600+. Uses the dedicated `--gradient-pulse-button` for AA contrast.</p>
+</div>
+
 </body></html>
