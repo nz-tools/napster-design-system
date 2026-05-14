@@ -142,6 +142,8 @@ Ziv Navoth (`zivnavoth@gmail.com`). For questions on the visual system, see the 
 
 ## Version
 
-`v1.1.0` — three-font system. Avantt retired from the design system; Inter (display + body), Instrument Serif italic (editorial accents), and IBM Plex Mono (metadata) now carry everything. The live napster.com site continues to use Avantt and is documented as such in `reference/napster-com-audit.md`.
+`v1.1.1` — hygiene patch. Adds missing focus-visible states, reconciles component specimens with canonical radii/focus treatment, fixes the Napster App prototype's Amit portrait and eyebrow tokens, and corrects the WCAG contrast notes.
+
+Previous: `v1.1.0` — three-font system. Avantt retired from the design system; Inter (display + body), Instrument Serif italic (editorial accents), and IBM Plex Mono (metadata) now carry everything. The live napster.com site continues to use Avantt and is documented as such in `reference/napster-com-audit.md`.
 
 Previous: `v1.0.14` — final Avantt-based release. Self-hosted Avantt across all four weights, jsDelivr CDN delivery, font-registry upload required at import time.

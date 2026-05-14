@@ -393,6 +393,14 @@ code, .mono {
   align-items: center;
   gap: var(--space-2);
 }
+.btn:focus-visible,
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.btn-ghost:focus-visible,
+.btn-primary-pulse:focus-visible {
+  outline: 2px solid var(--pink-rim);
+  outline-offset: 3px;
+}
 .btn-primary             { background: var(--pink-deep); }
 .btn-primary:hover       { background: #CB42AC; }
 .btn-primary:active      { transform: scale(0.98); }
@@ -423,6 +431,25 @@ code, .mono {
 .btn-primary-pulse:hover  { filter: brightness(1.08); }
 .btn-primary-pulse:active { transform: scale(0.98); filter: brightness(0.95); }
 
+a:hover,
+a:focus-visible {
+  color: var(--pulse-1);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.input {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  color: var(--fg);
+  font-family: var(--font-body);
+}
+.input:focus-visible {
+  border-color: var(--pink-rim);
+  outline: none;
+}
+
 /* ─────────────────────────────────────────────────────────────────
    PANELS / CARDS
    ───────────────────────────────────────────────────────────────── */
@@ -444,6 +471,13 @@ code, .mono {
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
   padding: var(--space-6);
+}
+.card:focus-visible,
+.card-large:focus-visible,
+.card-hero:focus-visible,
+.card-glass:focus-visible {
+  outline: 2px solid var(--pink-rim);
+  outline-offset: 3px;
 }
 .card-large {
   background: var(--bg-mulberry);

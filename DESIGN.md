@@ -4,7 +4,7 @@ description: >
   The unified Napster design system. Dark cinematic identity, circular visual
   backbone, Napster Pink accent. Audience-facing: this is the system Claude Design
   uses to generate all Napster-branded artifacts.
-version: 1.1.0
+version: 1.1.1
 sources:
   - napster.com (live audit, April 2026 — the customer-facing truth)
   - AKEO Brand Definition Proposal (Mateo Reyes, 2026 — structural framework)
@@ -261,10 +261,12 @@ linear-gradient(100deg,
 ### Contrast (WCAG)
 
 Body text `#FFFFFF` on `#000000`: contrast ratio 21:1. AAA.
-Muted text `rgba(255,255,255,0.5)` on `#000000`: contrast ratio 10.5:1. AAA.
-Pink `#DD52CB` on `#000000`: contrast ratio 5.4:1. AA for body text. Use sparingly, never below 14px.
-Pink-deep `#BE369D` on `#000000`: contrast ratio 4.6:1. AA. Reserved for button fills with white text.
-White on `#BE369D` button: contrast 4.6:1. AA.
+Muted text `rgba(255,255,255,0.5)` composited on `#000000`: contrast ratio ~5.32:1. AA for normal text; fails AAA for normal text.
+Pink `#DD52CB` on `#000000`: contrast ratio ~6.14:1. AA for normal text; use sparingly, never below 14px.
+Pink-deep `#BE369D` on `#000000`: contrast ratio ~4.20:1. AA for large text and non-text UI only. Reserved for fills, not body copy.
+White on `#BE369D` button: contrast ratio ~5.00:1. AA for normal text.
+White on `#CB42AC` primary-button hover: contrast ratio ~4.27:1. **Known v1.1.1 issue**: fails AA for normal-size button text; resolve in v1.2.0.
+White text over `.btn-primary-pulse` gradient: fails AA over the bright `#FF7DF3` / `#FFA1F3` stops. **Known v1.1.1 issue**: resolve in v1.2.0.
 
 ---
 

@@ -8,12 +8,12 @@ const personas = [
   { name: "May",     role: "Creative",    img: "../../imagery/people/portraits-hero/napster-companion-may-li-creative.avif" },
   { name: "JC",      role: "Code", img: "../../imagery/people/portraits-hero/napster-companion-jc-mitchell-code.avif" },
   { name: "Elena",   role: "Wellbeing",        img: "../../imagery/people/portraits-hero/napster-companion-elena-garcia-wellbeing.avif" },
-  { name: "Amit",    role: "Tech Support",       img: "../../imagery/people/portraits-hero/napster-companion-alyssa-reynolds-career.avif" },
+  { name: "Amit",    role: "Tech Support",       img: "../../imagery/people/portraits-hero/napster-companion-amit-pillai-tech-support.avif" },
   { name: "Alyssa",  role: "Career",     img: "../../imagery/people/portraits-hero/napster-companion-alyssa-reynolds-career.avif" },
 ];
 
-const Eyebrow = ({children, color=PulseLite}) => (
-  <div style={{fontSize:10, letterSpacing:".14em", textTransform:"uppercase", color, fontWeight:600, fontFamily:"var(--font-body)"}}>{children}</div>
+const Eyebrow = ({children, color="#DD52CB"}) => (
+  <div style={{fontSize:12, letterSpacing:".04em", textTransform:"uppercase", color, fontWeight:500, fontFamily:"var(--font-mono)"}}>{children}</div>
 );
 
 const PrimaryBtn = ({children, w}) => (
