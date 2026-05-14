@@ -4,9 +4,26 @@ After importing this design system into Claude Design (from GitHub or local), ru
 
 ## 1. Fonts — nothing to upload
 
-As of v1.1.0 the system uses three Google Fonts only — **Inter**, **Instrument Serif** *(italic)*, and **IBM Plex Mono**. They auto-resolve from the `@import` at the top of `colors_and_type.css`. No font registry alert, no upload step.
+As of v1.1.0 the system uses three Google Fonts only — **Inter**, **Instrument Serif** *(italic)*, and **IBM Plex Mono**. They auto-resolve at runtime from the `@import` at the top of `colors_and_type.css`. There is no proprietary brand font.
 
-> **Previous versions** (v1.0.x) required uploading four Avantt weights via the "Upload fonts" button on the missing-brand-fonts alert. That alert no longer appears in v1.1.0 because Avantt has been retired from the design system. The live napster.com site continues to use Avantt — `reference/napster-com-audit.md` documents that — but Claude Design does not need it.
+### About the "Missing brand fonts" alert
+
+After import, Claude Design may show an orange **"Missing brand fonts"** alert near the top of the Design System tab, reading *"Claude is rendering typography with substitute web fonts."*
+
+**This alert is informational and can be safely ignored on a Google-Fonts-only design system.** It does not block publishing.
+
+What's happening: Claude Design's preview environment renders cards with built-in faces (Anthropic Serif as a substitute for Instrument Serif, Super Mono VF as a substitute for IBM Plex Mono). Inter resolves natively because it's in Claude Design's built-in font registry. The alert is the host UI noting that no project-uploaded brand font is registered — it does not mean the design system is broken.
+
+Production HTML generated outside Claude Design (artifacts, slides, one-pagers exported to live URLs) loads the canonical Google Fonts directly via the `@import` and renders with the real letterforms. Two render paths, both internally consistent:
+
+| Surface | Font source | Letterforms |
+|---|---|---|
+| Claude Design preview cards | Built-in substitutes | Close-but-not-canonical |
+| Generated production artifacts | Google Fonts CDN | Canonical Inter / Instrument Serif italic / IBM Plex Mono |
+
+If you want the Claude Design preview to also render the canonical faces, the "Upload fonts" button opens a local-file browser where you can register TTF copies of Instrument Serif italic and IBM Plex Mono Regular/Medium with the project. This is optional and does not affect anything outside the preview cards.
+
+> **Previous versions** (v1.0.x) required uploading four Avantt weights via the "Upload fonts" button because Avantt was the only display face and was not in Claude Design's built-in registry. v1.1.0 retired Avantt; the live napster.com site continues to use it and `reference/napster-com-audit.md` documents that, but the design system does not.
 
 ## 2. Pull in the full imagery library
 
