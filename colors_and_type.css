@@ -14,7 +14,8 @@
    numbers, slide chrome). */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@1&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
-:root {
+:root,
+[data-theme="dark"] {
   color-scheme: dark;
 
   /* ─────────────────────────────────────────────────────────────
@@ -536,6 +537,24 @@ a:focus-visible {
 .input:focus-visible {
   border-color: var(--input-focus-border);
   outline: none;
+}
+
+/* Portraits keep their dark cinematic treatment even inside light app surfaces.
+   Apply data-theme="dark" to this wrapper when it sits in a light subtree. */
+.portrait-frame {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--r-lg);
+  color: var(--text-primary);
+  overflow: hidden;
+}
+.portrait-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.portrait-frame-body {
+  padding: var(--space-4);
 }
 
 /* ─────────────────────────────────────────────────────────────────

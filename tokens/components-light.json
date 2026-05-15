@@ -1,0 +1,76 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "version": "1.3.0",
+  "mode": "light",
+  "source": "tokens/theme-light.css + DESIGN.md §7",
+  "component": {
+    "button": {
+      "primary": {
+        "background": {
+          "default": { "$value": "var(--btn-primary-bg)", "$type": "color" },
+          "hover": { "$value": "var(--btn-primary-hover-bg)", "$type": "color" }
+        },
+        "foreground": { "$value": "var(--btn-primary-fg)", "$type": "color" },
+        "focusRing": { "$value": "var(--focus-ring)", "$type": "color" }
+      },
+      "secondary": {
+        "background": {
+          "default": { "$value": "var(--btn-secondary-bg)", "$type": "color" },
+          "hover": { "$value": "var(--btn-secondary-hover-bg)", "$type": "color" }
+        },
+        "border": { "$value": "1px solid var(--btn-secondary-border)", "$type": "strokeStyle" },
+        "foreground": { "$value": "var(--btn-secondary-fg)", "$type": "color" },
+        "focusRing": { "$value": "var(--focus-ring)", "$type": "color" }
+      },
+      "ghost": {
+        "foreground": {
+          "default": { "$value": "var(--btn-ghost-fg)", "$type": "color" },
+          "hover": { "$value": "var(--btn-ghost-hover-fg)", "$type": "color" }
+        },
+        "focusRing": { "$value": "var(--focus-ring)", "$type": "color" }
+      },
+      "primaryPulse": {
+        "background": { "$value": "var(--gradient-pulse-button)", "$type": "gradient" },
+        "foreground": { "$value": "var(--btn-pulse-fg)", "$type": "color" },
+        "minFontSize": { "$value": "24px", "$type": "dimension" },
+        "minFontWeight": { "$value": 600, "$type": "fontWeight" },
+        "focusRing": { "$value": "var(--focus-ring)", "$type": "color" }
+      }
+    },
+    "card": {
+      "default": {
+        "background": { "$value": "var(--card-bg)", "$type": "color" },
+        "border": { "$value": "1px solid var(--card-border)", "$type": "strokeStyle" },
+        "hoverBorder": { "$value": "var(--card-hover-border)", "$type": "color" },
+        "focusRing": { "$value": "var(--focus-ring)", "$type": "color" }
+      },
+      "glass": {
+        "background": { "$value": "var(--surface-glass-fill)", "$type": "color" },
+        "border": { "$value": "1px solid var(--surface-glass-border)", "$type": "strokeStyle" },
+        "shadow": { "$value": "var(--inner-glow)", "$type": "shadow" }
+      }
+    },
+    "panel": {
+      "default": {
+        "background": { "$value": "var(--surface-panel)", "$type": "color" },
+        "border": { "$value": "var(--panel-border)", "$type": "strokeStyle" }
+      },
+      "pink": {
+        "background": { "$value": "var(--surface-panel-pink)", "$type": "color" },
+        "border": { "$value": "var(--panel-border-pink)", "$type": "strokeStyle" }
+      }
+    },
+    "input": {
+      "background": { "$value": "var(--input-bg)", "$type": "color" },
+      "border": {
+        "default": { "$value": "var(--input-border)", "$type": "color" },
+        "focus": { "$value": "var(--input-focus-border)", "$type": "color" }
+      },
+      "foreground": { "$value": "var(--input-fg)", "$type": "color" },
+      "placeholder": { "$value": "var(--input-placeholder)", "$type": "color" }
+    },
+    "eyebrow": {
+      "foreground": { "$value": "var(--eyebrow-fg)", "$type": "color" }
+    }
+  }
+}

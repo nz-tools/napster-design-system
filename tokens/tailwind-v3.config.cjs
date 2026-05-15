@@ -18,5 +18,10 @@ module.exports = {
         napster: theme.motion.easing
       }
     }
-  }
+  },
+  plugins: [
+    function napsterLightVariant({ addVariant }) {
+      addVariant("light", '[data-theme="light"] &');
+    }
+  ]
 };

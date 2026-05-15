@@ -1,0 +1,112 @@
+/* Napster light-mode app-surface tokens.
+   Import after ../colors_and_type.css. Marketing surfaces remain dark. */
+
+[data-theme="light"] {
+  color-scheme: light;
+
+  /* Core background + foreground */
+  --bg:               #FAF8FC;
+  --bg-mulberry:      #FFFFFF;
+  --bg-plum:          #F6EEF7;
+  --bg-purple:        #F2E8F1;
+  --bg-charcoal:      #EEE8EF;
+  --bg-panel:         rgba(32, 24, 32, 0.04);
+  --surface-glass:    rgba(255, 255, 255, 0.72);
+
+  --fg:               #201820;
+  --fg-muted:         rgba(32, 24, 32, 0.64);
+  --fg-subtle:        rgba(32, 24, 32, 0.38);
+  --fg-disabled:      rgba(32, 24, 32, 0.32);
+
+  /* Borders and panels */
+  --panel-fill:       rgba(255, 255, 255, 0.82);
+  --panel-fill-pink:  rgba(190, 54, 157, 0.07);
+  --border:           rgba(32, 24, 32, 0.12);
+  --border-strong:    rgba(32, 24, 32, 0.20);
+  --border-pink:      rgba(190, 54, 157, 0.32);
+  --hairline:         rgba(32, 24, 32, 0.08);
+
+  /* Role tokens */
+  --surface-page:          var(--bg);
+  --surface-card:          var(--bg-mulberry);
+  --surface-panel:         var(--panel-fill);
+  --surface-panel-pink:    var(--panel-fill-pink);
+  --surface-glass-fill:    var(--surface-glass);
+  --surface-glass-border:  var(--border-strong);
+
+  --text-primary:          var(--fg);
+  --text-muted:            var(--fg-muted);
+  --text-subtle:           var(--fg-subtle);
+  --text-disabled:         var(--fg-disabled);
+
+  --accent:                var(--pink-deep);
+  --accent-hot:            var(--pink);
+  --accent-strong:         #A82C8C;
+  --on-accent:             #FFFFFF;
+  --eyebrow-fg:            var(--pink-deep);
+  --link-fg:               var(--pink-deep);
+  --link-hover:            #A82C8C;
+  --pull-quote-border:     var(--pink-deep);
+
+  --code-bg:               rgba(32, 24, 32, 0.06);
+  --code-fg:               var(--fg);
+
+  --btn-fg:                var(--fg);
+  --btn-primary-bg:        var(--pink-deep);
+  --btn-primary-hover-bg:  #A82C8C;
+  --btn-primary-hover:     var(--btn-primary-hover-bg);
+  --btn-primary-fg:        #FFFFFF;
+  --btn-secondary-bg:      rgba(190, 54, 157, 0.06);
+  --btn-secondary-border:  rgba(190, 54, 157, 0.26);
+  --btn-secondary-hover-bg: rgba(190, 54, 157, 0.10);
+  --btn-secondary-hover:   var(--btn-secondary-hover-bg);
+  --btn-secondary-fg:      #A82C8C;
+  --btn-ghost-fg:          var(--fg);
+  --btn-ghost-hover-fg:    var(--pink-deep);
+  --btn-ghost-hover:       var(--btn-ghost-hover-fg);
+  --btn-pulse-fg:          #FFFFFF;
+  --btn-pulse-hover-ring:  rgba(32, 24, 32, 0.18);
+
+  --card-bg:               #FFFFFF;
+  --card-border:           var(--border);
+  --card-hover-border:     rgba(190, 54, 157, 0.35);
+
+  --input-bg:              #FFFFFF;
+  --input-border:          rgba(32, 24, 32, 0.16);
+  --input-fg:              var(--fg);
+  --input-placeholder:     rgba(32, 24, 32, 0.42);
+  --input-focus-border:    var(--pink-deep);
+  --focus-ring:            var(--pink-deep);
+
+  --panel-border:          1px solid var(--border);
+  --panel-border-pink:     1px solid var(--border-pink);
+
+  /* Light-safe shadows and pulse CTA */
+  --napster-shadow-sm:        0 1px 2px rgba(32, 24, 32, 0.10);
+  --napster-shadow-md:        0 8px 24px rgba(32, 24, 32, 0.12);
+  --napster-shadow-lg:        0 24px 64px rgba(32, 24, 32, 0.16);
+  --napster-shadow-panel:     0 14px 40px rgba(32, 24, 32, 0.10);
+  --napster-shadow-inset-light: inset 0 0 0 0.5px rgba(255, 255, 255, 0.70);
+  --napster-inner-glow:       inset 0 1px 0 rgba(255, 255, 255, 0.76),
+                              inset 0 0 0 1px rgba(32, 24, 32, 0.06);
+  --napster-glow-pink:        0 0 32px rgba(190, 54, 157, 0.22);
+  --napster-glow-pulse:       0 10px 32px rgba(185, 44, 159, 0.24);
+  --shadow-sm:                var(--napster-shadow-sm);
+  --shadow-md:                var(--napster-shadow-md);
+  --shadow-lg:                var(--napster-shadow-lg);
+  --shadow-panel:             var(--napster-shadow-panel);
+  --shadow-inset-light:       var(--napster-shadow-inset-light);
+  --inner-glow:               var(--napster-inner-glow);
+  --glow-pink:                var(--napster-glow-pink);
+  --glow-pulse:               var(--napster-glow-pulse);
+
+  --gradient-hero:
+    linear-gradient(90deg,
+      #201820 0%,
+      #BE369D 71.63%,
+      #DD52CB 87.98%);
+  --gradient-label:
+    linear-gradient(91deg, #BE369D 0%, #A82C8C 100%);
+  --gradient-pulse-button:
+    linear-gradient(135deg, #B92C9F 0%, #962480 100%);
+}

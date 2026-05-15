@@ -1,6 +1,11 @@
 /* Tailwind v4 namespace adapter.
-   Import colors_and_type.css first; this file only aliases existing Napster
-   custom properties into Tailwind's @theme namespaces. */
+   Import colors_and_type.css first. This file loads the app-surface light
+   overrides, defines the light: variant, and aliases Napster custom
+   properties into Tailwind's @theme namespaces. */
+
+@import "./theme-light.css";
+
+@custom-variant light ([data-theme="light"] &);
 
 @theme inline {
   --color-bg: var(--bg);
@@ -36,7 +41,35 @@
   --color-border-strong: var(--border-strong);
   --color-border-pink: var(--border-pink);
   --color-focus-ring: var(--focus-ring);
+  --color-surface-page: var(--surface-page);
+  --color-surface-card: var(--surface-card);
+  --color-surface-panel: var(--surface-panel);
+  --color-surface-panel-pink: var(--surface-panel-pink);
+  --color-surface-glass-fill: var(--surface-glass-fill);
+  --color-text-primary: var(--text-primary);
+  --color-text-muted: var(--text-muted);
+  --color-text-subtle: var(--text-subtle);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-eyebrow: var(--eyebrow-fg);
+  --color-link: var(--link-fg);
+  --color-link-hover: var(--link-hover);
+  --color-code-bg: var(--code-bg);
+  --color-code-fg: var(--code-fg);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-input-bg: var(--input-bg);
+  --color-input-border: var(--input-border);
+  --color-btn-primary-bg: var(--btn-primary-bg);
   --color-btn-primary-hover: var(--btn-primary-hover);
+  --color-btn-primary-hover-bg: var(--btn-primary-hover-bg);
+  --color-btn-primary-fg: var(--btn-primary-fg);
+  --color-btn-secondary-bg: var(--btn-secondary-bg);
+  --color-btn-secondary-border: var(--btn-secondary-border);
+  --color-btn-secondary-hover-bg: var(--btn-secondary-hover-bg);
+  --color-btn-secondary-fg: var(--btn-secondary-fg);
+  --color-btn-ghost-fg: var(--btn-ghost-fg);
+  --color-btn-ghost-hover-fg: var(--btn-ghost-hover-fg);
 
   --font-display: var(--napster-font-display);
   --font-body: var(--napster-font-body);

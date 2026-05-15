@@ -1,0 +1,50 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "version": "1.3.0",
+  "mode": "light",
+  "source": "tokens/theme-light.css",
+  "color": {
+    "background": {
+      "default": { "$value": "#FAF8FC", "$type": "color", "$description": "Light app-surface canvas. Marketing remains dark." },
+      "card": { "$value": "#FFFFFF", "$type": "color", "$description": "Primary app card surface." },
+      "plum": { "$value": "#F6EEF7", "$type": "color", "$description": "Warm light atmospheric peer." },
+      "purple": { "$value": "#F2E8F1", "$type": "color", "$description": "Warm light purple peer." },
+      "charcoal": { "$value": "#EEE8EF", "$type": "color", "$description": "Light neutral panel peer." }
+    },
+    "foreground": {
+      "default": { "$value": "#201820", "$type": "color", "$description": "Primary text on light." },
+      "muted": { "$value": "rgba(32,24,32,0.64)", "$type": "color", "$description": "Secondary text on light." },
+      "subtle": { "$value": "rgba(32,24,32,0.38)", "$type": "color", "$description": "Tertiary text, placeholders, disabled affordances." },
+      "disabled": { "$value": "rgba(32,24,32,0.32)", "$type": "color" }
+    },
+    "role": {
+      "accent": { "$value": "#BE369D", "$type": "color", "$description": "Light-mode precious accent; AA on light for normal text." },
+      "accent-strong": { "$value": "#A82C8C", "$type": "color", "$description": "Light-mode hover/strong accent." },
+      "on-accent": { "$value": "#FFFFFF", "$type": "color", "$description": "Text on pink-deep or darker pink fills." },
+      "eyebrow": { "$value": "#BE369D", "$type": "color" },
+      "link": { "$value": "#BE369D", "$type": "color" },
+      "link-hover": { "$value": "#A82C8C", "$type": "color" },
+      "focus-ring": { "$value": "#BE369D", "$type": "color" }
+    },
+    "panel": {
+      "fill": { "$value": "rgba(255,255,255,0.82)", "$type": "color" },
+      "fill-pink": { "$value": "rgba(190,54,157,0.07)", "$type": "color" },
+      "border": { "$value": "rgba(32,24,32,0.12)", "$type": "color" },
+      "border-strong": { "$value": "rgba(32,24,32,0.20)", "$type": "color" },
+      "border-pink": { "$value": "rgba(190,54,157,0.32)", "$type": "color" },
+      "hairline": { "$value": "rgba(32,24,32,0.08)", "$type": "color" }
+    }
+  },
+  "gradient": {
+    "hero-text": {
+      "$value": "linear-gradient(90deg, #201820 0%, #BE369D 71.63%, #DD52CB 87.98%)",
+      "$type": "gradient",
+      "$description": "Light-mode load-bearing noun gradient."
+    },
+    "pulse-button": {
+      "$value": "linear-gradient(135deg, #B92C9F 0%, #962480 100%)",
+      "$type": "gradient",
+      "$description": "Light-mode pulse CTA gradient. White text clears AA at large-text threshold across both stops."
+    }
+  }
+}
