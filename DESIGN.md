@@ -267,6 +267,23 @@ linear-gradient(100deg,
   #000000 100%)
 ```
 
+### Color modes
+
+Napster remains dark-canonical. Marketing surfaces, decks, one-pagers, landing pages, and brand films stay dark. Product/app surfaces may opt into a sanctioned light variant by importing `tokens/theme-light.css` after `colors_and_type.css` and setting `data-theme="light"` on the app-surface wrapper. There is no CSS-level `prefers-color-scheme` fallback; app code may read OS preference and set the attribute deliberately.
+
+| Surface | Default mode | Toggle? |
+|---|---|---|
+| napster.com marketing site | Dark | No |
+| `ui-kits/napster-com/` marketing kit | Dark | No |
+| Decks, slides, one-pagers, sales collateral | Dark | No |
+| Product / app surfaces — admin, settings, forms, data tables, account UI | Dark default | Yes — opt into light with `data-theme="light"` |
+| Developer docs / API reference | Both supported; default dark | Yes — readers may prefer light |
+| Product screenshots / mockups inside decks | Capture each screenshot in the product's native mode | Deck or marketing chrome around the screenshot stays dark |
+| Embedded third-party surfaces | Whatever the embed uses | Embed stays as-is; Napster chrome around it stays dark |
+| Companion portraits | Dark canvas | No — frame in a contained dark cell when used on a light surface |
+
+Brand constants do not change between modes. Role tokens do. On dark, `--accent` resolves to Napster Pink `#DD52CB`. On light, `--accent` resolves to pink-deep `#BE369D` so small text and eyebrows clear AA. Bright pink remains available on light only for large-display accents.
+
 ### Contrast (WCAG)
 
 Body text `#FFFFFF` on `#000000`: contrast ratio 21:1. AAA.
@@ -277,11 +294,21 @@ White on `#BE369D` button: contrast ratio ~5.00:1. AA for normal text.
 White on `#C33DA2` primary-button hover: contrast ratio ~4.66:1. AA for normal text.
 White on `.btn-primary-pulse`'s button-specific gradient (`#EA2DD2` → `#E65AD5`): minimum contrast ratio ~3.09:1. AA for large text only. Use at ≥24px and weight ≥600.
 
+Light primary text `#201820` on `#FAF8FC`: contrast ratio ~16.40:1. AAA.
+Light muted text `rgba(32,24,32,0.64)` composited on `#FAF8FC`: contrast ratio ~5.08:1. AA for normal text.
+Light subtle text `rgba(32,24,32,0.38)` composited on `#FAF8FC`: contrast ratio ~2.36:1. Non-body only: placeholders, disabled affordances, decorative metadata.
+Light accent `#BE369D` on `#FAF8FC`: contrast ratio ~4.73:1. AA for normal text.
+Light accent hover `#A82C8C` on `#FAF8FC`: contrast ratio ~5.85:1. AA for normal text.
+Bright pink `#DD52CB` on `#FAF8FC`: contrast ratio ~3.24:1. Fails AA for normal text; use only for large-display accents on light.
+White on light primary button `#BE369D`: contrast ratio ~5.00:1. AA for normal text.
+White on light primary-button hover `#A82C8C`: contrast ratio ~6.17:1. AA for normal text.
+White on light `.btn-primary-pulse` gradient (`#B92C9F` → `#962480`): minimum contrast ratio ~5.35:1. AA for normal text; component still stays locked to ≥24px and weight ≥600.
+
 ### Accessibility implementation
 
 Text over fixed solid surfaces must use the measured pairings above. Text over imagery is not measurable from tokens alone: add a darken pass (`linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55))`) until the text clears AA in the actual composition. The Napster Beam is overlay-only on imagery and never sits directly behind live text.
 
-Napster is dark-canonical. Do not add `prefers-color-scheme: light` plumbing. If a product must embed a light third-party surface, isolate that surface and keep Napster navigation, chrome, and primary CTAs dark.
+Napster is dark-first with a scoped app-surface light variant. Do not put light mode on marketing surfaces. Do not let CSS media queries flip the brand by default. App code may set `data-theme="light"` from explicit user preference, account preference, or OS preference.
 
 For motion reduction, disable transitions and the pulse-button halo:
 
@@ -499,26 +526,26 @@ Napster lives on black. True drop shadows are rare. Depth comes from inner glows
 ### Buttons
 
 **Default `btn-primary`** (live-verified):
-- Background `#BE369D` (deep pink).
+- Background `var(--btn-primary-bg)` (dark and light default to deep pink).
 - Color white.
 - Border-radius `10px`.
 - Padding `18.5px 20px`.
 - Font Inter 14px 600.
-- Hover: accessible lighten to `#C33DA2`.
+- Hover: `var(--btn-primary-hover-bg)` (`#C33DA2` on dark, `#A82C8C` on light).
 - Press: `transform: scale(0.98)`.
 
 **`btn-secondary`** (live-verified):
-- Background `rgba(190,54,157,0.02)` (subtle pink tint).
-- Border `1px solid rgba(255,161,243,0.20)`.
+- Background `var(--btn-secondary-bg)` (subtle pink tint).
+- Border `1px solid var(--btn-secondary-border)`.
 - Otherwise same as primary.
-- Hover: background `rgba(190,54,157,0.08)`.
+- Hover: background `var(--btn-secondary-hover-bg)`.
 
 **`btn-ghost`**:
-- Transparent background, white text, narrower padding (`12px 16px`).
-- Hover: color shifts to `pulse-1` `#EA2DD2`.
+- Transparent background, mode-aware text, narrower padding (`12px 16px`).
+- Hover: color shifts to `var(--btn-ghost-hover-fg)`.
 
 **`btn-primary-pulse`** — the hero CTA variant. **One per page maximum.**
-- Background `var(--gradient-pulse-button)` (`#EA2DD2` → `#E65AD5`).
+- Background `var(--gradient-pulse-button)` (`#EA2DD2` → `#E65AD5` on dark; `#B92C9F` → `#962480` on light).
 - Border-radius `9999px` (pill).
 - `box-shadow: var(--glow-pulse)`.
 - Padding `14px 20px`.
@@ -534,25 +561,29 @@ Napster lives on black. True drop shadows are rare. Depth comes from inner glows
 | `card-hero` | 48px | 40px | Film-frame compositions, brand moments |
 | `card-glass` | 48px | varies | Heavy glass over imagery; uses `blur-card-glass` + `inner-glow` |
 
-Anatomy of a default card: Mulberry surface (`#1A0918`) · 1px hairline border (`rgba(255,255,255,0.10)`) · 16px radius · interior padding 24px · optional pink accent dot on the eyebrow.
+Anatomy of a default card: `var(--card-bg)` surface · 1px `var(--card-border)` hairline · 16px radius · interior padding 24px · optional accent dot on the eyebrow.
 
 ### Panels (glass)
 
-`.panel` — uses `panel-fill` (4% white) + `panel-border` + `r-lg` + `blur-panel` + `shadow-inset-light` + `shadow-panel`. The default surface used inside heroes and modals.
+`.panel` — uses `surface-panel` + `panel-border` + `r-lg` + `blur-panel` + `shadow-inset-light` + `shadow-panel`. The default surface used inside heroes and modals.
 
-`.panel-pink` — `panel-fill-pink` (8% deep-pink) + `border-pink` + `r-lg`. Pink callout. Use sparingly.
+`.panel-pink` — `surface-panel-pink` + `border-pink` + `r-lg`. Pink callout. Use sparingly.
 
 ### Forms / inputs
 
-- Field background: `rgba(255,255,255,0.04)`.
-- Border: `rgba(255,255,255,0.10)`.
-- Placeholder text: `fg-subtle` `rgba(255,255,255,0.2)`.
-- Focus: border shifts to `pink-rim` `rgba(255,161,243,1.0)`; no glow.
+- Field background: `var(--input-bg)`.
+- Border: `var(--input-border)`.
+- Placeholder text: `var(--input-placeholder)`.
+- Focus: border shifts to `var(--input-focus-border)`; no glow.
 - Radius `10px` (matches buttons).
 
 ### Eyebrow
 
-Every section starts with an eyebrow: IBM Plex Mono 500 / 12px / uppercase / `+0.48px` tracking / `#DD52CB`. Single line. No more than 3 words ideally. Examples: **MEET YOUR CREW.** **WHAT WE BUILT.** **PRICING.**
+Every section starts with an eyebrow: IBM Plex Mono 500 / 12px / uppercase / `+0.48px` tracking / `var(--eyebrow-fg)`. Single line. No more than 3 words ideally. Examples: **MEET YOUR CREW.** **WHAT WE BUILT.** **PRICING.**
+
+### Companion portraits in light mode
+
+Companion portraits keep their dark cinematic treatment. Inside a light product surface, wrap the portrait tile in `.portrait-frame` and set `data-theme="dark"` on that wrapper. The surrounding app page stays light; the portrait cell actively resets to the dark token cascade.
 
 ### State variants summary
 

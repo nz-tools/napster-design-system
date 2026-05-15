@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Napster modes specimen</title>
+  <link rel="stylesheet" href="../../colors_and_type.css">
+  <link rel="stylesheet" href="../../tokens/theme-light.css">
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--surface-page);color:var(--text-primary);font-family:var(--font-body)}
+    .modes{display:grid;grid-template-columns:1fr 1fr;min-height:100vh}
+    .mode{padding:32px;display:flex;flex-direction:column;gap:22px;background:var(--surface-page);color:var(--text-primary)}
+    .mode-title{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--hairline);padding-bottom:14px}
+    .stack{display:flex;flex-direction:column;gap:12px}
+    .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .swatch{width:44px;height:44px;border-radius:var(--r-md);border:1px solid var(--border)}
+    .spec-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .field{display:flex;flex-direction:column;gap:6px}
+    .badge{display:inline-flex;align-items:center;border-radius:var(--r-pill);padding:4px 10px;font:600 var(--fs-caption)/1 var(--font-body);border:1px solid var(--border)}
+    .badge-good{color:var(--good);background:color-mix(in srgb,var(--good) 12%,transparent)}
+    .badge-bad{color:var(--bad);background:color-mix(in srgb,var(--bad) 12%,transparent)}
+    .badge-info{color:var(--accent);background:var(--surface-panel-pink)}
+    .mini-table{width:100%;border-collapse:collapse}
+    .mini-table th,.mini-table td{padding:10px;border-bottom:1px solid var(--hairline);text-align:left}
+    .mini-table th{font:500 var(--fs-meta)/1 var(--font-mono);letter-spacing:var(--tracking-mono);color:var(--text-muted)}
+    .portrait-frame img{aspect-ratio:3/4;object-fit:cover}
+    @media (max-width:900px){.modes{grid-template-columns:1fr}.spec-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="modes">
+    <section class="mode" data-theme="dark">
+      <div class="mode-title">
+        <p class="eyebrow">Dark default</p>
+        <p class="meta">data-theme="dark"</p>
+      </div>
+      <div class="stack">
+        <h1 class="h-hero">A specialist for every <span class="gradient-word">moment.</span></h1>
+        <p class="body-lg muted">Dark remains canonical for marketing, decks, one-pagers, and brand films.</p>
+      </div>
+      <div class="row">
+        <button class="btn btn-primary">Save changes</button>
+        <button class="btn btn-secondary">Learn more</button>
+        <button class="btn btn-ghost">Sign in</button>
+        <button class="btn btn-primary-pulse">Start building</button>
+      </div>
+      <div class="spec-grid">
+        <article class="card">
+          <p class="eyebrow">Card</p>
+          <h3 class="h3">Mulberry surface.</h3>
+          <p class="body-sm">Role tokens keep the dark render unchanged.</p>
+        </article>
+        <aside class="panel">
+          <p class="eyebrow">Panel</p>
+          <p class="body">Glass surface for product chrome.</p>
+        </aside>
+      </div>
+      <label class="field">
+        <span class="eyebrow">Email</span>
+        <input class="input" type="email" placeholder="you@napster.com">
+      </label>
+      <blockquote class="pull-quote">Software just became labor.</blockquote>
+      <table class="mini-table">
+        <thead><tr><th>Workspace</th><th>Status</th></tr></thead>
+        <tbody><tr><td>Companion Studio</td><td><span class="badge badge-good">Live</span></td></tr></tbody>
+      </table>
+    </section>
+
+    <section class="mode" data-theme="light">
+      <div class="mode-title">
+        <p class="eyebrow">Light app surface</p>
+        <p class="meta">data-theme="light"</p>
+      </div>
+      <div class="stack">
+        <h1 class="h-hero">Account settings for every <span class="gradient-word">workspace.</span></h1>
+        <p class="body-lg muted">Light is opt-in for dashboards, settings, forms, data tables, and docs.</p>
+      </div>
+      <div class="row">
+        <button class="btn btn-primary">Save changes</button>
+        <button class="btn btn-secondary">Learn more</button>
+        <button class="btn btn-ghost">Sign in</button>
+        <button class="btn btn-primary-pulse">Start building</button>
+      </div>
+      <div class="spec-grid">
+        <article class="card">
+          <p class="eyebrow">Card</p>
+          <h3 class="h3">Warm white surface.</h3>
+          <p class="body-sm">Pink-deep carries the load-bearing accent on light.</p>
+        </article>
+        <aside class="panel-pink">
+          <p class="eyebrow">Alert</p>
+          <p class="body">Brand callout using mode-aware panel tokens.</p>
+        </aside>
+      </div>
+      <label class="field">
+        <span class="eyebrow">Email</span>
+        <input class="input" type="email" placeholder="you@napster.com">
+      </label>
+      <article class="portrait-frame" data-theme="dark">
+        <img src="../../imagery/people/portraits-hero/napster-companion-kai-mercer-chiefofstaff.avif" alt="Kai Mercer">
+        <div class="portrait-frame-body">
+          <p class="eyebrow">Chief of Staff</p>
+          <h3 class="h3"><span class="accent-serif">Kai Mercer</span></h3>
+        </div>
+      </article>
+      <table class="mini-table">
+        <thead><tr><th>Workspace</th><th>Status</th></tr></thead>
+        <tbody><tr><td>Billing</td><td><span class="badge badge-info">Review</span></td></tr><tr><td>Import</td><td><span class="badge badge-bad">Blocked</span></td></tr></tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

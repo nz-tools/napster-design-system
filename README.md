@@ -52,12 +52,15 @@ napster-design-system-unified/
 │   └── voice-and-tone.md           # Banned words, preferred vocabulary, five copy patterns
 ├── tokens/
 │   ├── colors.json                 # DTCG-format color tokens + gradients + usage ratio
+│   ├── colors-light.json           # DTCG-format light app-surface color peers
 │   ├── typography.json             # Type tokens + text styles
 │   ├── spacing.json                # Spacing + radii + components + breakpoints + slide dims
 │   ├── motion.json                 # Duration + easing + motion principles
 │   ├── components.json             # DTCG-format component state tokens
+│   ├── components-light.json       # DTCG-format light component peers
 │   ├── theme.json                  # Plain CSS-var-backed tooling surface
 │   ├── theme.ts                    # Typed wrapper around theme.json
+│   ├── theme-light.css             # Light app-surface token cascade
 │   ├── tailwind-v4.css             # Tailwind v4 @theme alias adapter
 │   └── tailwind-v3.config.cjs      # Tailwind v3 preset config
 ├── logos/
@@ -98,7 +101,7 @@ napster-design-system-unified/
 │   └── napster-app/                # Mobile companion app kit
 ├── reference/
 │   └── napster-com-audit.md        # The live-site computed-style audit (April 2026)
-├── tools/                          # figma_asset_export.py + tools README
+├── tools/                          # figma_asset_export.py + theme validation
 └── validation/
     └── test-prompts.md             # 5 prompts for post-upload validation
 ```
@@ -132,9 +135,9 @@ napster-design-system-unified/
 
 These rules override everything else, including style intuition.
 
-1. Pure `#000000` backgrounds. Not `#111`, not gradient.
-2. Napster Pink `#DD52CB` on the load-bearing noun only. One pink element per composition.
-3. Eyebrows are IBM Plex Mono 500, 12px, uppercase, `+0.48px` tracking, `#DD52CB`. Every section gets one.
+1. Pure `#000000` backgrounds for marketing, decks, one-pagers, and brand surfaces. Product/app surfaces may opt into light with `data-theme="light"`.
+2. Napster Pink `#DD52CB` on the load-bearing noun only. On light app surfaces, use pink-deep `#BE369D` for small text accents.
+3. Eyebrows are IBM Plex Mono 500, 12px, uppercase, `+0.48px` tracking, and `var(--eyebrow-fg)`. Every section gets one.
 4. Hero headlines are Inter 700, sentence case, ending with a period.
 5. Companion names and accent words use Instrument Serif italic. Pull quotes, the same.
 6. Metadata (page numbers, timestamps, footer markers, slide chrome) sits in IBM Plex Mono.
@@ -151,7 +154,11 @@ Ziv Navoth (`zivnavoth@gmail.com`). For questions on the visual system, see the 
 
 ## Version
 
-`v1.2.0` — developer-experience cut. Adds Tailwind v4/v3 adapters, `theme.json` / `theme.ts`, DTCG component state tokens, a production app integration guide, a canonical component reference, asset URL override hooks, and expanded accessibility guidance.
+`v1.3.0` — light mode for product/app surfaces. Adds role-token theming, `tokens/theme-light.css`, DTCG light peers, Tailwind `light:` adapters, mode-aware `theme.json` / `theme.ts`, side-by-side mode specimen, admin UI recipes, and executable theme validation.
+
+Previous: `v1.2.4` — component specimen audit. Surfaces `.btn-primary-pulse` and `:focus-visible`, and normalizes eyebrow drift to the canonical `.eyebrow` class.
+
+Previous: `v1.2.0` — developer-experience cut. Adds Tailwind v4/v3 adapters, `theme.json` / `theme.ts`, DTCG component state tokens, a production app integration guide, a canonical component reference, asset URL override hooks, and expanded accessibility guidance.
 
 Previous: `v1.1.1` — hygiene patch. Adds missing focus-visible states, reconciles component specimens with canonical radii/focus treatment, fixes the Napster App prototype's Amit portrait and eyebrow tokens, and corrects the WCAG contrast notes.
 

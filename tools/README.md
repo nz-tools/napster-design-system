@@ -63,3 +63,13 @@ If it misses things, the filter for named assets only emits `COMPONENT` and `COM
 - **403 on render endpoint**: token probably lacks `file_content:read` scope.
 - **Script hangs on a big file**: the initial `/v1/files/` call can take 60–120s for a 5GB file. That's normal.
 - **Missing pages**: branches aren't fetched by default. If the assets live in a branch, add `?branch_data=true` to the file fetch and walk `branches` too.
+
+## Theme validation
+
+Run this before shipping mode-token changes:
+
+```bash
+npm run validate:themes
+```
+
+The validator checks light-token peer coverage, raw dark-only alpha literals outside token selectors, and the WCAG contrast pairs declared in `DESIGN.md` §2.
