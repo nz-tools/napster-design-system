@@ -154,7 +154,9 @@ Ziv Navoth (`zivnavoth@gmail.com`). For questions on the visual system, see the 
 
 ## Version
 
-`v1.3.1` — light cascade discoverability fix. Moves the runtime light app-surface cascade into `colors_and_type.css` so one canonical import covers both modes and fresh Claude Design imports see light-mode support; keeps `tokens/theme-light.css` as a one-release back-compat stub.
+`v1.3.2` — Color Modes specimen + Poppins decision doc. Adds `components/components-color-modes.html` (dark + light side-by-side) so Claude Design's curator has a card-shaped preview of the dual-mode story to surface. Documents in `DESIGN.md` §3 why Poppins (AKEO's Google Fonts alternative to Avantt) was not carried into the post-v1.1.0 system. Doc/specimen-only patch; no token or CSS changes.
+
+Previous: `v1.3.1` — light cascade discoverability fix. Moves the runtime light app-surface cascade into `colors_and_type.css` so one canonical import covers both modes and fresh Claude Design imports see light-mode support; keeps `tokens/theme-light.css` as a one-release back-compat stub.
 
 Previous: `v1.3.0` — light mode for product/app surfaces. Adds role-token theming, `tokens/theme-light.css`, DTCG light peers, Tailwind `light:` adapters, mode-aware `theme.json` / `theme.ts`, side-by-side mode specimen, admin UI recipes, and executable theme validation.
 

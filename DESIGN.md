@@ -4,7 +4,7 @@ description: >
   The unified Napster design system. Dark cinematic identity, circular visual
   backbone, Napster Pink accent. Audience-facing: this is the system Claude Design
   uses to generate all Napster-branded artifacts.
-version: 1.3.1
+version: 1.3.2
 sources:
   - napster.com (live audit, April 2026 — the customer-facing truth)
   - AKEO Brand Definition Proposal (Mateo Reyes, 2026 — structural framework)
@@ -338,6 +338,8 @@ The design system uses three Google Fonts. Nothing self-hosted. Nothing to uploa
 | Arial | System fallback only | — |
 
 **A note on Avantt.** Avantt remains the display face on napster.com. It is no longer part of the design system. The reasons: (1) anyone at Napster using Claude Design shouldn't have to install a self-hosted commercial font; (2) the system has to cover product apps that can't ship Avantt. Google Fonts solves both. `reference/napster-com-audit.md` documents the live napster.com state, Avantt included, as a factual record of the marketing site.
+
+**A note on Poppins.** The AKEO Brand Definition Proposal (2026) specifies Poppins as the Google Fonts *alternative* to Avantt — a three-tier stack of Avantt (primary) → Poppins (open-source substitute) → Arial (system fallback). Poppins's role was: *"used only when Avantt is not available."* Since v1.1.0 retired Avantt and adopted Inter — itself a Google Font — as the primary display face, the role Poppins was created to fill no longer exists. Inter is the alternative. Where AKEO sometimes paired Inter and Poppins at display sizes for stylistic contrast, the design system fills that role with Instrument Serif italic (companion names, pull quotes, accent words). Poppins is not a missing piece; it is a workaround for a problem the v1.1.0 typography migration solved differently. If anyone asks "why isn't Poppins in our system?" — this is the answer.
 
 ### Type scale
 

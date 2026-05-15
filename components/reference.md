@@ -4,6 +4,8 @@ Copy-paste reference for production apps. Import `colors_and_type.css` before us
 
 ## Color Modes
 
+Side-by-side specimen: [`components/components-color-modes.html`](components-color-modes.html). Dark canonical on the left, light app-surface on the right, same canonical classes resolving through different role-token values in each subtree.
+
 Dark is the default. Product/app surfaces can opt into light mode on a subtree:
 
 ```html
