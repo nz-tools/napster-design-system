@@ -1,17 +1,17 @@
 <!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css"><style>
-html,body{margin:0;background:#000;color:#fff;font-family:var(--font-body)}
+html,body{margin:0;background:var(--surface-page);color:var(--text-primary);font-family:var(--font-body)}
 .card{padding:20px 28px;display:flex;gap:14px;align-items:center}
-.field{flex:1;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:14px 18px;display:flex;flex-direction:column;gap:4px}
-.field .eyebrow{color:rgba(255,255,255,.5)}
-.field.focus{border-color:var(--pink-rim)}
-.field.focus .eyebrow{color:var(--pink)}
+.field{flex:1;background:var(--input-bg);border:1px solid var(--input-border);border-radius:var(--r-md);padding:14px 18px;display:flex;flex-direction:column;gap:4px}
+.field .eyebrow{color:var(--text-muted)}
+.field.focus{border-color:var(--input-focus-border)}
+.field.focus .eyebrow{color:var(--eyebrow-fg)}
 .val{font-family:var(--font-display);font-weight:500;font-size:16px}
 .chip{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:9999px;font-size:12px;font-weight:600}
 </style></head><body class="napster"><div class="card">
-  <div class="field"><div class="eyebrow">Phone</div><div class="val" style="color:rgba(255,255,255,.5)">+1 012 345 6789</div></div>
+  <div class="field"><div class="eyebrow">Phone</div><div class="val" style="color:var(--text-muted)">+1 012 345 6789</div></div>
   <div class="field focus"><div class="eyebrow">Email</div><div class="val">you@napster.ai</div></div>
   <div style="display:flex;flex-direction:column;gap:6px">
-    <span class="chip" style="background:linear-gradient(135deg,#EA2DD2,#FF7DF3);color:#fff">Active</span>
-    <span class="chip" style="background:rgba(255,255,255,.06);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.1)">Default</span>
+    <span class="chip" style="background:var(--gradient-pulse-button);color:var(--btn-pulse-fg)">Active</span>
+    <span class="chip" style="background:var(--code-bg);color:var(--text-muted);border:1px solid var(--border)">Default</span>
   </div>
 </div></body></html>

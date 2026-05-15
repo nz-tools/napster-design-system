@@ -1,15 +1,15 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
 <style>
-body{margin:0;padding:28px;background:#000;color:#fff;font-family:var(--font-body);display:flex;flex-direction:column;gap:20px;}
+body{margin:0;padding:28px;background:var(--surface-page);color:var(--text-primary);font-family:var(--font-body);display:flex;flex-direction:column;gap:20px;}
 .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;}
 .section .eyebrow{margin-bottom:8px;}
 .section + .section{margin-top:4px;}
 /* Demonstrate state visuals on top of the canonical .btn classes by
    overriding the relevant pseudo-class result inline. Real consumers should
    use :hover / :active / :focus-visible directly. */
-.demo-hover.btn-primary{background:var(--btn-primary-hover);}
+.demo-hover.btn-primary{background:var(--btn-primary-hover-bg);}
 .demo-active.btn-primary{transform:scale(.98);}
-.demo-focus.btn-primary{outline:2px solid var(--pink-rim);outline-offset:2px;}
+.demo-focus.btn-primary{outline:2px solid var(--focus-ring);outline-offset:2px;}
 </style></head><body>
 
 <div class="section">

@@ -15,6 +15,8 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@1&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
+  color-scheme: dark;
+
   /* ─────────────────────────────────────────────────────────────
      CORE BACKGROUND + FOREGROUND
      ───────────────────────────────────────────────────────────── */
@@ -80,10 +82,58 @@
   --border-pink:      rgba(190, 54, 157, 0.35);
   --hairline:         rgba(255, 255, 255, 0.05);
 
-  /* Semantic aliases */
-  --accent:           var(--pink);
-  --accent-hot:       var(--pulse-1);
-  --on-accent:        var(--fg);
+  /* Mode-aware role tokens.
+     Brand constants above never change; components consume these roles. */
+  --surface-page:          var(--bg);
+  --surface-card:          var(--bg-mulberry);
+  --surface-panel:         var(--panel-fill);
+  --surface-panel-pink:    var(--panel-fill-pink);
+  --surface-glass-fill:    var(--surface-glass);
+  --surface-glass-border:  var(--border-strong);
+
+  --text-primary:          var(--fg);
+  --text-muted:            var(--fg-muted);
+  --text-subtle:           var(--fg-subtle);
+  --text-disabled:         var(--fg-disabled);
+
+  --accent:                var(--pink);
+  --accent-hot:            var(--pulse-1);
+  --accent-strong:         var(--pink-deep);
+  --on-accent:             var(--fg);
+  --eyebrow-fg:            var(--pink);
+  --link-fg:               var(--pink);
+  --link-hover:            var(--pulse-1);
+  --pull-quote-border:     var(--pink);
+
+  --code-bg:               rgba(255, 255, 255, 0.06);
+  --code-fg:               var(--fg);
+
+  --btn-fg:                var(--fg);
+  --btn-primary-bg:        var(--pink-deep);
+  --btn-primary-hover-bg:  #C33DA2;   /* AA with white text at normal button sizes */
+  --btn-primary-hover:     var(--btn-primary-hover-bg); /* Back-compat alias */
+  --btn-primary-fg:        var(--fg);
+  --btn-secondary-bg:      rgba(190, 54, 157, 0.02);
+  --btn-secondary-border:  rgba(255, 161, 243, 0.20);
+  --btn-secondary-hover-bg: rgba(190, 54, 157, 0.08);
+  --btn-secondary-hover:   var(--btn-secondary-hover-bg); /* Back-compat alias */
+  --btn-secondary-fg:      var(--fg);
+  --btn-ghost-fg:          var(--fg);
+  --btn-ghost-hover-fg:    var(--pulse-1);
+  --btn-ghost-hover:       var(--btn-ghost-hover-fg); /* Back-compat alias */
+  --btn-pulse-fg:          var(--on-accent);
+  --btn-pulse-hover-ring:  rgba(255, 255, 255, 0.18);
+
+  --card-bg:               var(--bg-mulberry);
+  --card-border:           var(--border);
+  --card-hover-border:     rgba(255, 255, 255, 0.20);
+
+  --input-bg:              rgba(255, 255, 255, 0.04);
+  --input-border:          var(--border);
+  --input-fg:              var(--fg);
+  --input-placeholder:     var(--fg-subtle);
+  --input-focus-border:    var(--pink-rim);
+  --focus-ring:            var(--pink-rim);
 
   /* ─────────────────────────────────────────────────────────────
      SIGNATURE GRADIENTS
@@ -276,16 +326,6 @@
   --panel-border:        1px solid var(--border);
   --panel-border-pink:   1px solid var(--border-pink);
 
-  /* Component state aliases */
-  --btn-primary-bg:       var(--pink-deep);
-  --btn-primary-hover:    #C33DA2;   /* AA with white text at normal button sizes */
-  --btn-secondary-hover:  rgba(190, 54, 157, 0.08);
-  --btn-ghost-hover:      var(--pulse-1);
-  --link-hover:           var(--pulse-1);
-  --card-hover-border:    rgba(255, 255, 255, 0.20);
-  --focus-ring:           var(--pink-rim);
-  --input-focus-border:   var(--pink-rim);
-
   /* Asset URL hooks for apps that import this CSS from another repo/package.
      Override --napster-grain-texture with a full url(...) value in the app. */
   --napster-asset-base:   "";
@@ -297,8 +337,8 @@
    Wrap legacy or third-party content in .napster to scope.
    ===================================================================== */
 html, body, .napster {
-  background-color: var(--bg);
-  color: var(--fg);
+  background-color: var(--surface-page);
+  color: var(--text-primary);
   font-family: var(--font-body);
   font-size: var(--fs-body);
   line-height: var(--lh-body);
@@ -317,7 +357,7 @@ html, body, .napster {
   font-weight: var(--fw-medium);
   text-transform: uppercase;
   letter-spacing: var(--tracking-eyebrow);
-  color: var(--pink);
+  color: var(--eyebrow-fg);
 }
 
 /* Hero — Inter 700, 72px, sentence case, ends with a period. */
@@ -327,7 +367,7 @@ html, body, .napster {
   font-weight: var(--fw-bold);
   line-height: var(--lh-headline);
   letter-spacing: var(--tracking-hero);
-  color: var(--fg);
+  color: var(--text-primary);
 }
 
 /* Section headline — Inter 700, 41px. */
@@ -379,8 +419,8 @@ html, body, .napster {
   font-size: var(--fs-subtitle);
   line-height: 1.35;
   letter-spacing: -0.005em;
-  color: var(--fg);
-  border-left: 2px solid var(--pink);
+  color: var(--text-primary);
+  border-left: 2px solid var(--pull-quote-border);
   padding-left: var(--space-4);
   margin: var(--space-6) 0;
 }
@@ -391,21 +431,22 @@ html, body, .napster {
   font-size: var(--fs-meta);
   font-weight: var(--fw-regular);
   letter-spacing: var(--tracking-mono);
-  color: var(--fg-muted);
+  color: var(--text-muted);
 }
 
 /* Body text */
 .body-lg  { font-size: var(--fs-body-lg); line-height: 1.5; }
 .body     { font-size: var(--fs-body);    line-height: var(--lh-body); }
-.body-sm  { font-size: var(--fs-body-sm); line-height: var(--lh-body); color: var(--fg-muted); }
-.caption  { font-size: var(--fs-caption); color: var(--fg-muted); }
-.muted    { color: var(--fg-muted); }
-.subtle   { color: var(--fg-subtle); }
+.body-sm  { font-size: var(--fs-body-sm); line-height: var(--lh-body); color: var(--text-muted); }
+.caption  { font-size: var(--fs-caption); color: var(--text-muted); }
+.muted    { color: var(--text-muted); }
+.subtle   { color: var(--text-subtle); }
 
 code, .mono {
   font-family: var(--font-mono);
   font-size: 0.92em;
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--code-bg);
+  color: var(--code-fg);
   padding: 0.1em 0.35em;
   border-radius: var(--r-xs);
 }
@@ -422,7 +463,7 @@ code, .mono {
   padding: 18.5px 20px;
   border: none;
   cursor: pointer;
-  color: var(--fg);
+  color: var(--btn-fg);
   transition: background var(--duration-fast) var(--easing),
               transform var(--duration-fast) var(--easing),
               filter var(--duration-mid) var(--easing);
@@ -438,27 +479,28 @@ code, .mono {
   outline: 2px solid var(--focus-ring);
   outline-offset: 3px;
 }
-.btn-primary             { background: var(--btn-primary-bg); }
-.btn-primary:hover       { background: var(--btn-primary-hover); }
+.btn-primary             { background: var(--btn-primary-bg); color: var(--btn-primary-fg); }
+.btn-primary:hover       { background: var(--btn-primary-hover-bg); }
 .btn-primary:active      { transform: scale(0.98); }
 
 .btn-secondary {
-  background: rgba(190, 54, 157, 0.02);
-  border: 1px solid rgba(255, 161, 243, 0.2);
+  background: var(--btn-secondary-bg);
+  border: 1px solid var(--btn-secondary-border);
+  color: var(--btn-secondary-fg);
 }
-.btn-secondary:hover     { background: var(--btn-secondary-hover); }
+.btn-secondary:hover     { background: var(--btn-secondary-hover-bg); }
 
 .btn-ghost {
   background: transparent;
-  color: var(--fg);
+  color: var(--btn-ghost-fg);
   padding: 12px 16px;
 }
-.btn-ghost:hover         { color: var(--btn-ghost-hover); }
+.btn-ghost:hover         { color: var(--btn-ghost-hover-fg); }
 
 /* Hero CTA variant — AKEO pulse gradient + halo. One per page max. */
 .btn-primary-pulse {
   background: var(--gradient-pulse-button);
-  color: var(--on-accent);
+  color: var(--btn-pulse-fg);
   box-shadow: var(--glow-pulse);
   border-radius: var(--r-pill);
   padding: 14px 20px;
@@ -468,7 +510,7 @@ code, .mono {
   line-height: var(--lh-headline);
   letter-spacing: var(--tracking-button);
 }
-.btn-primary-pulse:hover  { box-shadow: var(--glow-pulse), 0 0 0 1px rgba(255, 255, 255, 0.18); }
+.btn-primary-pulse:hover  { box-shadow: var(--glow-pulse), 0 0 0 1px var(--btn-pulse-hover-ring); }
 .btn-primary-pulse:active { transform: scale(0.98); filter: brightness(0.95); }
 
 a:hover,
@@ -479,17 +521,17 @@ a:focus-visible {
 }
 
 .input {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border);
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
   border-radius: var(--r-md);
-  color: var(--fg);
+  color: var(--input-fg);
   font-family: var(--font-body);
   font-size: var(--fs-body);
   line-height: var(--lh-body);
   padding: 14px 18px;
 }
 .input::placeholder {
-  color: var(--fg-subtle);
+  color: var(--input-placeholder);
 }
 .input:focus-visible {
   border-color: var(--input-focus-border);
@@ -500,21 +542,21 @@ a:focus-visible {
    PANELS / CARDS
    ───────────────────────────────────────────────────────────────── */
 .panel {
-  background: var(--panel-fill);
+  background: var(--surface-panel);
   border: var(--panel-border);
   border-radius: var(--r-lg);
   backdrop-filter: var(--blur-panel);
   box-shadow: var(--shadow-inset-light), var(--shadow-panel);
 }
 .panel-pink {
-  background: var(--panel-fill-pink);
+  background: var(--surface-panel-pink);
   border: var(--panel-border-pink);
   border-radius: var(--r-lg);
 }
 
 .card {
-  background: var(--bg-mulberry);
-  border: 1px solid var(--border);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: var(--r-lg);
   padding: var(--space-6);
 }
@@ -532,22 +574,22 @@ a:focus-visible {
   outline-offset: 3px;
 }
 .card-large {
-  background: var(--bg-mulberry);
-  border: 1px solid var(--border);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: var(--r-xl);
   padding: var(--space-8);
 }
 .card-hero {
-  background: var(--bg-mulberry);
-  border: 1px solid var(--border);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: var(--r-2xl);
   padding: var(--space-10);
 }
 .card-glass {
-  background: var(--surface-glass);
+  background: var(--surface-glass-fill);
   backdrop-filter: var(--blur-card-glass);
   -webkit-backdrop-filter: var(--blur-card-glass);
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--surface-glass-border);
   border-radius: var(--r-2xl);
   box-shadow: var(--inner-glow);
 }
