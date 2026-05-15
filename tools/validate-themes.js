@@ -5,11 +5,9 @@ const path = require("path");
 
 const root = path.resolve(__dirname, "..");
 const cssPath = path.join(root, "colors_and_type.css");
-const lightCssPath = path.join(root, "tokens", "theme-light.css");
 const designPath = path.join(root, "DESIGN.md");
 
 const css = fs.readFileSync(cssPath, "utf8");
-const lightCss = fs.readFileSync(lightCssPath, "utf8");
 const design = fs.readFileSync(designPath, "utf8");
 
 const failures = [];
@@ -37,7 +35,7 @@ function extractCustomProps(source, selectorStart) {
 }
 
 const darkProps = extractCustomProps(css, ":root,");
-const lightProps = extractCustomProps(lightCss, '[data-theme="light"]');
+const lightProps = extractCustomProps(css, '[data-theme="light"]');
 
 const modeAwareProps = [
   "--bg",
@@ -146,7 +144,7 @@ function stripBlock(source, selectorStart) {
   return source.slice(0, start) + source.slice(end);
 }
 
-const componentCss = stripBlock(css, ":root,");
+const componentCss = stripBlock(stripBlock(css, ":root,"), '[data-theme="light"]');
 const rawDarkLiteral = /rgba\(\s*(?:255\s*,\s*255\s*,\s*255|0\s*,\s*0\s*,\s*0)\s*,/i;
 componentCss.split(/\n/).forEach((line, index) => {
   if (rawDarkLiteral.test(line)) {

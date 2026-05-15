@@ -60,7 +60,7 @@ napster-design-system-unified/
 │   ├── components-light.json       # DTCG-format light component peers
 │   ├── theme.json                  # Plain CSS-var-backed tooling surface
 │   ├── theme.ts                    # Typed wrapper around theme.json
-│   ├── theme-light.css             # Light app-surface token cascade
+│   ├── theme-light.css             # Deprecated v1.3.0 back-compat stub
 │   ├── tailwind-v4.css             # Tailwind v4 @theme alias adapter
 │   └── tailwind-v3.config.cjs      # Tailwind v3 preset config
 ├── logos/
@@ -154,7 +154,9 @@ Ziv Navoth (`zivnavoth@gmail.com`). For questions on the visual system, see the 
 
 ## Version
 
-`v1.3.0` — light mode for product/app surfaces. Adds role-token theming, `tokens/theme-light.css`, DTCG light peers, Tailwind `light:` adapters, mode-aware `theme.json` / `theme.ts`, side-by-side mode specimen, admin UI recipes, and executable theme validation.
+`v1.3.1` — light cascade discoverability fix. Moves the runtime light app-surface cascade into `colors_and_type.css` so one canonical import covers both modes and fresh Claude Design imports see light-mode support; keeps `tokens/theme-light.css` as a one-release back-compat stub.
+
+Previous: `v1.3.0` — light mode for product/app surfaces. Adds role-token theming, `tokens/theme-light.css`, DTCG light peers, Tailwind `light:` adapters, mode-aware `theme.json` / `theme.ts`, side-by-side mode specimen, admin UI recipes, and executable theme validation.
 
 Previous: `v1.2.4` — component specimen audit. Surfaces `.btn-primary-pulse` and `:focus-visible`, and normalizes eyebrow drift to the canonical `.eyebrow` class.
 

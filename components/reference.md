@@ -1,6 +1,6 @@
 # Napster Component Reference
 
-Copy-paste reference for production apps. Import `colors_and_type.css` before using these classes. Product/app surfaces that support light mode should also import `tokens/theme-light.css` after it.
+Copy-paste reference for production apps. Import `colors_and_type.css` before using these classes. One import covers both the dark default and the opt-in light app-surface cascade.
 
 ## Color Modes
 
@@ -286,12 +286,12 @@ select.input option:checked{background:var(--accent);color:var(--on-accent)}
 
 ```html
 <footer class="meta">
-  NAPSTER DESIGN SYSTEM · 2026 · v1.3.0
+  NAPSTER DESIGN SYSTEM · 2026 · v1.3.1
 </footer>
 ```
 
 ```jsx
 export function Footer() {
-  return <footer className="meta">NAPSTER DESIGN SYSTEM · 2026 · v1.3.0</footer>;
+  return <footer className="meta">NAPSTER DESIGN SYSTEM · 2026 · v1.3.1</footer>;
 }
 ```

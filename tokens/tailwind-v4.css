@@ -1,9 +1,7 @@
 /* Tailwind v4 namespace adapter.
-   Import colors_and_type.css first. This file loads the app-surface light
-   overrides, defines the light: variant, and aliases Napster custom
-   properties into Tailwind's @theme namespaces. */
-
-@import "./theme-light.css";
+   Import colors_and_type.css first. It now contains both dark and light
+   runtime cascades; this file defines the light: variant and aliases Napster
+   custom properties into Tailwind's @theme namespaces. */
 
 @custom-variant light ([data-theme="light"] &);
 

@@ -1,6 +1,6 @@
 {
-  "version": "1.3.0",
-  "source": "../colors_and_type.css + ./theme-light.css",
+  "version": "1.3.1",
+  "source": "../colors_and_type.css",
   "description": "Plain tooling surface for app teams. Top-level tokens are CSS custom-property references for live theming; dark and light namespaces provide resolved mode values.",
   "defaultMode": "dark",
   "color": {

@@ -4,7 +4,7 @@ description: >
   The unified Napster design system. Dark cinematic identity, circular visual
   backbone, Napster Pink accent. Audience-facing: this is the system Claude Design
   uses to generate all Napster-branded artifacts.
-version: 1.3.0
+version: 1.3.1
 sources:
   - napster.com (live audit, April 2026 — the customer-facing truth)
   - AKEO Brand Definition Proposal (Mateo Reyes, 2026 — structural framework)
@@ -269,7 +269,7 @@ linear-gradient(100deg,
 
 ### Color modes
 
-Napster remains dark-canonical. Marketing surfaces, decks, one-pagers, landing pages, and brand films stay dark. Product/app surfaces may opt into a sanctioned light variant by importing `tokens/theme-light.css` after `colors_and_type.css` and setting `data-theme="light"` on the app-surface wrapper. There is no CSS-level `prefers-color-scheme` fallback; app code may read OS preference and set the attribute deliberately.
+Napster remains dark-canonical. Marketing surfaces, decks, one-pagers, landing pages, and brand films stay dark. Product/app surfaces may opt into a sanctioned light variant with the same canonical `colors_and_type.css` import by setting `data-theme="light"` on the app-surface wrapper. There is no CSS-level `prefers-color-scheme` fallback; app code may read OS preference and set the attribute deliberately.
 
 | Surface | Default mode | Toggle? |
 |---|---|---|

@@ -9,16 +9,16 @@ Consume a pinned release tag. Do not float on `main`.
 ```bash
 git submodule add https://github.com/nz-tools/napster-design-system.git vendor/napster-design-system
 cd vendor/napster-design-system
-git checkout v1.3.0
+git checkout v1.3.1
 cd ../..
 git add .gitmodules vendor/napster-design-system
 ```
 
-If submodules are not allowed in the app repo, copy the release-tag contents at build time or vendor them in a `vendor/napster-design-system/` folder. The important rule is intentional upgrades: app teams bump from `v1.3.0` to a later tag deliberately, review the diff, and ship that change like any other dependency update.
+If submodules are not allowed in the app repo, copy the release-tag contents at build time or vendor them in a `vendor/napster-design-system/` folder. The important rule is intentional upgrades: app teams bump from `v1.3.1` to a later tag deliberately, review the diff, and ship that change like any other dependency update.
 
 ## Required CSS import
 
-Every integration path starts with the canonical CSS. It loads the three Google Fonts, defines the CSS custom properties, and provides semantic classes.
+Every integration path starts with the canonical CSS. It loads the three Google Fonts, defines the CSS custom properties, provides semantic classes, and includes both the dark default and the opt-in light app-surface cascade.
 
 ```css
 @import "./vendor/napster-design-system/colors_and_type.css";
@@ -26,12 +26,7 @@ Every integration path starts with the canonical CSS. It loads the three Google 
 
 If your app uses Next.js font optimization or has a strict CSP, load Inter, Instrument Serif italic, and IBM Plex Mono through your app's font pipeline, but keep the family names aligned with `--font-display`, `--font-body`, `--font-serif`, and `--font-mono`.
 
-If your app uses the light app-surface variant through plain CSS classes or Tailwind v3, import the light token cascade after the canonical CSS. Tailwind v4 apps get this through `tokens/tailwind-v4.css`.
-
-```css
-@import "./vendor/napster-design-system/colors_and_type.css";
-@import "./vendor/napster-design-system/tokens/theme-light.css";
-```
+One import covers both modes. `tokens/theme-light.css` remains as a deprecated back-compat stub for apps that followed the v1.3.0 guide, but new integrations should not import it.
 
 ## Asset URL override
 
@@ -51,7 +46,6 @@ Use this when you want the smallest integration surface.
 
 ```jsx
 import "./vendor/napster-design-system/colors_and_type.css";
-import "./vendor/napster-design-system/tokens/theme-light.css";
 
 export function NapsterButton() {
   return <button className="btn btn-primary">Get started now</button>;
@@ -86,7 +80,7 @@ export function TailwindNapsterButton() {
 
 ### Tailwind v3
 
-Use the preset config and keep importing `colors_and_type.css` plus `tokens/theme-light.css` if your app supports the light variant. The preset defines a `light:` variant through a Tailwind v3 plugin.
+Use the preset config and keep importing `colors_and_type.css`. The preset defines a `light:` variant through a Tailwind v3 plugin.
 
 ```js
 const napster = require("./vendor/napster-design-system/tokens/tailwind-v3.config.cjs");
