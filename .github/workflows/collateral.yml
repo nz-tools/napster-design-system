@@ -1,0 +1,32 @@
+name: collateral
+
+# Claim-integrity gate for sales/partner collateral. Runs on any PR that
+# touches rendered collateral or the claims registry, so a reviewer can never
+# approve a diff that reintroduces a July-2026-audit-class violation.
+on:
+  pull_request:
+    paths:
+      - 'collateral/**'
+      - 'claims/**'
+      - 'tools/lint-collateral.mjs'
+      - 'tools/render-collateral.mjs'
+      - '.github/workflows/collateral.yml'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      # lint-collateral.mjs is dependency-free by design, so no install step is
+      # needed for the gate itself.
+      - name: Lint collateral against the claims registry
+        run: npm run lint:collateral
+
+  # NOTE: the render + PDF-artifact-upload job lands with Task 3
+  # (tools/render-collateral.mjs). Once that script exists, add a `render` job
+  # here that runs `npm run render` and uploads dist/collateral/*.pdf via
+  # actions/upload-artifact, so reviewers approve the rendered visual, not just
+  # the diff. Kept out for now so CI stays green while render is pending.

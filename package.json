@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "validate:themes": "node tools/validate-themes.js"
+    "validate:themes": "node tools/validate-themes.js",
+    "lint:collateral": "node tools/lint-collateral.mjs"
   }
 }
