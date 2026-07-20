@@ -1,0 +1,70 @@
+{
+  "version": "2026-07-20",
+  "adjudicated_by": "ziv@napster.com",
+  "source_of_truth": "Product Portfolio v1.1 (go.napster.com/napster-portfolio, 16 Jul 2026) + CPO rulings 20 Jul 2026",
+  "global": {
+    "security_line": "Napster is SOC 2 Type II audited; identity and encryption align to the Microsoft stack.",
+    "security_note": "SOC 2 Type II attestation confirmed real by CPO. Never write 'SOC 2 controls', 'SOC 2*', or 'SOC 2 certified'. Final wording subject to legal confirmation of report scope/period — if legal amends, change it HERE only.",
+    "marketplace_canon": {
+      "transactable_today": ["Napster Agent (shopping assistant)", "Napster API", "Napster Learn"],
+      "coming": ["Napster Station"],
+      "in_progress": ["Napster for Work", "Napster Pulse"],
+      "rule": "No blanket 'Available in Microsoft Marketplace' statement is true at company level. State per-product status only."
+    },
+    "endorsement_rule": "Never imply Microsoft endorsement, co-sell incentive, or MACC eligibility beyond the per-product status above.",
+    "trademarks_cleared": ["VoiceField™"],
+    "spelling": "US English everywhere (recognizes, summarized)."
+  },
+  "products": {
+    "napster-app": {
+      "name": "Napster App",
+      "pricing": "$20 / $100 / $200 per person per month",
+      "annual_plan": true,
+      "platforms": "iOS · Android · Desktop · Web",
+      "platform_note": "Android is included. Never ship 'iOS · Mac · Web'.",
+      "e2e_encryption_claim_cleared": true,
+      "free_tier_claim": "UNRESOLVED — do not write '$0' or 'free to try' until CPO documents a trial"
+    },
+    "napster-view": {
+      "name": "Napster View",
+      "pricing": "$99 one-time, or free with any Napster App annual plan",
+      "pricing_note": "The free-with-annual bundle is CONFIRMED REAL (CPO, 20 Jul 2026). Portfolio page needs updating to match — collateral is correct."
+    },
+    "napster-agent": {
+      "name": "Napster Agent",
+      "fka": "Spaces",
+      "pricing": "$99/mo (one role, 50 hrs) · $249/mo (up to three roles, 150 shared hrs) · Boost $20/$50/$100",
+      "pricing_rule": "Flat package model. NEVER 'usage-based' or 'per-hour' — that is the API's model, and confusing them is explicitly warned against in the portfolio.",
+      "channels": "Website first; phone/contact-center via API or telephony partner — not a default channel"
+    },
+    "napster-api": {
+      "name": "Napster API",
+      "dead_names": ["Companion API", "OmniAgent API"],
+      "pricing": "$0.60/hr bring-your-own-agent or bring-your-own-model · $3.50/hr Napster brings everything"
+    },
+    "napster-learn": {
+      "name": "Napster Learn",
+      "pricing": "$50K/yr + $20/admin/mo + learner pool $5/hr · Digital Twin runtime $7/hr"
+    },
+    "napster-pulse": {
+      "name": "Napster Pulse",
+      "status": "In build. Public beta 10/15 — do NOT print the date in external collateral.",
+      "shipped_features": ["AI-powered analysis", "live sentiment", "per-response summaries", "export to PDF"],
+      "banned_features": ["team collaboration", "custom reports"],
+      "banned_metrics": ["10k+ interviews", "98% satisfaction", "5 min setup"],
+      "screenshot_rule": "Synthetic participants only (e.g. Maya Alvarez, maya@example.com). Never internal employees, @napster.com addresses, or transcripts naming internal tools."
+    },
+    "napster-station": {
+      "name": "Napster Station",
+      "pricing": "$499/mo bundle (device + software + usage), 12-month commitment, usage included",
+      "hardware": "Countertop device on a motion base that turns to greet customers. NOT 'transparent display', NOT 'runs on the customer's own hardware'.",
+      "url": "napster.com — never napster.com/developer on Station collateral"
+    },
+    "napster-for-work": {
+      "name": "Napster for Work",
+      "status": "In build",
+      "pricing": "Team $20 Standard / $100 Premium per seat/mo · Enterprise $20/seat/mo + $5/hr pooled",
+      "image_rule": "Use work-crew imagery. Never the consumer finance screenshot ('Plan any money move')."
+    }
+  }
+}
