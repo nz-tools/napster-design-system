@@ -8,6 +8,10 @@
 *.swp
 *.swo
 
+# Node / build
+node_modules/
+dist/
+
 # OS / archives
 Thumbs.db
 *.zip
