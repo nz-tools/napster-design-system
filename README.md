@@ -17,6 +17,16 @@ A synthesis of two source materials:
 
 Where the two agreed, that's what's here. Where they disagreed, the live site won.
 
+## A design system, not a content system
+
+This repo governs how Napster **looks** — tokens, type, color, components, imagery, voice *patterns*. It deliberately does **not** govern what Napster **says**: pricing, specs, availability, security posture, and partnership claims are content, and their single source of truth is **go.napster.com/content-library**.
+
+Consequences:
+
+- Every number, price, quote, and product claim in this bundle is **illustrative** — it exists to demonstrate a design pattern and must never be quoted or exported as fact.
+- The example compositions in `compositions/` carry a visible **SPECIMEN** chip so a rendered or printed copy can't be mistaken for approved collateral.
+- If you're producing real collateral: take the *look* from here, take the *facts* from the content library.
+
 ## How to publish
 
 1. Zip this entire `napster-design-system-unified/` folder.
@@ -73,8 +83,7 @@ napster-design-system-unified/
 ├── layout/                         # Spacing + radii + glow specimens
 ├── components/                     # Button/card/input/footer/personas specimens + reference.md
 ├── compositions/
-│   ├── one-pagers/                 # napster-platform, napster-station, napster-view
-│   └── landing-pages/              # napster-view landing page
+│   └── one-pagers/                 # napster-platform, napster-view — SPECIMEN exemplars (illustrative copy)
 ├── imagery/
 │   ├── product/                    # Organized by product line
 │   │   ├── station/                # 32 files — environments, specs, hero

@@ -28,6 +28,8 @@ The before-line should be brief enough to land in one breath. The after-line sho
 
 Not: *"industry-leading"*, *"at scale"*, *"transformative"*. If you don't have the number, find one. If you can't find one, write a different sentence.
 
+> **Boundary note:** every number in this doctrine is illustrative — it teaches the *pattern* of specificity, it is not a real figure. Real numbers for real collateral come from **go.napster.com/content-library**, never from this design system.
+
 ### 4. Rename the category. Don't compete inside it.
 
 We aren't a better chatbot — we're a **companion**. A **crew**.
