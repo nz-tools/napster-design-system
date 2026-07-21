@@ -9,10 +9,13 @@ PDF (816×1056) by `tools/render-collateral.mjs`.
   placeholders (`{{claims.products.<slug>.<field>}}`) for anything the registry
   governs — pricing, feature lists, security lines. Purely narrative copy may
   stay inline. Never hard-code a metric, price, customer count, or setup time.
-- **Reference implementation:** the approved `napster-pulse.html` is the pattern
-  every new one-pager should follow (layout, token usage, fact band, footnote
-  discipline). *(Pending: the CPO-approved `napster-pulse-onepager.html` had not
-  been supplied when this directory was scaffolded — see the PR description.)*
+- **Reference implementation:** [`napster-pulse.html`](napster-pulse.html) is the
+  co-authored reference every new one-pager should follow — layout, token usage,
+  the eyebrow-per-section pattern, the qualitative fact band (no invented
+  metrics), footnote/asterisk discipline, and claim strings pulled from the
+  registry via `{{claims…}}` placeholders. It renders to one letter page with
+  Inter / IBM Plex Mono embedded (`npm run render` → `dist/collateral/`) and
+  passes `npm run lint:collateral`.
 - **Design tokens** are consumed, never redefined. Link
   `../../colors_and_type.css`; do not add or edit token values here.
 - Every file is gated by `npm run lint:collateral` (asterisk symmetry, dead
