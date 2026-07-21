@@ -25,8 +25,24 @@ jobs:
       - name: Lint collateral against the claims registry
         run: npm run lint:collateral
 
-  # NOTE: the render + PDF-artifact-upload job lands with Task 3
-  # (tools/render-collateral.mjs). Once that script exists, add a `render` job
-  # here that runs `npm run render` and uploads dist/collateral/*.pdf via
-  # actions/upload-artifact, so reviewers approve the rendered visual, not just
-  # the diff. Kept out for now so CI stays green while render is pending.
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Chromium for Playwright
+        run: npx playwright install --with-deps chromium
+      - name: Render collateral to PDF
+        run: npm run render
+      # Upload the rendered PDFs so reviewers approve the visual, not just the diff.
+      - name: Upload rendered PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: collateral-pdfs
+          path: dist/collateral/*.pdf
+          if-no-files-found: error
