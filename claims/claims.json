@@ -1,10 +1,13 @@
 {
-  "version": "2026-07-20",
+  "version": "2026-07-21",
   "adjudicated_by": "ziv@napster.com",
-  "source_of_truth": "Product Portfolio v1.1 (go.napster.com/napster-portfolio, 16 Jul 2026) + CPO rulings 20 Jul 2026",
+  "source_of_truth": "Product Portfolio v1.1 (go.napster.com/napster-portfolio, 16 Jul 2026) + CPO rulings 20 Jul 2026 + CPO rulings 21 Jul 2026",
+  "cpo_amendments_2026_07_21": "View: $99 one-time / free-with-annual, ALREADY SHIPPED & available, 3D holographic display that sits on top of the screen. Station: collateral must follow this registry (pricing $499/mo bundle usage-included; hardware = countertop motion-base device, no transparent-display or MACC/Marketplace claims). App: free-tier RESOLVED — 'free to try' approved. Contact email standardized to hello@napster.com. 'SOC 2 Type II' badge phrasing approved.",
   "global": {
     "security_line": "Napster is SOC 2 Type II audited; identity and encryption align to the Microsoft stack.",
-    "security_note": "SOC 2 Type II attestation confirmed real by CPO. Never write 'SOC 2 controls', 'SOC 2*', or 'SOC 2 certified'. Final wording subject to legal confirmation of report scope/period — if legal amends, change it HERE only.",
+    "security_note": "SOC 2 Type II attestation confirmed real by CPO. The bare badge token 'SOC 2 Type II' is approved (CPO 2026-07-21). Never write 'SOC 2 controls', 'SOC 2*', or 'SOC 2 certified'. Final wording subject to legal confirmation of report scope/period — if legal amends, change it HERE only.",
+    "contact_email": "hello@napster.com",
+    "contact_email_note": "Standardized public contact address (CPO 2026-07-21). Collateral uses hello@napster.com; the lint gate allows only this @napster.com address in visible copy.",
     "marketplace_canon": {
       "transactable_today": ["Napster Agent (shopping assistant)", "Napster API", "Napster Learn"],
       "coming": ["Napster Station"],
@@ -23,11 +26,13 @@
       "platforms": "iOS · Android · Desktop · Web",
       "platform_note": "Android is included. Never ship 'iOS · Mac · Web'.",
       "e2e_encryption_claim_cleared": true,
-      "free_tier_claim": "UNRESOLVED — do not write '$0' or 'free to try' until CPO documents a trial"
+      "free_tier_claim": "RESOLVED (CPO 2026-07-21): 'free to try' is approved — a free trial exists. '$0'/'free to try'/'start free' are now permitted for the App."
     },
     "napster-view": {
       "name": "Napster View",
       "pricing": "$99 one-time, or free with any Napster App annual plan",
+      "status": "Shipped — available now (CPO 2026-07-21). Not a pre-order; do not write 'reservable' or a future ship date.",
+      "hardware": "A 3D holographic display that sits on top of your screen (clips above the laptop display). Glasses-free.",
       "pricing_note": "The free-with-annual bundle is CONFIRMED REAL (CPO, 20 Jul 2026). Portfolio page needs updating to match — collateral is correct."
     },
     "napster-agent": {

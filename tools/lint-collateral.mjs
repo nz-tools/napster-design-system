@@ -30,6 +30,7 @@ const CLAIMS_PATH = join(REPO_ROOT, 'claims', 'claims.json');
 /* ---------- registry ---------- */
 const claims = JSON.parse(readFileSync(CLAIMS_PATH, 'utf8'));
 const SECURITY_LINE = claims.global.security_line;
+const ALLOWED_EMAIL = (claims.global.contact_email || 'partners@napster.com').toLowerCase();
 const PULSE = claims.products['napster-pulse'];
 const PULSE_BANNED = [...(PULSE.banned_features || []), ...(PULSE.banned_metrics || [])];
 
@@ -113,8 +114,11 @@ function lintDoc(relPath, html) {
   if (/SOC 2 controls/i.test(text)) add('security-phrasing', "banned phrase 'SOC 2 controls'");
   if (/SOC 2\*/i.test(text)) add('security-phrasing', "banned phrase 'SOC 2*'");
   if (/SOC 2 certified/i.test(text)) add('security-phrasing', "banned phrase 'SOC 2 certified'");
-  if (/SOC 2/i.test(text) && !text.includes(SECURITY_LINE)) {
-    add('security-phrasing', 'SOC 2 is mentioned but the exact global.security_line string is not present verbatim');
+  // The bare badge token 'SOC 2 Type II' is CPO-approved. Any other SOC 2
+  // mention must carry the exact security_line verbatim.
+  const soc2Residual = text.replace(/SOC 2 Type II/gi, '');
+  if (/SOC 2/i.test(soc2Residual) && !text.includes(SECURITY_LINE)) {
+    add('security-phrasing', "SOC 2 mentioned outside the approved 'SOC 2 Type II' badge without the exact global.security_line");
   }
 
   // 4. Blanket marketplace claim (no per-product qualifier in the same clause)
@@ -149,8 +153,8 @@ function lintDoc(relPath, html) {
   // 8. Internal data — any @napster.com address other than partners@napster.com
   const emails = text.match(/[A-Za-z0-9._%+-]+@napster\.com/gi) || [];
   for (const e of emails) {
-    if (e.toLowerCase() !== 'partners@napster.com') {
-      add('internal-data', `non-partner @napster.com address in copy: '${e}' (only partners@napster.com is allowed)`);
+    if (e.toLowerCase() !== ALLOWED_EMAIL) {
+      add('internal-data', `non-standard @napster.com address in copy: '${e}' (only ${ALLOWED_EMAIL} is allowed)`);
     }
   }
 
