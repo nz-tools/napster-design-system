@@ -39,7 +39,7 @@ That line is not marketing copy. It is the central frame for every Napster surfa
 ## Three load-bearing voice ideas
 
 1. **Declarative.** Short sentences, full stops. Hedges and qualifiers betray the brand.
-2. **Specific.** Numbers, places, names. Never "industry-leading", always `$5/hour` or `under an hour`.
+2. **Specific.** Numbers, places, names. Never "industry-leading", always `$5/hour` or `under an hour`. (Example figures are illustrative — real numbers come from the content library.)
 3. **Renaming.** Don't compete inside an existing category — rename it. We aren't a better chatbot — we're a **companion**. A **crew**. You **hire**, **deploy**, and **calibrate** crew members.
 
 ## Where to go from here

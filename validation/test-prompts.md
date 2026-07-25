@@ -4,6 +4,8 @@ Run these five prompts in Claude Design **after uploading this bundle to claude.
 
 For each prompt, score the output against the **Pass criteria**. A bundle that passes 5 of 5 is ready. A bundle that passes 4 of 5 is acceptable but flag the failing dimension. Below 4 of 5: republish.
 
+> **Note:** these prompts test *design* fidelity — layout, type, color, imagery retrieval, voice patterns. Any numbers, prices, or product claims in the generated outputs are illustrative specimen copy, not approved fact. Approved content lives at go.napster.com/content-library.
+
 ---
 
 ## Prompt 1 — Napster Station landing page

@@ -40,7 +40,7 @@
     position: absolute;
     right: -60px; top: 44px;
     width: 500px; aspect-ratio: 1000/500;
-    background: url('../../../imagery/product/view/napster-view-hardware.avif') center/cover no-repeat;
+    background: url('../../imagery/product/view/napster-view-hardware.avif') center/cover no-repeat;
   }
   .hero-device::before {
     content: ""; position: absolute; inset: 0;
@@ -62,6 +62,9 @@
     border: 1px solid rgba(255,255,255,0.18);
     border-radius: var(--r-pill);
   }
+  /* Specimen marker — this file demonstrates the design system; its copy is
+     illustrative, never approved fact. See DESIGN.md §3 Boundary. */
+  .meta-chip.specimen { color: var(--pink-bright); border-color: rgba(234,45,210,0.45); }
   .hero-copy { max-width: 440px; }
   .eyebrow-xs {
     font-size: 11px; font-weight: 700;
@@ -380,12 +383,15 @@
     <div class="hero-inner">
       <div class="hero-head">
         <img class="logo-wm" src="../../logos/horizontal/napster-horizontal-white.svg" alt="Napster">
-        <span class="meta-chip">Hardware · 2026</span>
+        <div style="display:flex; gap:8px;">
+          <span class="meta-chip specimen">Specimen · illustrative copy</span>
+          <span class="meta-chip">Hardware · 2026</span>
+        </div>
       </div>
       <div class="hero-copy">
         <h1 class="h1">A 3D holographic display for <span class="accent">your AI.</span></h1>
         <p class="hero-sub">Companions step out of the screen. No headset. No glasses. Just presence, clipped to your Mac.</p>
-        <p class="hero-ship">Shipping summer 2026 · $399 reservable now</p>
+        <p class="hero-ship">Made for Apple Silicon Macs</p>
       </div>
     </div>
   </section>
@@ -498,7 +504,7 @@
     </header>
     <div class="scene-grid">
       <div class="scene">
-        <div class="scene-img" style="background-image:url('../../../imagery/product/view/napster-view-scene-5sec.avif')"></div>
+        <div class="scene-img" style="background-image:url('../../imagery/product/view/napster-view-scene-5sec.avif')"></div>
         <div class="scene-grad"></div>
         <p class="scene-step">One · Clip</p>
         <div class="scene-body">
@@ -507,7 +513,7 @@
         </div>
       </div>
       <div class="scene">
-        <div class="scene-img" style="background-image:url('../../../imagery/product/view/napster-view-scene-3d.avif')"></div>
+        <div class="scene-img" style="background-image:url('../../imagery/product/view/napster-view-scene-3d.avif')"></div>
         <div class="scene-grad"></div>
         <p class="scene-step">Two · Look</p>
         <div class="scene-body">
@@ -516,7 +522,7 @@
         </div>
       </div>
       <div class="scene">
-        <div class="scene-img" style="background-image:url('../../../imagery/product/view/napster-view-scene-present.avif')"></div>
+        <div class="scene-img" style="background-image:url('../../imagery/product/view/napster-view-scene-present.avif')"></div>
         <div class="scene-grad"></div>
         <p class="scene-step">Three · Work</p>
         <div class="scene-body">
@@ -532,16 +538,16 @@
     <div class="proof">
       <p class="proof-label">In the wild</p>
       <p class="proof-quote">"I stopped treating my AI like a tab. It's someone I look up at."
-        <span class="proof-attr">— Early View pilot · Q1 2026</span>
+        <span class="proof-attr">— Illustrative quote (specimen)</span>
       </p>
     </div>
     <div class="cta">
       <div>
-        <h3 class="cta-head">Reserve <span class="accent">the View.</span></h3>
-        <p class="cta-sub">Ships summer 2026.</p>
+        <h3 class="cta-head">Meet <span class="accent">the View.</span></h3>
+        <p class="cta-sub">A companion you look up at — not a tab you look for.</p>
       </div>
       <div class="cta-actions">
-        <a class="btn primary" href="#">Reserve</a>
+        <a class="btn primary" href="#">Learn more</a>
         <a class="btn ghost" href="#">Watch the film</a>
       </div>
       <div class="imprint">napster.com/view · hello@napster.com</div>

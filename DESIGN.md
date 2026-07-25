@@ -423,6 +423,14 @@ Napster writes like *a smart magazine about a serious idea* — editorial, decla
 
 Full voice doctrine: `brand/voice-and-tone.md`.
 
+### Boundary: design system, not content system (load-bearing)
+
+This system governs how Napster **looks, sounds, and is laid out**. It does not govern what Napster **claims**. Every number, price, date, spec, quote, and product claim appearing anywhere in this bundle — docs, specimens, UI kits, compositions — is **illustrative copy for demonstrating design patterns**, not approved fact. Never quote, export, or reuse it as real content.
+
+- Real, approved collateral and claims live at **go.napster.com/content-library**. That is the only source of truth for pricing, security, availability, and partnership statements.
+- Anything generated from this system that will carry real claims must have its copy sourced and verified there — the design system supplies the look, never the facts.
+- Example compositions in `compositions/` carry a visible **SPECIMEN** chip for this reason. Keep the chip when deriving new specimens; remove it only once the copy has been replaced with verified content from the content library.
+
 ---
 
 ## 4. Layout
@@ -607,7 +615,7 @@ Companion portraits keep their dark cinematic treatment. Inside a light product 
 2. **Put the horizontal lockup top-left.** (`logos/horizontal/`). The lockup, not the bare wordmark, is the default mark. Clearspace ≥ lockup-height on all sides.
 3. **Use sentence case for headlines.** End hero lines with a period.
 4. **Name companions.** Full human names: Kai Mercer. Kevin Jones. Never "your AI" or "the assistant". Set names in Instrument Serif italic when they appear in editorial prose ("Meet *Kai Mercer*.").
-5. **Be specific with numbers.** `$5/hour`, `under an hour`, `2 million`, `1.5MW`. Never `industry-leading`, never `at scale`.
+5. **Be specific with numbers.** `$5/hour`, `under an hour`, `2 million`, `1.5MW`. Never `industry-leading`, never `at scale`. (These are illustrations of the *style*, not real figures — see the Boundary note in §3. Real numbers come from the content library.)
 6. **Reserve the Beam for imagery.** It rides on top of hero photography at `mix-blend-mode: screen`.
 7. **Round every corner you can.** The circle is the visual backbone.
 8. **Re-total row budgets** in the same edit when you change a band's height. Bottom-imprint padding is the canary.

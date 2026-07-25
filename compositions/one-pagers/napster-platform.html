@@ -32,7 +32,7 @@
   }
   .hero-img {
     position: absolute; inset: 0;
-    background: url('../../../imagery/people/crew/napster-lifestyle-peeps-crew.avif') center 30%/cover no-repeat;
+    background: url('../../imagery/people/crew/napster-lifestyle-peeps-crew.avif') center 30%/cover no-repeat;
   }
   .hero-img::after {
     content: ""; position: absolute; inset: 0;
@@ -57,6 +57,9 @@
     border: 1px solid rgba(255,255,255,0.18);
     border-radius: var(--r-pill);
   }
+  /* Specimen marker — this file demonstrates the design system; its copy is
+     illustrative, never approved fact. See DESIGN.md §3 Boundary. */
+  .meta-chip.specimen { color: var(--pink-bright); border-color: rgba(234,45,210,0.45); }
   .hero-copy { max-width: 580px; }
   .eyebrow-xs {
     font-family: var(--font-body);
@@ -110,8 +113,8 @@
   .thesis-body {
     font-family: var(--font-display);
     font-weight: 500;
-    font-size: 19px;
-    line-height: 1.35;
+    font-size: 17.5px;
+    line-height: 1.32;
     color: rgba(255,255,255,0.92);
     letter-spacing: -0.015em;
   }
@@ -306,7 +309,10 @@
     <div class="hero-inner">
       <div class="hero-head">
         <div class="logo"><span class="logo-mark">Napster</span></div>
-        <span class="meta-chip">The Crew Platform · 2026</span>
+        <div style="display:flex; gap:8px;">
+          <span class="meta-chip specimen">Specimen · illustrative copy</span>
+          <span class="meta-chip">The Crew Platform · 2026</span>
+        </div>
       </div>
       <div class="hero-copy">
         <p class="eyebrow-xs">Meet your crew</p>
@@ -331,14 +337,14 @@
       <span class="section-sub">Specialists across every domain</span>
     </header>
     <div class="crew-grid">
-      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../../../imagery/people/portraits-hero/napster-companion-jane-chiefofstaff.avif')"></div><div class="crew-name">Jane</div><div class="crew-role">Chief of staff</div></div>
-      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../../../imagery/people/portraits-hero/napster-companion-kevin-jones-finance.avif')"></div><div class="crew-name">Kevin</div><div class="crew-role">Finance guide</div></div>
-      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../../../imagery/people/portraits-hero/napster-companion-jordan-carter-fitness.avif')"></div><div class="crew-name">Jordan</div><div class="crew-role">Fitness coach</div></div>
-      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../../../imagery/people/portraits-hero/napster-companion-elena-garcia-wellbeing.avif')"></div><div class="crew-name">Elena</div><div class="crew-role">Wellbeing</div></div>
-      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../../../imagery/people/portraits-hero/napster-companion-alyssa-reynolds-career.avif')"></div><div class="crew-name">Alyssa</div><div class="crew-role">Career coach</div></div>
-      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../../../imagery/people/portraits-hero/napster-companion-richard-warnok-learning.avif')"></div><div class="crew-name">Richard</div><div class="crew-role">Learning</div></div>
-      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../../../imagery/people/portraits-hero/napster-companion-jc-mitchell-code.avif')"></div><div class="crew-name">JC</div><div class="crew-role">Code wizard</div></div>
-      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../../../imagery/people/portraits-hero/napster-companion-may-li-creative.avif')"></div><div class="crew-name">May</div><div class="crew-role">Creative guru</div></div>
+      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../../imagery/people/portraits-hero/napster-companion-jane-chiefofstaff.avif')"></div><div class="crew-name">Jane</div><div class="crew-role">Chief of staff</div></div>
+      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../../imagery/people/portraits-hero/napster-companion-kevin-jones-finance.avif')"></div><div class="crew-name">Kevin</div><div class="crew-role">Finance guide</div></div>
+      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../../imagery/people/portraits-hero/napster-companion-jordan-carter-fitness.avif')"></div><div class="crew-name">Jordan</div><div class="crew-role">Fitness coach</div></div>
+      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../../imagery/people/portraits-hero/napster-companion-elena-garcia-wellbeing.avif')"></div><div class="crew-name">Elena</div><div class="crew-role">Wellbeing</div></div>
+      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../../imagery/people/portraits-hero/napster-companion-alyssa-reynolds-career.avif')"></div><div class="crew-name">Alyssa</div><div class="crew-role">Career coach</div></div>
+      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../../imagery/people/portraits-hero/napster-companion-richard-warnok-learning.avif')"></div><div class="crew-name">Richard</div><div class="crew-role">Learning</div></div>
+      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../../imagery/people/portraits-hero/napster-companion-jc-mitchell-code.avif')"></div><div class="crew-name">JC</div><div class="crew-role">Code wizard</div></div>
+      <div class="crew-card"><div class="crew-avatar" style="background-image:url('../../imagery/people/portraits-hero/napster-companion-may-li-creative.avif')"></div><div class="crew-name">May</div><div class="crew-role">Creative guru</div></div>
     </div>
   </section>
 
@@ -354,7 +360,7 @@
       <div class="surface"><div class="surface-icon">V</div><div><p class="surface-name">View</p><p class="surface-desc">Holographic display</p></div></div>
       <div class="surface"><div class="surface-icon">S</div><div><p class="surface-name">Station</p><p class="surface-desc">Always-on concierge</p></div></div>
       <div class="surface"><div class="surface-icon">L</div><div><p class="surface-name">Learn</p><p class="surface-desc">Training &amp; coaching</p></div></div>
-      <div class="surface"><div class="surface-icon">W</div><div><p class="surface-name">Spaces</p><p class="surface-desc">Agents for websites</p></div></div>
+      <div class="surface"><div class="surface-icon">W</div><div><p class="surface-name">Agent</p><p class="surface-desc">Agents for websites</p></div></div>
       <div class="surface"><div class="surface-icon">D</div><div><p class="surface-name">API</p><p class="surface-desc">For developers</p></div></div>
     </div>
   </section>
@@ -365,8 +371,8 @@
       <p class="proof-label">Why it lands</p>
       <div class="proof-grid">
         <div class="proof-stat">
-          <div class="stat-num"><span class="accent">$0.01</span></div>
-          <div class="stat-lbl">Per minute of lifelike video presence on the Napster API.</div>
+          <div class="stat-num"><span class="accent">24/7</span></div>
+          <div class="stat-lbl">Your crew, present on every surface, around the clock.</div>
         </div>
         <div class="proof-quote">
           “Your next hire might not be a person. It might be a crew.”
@@ -377,7 +383,7 @@
     <div class="cta">
       <div>
         <h3 class="cta-head">Get your <span class="accent">crew.</span></h3>
-        <p class="cta-sub">Start free with the Napster app, or talk to us about deploying crew across your org.</p>
+        <p class="cta-sub">Get started with the Napster app, or talk to us about deploying a crew across your org.</p>
       </div>
       <div class="cta-actions">
         <a class="btn primary" href="#">Get started</a>
