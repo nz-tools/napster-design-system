@@ -760,3 +760,9 @@ Hardware shots, product UI captures, spec details. Background is pure `#000000`.
 ---
 
 *Maintained as part of the Napster brand system. Primary author of voice: Ziv Navoth. Visual system: AKEO Brand Definition Proposal (Mateo Reyes, April 2026). Live-tokens reconciliation: April 2026 napster.com audit.*
+
+## 10. Napster for Work App UI
+
+[APP-UI.md](APP-UI.md) defines the dedicated agent-application surface for NfW / Napster Desktop. Within `.nfw`, its component geometry and product typography rules take precedence over the marketing layout/component recipes above. Existing color modes and the three-font system remain authoritative. App radii use `--nfw-radius-*` rather than changing `--r-*`. Product headings do not require marketing eyebrows or terminal periods.
+
+The canonical CSS import includes `app_ui.css`; add `.nfw` and an explicit `data-theme` to opt in. See the [source mapping](reference/nfw-akeo-handoff.md) for AKEO evidence and implementation choices, and the [specimen](ui-kits/napster-work/index.html) for interactive examples.

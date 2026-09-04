@@ -178,3 +178,7 @@ Previous: `v1.1.1` — hygiene patch. Adds missing focus-visible states, reconci
 Previous: `v1.1.0` — three-font system. Avantt retired from the design system; Inter (display + body), Instrument Serif italic (editorial accents), and IBM Plex Mono (metadata) now carry everything. The live napster.com site continues to use Avantt and is documented as such in `reference/napster-com-audit.md`.
 
 Previous: `v1.0.14` — final Avantt-based release. Self-hosted Avantt across all four weights, jsDelivr CDN delivery, font-registry upload required at import time.
+
+## Napster for Work App UI
+
+Dedicated agent apps use [APP-UI.md](APP-UI.md), the scoped `app_ui.css` recipes included by the canonical import, and [App UI tokens](tokens/app-ui.json). Preview the [interactive specimen](ui-kits/napster-work/index.html). AKEO source mappings, adaptation decisions, and unresolved questions are in [the handoff reference](reference/nfw-akeo-handoff.md). This additive extension is unreleased; consume a merged commit or a subsequently published release, not an invented version tag.

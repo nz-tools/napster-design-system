@@ -1,0 +1,146 @@
+/* Napster for Work. Included by colors_and_type.css. See APP-UI.md.
+   Every visual recipe is opt-in through .nfw; global brand tokens stay intact. */
+:root, [data-theme="dark"] {
+  --nfw-card-bg: #171717;
+  --nfw-muted: #B8B8B8;
+  --nfw-control-border: #858085;
+  --nfw-success-fg: var(--good);
+  --nfw-critical-fg: var(--bad);
+  --nfw-scrim: rgba(0, 0, 0, 0.65);
+  --nfw-radius-xs: 8px;
+  --nfw-radius-sm: 12px;
+  --nfw-radius-md: 16px;
+  --nfw-radius-lg: 20px;
+  --nfw-radius-xl: 24px;
+  --nfw-radius-pill: 9999px;
+  --nfw-inset: 24px;
+  --nfw-inset-spacious: 32px;
+  --nfw-inset-small: 16px;
+  --nfw-section-gap: 40px;
+  --nfw-space-tight: 6px;
+  --nfw-grid-gap: 8px;
+  --nfw-target: 44px;
+  --nfw-dialog-width: 360px;
+}
+[data-theme="light"] {
+  --nfw-card-bg: #FFFFFF;
+  --nfw-muted: #655A65;
+  --nfw-control-border: #817481;
+  --nfw-success-fg: #126B45;
+  --nfw-critical-fg: #AF2637;
+  --nfw-scrim: rgba(32, 24, 32, 0.45);
+}
+.nfw {
+  container: nfw / inline-size;
+  min-width: 0;
+  background: var(--surface-page);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.nfw, .nfw * { box-sizing: border-box; }
+.nfw [hidden] { display: none !important; }
+.nfw .nfw-content {
+  padding: var(--nfw-inset);
+  display: grid;
+  gap: var(--space-6);
+  min-width: 0;
+}
+.nfw .nfw-content--spacious {
+  padding: var(--nfw-inset-spacious);
+  gap: var(--nfw-section-gap);
+}
+.nfw .nfw-title, .nfw .nfw-heading {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  overflow-wrap: anywhere;
+}
+.nfw .nfw-title { font-size: 24px; font-weight: 700; line-height: 1.25; }
+.nfw .nfw-heading { font-size: 20px; font-weight: 600; line-height: 1.3; }
+.nfw .nfw-muted { color: var(--nfw-muted); }
+.nfw .nfw-caption { font-size: 12px; line-height: 1.5; }
+.nfw p { margin: 0; overflow-wrap: anywhere; }
+.nfw header > p { margin-top: var(--nfw-space-tight); }
+.nfw .nfw-grid { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: var(--nfw-grid-gap); }
+.nfw .nfw-grid > * { grid-column: 1 / -1; min-width: 0; }
+.nfw .nfw-grid--summary > * { grid-column: span 4; }
+.nfw .nfw-card {
+  display: grid;
+  align-content: start;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  border: 1px solid var(--card-border);
+  border-radius: var(--nfw-radius-md);
+  background: var(--nfw-card-bg);
+  min-width: 0;
+}
+.nfw .nfw-card--large { border-radius: var(--nfw-radius-lg); }
+.nfw .nfw-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
+.nfw .btn {
+  min-height: var(--nfw-target);
+  min-width: var(--nfw-target);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--nfw-radius-pill);
+  justify-content: center;
+  line-height: 1.4;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.nfw .btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; pointer-events: none; }
+.nfw .btn[aria-busy="true"] { cursor: progress; }
+.nfw .btn-secondary { border-color: var(--nfw-control-border); }
+.nfw .btn[aria-pressed="true"] { box-shadow: inset 0 0 0 2px var(--accent); }
+.nfw .nfw-icon-button { padding: 10px; width: var(--nfw-target); height: var(--nfw-target); border-radius: 50%; flex: 0 0 auto; }
+.nfw .nfw-icon-button img { display: block; width: 24px; height: 24px; }
+.nfw .input {
+  width: 100%; min-width: 0; min-height: var(--nfw-target);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--nfw-radius-md);
+  border-color: var(--nfw-control-border);
+  font-size: 14px;
+}
+.nfw .input::placeholder { color: var(--nfw-muted); }
+.nfw .input:focus-visible, .nfw .nfw-tab:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 3px; }
+.nfw .nfw-tabs { display: flex; gap: var(--space-4); padding: 0 var(--nfw-inset); border-bottom: 1px solid var(--border); overflow-x: auto; }
+.nfw .nfw-tabs--spacious { padding-inline: var(--nfw-inset-spacious); }
+.nfw .nfw-tab {
+  flex: 0 0 auto; min-height: var(--nfw-target); border: 0; border-bottom: 2px solid transparent;
+  background: transparent; color: var(--nfw-muted); font: inherit; padding: var(--space-3) var(--space-1); cursor: pointer;
+}
+.nfw .nfw-tab[aria-selected="true"], .nfw .nfw-tab[aria-current="page"] { color: var(--text-primary); border-bottom-color: var(--accent); }
+.nfw .nfw-tab:hover { color: var(--text-primary); }
+.nfw .nfw-status { width: fit-content; border: 1px solid currentColor; border-radius: var(--nfw-radius-pill); padding: 4px 10px; font-size: 12px; }
+.nfw .nfw-status--success { color: var(--nfw-success-fg); }
+.nfw .nfw-status--critical { color: var(--nfw-critical-fg); }
+.nfw .nfw-dialog {
+  width: min(var(--nfw-dialog-width), calc(100vw - 32px));
+  max-height: calc(100dvh - 32px); overflow-y: auto;
+  padding: var(--space-6); border: 1px solid var(--card-border); border-radius: var(--nfw-radius-xl);
+  background: var(--nfw-card-bg); color: var(--text-primary); box-shadow: var(--napster-shadow-lg);
+  margin: auto;
+}
+.nfw .nfw-dialog::backdrop { background: var(--nfw-scrim); }
+.nfw .nfw-dialog-body { display: grid; gap: var(--space-4); }
+.nfw .nfw-dialog-actions { display: grid; gap: var(--space-2); margin-top: var(--space-6); }
+.nfw .nfw-tooltip {
+  position: fixed; z-index: 100; width: max-content; max-width: min(280px, calc(100vw - 16px));
+  background: var(--nfw-card-bg); color: var(--text-primary); border: 1px solid var(--border-strong);
+  border-radius: var(--nfw-radius-xs); padding: 8px 16px; font-size: 12px; line-height: 1.5;
+  box-shadow: var(--napster-shadow-md); overflow-wrap: anywhere;
+}
+@container nfw (max-width: 511px) {
+  .nfw .nfw-content, .nfw .nfw-content--spacious { padding: var(--nfw-inset-small); }
+  .nfw .nfw-tabs { padding-inline: var(--nfw-inset-small); }
+  .nfw .nfw-grid--summary > * { grid-column: 1 / -1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nfw .btn { transition: none; }
+  .nfw .btn:active { transform: none; }
+}
+@media (forced-colors: active) {
+  .nfw .btn, .nfw .nfw-card, .nfw .nfw-dialog, .nfw .nfw-tooltip { border: 1px solid CanvasText; }
+  .nfw .nfw-tab[aria-selected="true"] { border-bottom-color: Highlight; }
+}

@@ -13,6 +13,7 @@
    IBM Plex Mono is the metadata face (eyebrows, timestamps, page
    numbers, slide chrome). */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@1&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('./app_ui.css');
 
 :root,
 [data-theme="dark"] {

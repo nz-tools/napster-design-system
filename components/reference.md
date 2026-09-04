@@ -297,3 +297,7 @@ export function Footer() {
   return <footer className="meta">NAPSTER DESIGN SYSTEM · 2026 · v1.3.1</footer>;
 }
 ```
+
+## Napster for Work patterns
+
+Dedicated agent applications use the scoped recipes and interaction contracts in [APP-UI.md](../APP-UI.md). Start with `<main class="nfw" data-theme="dark">`, then reuse `.btn` and `.input` within `.nfw-content` and `.nfw-card`. App buttons become pills and app inputs/cards use 16px radii. Existing unscoped patterns above keep their original geometry. See the [interactive specimen](../ui-kits/napster-work/index.html) for tab, dialog, tooltip, and state examples.
