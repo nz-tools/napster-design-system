@@ -207,3 +207,11 @@ Rules:
 - Use Inter for display/body/UI, Instrument Serif italic for editorial accents, and IBM Plex Mono for metadata/eyebrows.
 - Use `.btn-primary-pulse` only as a large-text hero CTA.
 ```
+
+## Dedicated agent applications (NfW / Napster Desktop)
+
+Read [APP-UI.md](APP-UI.md) when building a dedicated agent application. The same `colors_and_type.css` import includes the App UI recipes. Wrap the application in `<main class="nfw" data-theme="dark">` (or light). Reuse `.btn`, `.input`, and canonical color roles; add `.nfw-content`, `.nfw-card`, and the documented navigation/overlay recipes. Marketing geometry remains unchanged outside `.nfw`.
+
+Vendor `app_ui.css` alongside `colors_and_type.css`; copying only the latter will omit this extension. Plain tooling consumers can read `tokens/app-ui.json`, including the `cssVariable` field. Existing Tailwind/theme adapters are unchanged; access new App UI values through CSS variables or the App UI JSON. Portals need the app scope and selected theme.
+
+The [specimen](ui-kits/napster-work/index.html) includes local demo behavior. Integrate production routing, permissions, actions, and accessible component primitives in the consuming app. This extension does not change live Napster applications.

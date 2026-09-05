@@ -43,3 +43,7 @@ If working on production code, use a pinned release tag and start with `DEVELOPE
 13. The Napster Beam gradient is overlay-only on imagery (`mix-blend-mode: screen`). Never directly behind text.
 
 If the user invokes this skill without any other guidance, ask them what they want to build or design, ask some questions, and act as an expert designer who outputs HTML artifacts _or_ production code, depending on the need.
+
+## Dedicated agent applications
+
+For Napster for Work / NfW / Napster Desktop dedicated apps, read `APP-UI.md` after the developer guide. Use the `.nfw` scope and App UI tokens; preserve canonical fonts and color modes. See `reference/nfw-akeo-handoff.md` before interpreting differences from AKEO Figma. Do not infer unapproved breakpoint values from placeholder prose.

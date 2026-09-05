@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Napster for Work — App UI specimen</title>
+  <link rel="stylesheet" href="../../colors_and_type.css">
+  <style>
+    body { margin: 0; padding: 24px; }
+    .specimen { max-width: 1120px; margin: auto; }
+    .specimen-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 24px; }
+    .specimen-label { font-family: var(--font-mono); font-size: 12px; letter-spacing: .04em; }
+    .specimen-frame { border: 1px solid var(--border-strong); border-radius: 24px; overflow: hidden; }
+    .specimen-number { font-size: 32px; font-weight: 700; line-height: 1.2; }
+    .specimen-help { display: inline-flex; align-items: center; gap: 8px; }
+    .specimen-note { padding: 24px; }
+    .specimen-help-icon { width: 24px; height: 24px; background: currentColor; mask: url('../../icons/icon-question.svg') center / contain no-repeat; }
+    @media (max-width: 600px) { body { padding: 8px; } .specimen-bar { padding: 16px; } }
+  </style>
+</head>
+<body>
+<main class="nfw specimen" data-theme="dark" id="app" aria-labelledby="specimen-title">
+  <header class="specimen-bar">
+    <div><p class="specimen-label">SPECIMEN / NAPSTER FOR WORK</p><h1 class="nfw-title" id="specimen-title">Agent application UI</h1></div>
+    <button type="button" class="btn btn-secondary" id="theme-toggle">Switch to light</button>
+  </header>
+  <div class="specimen-frame">
+    <div class="nfw-tabs nfw-tabs--spacious" role="tablist" aria-label="Agent application">
+      <button type="button" class="nfw-tab" role="tab" id="tab-briefing" aria-controls="panel-briefing" aria-selected="true" tabindex="0">Briefing</button>
+      <button type="button" class="nfw-tab" role="tab" id="tab-files" aria-controls="panel-files" aria-selected="false" tabindex="-1">Files</button>
+      <button type="button" class="nfw-tab" role="tab" id="tab-states" aria-controls="panel-states" aria-selected="false" tabindex="-1">Component states</button>
+    </div>
+    <section class="nfw-content nfw-content--spacious" role="tabpanel" id="panel-briefing" aria-labelledby="tab-briefing" tabindex="0">
+      <header><h2 class="nfw-title">Your next practice</h2><p class="nfw-muted">A consistent workspace for the task at hand.</p></header>
+      <div class="nfw-grid nfw-grid--summary">
+        <article class="nfw-card"><p class="nfw-muted">Sessions completed</p><p class="specimen-number">4</p><p class="nfw-caption nfw-muted">Illustrative sample data</p></article>
+        <article class="nfw-card"><p class="nfw-muted">Preparation</p><p class="specimen-number">Ready</p><span class="nfw-status nfw-status--success">Brief prepared</span></article>
+      </div>
+      <article class="nfw-card nfw-card--large">
+        <div class="specimen-help"><h3 class="nfw-heading">Set the focus</h3><button type="button" class="btn btn-ghost nfw-icon-button" id="help" aria-label="About practice focus" aria-describedby="focus-tip"><span class="specimen-help-icon" aria-hidden="true"></span></button></div>
+        <p class="nfw-muted">Give your companion a short topic for the next session.</p>
+        <label for="topic">Practice topic</label><input class="input" id="topic" value="Presenting a new idea" autocomplete="off">
+        <div class="nfw-actions"><button type="button" class="btn btn-primary" id="start">Start practice</button><button type="button" class="btn btn-ghost" id="reset">Reset topic</button></div>
+        <p class="nfw-caption nfw-muted" role="status" id="practice-status">Demo only. No session is created.</p>
+      </article>
+    </section>
+    <section class="nfw-content" role="tabpanel" id="panel-files" aria-labelledby="tab-files" tabindex="0" hidden>
+      <header><h2 class="nfw-title">Files</h2><p class="nfw-muted">Reference material for this application.</p></header>
+      <article class="nfw-card"><h3 class="nfw-heading">No files yet</h3><p class="nfw-muted">Connect the host’s file picker here in a production app. No sample files have been added.</p></article>
+    </section>
+    <section class="nfw-content" role="tabpanel" id="panel-states" aria-labelledby="tab-states" tabindex="0" hidden>
+      <header><h2 class="nfw-title">Component states</h2><p class="nfw-muted">Keyboard focus, pending actions, and explicit recovery.</p></header>
+      <article class="nfw-card"><h3 class="nfw-heading">Action hierarchy</h3><div class="nfw-actions"><button type="button" class="btn btn-primary" disabled>Unavailable</button><button type="button" class="btn btn-secondary" id="toggle" aria-pressed="false">Pin briefing</button><button type="button" class="btn btn-ghost" id="show-dialog">Preview confirmation</button></div><p class="nfw-muted" id="pin-status" role="status">Briefing is not pinned.</p></article>
+      <article class="nfw-card"><h3 class="nfw-heading">Recoverable failure</h3><span class="nfw-status nfw-status--critical" id="error-label">Could not load the brief</span><p class="nfw-muted">Your topic is preserved. This example simulates a successful retry.</p><div><button type="button" class="btn btn-secondary" id="retry">Retry</button></div><p role="status" id="retry-status">Waiting for retry.</p></article>
+    </section>
+  </div>
+  <p class="specimen-note nfw-caption nfw-muted">SPECIMEN — all data and actions are illustrative. This page demonstrates the shared App UI contract; it does not connect to Napster services.</p>
+  <div class="nfw-tooltip" role="tooltip" id="focus-tip" hidden>Choose one topic for your practice session</div>
+  <dialog class="nfw-dialog" id="confirm" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+    <div class="nfw-dialog-body"><h2 class="nfw-heading" id="dialog-title">Reset practice topic?</h2><p id="dialog-description">This clears the sample topic field. You can enter a new topic afterward.</p></div>
+    <form method="dialog" class="nfw-dialog-actions"><button class="btn btn-primary" value="confirm">Reset topic</button><button class="btn btn-ghost" value="cancel" autofocus>Cancel</button></form>
+  </dialog>
+</main>
+<script src="specimen.js"></script>
+</body>
+</html>

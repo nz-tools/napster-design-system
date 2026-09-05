@@ -73,3 +73,10 @@ npm run validate:themes
 ```
 
 The validator checks light-token peer coverage, raw dark-only alpha literals outside token selectors, and the WCAG contrast pairs declared in `DESIGN.md` §2.
+
+## App UI validation
+
+Run `npm run validate:app-ui` for App UI JSON/CSS token parity, variable resolution,
+the canonical import, local specimen assets, ARIA references, and 16 foreground/
+surface contrast pairs. These static checks supplement browser checks of
+`ui-kits/napster-work/index.html`; they do not prove interactive accessibility.

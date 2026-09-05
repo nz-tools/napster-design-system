@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "validate:themes": "node tools/validate-themes.js"
+    "validate:themes": "node tools/validate-themes.js",
+    "validate:app-ui": "node tools/validate-app-ui.js"
   }
 }

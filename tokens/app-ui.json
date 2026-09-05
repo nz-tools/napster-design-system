@@ -1,0 +1,122 @@
+{
+  "source": "AKEO Napster for Work, Documentation 27:548; see reference/nfw-akeo-handoff.md",
+  "scope": ".nfw",
+  "tokens": {
+    "card-bg": {
+      "$value": "#171717",
+      "cssVariable": "--nfw-card-bg",
+      "$type": "color"
+    },
+    "muted": {
+      "$value": "#B8B8B8",
+      "cssVariable": "--nfw-muted",
+      "$type": "color"
+    },
+    "control-border": {
+      "$value": "#858085",
+      "cssVariable": "--nfw-control-border",
+      "$type": "color"
+    },
+    "scrim": {
+      "$value": "rgba(0, 0, 0, 0.65)",
+      "cssVariable": "--nfw-scrim",
+      "$type": "color"
+    },
+    "radius-xs": {
+      "$value": "8px",
+      "cssVariable": "--nfw-radius-xs",
+      "$type": "dimension"
+    },
+    "radius-sm": {
+      "$value": "12px",
+      "cssVariable": "--nfw-radius-sm",
+      "$type": "dimension"
+    },
+    "radius-md": {
+      "$value": "16px",
+      "cssVariable": "--nfw-radius-md",
+      "$type": "dimension"
+    },
+    "radius-lg": {
+      "$value": "20px",
+      "cssVariable": "--nfw-radius-lg",
+      "$type": "dimension"
+    },
+    "radius-xl": {
+      "$value": "24px",
+      "cssVariable": "--nfw-radius-xl",
+      "$type": "dimension"
+    },
+    "radius-pill": {
+      "$value": "9999px",
+      "cssVariable": "--nfw-radius-pill",
+      "$type": "dimension"
+    },
+    "inset": {
+      "$value": "24px",
+      "cssVariable": "--nfw-inset",
+      "$type": "dimension"
+    },
+    "inset-spacious": {
+      "$value": "32px",
+      "cssVariable": "--nfw-inset-spacious",
+      "$type": "dimension"
+    },
+    "inset-small": {
+      "$value": "16px",
+      "cssVariable": "--nfw-inset-small",
+      "$type": "dimension"
+    },
+    "section-gap": {
+      "$value": "40px",
+      "cssVariable": "--nfw-section-gap",
+      "$type": "dimension"
+    },
+    "space-tight": {
+      "$value": "6px",
+      "cssVariable": "--nfw-space-tight",
+      "$type": "dimension"
+    },
+    "grid-gap": {
+      "$value": "8px",
+      "cssVariable": "--nfw-grid-gap",
+      "$type": "dimension"
+    },
+    "target": {
+      "$value": "44px",
+      "cssVariable": "--nfw-target",
+      "$type": "dimension"
+    },
+    "dialog-width": {
+      "$value": "360px",
+      "cssVariable": "--nfw-dialog-width",
+      "$type": "dimension"
+    },
+    "success-fg": {
+      "$value": "var(--good)",
+      "cssVariable": "--nfw-success-fg",
+      "$type": "color"
+    },
+    "critical-fg": {
+      "$value": "var(--bad)",
+      "cssVariable": "--nfw-critical-fg",
+      "$type": "color"
+    }
+  },
+  "light": {
+    "--nfw-card-bg": "#FFFFFF",
+    "--nfw-muted": "#655A65",
+    "--nfw-control-border": "#817481",
+    "--nfw-success-fg": "#126B45",
+    "--nfw-critical-fg": "#AF2637",
+    "--nfw-scrim": "rgba(32, 24, 32, 0.45)"
+  },
+  "implementationDefaults": [
+    "target icon glyph 24px",
+    "dialog width 360px",
+    "tooltip delay 400ms",
+    "two summary columns above 511px",
+    "light mode adaptation",
+    "opaque muted text and control borders"
+  ]
+}
