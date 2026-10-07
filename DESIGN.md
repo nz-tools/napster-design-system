@@ -745,7 +745,7 @@ Hardware shots, product UI captures, spec details. Background is pure `#000000`.
 | Session flow, "pick → talk → shape → share" | `imagery/scenes/sessions/` |
 | Use cases (coding, writing, creative) | `imagery/scenes/usecases/` |
 | Decorative element, gradient panel, footer CTA, grain texture | `imagery/decorative/` |
-| AI disclosure, "Includes AI-generated actors", the AI mark | `brand/ai-disclosure/` |
+| AI disclosure on video, "Includes AI-generated actors", the AI mark | `brand/ai-disclosure/` (rule in § 9.8) |
 
 ### 9.6 Treatments
 
@@ -764,10 +764,13 @@ Hardware shots, product UI captures, spec details. Background is pure `#000000`.
 
 ### 9.8 AI disclosure
 
-When a piece needs to disclose AI-generated actors, use Napster's own marks. Two forms live in `brand/ai-disclosure/`: the **AI mark** (the letters *AI* in a rounded outline) and the **sentence** (*Includes AI-generated actors.*, set in IBM Plex Mono). Each ships in white for dark backgrounds and black for light ones.
+Every video Napster publishes discloses its AI-generated actors, with Napster's own marks. Two forms live in `brand/ai-disclosure/`: the **AI mark** (the letters *AI* in a rounded outline) and the **sentence** (*Includes AI-generated actors*, set in IBM Plex Mono, no period). Each ships in white for dark backgrounds and black for light ones.
 
-- Use the files as supplied. Do not redraw the mark, retype the sentence, reword it, or recolor either one.
-- Placement and minimum size are not defined yet. See `brand/ai-disclosure/README.md`.
+- **The mark stays up.** Bottom-right, inside the safe area (about 5% in from the right and bottom edges), from the first frame to the last. It never moves.
+- **The sentence opens and closes.** It sits directly left of the mark for the first 3 to 4 seconds, goes away, and comes back for the last 3 to 4 seconds. There is no separate closing card.
+- **Word for word.** *Includes AI-generated actors*. No variants, no paraphrase.
+- Use the files as supplied. Do not redraw the mark, retype the sentence, or recolor either one.
+- Still images have no placement rule yet. Color, size, export and other details are in `brand/ai-disclosure/README.md`.
 
 ---
 

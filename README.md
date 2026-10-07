@@ -60,7 +60,7 @@ napster-design-system-unified/
 ├── brand/
 │   ├── overview.md                 # Personality, audience, emotional target
 │   ├── voice-and-tone.md           # Banned words, preferred vocabulary, five copy patterns
-│   └── ai-disclosure/              # AI disclosure marks: the AI mark + "Includes AI-generated actors." (black, white)
+│   └── ai-disclosure/              # AI disclosure marks: the AI mark + "Includes AI-generated actors" (black, white), and the rule for video
 ├── tokens/
 │   ├── colors.json                 # DTCG-format color tokens + gradients + usage ratio
 │   ├── colors-light.json           # DTCG-format light app-surface color peers
@@ -143,7 +143,7 @@ napster-design-system-unified/
 | Find atmospheric / cinematic background | `imagery/scenes/twin/` or `imagery/decorative/` |
 | Send a logo to a printer, manufacturer, or partner | `logos/README.md` § *File formats* (SVG, PDF, PNG) |
 | Answer a logo spec question (color, typeface, minimum size, Pantone) | `logos/README.md` § *Specifications* |
-| Disclose AI-generated actors | `brand/ai-disclosure/` |
+| Disclose AI-generated actors in a video | `brand/ai-disclosure/` (marks + the placement and timing rule) |
 | Audit a generated artifact | `DESIGN.md` § Do's and Don'ts |
 
 ## Non-negotiable rules

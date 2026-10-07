@@ -1,19 +1,20 @@
 <!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css"><style>
 html,body{margin:0;background:#000;color:#fff;font-family:var(--font-body)}
 .card{padding:32px 36px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.cell{border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:20px;min-width:0}
+/* 1em = the sentence's canvas height. Both files are drawn at one scale, so the mark is 930/441 = 2.109em. */
+.cell{border-radius:16px;padding:28px 32px;display:flex;align-items:center;justify-content:flex-end;gap:.6em;min-width:0;font-size:clamp(9px,1.45vw,20px)}
 .cell.dark{background:#000;border:1px solid rgba(255,255,255,.18)}
 .cell.light{background:#fff}
-.mark{height:56px;width:auto;margin-left:-4px}
-.sentence{width:320px;max-width:100%;height:auto}
-@media (max-width:640px){.card{grid-template-columns:1fr}}
+.sentence{height:1em;width:auto;transform:translateY(.078em)}
+.mark{height:2.109em;width:auto}
+@media (max-width:640px){.card{grid-template-columns:1fr}.cell{font-size:11px}}
 </style></head><body class="napster"><div class="card">
   <div class="cell dark">
+    <img class="sentence" src="ai-disclosure/napster-ai-element-sentence-mono-white.png" alt="Includes AI-generated actors">
     <img class="mark" src="ai-disclosure/napster-ai-element-mark-white.png" alt="AI">
-    <img class="sentence" src="ai-disclosure/napster-ai-element-sentence-mono-white.png" alt="Includes AI-generated actors.">
   </div>
   <div class="cell light">
+    <img class="sentence" src="ai-disclosure/napster-ai-element-sentence-mono-black.png" alt="Includes AI-generated actors">
     <img class="mark" src="ai-disclosure/napster-ai-element-mark-black.png" alt="AI">
-    <img class="sentence" src="ai-disclosure/napster-ai-element-sentence-mono-black.png" alt="Includes AI-generated actors.">
   </div>
 </div></body></html>
