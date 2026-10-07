@@ -59,7 +59,8 @@ napster-design-system-unified/
 ├── colors_and_type.css             # ⭐ Single-import CSS with all tokens + semantic classes.
 ├── brand/
 │   ├── overview.md                 # Personality, audience, emotional target
-│   └── voice-and-tone.md           # Banned words, preferred vocabulary, five copy patterns
+│   ├── voice-and-tone.md           # Banned words, preferred vocabulary, five copy patterns
+│   └── ai-disclosure/              # AI disclosure marks: the AI mark + "Includes AI-generated actors." (black, white)
 ├── tokens/
 │   ├── colors.json                 # DTCG-format color tokens + gradients + usage ratio
 │   ├── colors-light.json           # DTCG-format light app-surface color peers
@@ -74,9 +75,10 @@ napster-design-system-unified/
 │   ├── tailwind-v4.css             # Tailwind v4 @theme alias adapter
 │   └── tailwind-v3.config.cjs      # Tailwind v3 preset config
 ├── logos/
-│   ├── horizontal/                 # Horizontal lockup (white, black, 256w raster)
-│   ├── icon/                       # n-mark in 3 fidelities + favicons
-│   └── wordmark/                   # Wordmark, vertical white, vertical black
+│   ├── horizontal/                 # Horizontal lockup (white, black) as SVG, PDF, PNG + 256w raster
+│   ├── icon/                       # n-mark in 3 fidelities + glass-mark PNG; icon (white, black) as SVG, PDF, PNG
+│   ├── wordmark/                   # Wordmark; vertical lockup (white, black) as SVG, PDF, PNG
+│   └── README.md                   # Which mark to use, specifications, file formats
 ├── colors/                         # Color specimen HTML (Design System tab)
 ├── typography/
 │   └── specimens/                  # Type ramp specimen HTML (the three Google Fonts in use)
@@ -138,6 +140,9 @@ napster-design-system-unified/
 | Find a Companion environment scene ("where this role works") | `imagery/scenes/companion-environments/` (atmospheric, no person — for background plates and layered hero compositions) |
 | Find a Music Producer portrait (Luna, Axel, Billie, …) | `imagery/people/producers/` |
 | Find atmospheric / cinematic background | `imagery/scenes/twin/` or `imagery/decorative/` |
+| Send a logo to a printer, manufacturer, or partner | `logos/README.md` § *File formats* (SVG, PDF, PNG) |
+| Answer a logo spec question (color, typeface, minimum size, Pantone) | `logos/README.md` § *Specifications* |
+| Disclose AI-generated actors | `brand/ai-disclosure/` |
 | Audit a generated artifact | `DESIGN.md` § Do's and Don'ts |
 
 ## Non-negotiable rules

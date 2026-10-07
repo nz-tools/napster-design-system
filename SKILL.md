@@ -16,7 +16,8 @@ Read `DESIGN.md` and `README.md` within this skill first. Then explore the rest.
 - `tokens/` — DTCG-format JSON tokens plus app adapters: `colors.json`, `typography.json`, `spacing.json`, `motion.json`, `components.json`, `theme.json`, `theme.ts`, `tailwind-v4.css`, `tailwind-v3.config.cjs`.
 - `brand/overview.md` — personality, audience, emotional target.
 - `brand/voice-and-tone.md` — banned words, preferred vocabulary, five copy patterns, casing rules.
-- `logos/` — all approved Napster logos (wordmark, n-mark in three fidelities, lockups).
+- `logos/` — all approved Napster logos (wordmark, n-mark in three fidelities, lockups) as SVG, with PDF and PNG exports for vendors. `logos/README.md` holds the logo specifications.
+- `brand/ai-disclosure/` — the AI disclosure marks (the AI mark and the sentence *Includes AI-generated actors.*), black and white. Use as supplied.
 - `icons/` — 22 bundled SVG line icons.
 - `reference/napster-com-audit.md` — live-site computed-style audit (the source of truth for live tokens).
 - `compositions/one-pagers/` — 3 one-pagers (platform, station, view).

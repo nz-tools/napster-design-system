@@ -657,6 +657,8 @@ Napster ships a bundled icon set of 22 line icons under `icons/`: microphone, us
 
 Plus the simplified favicon-grade `napster-icon-white.svg` / `napster-icon-black.svg`.
 
+The full n-mark is layered glass artwork, not a single gradient. Its reference rendering is `logos/icon/napster-n-mark-654w.png`. Print sizes, the logotype's typeface status, and vendor file formats (PDF, PNG) are in `logos/README.md` § *Specifications*.
+
 **3D icons** referenced by the AKEO deck were not exportable as flat raster and are not in this bundle. Render with a 3D pipeline if needed; do not substitute with a flat icon.
 
 ---
@@ -741,6 +743,7 @@ Hardware shots, product UI captures, spec details. Background is pure `#000000`.
 | Session flow, "pick → talk → shape → share" | `imagery/scenes/sessions/` |
 | Use cases (coding, writing, creative) | `imagery/scenes/usecases/` |
 | Decorative element, gradient panel, footer CTA, grain texture | `imagery/decorative/` |
+| AI disclosure, "Includes AI-generated actors", the AI mark | `brand/ai-disclosure/` |
 
 ### 9.6 Treatments
 
@@ -756,6 +759,13 @@ Hardware shots, product UI captures, spec details. Background is pure `#000000`.
 - B&W photography.
 - Photography of devices that don't exist in the Napster product family.
 - Smiles in marketing portraits unless the persona is mid-laugh in candid context.
+
+### 9.8 AI disclosure
+
+When a piece needs to disclose AI-generated actors, use Napster's own marks. Two forms live in `brand/ai-disclosure/`: the **AI mark** (the letters *AI* in a rounded outline) and the **sentence** (*Includes AI-generated actors.*, set in IBM Plex Mono). Each ships in white for dark backgrounds and black for light ones.
+
+- Use the files as supplied. Do not redraw the mark, retype the sentence, reword it, or recolor either one.
+- Placement and minimum size are not defined yet. See `brand/ai-disclosure/README.md`.
 
 ---
 
