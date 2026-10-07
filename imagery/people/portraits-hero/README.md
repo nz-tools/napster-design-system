@@ -1,10 +1,10 @@
-# Companion Portraits
+# Agent Portraits
 
-**Slot:** Isolated Portraits — Companion Character
+**Slot:** Isolated Portraits — Agent Character
 
 ## What's in this folder
 
-3/4-framed portraits of each named Napster Companion. Background is the persona's environment (studio, kitchen, gym), never a void. These files are used for *all* companion portrait contexts — hero use on landing pages, smaller use in roster grids and cards. CSS handles sizing.
+3/4-framed portraits of each named Napster agent. Background is the persona's environment (studio, kitchen, gym), never a void. These files are used for *all* agent portrait contexts — hero use on landing pages, smaller use in roster grids and cards. CSS handles sizing.
 
 ## Treatment
 
@@ -12,7 +12,7 @@ Filename convention: `napster-companion-{firstname}-{surname}-{role}.{ext}`. Can
 
 ## Contents
 
-| Companion | Role | Dimensions |
+| Agent | Role | Dimensions |
 |---|---|---|
 | Alyssa Reynolds | Career | 1088×1680 |
 | Elena Garcia | Wellbeing | 1088×1680 |
@@ -43,7 +43,7 @@ Richard Warnok leads the Tutors crew as Learning Guide. He is one identity with 
 
 ## History
 
-Until v1.2.1, this folder held square 1200×1200 environment scenes that were mistakenly documented as portraits. The actual portrait set lived at `portraits-thumb/`. v1.2.2 moved the environment scenes out to `imagery/scenes/companion-environments/` (where they belong) and promoted the real portraits here. The separate `portraits-thumb/` folder was removed; one portrait per companion is enough — CSS sizes them down for card use.
+Until v1.2.1, this folder held square 1200×1200 environment scenes that were mistakenly documented as portraits. The actual portrait set lived at `portraits-thumb/`. v1.2.2 moved the environment scenes out to `imagery/scenes/companion-environments/` (where they belong) and promoted the real portraits here. The separate `portraits-thumb/` folder was removed; one portrait per agent is enough — CSS sizes them down for card use.
 
 ---
 

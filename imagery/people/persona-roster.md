@@ -72,7 +72,7 @@ The six new seats were registered here **before** any portrait was generated, de
 
 ## Mac-at-desk variants
 
-The iterative bundle also ships "companion at Mac" compositions under `imagery/product/mac/napster-mac-{firstname}-{surname}-{role}-{descriptor}.avif`:
+The iterative bundle also ships "agent at Mac" compositions under `imagery/product/mac/napster-mac-{firstname}-{surname}-{role}-{descriptor}.avif`:
 
 - `napster-mac-alyssa-reynolds-career-coach.avif`
 - `napster-mac-elena-garcia-wellbeing-guide.avif`
@@ -83,7 +83,7 @@ The iterative bundle also ships "companion at Mac" compositions under `imagery/p
 - `napster-mac-kevin-jones-financial-guide.avif`
 - `napster-mac-richard-warnok-learning-mentor.avif`
 
-These are the canonical "companion at work" compositions for product UI marketing.
+These are the canonical "agent at work" compositions for product UI marketing.
 
 ## Producers (music line — separate from the agent roster)
 

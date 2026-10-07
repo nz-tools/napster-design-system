@@ -2,13 +2,13 @@
 
 ## What Napster is
 
-Napster is the AI companion platform. We rebuilt the brand around a simple insight: a chatbot answers questions; a companion mentors. The product is a portfolio of voice-and-visual AI specialists — Kai for Chief of Staff work, Kevin for Finance, May for Creative, Jordan for Fitness — each with full human names, persistent memory, and the ability to be hired, deployed, calibrated, and tuned like a colleague.
+Napster is the AI agent platform. We rebuilt the brand around a simple insight: a chatbot answers questions; an agent mentors. The product is a portfolio of voice-and-visual AI specialists — Kai for Chief of Staff work, Kevin for Finance, May for Creative, Jordan for Fitness — each with full human names, persistent memory, and the ability to be hired, deployed, calibrated, and tuned like a colleague.
 
 ## The 26-year arc
 
 > *Twenty-six years ago, we democratized music. Now we're democratizing expertise.*
 
-That line is not marketing copy. It is the central frame for every Napster surface. The history matters: the file-sharing service was the first time individuals could access a library of expertise (then: songs) that had previously been gatekept. We are doing it again, with companions instead of MP3s.
+That line is not marketing copy. It is the central frame for every Napster surface. The history matters: the file-sharing service was the first time individuals could access a library of expertise (then: songs) that had previously been gatekept. We are doing it again, with agents instead of MP3s.
 
 ## Personality
 
@@ -27,7 +27,7 @@ That line is not marketing copy. It is the central frame for every Napster surfa
 | `napster.com` | Consumers, curious developers | Confidence. *Software just became labor.* |
 | Sales decks | Enterprise buyers — operators, integrators, ops leads | Inevitability. *This is what comes next.* |
 | Internal comms | Napster team | Pride. *We democratized music. Now we democratize expertise.* |
-| Product UI | Active users | Calm. The interface gets out of the way of the companion. |
+| Product UI | Active users | Calm. The interface gets out of the way of the agent. |
 | Developer docs | Engineers integrating Napster API | Clarity. Plain language, real numbers, working code. |
 
 ## Three load-bearing visual ideas
@@ -40,10 +40,10 @@ That line is not marketing copy. It is the central frame for every Napster surfa
 
 1. **Declarative.** Short sentences, full stops. Hedges and qualifiers betray the brand.
 2. **Specific.** Numbers, places, names. Never "industry-leading", always `$5/hour` or `under an hour`. (Example figures are illustrative — real numbers come from the content library.)
-3. **Renaming.** Don't compete inside an existing category — rename it. We aren't a better chatbot — we're a **companion**. A **crew**. You **hire**, **deploy**, and **calibrate** crew members.
+3. **Renaming.** Don't compete inside an existing category — rename it. We aren't a better chatbot — we're a **crew** of **agents**. You **hire**, **deploy**, and **calibrate** crew members.
 
 ## Where to go from here
 
 - **Voice and prose mechanics:** `voice-and-tone.md`.
 - **Visual system:** `../DESIGN.md`.
-- **Companion roster:** `../imagery/people/persona-roster.md`.
+- **Agent roster:** `../imagery/people/persona-roster.md`.

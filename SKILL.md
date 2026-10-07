@@ -1,6 +1,6 @@
 ---
 name: napster-design
-description: Use this skill to generate well-branded interfaces and assets for Napster — the AI companion platform. Dark cinematic identity, circular visual backbone, Napster Pink accent. Use for production work or throwaway prototypes/mocks/slides.
+description: Use this skill to generate well-branded interfaces and assets for Napster — the AI agent platform. Dark cinematic identity, circular visual backbone, Napster Pink accent. Use for production work or throwaway prototypes/mocks/slides.
 user-invocable: true
 ---
 
@@ -33,12 +33,12 @@ If working on production code, use a pinned release tag and start with `DEVELOPE
 2. Napster Pink (`#DD52CB`) appears on ONE element per composition — the load-bearing noun.
 3. Eyebrows are `.eyebrow` — IBM Plex Mono 500, 12px, uppercase, `+0.48px` tracking, pink. Every section gets one.
 4. Hero headlines are Inter 700 sentence case, end with a period.
-5. Companion names and editorial accents use Instrument Serif italic (`.accent-serif`). Pull quotes, the same (`.pull-quote`).
+5. Agent names and editorial accents use Instrument Serif italic (`.accent-serif`). Pull quotes, the same (`.pull-quote`).
 6. Page numbers, timestamps, footer markers, slide chrome use IBM Plex Mono (`.meta`).
 7. Horizontal lockup top-left (`logos/horizontal/`), clearspace ≥ lockup-height. The lockup is the default mark — wordmark + n-mark together — not the bare wordmark. For small contexts (favicon, avatar, app icon), use the standalone n-mark from `logos/icon/`.
-8. Never use: chatbot, leverage, AI-powered, revolutionize, solution, emoji.
+8. Never use: chatbot, companion (say agent), leverage, AI-powered, revolutionize, solution, emoji.
 9. Round every corner you can. The circle is the visual backbone.
-10. Companions have full human names (Kai Mercer, Kevin Jones, May Li). Not "the AI". See `imagery/people/persona-roster.md`.
+10. Agents have full human names (Kai Mercer, Kevin Jones, May Li). Not "the AI". See `imagery/people/persona-roster.md`.
 11. **Fixed-size layouts declare a row budget.** One-pagers, slides, and any composition with a fixed outer height must define each row's height as a CSS custom property (`--row-hero`, `--row-specs`, etc.) and declare `--sheet-max`. The sum of rows must equal `--sheet-max`. When a fix adds vertical pixels to one band, re-total the rows in the same edit — never leave the math for later. Bottom imprints/footers need ≥24px padding below them; they are the canary for budget overflow.
 12. Default button radius is `10px`. Pill shape is reserved for chips and one designated hero CTA per page (`.btn-primary-pulse`).
 13. The Napster Beam gradient is overlay-only on imagery (`mix-blend-mode: screen`). Never directly behind text.

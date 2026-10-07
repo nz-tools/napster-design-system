@@ -1,4 +1,4 @@
-/* Napster App — companion screens.
+/* Napster App — agent screens.
    Prototype/reference only; production apps should use DEVELOPER-GUIDE.md and
    components/reference.md as the canonical implementation path. */
 
@@ -42,7 +42,7 @@ window.Welcome = function Welcome() {
       </div>
       <Eyebrow>Hello, I'm Napster</Eyebrow>
       <div style={{fontFamily:"var(--font-display)", fontWeight:700, fontSize:38, lineHeight:1.02, letterSpacing:"-.025em", marginTop:10}}>
-        A companion<br/>that creates<br/>with you.
+        An agent<br/>that creates<br/>with you.
       </div>
       <div style={{fontSize:13, color:"rgba(255,255,255,.65)", lineHeight:1.45, marginTop:14}}>
         Voice‑first AI agents for learning, fitness, finance and the rest of life.
@@ -55,7 +55,7 @@ window.Welcome = function Welcome() {
   );
 };
 
-/* ----- Screen 2: Companions home --------------------------------------- */
+/* ----- Screen 2: Agents home --------------------------------------- */
 window.CompanionsHome = function CompanionsHome() {
   return (
     <div style={{flex:1,display:"flex",flexDirection:"column",padding:"4px 0 100px"}}>
@@ -67,7 +67,7 @@ window.CompanionsHome = function CompanionsHome() {
         <div style={{width:36,height:36,borderRadius:"50%",background:"#1A0918",border:"1px solid rgba(255,255,255,.12)"}}/>
       </div>
       <div style={{padding:"18px 24px 0"}}>
-        <div style={{fontSize:13,color:"rgba(255,255,255,.55)",fontWeight:500}}>Your companions</div>
+        <div style={{fontSize:13,color:"rgba(255,255,255,.55)",fontWeight:500}}>Your agents</div>
       </div>
       <div style={{padding:"12px 16px 0",display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
         {personas.slice(0,4).map(p => (
@@ -113,7 +113,7 @@ window.VoiceSession = function VoiceSession() {
         </div>
         <div style={{textAlign:"center"}}>
           <div style={{fontFamily:"var(--font-display)",fontWeight:700,fontSize:22,letterSpacing:"-.02em"}}>"Tell me about<br/>the Bauhaus."</div>
-          <div style={{fontSize:12,color:"rgba(255,255,255,.55)",marginTop:8}}>Kai · Learning companion</div>
+          <div style={{fontSize:12,color:"rgba(255,255,255,.55)",marginTop:8}}>Kai · Learning agent</div>
         </div>
       </div>
       <div style={{padding:"24px",display:"flex",alignItems:"center",justifyContent:"center",gap:18}}>

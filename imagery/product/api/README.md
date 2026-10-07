@@ -12,7 +12,7 @@ Background pure #000000. No environmental clutter. Cards and homepage tiles can 
 
 ## Contents
 
-- Homepage product card (companion platform)
+- Homepage product card (agent platform)
 - Start-building visual
 - API hero tile
 

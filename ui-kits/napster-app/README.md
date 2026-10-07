@@ -4,9 +4,9 @@ Prototype/reference only. Do not treat this folder as the canonical production
 component library. For production app integration, use `../../DEVELOPER-GUIDE.md`,
 `../../components/reference.md`, and the token adapters under `../../tokens/`.
 
-Voice-first companion app. Five core screens showing the canonical product
-moments: welcome, companion grid (home), an active voice session, a chat
-thread with a companion, and the profile/settings page.
+Voice-first agent app. Five core screens showing the canonical product
+moments: welcome, agent grid (home), an active voice session, a chat
+thread with an agent, and the profile/settings page.
 
 ## Files
 - `index.html` — five iPhone-shaped frames side-by-side; loads `components.jsx`.

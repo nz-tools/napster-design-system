@@ -8,7 +8,7 @@ Napster's image library, organized by the four-part vocabulary defined in `DESIG
 |---|---|---|
 | Warm Lifestyle | User Value | `people/crew/`, `brand-life/` |
 | Atmospheric / Cinematic | Brand Feeling | `scenes/twin/`, `decorative/`, `scenes/sessions/`, `scenes/companion-environments/` |
-| Isolated Portraits | Companion Character | `people/portraits-hero/`, `people/producers/` |
+| Isolated Portraits | Agent Character | `people/portraits-hero/`, `people/producers/` |
 | Product on Pure Black | Product Clarity | `product/api/`, `product/app/`, `product/learn/`, `product/mac/`, `product/spaces/`, `product/station/`, `product/view/`, `scenes/usecases/` |
 
 ## Where to look first
@@ -23,7 +23,7 @@ When a prompt mentions a specific Napster product, go straight to `product/{prod
 - "Napster App" → `product/app/`
 - "Napster API" → `product/api/`
 
-When the prompt names a Companion (Kai, May, JC, Elena, Kevin, Alyssa, Jordan, Richard, Jane, Amit) → `people/portraits-hero/`. One file per companion; CSS sizes them for both hero and card contexts. For "where this companion's role works" atmospheric scenes (no person in frame), reach for `scenes/companion-environments/`. Amit currently has no portrait — see `people/persona-roster.md` for the workaround.
+When the prompt names an agent (Kai, May, JC, Elena, Kevin, Alyssa, Jordan, Richard, Jane, Amit) → `people/portraits-hero/`. One file per agent; CSS sizes them for both hero and card contexts. For "where this agent's role works" atmospheric scenes (no person in frame), reach for `scenes/companion-environments/`. Amit currently has no portrait — see `people/persona-roster.md` for the workaround.
 
 When the prompt names a Tutor (Ama, Dara, June, Teo, Ines, Desmond) → `people/portraits-hero/napster-tutor-*`. Their rooms are in `scenes/companion-environments/napster-tutor-environment-{subject}.avif`, and the seven-up lineup is `people/crew/napster-tutors-crew-lineup.avif`. Richard Warnok leads the Tutors crew and keeps his one portrait.
 
@@ -38,7 +38,7 @@ When the prompt names a Music Producer (Axel, Billie, Jasper, Luna, Mateo, Nyx, 
 ## Filename conventions
 
 - Every asset begins with `napster-`.
-- Companions: `napster-companion-{firstname}-{surname}-{role}.{ext}`.
+- Agents (Specialist crew): `napster-companion-{firstname}-{surname}-{role}.{ext}`. The `companion` segment is a legacy identifier, not vocabulary.
 - Tutors: `napster-tutor-{firstname}-{surname}-{subject}.{ext}`.
 - Producers: `napster-producer-{firstname}-{genre}.{ext}`.
 - Product: `napster-{product}-{descriptor}.{ext}` (e.g. `napster-station-spec-voicefield.jpg`).
@@ -56,4 +56,4 @@ Each subfolder has its own README with the slot, treatment, and inventory.
 
 ---
 
-See `DESIGN.md` § 9 *Imagery & Photography* for the full vocabulary, and `people/persona-roster.md` for the canonical Companion roster.
+See `DESIGN.md` § 9 *Imagery & Photography* for the full vocabulary, and `people/persona-roster.md` for the canonical agent roster.

@@ -34,14 +34,14 @@ Pull in the full imagery library from the repo. Include all files from
 imagery/product/api/, imagery/product/app/, imagery/product/learn/,
 imagery/product/mac/, imagery/product/spaces/, imagery/product/station/,
 and imagery/product/view/. Also pull all imagery/people/portraits-hero/
-files so every Companion has a resolvable portrait.
+files so every agent has a resolvable portrait.
 ```
 
 Claude Design will fetch the missing files from the source repo and refresh the preview cards.
 
-## 3. Confirm the personas card shows all 10 Companions
+## 3. Confirm the personas card shows all 10 agents
 
-Open the **Components > Personas** card and verify it shows ten Companion tiles (Kai, Jane, Kevin, Jordan, Elena, JC, May, Richard, Alyssa, Amit) with real portrait imagery. If any tile shows a broken-image icon, run the "pull in the full imagery library" prompt above; the portrait will be in the next-round pull.
+Open the **Components > Personas** card and verify it shows ten agent tiles (Kai, Jane, Kevin, Jordan, Elena, JC, May, Richard, Alyssa, Amit) with real portrait imagery. If any tile shows a broken-image icon, run the "pull in the full imagery library" prompt above; the portrait will be in the next-round pull.
 
 ## 4. Note about AVIF rendering
 
