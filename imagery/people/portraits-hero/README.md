@@ -24,6 +24,21 @@ Filename convention: `napster-companion-{firstname}-{surname}-{role}.{ext}`. Can
 | May Li | Creative | 1088×1680 |
 | Richard Warnok | Learning | 1088×1680 |
 
+### Tutors crew
+
+Six tutors, placed 2026-09-01. Filename convention: `napster-tutor-{firstname}-{surname}-{subject}.{ext}`. These are square head-and-shoulders portraits on a dark studio backdrop, not the vertical environment portraits above, so check the crop when a layout expects the 1088×1680 shape.
+
+| Tutor | Role | File | Dimensions |
+|---|---|---|---|
+| Ama Osei | History Tutor | `napster-tutor-ama-osei-history.avif` | 2048×2048 |
+| Dara Quinn | Reasoning & Argument Tutor | `napster-tutor-dara-quinn-reasoning.avif` | 2048×2048 |
+| June Tanaka | Writing & Literature Tutor | `napster-tutor-june-tanaka-writing.avif` | 2048×2048 |
+| Teo Vasilev | Mathematics Tutor | `napster-tutor-teo-vasilev-mathematics.avif` | 2048×2048 |
+| Ines Almeida | Science Tutor | `napster-tutor-ines-almeida-science.avif` | 2048×2048 |
+| Desmond Zhang | AI Tutor | `napster-tutor-desmond-zhang-ai.avif` | 2048×2048 |
+
+Richard Warnok leads the Tutors crew as Learning Guide. He is one identity with one portrait, listed above.
+
 **Not in this folder:** Amit Pillai (Tech Support) — no portrait file has been sourced. See `../persona-roster.md` for the workaround.
 
 ## History

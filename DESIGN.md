@@ -712,7 +712,7 @@ Clean, intimate, 3/4 framing. Single-source rim light, naturalistic. Background 
 - **Folders:** `imagery/people/portraits-hero/` (companion portraits — one file per companion; CSS sizes for hero or card use), `imagery/people/producers/` (music producers).
 - **Companion role environments:** `imagery/scenes/companion-environments/` — atmospheric "where this role works" scenes (no person in frame). Pairs with the portrait set for layered hero compositions.
 - **Use for:** companion roster pages, persona cards, "Meet the team" treatments, Crew lineups.
-- **Filename convention:** `napster-companion-{firstname}-{surname}-{role}.{ext}` for portraits; `napster-companion-environment-{role}.{ext}` for environments. See `imagery/people/persona-roster.md` for the canonical roster (Amit's portrait is currently unsourced — environment-only).
+- **Filename convention:** `napster-companion-{firstname}-{surname}-{role}.{ext}` for portraits; `napster-companion-environment-{role}.{ext}` for environments. See `imagery/people/persona-roster.md` for the canonical roster (Amit's portrait is currently unsourced — environment-only). The Tutors crew uses `napster-tutor-{firstname}-{surname}-{subject}.{ext}` and `napster-tutor-environment-{subject}.{ext}`; the `tutor` segment is deliberate and tells the crews apart at a glance.
 - **Examples:** `imagery/people/portraits-hero/napster-companion-kai-mercer-chiefofstaff.avif`, `imagery/scenes/companion-environments/napster-companion-environment-creative.avif`, `imagery/people/producers/napster-producer-luna-rnb.avif`.
 
 ### 9.4 Product on Pure Black — Product Clarity
@@ -736,6 +736,8 @@ Hardware shots, product UI captures, spec details. Background is pure `#000000`.
 | Napster API, platform, developers | `imagery/product/api/` |
 | A specific companion (Kai, May, JC, Elena, Kevin, Alyssa, Jordan, Richard, Jane) | `imagery/people/portraits-hero/` (one file each; CSS handles hero/card sizing). Amit has no portrait in the repo yet. |
 | "Where this companion's role works" atmospheric scene | `imagery/scenes/companion-environments/napster-companion-environment-{role}.avif` |
+| A tutor (Ama, Dara, June, Teo, Ines, Desmond) | `imagery/people/portraits-hero/napster-tutor-{firstname}-{surname}-{subject}.avif`. Square 2048×2048 studio headshots. |
+| A tutor's room, or the Tutors crew together | `imagery/scenes/companion-environments/napster-tutor-environment-{subject}.avif`; lineup at `imagery/people/crew/napster-tutors-crew-lineup.avif` |
 | Music producers (Luna, Axel, Billie, Jasper, Mateo, Nyx, Ruby Mae, Sloane, Voltage) | `imagery/people/producers/` |
 | Crew, lifestyle, customer-in-scene, family room, studio | `imagery/people/crew/` |
 | About page, creator portraits, designer at workstation | `imagery/brand-life/` |

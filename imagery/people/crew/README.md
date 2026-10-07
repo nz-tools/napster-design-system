@@ -16,6 +16,7 @@ Treatment: warm amber-magenta grade. No stock photography. No models — humans 
 - Music crew making something together
 - Consumer lifestyle (guitar, mobile, at the desk)
 - Enterprise crew workshops
+- Tutors crew lineup: `napster-tutors-crew-lineup.avif` (5504×3072). All seven in a fixed order, oldest knowledge to newest: Ama, Dara, June, Richard, Teo, Ines, Desmond. A studio group portrait, not a customer-in-scene shot.
 
 ---
 

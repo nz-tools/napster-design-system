@@ -96,7 +96,7 @@ napster-design-system-unified/
 │   │   ├── spaces/                 # 6 files — Spaces hero + lifestyle
 │   │   └── learn/                  # 4 files — Learn enterprise + cards
 │   ├── people/
-│   │   ├── portraits-hero/         # 9 AVIF companion portraits (vertical 3:4.6). One file per companion; CSS sizes them for both hero and card use. (Amit's portrait pending sourcing.)
+│   │   ├── portraits-hero/         # 9 AVIF companion portraits (vertical 3:4.6) + 6 Tutors portraits (square). One file per companion; CSS sizes them for both hero and card use. (Amit's portrait pending sourcing.)
 │   │   ├── producers/              # 9 music-line producer portraits (Axel, Billie, Jasper, …)
 │   │   └── crew/                   # Group / lifestyle compositions
 │   ├── brand-life/                 # Studio life, creator workstation photography
@@ -138,6 +138,7 @@ napster-design-system-unified/
 | Find product imagery for Napster API | `imagery/product/api/` |
 | Find a Companion portrait (Kai, May, JC, Elena, …) | `imagery/people/portraits-hero/` (one file per companion; CSS sizes for hero or card use) |
 | Find a Companion environment scene ("where this role works") | `imagery/scenes/companion-environments/` (atmospheric, no person — for background plates and layered hero compositions) |
+| Find a Tutor portrait (Ama, Dara, June, Teo, Ines, Desmond) | `imagery/people/portraits-hero/napster-tutor-*` (rooms in `imagery/scenes/companion-environments/`, lineup in `imagery/people/crew/`) |
 | Find a Music Producer portrait (Luna, Axel, Billie, …) | `imagery/people/producers/` |
 | Find atmospheric / cinematic background | `imagery/scenes/twin/` or `imagery/decorative/` |
 | Send a logo to a printer, manufacturer, or partner | `logos/README.md` § *File formats* (SVG, PDF, PNG) |

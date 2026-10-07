@@ -25,6 +25,8 @@ When a prompt mentions a specific Napster product, go straight to `product/{prod
 
 When the prompt names a Companion (Kai, May, JC, Elena, Kevin, Alyssa, Jordan, Richard, Jane, Amit) → `people/portraits-hero/`. One file per companion; CSS sizes them for both hero and card contexts. For "where this companion's role works" atmospheric scenes (no person in frame), reach for `scenes/companion-environments/`. Amit currently has no portrait — see `people/persona-roster.md` for the workaround.
 
+When the prompt names a Tutor (Ama, Dara, June, Teo, Ines, Desmond) → `people/portraits-hero/napster-tutor-*`. Their rooms are in `scenes/companion-environments/napster-tutor-environment-{subject}.avif`, and the seven-up lineup is `people/crew/napster-tutors-crew-lineup.avif`. Richard Warnok leads the Tutors crew and keeps his one portrait.
+
 When the prompt names a Music Producer (Axel, Billie, Jasper, Luna, Mateo, Nyx, Ruby Mae, Sloane, Voltage) → `people/producers/`.
 
 ## Treatments
@@ -37,6 +39,7 @@ When the prompt names a Music Producer (Axel, Billie, Jasper, Luna, Mateo, Nyx, 
 
 - Every asset begins with `napster-`.
 - Companions: `napster-companion-{firstname}-{surname}-{role}.{ext}`.
+- Tutors: `napster-tutor-{firstname}-{surname}-{subject}.{ext}`.
 - Producers: `napster-producer-{firstname}-{genre}.{ext}`.
 - Product: `napster-{product}-{descriptor}.{ext}` (e.g. `napster-station-spec-voicefield.jpg`).
 
