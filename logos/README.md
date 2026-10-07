@@ -11,7 +11,7 @@ The **horizontal lockup**: wordmark + n-mark together, side by side. This is wha
 - `horizontal/napster-horizontal-black-256w.jpg` — raster fallback at 256px width
 - Each color also ships as `.pdf` and `-2048w.png`. See *File formats* below.
 
-**Place it top-left of every composition.** Clearspace ≥ lockup-height on all sides. Never set the lockup below 24px wide — below that, the n-mark's cat-headphone detail disappears.
+**Place it top-left of every composition.** Clearspace ≥ lockup-height on all sides. Never set the lockup below 80px wide on screen or 20mm in print. Below that it stops being legible; switch to the icon. The minimum applies to the visible artwork. The lockup files carry padding inside their canvas (the artwork is 79% of the canvas width), so an image set 42px tall shows a lockup about 83px wide.
 
 ## The Vertical Lockup (narrow or centered hero contexts)
 
@@ -45,6 +45,8 @@ Plus the simple black/white variants used in code surfaces:
 
 Use the PNG wherever fidelity matters. For anything larger, export from the Figma source at 2× or 4×. Do not upscale the PNG and do not rebuild the effect in CSS.
 
+Never set the icon below 20px high on screen or 5mm in print.
+
 **The n-mark is not a UI icon.** It is the brand mark. Do not use it as a button glyph, a menu item, or in place of an icon from `icons/`.
 
 ## The Standalone Wordmark (rarely used)
@@ -68,15 +70,15 @@ The bare text "napster" without the n-mark.
 
 ## Specifications
 
-Color, typeface and glass-mark answers come from AKEO (2026-10-02). Print sizes and the mid-tone rule come from AKEO's 2026 Identity Manual. The last two rows describe the files as they stand.
+Color, typeface and glass-mark answers come from AKEO (2026-10-02). Minimum sizes and the mid-tone rule come from AKEO's 2026 Identity Manual. The last two rows describe the files as they stand.
 
 | Question | Answer |
 |---|---|
 | Logo color | One color. Pure White `#FFFFFF` on dark backgrounds, Jet Black `#000000` on light ones. On mid-tone or gray backgrounds, pick whichever gives the stronger contrast. |
 | Logotype typeface | There is none to name. The Napster lettering is custom artwork that predates the 2026 brand refresh. An earlier agency drew it, the refresh left it unchanged, and its source typeface is not on record. Never retype the name in a font. Use the supplied files. |
 | Brand typefaces | AKEO's brand materials pair Avantt with Inter. This system uses Inter, Instrument Serif italic and IBM Plex Mono. See `DESIGN.md` § 3. |
-| Smallest lockup in print | 20mm / 0.8in wide. |
-| Smallest icon in print | 5mm / 0.2in high. |
+| Smallest lockup | 80px wide on screen. 20mm / 0.8in wide in print. |
+| Smallest icon | 20px high on screen. 5mm / 0.2in high in print. |
 | Registered mark | The horizontal lockup carries the ® beside the wordmark. The vertical lockup and the icon do not. |
 | Pantone and CMYK | Not assigned. The logo is black or white, so it needs no color match. The brand pinks are specified in hex only; neither AKEO's Identity Manual nor this system carries Pantone or CMYK values for them. |
 

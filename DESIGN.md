@@ -624,7 +624,7 @@ Companion portraits keep their dark cinematic treatment. Inside a light product 
 ### Don'ts
 
 1. **Use Napster Pink on the load-bearing noun only.** One pink element per composition. If pink occupies more than 5%, the composition is wrong.
-2. **Never set the horizontal lockup below 24px wide.** Below that the n-mark's cat-headphone detail disappears. If you need a mark smaller than that, switch to the standalone n-mark (`logos/icon/`).
+2. **Never set the horizontal lockup below 80px wide on screen, or 20mm in print.** Below that it stops being legible. If you need a mark smaller than that, switch to the standalone n-mark (`logos/icon/`), which holds down to 20px high on screen and 5mm in print.
 3. **Backgrounds are pure `#000000`.** Not `#111`, not `#0a0a0a`, not gradient.
 4. **Default button radius is `10px`.** Pill shape is reserved for chips, tags, and one designated hero CTA per page.
 5. **One headline weight per composition.** Inter 700 is the default for hero and section headlines. Inter 800/900 is reserved for the largest display sizes (`display-1`, `display-cover`). Don't mix 700 and 800 in the same composition — the rhythm breaks.
@@ -657,7 +657,7 @@ Napster ships a bundled icon set of 22 line icons under `icons/`: microphone, us
 
 Plus the simplified favicon-grade `napster-icon-white.svg` / `napster-icon-black.svg`.
 
-The full n-mark is layered glass artwork, not a single gradient. Its reference rendering is `logos/icon/napster-n-mark-654w.png`. Print sizes, the logotype's typeface status, and vendor file formats (PDF, PNG) are in `logos/README.md` § *Specifications*.
+The full n-mark is layered glass artwork, not a single gradient. Its reference rendering is `logos/icon/napster-n-mark-654w.png`. Minimum sizes, the logotype's typeface status, and vendor file formats (PDF, PNG) are in `logos/README.md` § *Specifications*.
 
 **3D icons** referenced by the AKEO deck were not exportable as flat raster and are not in this bundle. Render with a 3D pipeline if needed; do not substitute with a flat icon.
 

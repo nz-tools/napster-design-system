@@ -76,7 +76,7 @@ function Footer() {
       <div style={{ maxWidth: 1400, margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1.4fr repeat(4, 1fr)', gap: 48, marginBottom: 64 }}>
           <div>
-            <img src="../../logos/horizontal/napster-horizontal-white.svg" alt="Napster" style={{ height: 26, marginBottom: 28 }} />
+            <img src="../../logos/horizontal/napster-horizontal-white.svg" alt="Napster" style={{ height: 42, marginTop: -8, marginBottom: 20 }} />
             <p style={{
               fontFamily: 'var(--font-body)', fontSize: 14, lineHeight: 1.5,
               color: 'rgba(255,255,255,0.6)', margin: 0, maxWidth: 260,
