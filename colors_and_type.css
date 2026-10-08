@@ -8,7 +8,7 @@
 
 /* Three Google Fonts. Everything resolves automatically — nothing to upload.
    Inter is the system face (display, body, labels, UI chrome).
-   Instrument Serif italic is the editorial accent (companion names,
+   Instrument Serif italic is the editorial accent (agent names,
    pull quotes, accent words in headlines).
    IBM Plex Mono is the metadata face (eyebrows, timestamps, page
    numbers, slide chrome). */
@@ -401,7 +401,7 @@ html, body, .napster {
 }
 
 /* Editorial accent — Instrument Serif italic. Use for:
-   – companion names ("Meet Kai Mercer.")
+   – agent names ("Meet Kai Mercer.")
    – accent words in headlines (alternate to .gradient-word)
    – pull quotes
    Never stack with .gradient-word on the same word. */

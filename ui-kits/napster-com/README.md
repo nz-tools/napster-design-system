@@ -7,7 +7,7 @@ Recreation of the napster.com marketing site based on the live site audit
 - `Nav.jsx` — top navigation with wordmark + menu + auth buttons
 - `Hero.jsx` — full-bleed lifestyle hero with eyebrow + gradient headline + CTAs
 - `FeatureRow.jsx` — alternating two-column feature sections
-- `CompanionGrid.jsx` — cast of companions (Jasmine, Carlos, Kevin, …)
+- `CompanionGrid.jsx` — cast of agents (Jasmine, Carlos, Kevin, …)
 - `CTABand.jsx` — black-bg inset CTA with big hero line
 - `Footer.jsx` — minimal dark footer
 

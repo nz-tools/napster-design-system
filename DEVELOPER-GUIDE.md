@@ -140,7 +140,7 @@ Napster remains dark-canonical for marketing surfaces, decks, one-pagers, and br
 </div>
 
 <aside data-theme="dark">
-  <!-- dark Napster chrome or companion portrait cell -->
+  <!-- dark Napster chrome or agent portrait cell -->
 </aside>
 ```
 

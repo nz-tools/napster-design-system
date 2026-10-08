@@ -7,7 +7,7 @@ Napster writes like **a smart magazine about a serious idea** — editorial, dec
 ### 1. Declarative sentences. Short ones.
 
 > *Software just became labor.*
-> *A chatbot answers questions. A companion mentors.*
+> *A chatbot answers questions. An agent mentors.*
 
 Hedging betrays the brand. Verbs like "we believe", "we think", "we feel" rarely belong in marketing copy. The product makes the claim; the copy states it.
 
@@ -32,7 +32,7 @@ Not: *"industry-leading"*, *"at scale"*, *"transformative"*. If you don't have t
 
 ### 4. Rename the category. Don't compete inside it.
 
-We aren't a better chatbot — we're a **companion**. A **crew**.
+We aren't a better chatbot — we're a **crew** of **agents**.
 
 You **hire**, **deploy**, **calibrate**, **tune**, **dial in**, **bring online**, **ship**. Crew members **remember**, **build on**, **pick up where**. The vocabulary is colleague-vocabulary, not product-vocabulary.
 
@@ -53,7 +53,7 @@ The reader recognizes the picture before they recognize the product.
 |---|---|
 | **Casing** | Sentence case for headlines. UPPERCASE for eyebrows. Never title case, except for proposal titles and section chrome. |
 | **Person** | **You** for the user (benefit-led). **We** rarely — Napster is the system, not the speaker. |
-| **Tense** | Present tense. Active verbs. *"Companions remember."* not *"will be able to remember."* |
+| **Tense** | Present tense. Active verbs. *"Agents remember."* not *"will be able to remember."* |
 | **Periods** | Hero lines end with a period. *"A specialist for every moment."* Signature. |
 | **Em-dashes** | Sparingly — one per passage max, used for pivots, not lists. |
 | **Exclamation marks** | Almost never. The declarative carries its own emphasis. |
@@ -69,7 +69,7 @@ Do not ship copy containing any of the following:
 `revolutionize` · `disrupt` · `game-changing` · `AI-powered` · `leverage` ·
 `solution` · `seamlessly` · `effortlessly` · `powerful` · `unlock` (the verb) ·
 `empower` · `industry-leading` · `world-class` · `chatbot` (that's what we aren't) ·
-`assistant` · `bot` · `users` (name them: students, operators, counselors, fans).
+`assistant` · `bot` · `companion` (retired, say agent) · `users` (name them: students, operators, counselors, fans).
 
 If a sentence depends on one of these words, the sentence is broken. Rewrite the sentence.
 
@@ -77,7 +77,7 @@ If a sentence depends on one of these words, the sentence is broken. Rewrite the
 
 | Concept | Use |
 |---|---|
-| AI agent | **companion** |
+| The AI you work with | **agent**. Never *companion*, *assistant* or *bot*. |
 | Group of agents | **crew** |
 | Onboarding an agent | **hire, deploy, ship, bring online** |
 | Tuning behavior | **calibrate, tune, dial in** |
@@ -87,9 +87,15 @@ If a sentence depends on one of these words, the sentence is broken. Rewrite the
 | Person using the product | **student, operator, counselor, founder, fan** — by role, never "user" |
 | Customer-facing operator (Station) | **operator** (airport-lounge operator, hotel operator) |
 
+## Retired: "companion"
+
+Napster's agents were called companions until the July 2026 renames. The word is retired on every surface. Say **agent**, and **crew** for a group of them. The developer product is the **Napster API**, never the Companion API.
+
+Some filenames and folders still carry the old word (`napster-companion-kai-mercer-chiefofstaff.avif`, `companion-environments/`). Those are stable identifiers, not vocabulary. Leave them as they are and never let the word reach copy.
+
 ## Named characters
 
-Companions get full human names. Always.
+Agents get full human names. Always.
 
 - **Kai Mercer** — Chief of Staff.
 - **Kevin Jones** — Finance.
@@ -110,7 +116,7 @@ Example:
 
 ```
 MEET YOUR CREW
-AI companions you can see, talk to, and create with.
+AI agents you can see, talk to, and create with.
 A specialist for every moment, available in seconds.
 ```
 
@@ -119,9 +125,9 @@ Within the hero, the load-bearing noun gets an accent treatment. Two options, ne
 - **`.gradient-word`** — the white-to-pink gradient. The default treatment. *"…create with."* / *"…every moment."*
 - **`.accent-serif`** — Instrument Serif italic. The editorial alternative. Use when the headline already carries its own visual weight, or when the accent word is a name or noun that wants a literary register. *"Meet [Kai Mercer]."* with the name in italic serif.
 
-## Companion names in prose
+## Agent names in prose
 
-Companions are introduced with full human names in Instrument Serif italic — *Kai Mercer*, *Kevin Jones*, *May Li* — at first mention in any editorial passage. Subsequent mentions use the first name only and stay in the surrounding type. Never set the role label in italic serif; the serif gear is reserved for the name itself.
+Agents are introduced with full human names in Instrument Serif italic — *Kai Mercer*, *Kevin Jones*, *May Li* — at first mention in any editorial passage. Subsequent mentions use the first name only and stay in the surrounding type. Never set the role label in italic serif; the serif gear is reserved for the name itself.
 
 ## Metadata register
 

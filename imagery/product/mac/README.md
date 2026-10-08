@@ -4,16 +4,16 @@
 
 ## What's in this folder
 
-The largest product imagery set in the system. Covers the Mac app UI, the Companion roster running on Mac, scene captures, and integration views (talk-to-anything, sharing screens, reviewing files).
+The largest product imagery set in the system. Covers the Mac app UI, the agent roster running on Mac, scene captures, and integration views (talk-to-anything, sharing screens, reviewing files).
 
 ## Treatment
 
-Files like `napster-mac-{firstname}-{surname}-{role}.avif` show each named Companion inside the Mac UI. Useful when building a one-pager that needs to show the product, not just the persona.
+Files like `napster-mac-{firstname}-{surname}-{role}.avif` show each named agent inside the Mac UI. Useful when building a one-pager that needs to show the product, not just the persona.
 
 ## Contents
 
 - App UI and chat UI captures
-- Each named Companion shown inside Mac
+- Each named agent shown inside Mac
 - Scene captures (review files, share screen, 3D video)
 - Integration shots (talk-to-anything, checkin-jane, oneapp)
 

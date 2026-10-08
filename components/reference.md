@@ -18,7 +18,7 @@ Dark is the default. Product/app surfaces can opt into light mode on a subtree:
 </main>
 ```
 
-Reset contained dark islands, such as companion portraits, with `data-theme="dark"` on the inner wrapper:
+Reset contained dark islands, such as agent portraits, with `data-theme="dark"` on the inner wrapper:
 
 ```html
 <main data-theme="light">
@@ -142,7 +142,7 @@ export function EmailInput() {
 <section class="napster">
   <p class="eyebrow">Meet your crew</p>
   <h1 class="h-hero">A specialist for every <span class="gradient-word">moment.</span></h1>
-  <p class="body-lg muted">Companions with memory, voice, and real context.</p>
+  <p class="body-lg muted">Agents with memory, voice, and real context.</p>
   <button class="btn btn-primary">Get started now</button>
 </section>
 ```
@@ -155,7 +155,7 @@ export function HeroBlock() {
       <h1 className="h-hero">
         A specialist for every <span className="gradient-word">moment.</span>
       </h1>
-      <p className="body-lg muted">Companions with memory, voice, and real context.</p>
+      <p className="body-lg muted">Agents with memory, voice, and real context.</p>
       <button className="btn btn-primary">Get started now</button>
     </section>
   );
@@ -210,7 +210,7 @@ These are recipes, not a packaged component library. They use role tokens so the
 ```html
 <table class="napster-table">
   <thead><tr><th>Workspace</th><th>Status</th><th>Updated</th></tr></thead>
-  <tbody><tr><td>Companion Studio</td><td><span class="badge badge-good">Live</span></td><td>14:32 UTC</td></tr></tbody>
+  <tbody><tr><td>Agent Studio</td><td><span class="badge badge-good">Live</span></td><td>14:32 UTC</td></tr></tbody>
 </table>
 ```
 

@@ -1,10 +1,10 @@
-# Companion Portraits
+# Agent Portraits
 
-**Slot:** Isolated Portraits — Companion Character
+**Slot:** Isolated Portraits — Agent Character
 
 ## What's in this folder
 
-3/4-framed portraits of each named Napster Companion. Background is the persona's environment (studio, kitchen, gym), never a void. These files are used for *all* companion portrait contexts — hero use on landing pages, smaller use in roster grids and cards. CSS handles sizing.
+3/4-framed portraits of each named Napster agent. Background is the persona's environment (studio, kitchen, gym), never a void. These files are used for *all* agent portrait contexts — hero use on landing pages, smaller use in roster grids and cards. CSS handles sizing.
 
 ## Treatment
 
@@ -12,7 +12,7 @@ Filename convention: `napster-companion-{firstname}-{surname}-{role}.{ext}`. Can
 
 ## Contents
 
-| Companion | Role | Dimensions |
+| Agent | Role | Dimensions |
 |---|---|---|
 | Alyssa Reynolds | Career | 1088×1680 |
 | Elena Garcia | Wellbeing | 1088×1680 |
@@ -24,11 +24,26 @@ Filename convention: `napster-companion-{firstname}-{surname}-{role}.{ext}`. Can
 | May Li | Creative | 1088×1680 |
 | Richard Warnok | Learning | 1088×1680 |
 
+### Tutors crew
+
+Six tutors, placed 2026-09-01. Filename convention: `napster-tutor-{firstname}-{surname}-{subject}.{ext}`. These are square head-and-shoulders portraits on a dark studio backdrop, not the vertical environment portraits above, so check the crop when a layout expects the 1088×1680 shape.
+
+| Tutor | Role | File | Dimensions |
+|---|---|---|---|
+| Ama Osei | History Tutor | `napster-tutor-ama-osei-history.avif` | 2048×2048 |
+| Dara Quinn | Reasoning & Argument Tutor | `napster-tutor-dara-quinn-reasoning.avif` | 2048×2048 |
+| June Tanaka | Writing & Literature Tutor | `napster-tutor-june-tanaka-writing.avif` | 2048×2048 |
+| Teo Vasilev | Mathematics Tutor | `napster-tutor-teo-vasilev-mathematics.avif` | 2048×2048 |
+| Ines Almeida | Science Tutor | `napster-tutor-ines-almeida-science.avif` | 2048×2048 |
+| Desmond Zhang | AI Tutor | `napster-tutor-desmond-zhang-ai.avif` | 2048×2048 |
+
+Richard Warnok leads the Tutors crew as Learning Guide. He is one identity with one portrait, listed above.
+
 **Not in this folder:** Amit Pillai (Tech Support) — no portrait file has been sourced. See `../persona-roster.md` for the workaround.
 
 ## History
 
-Until v1.2.1, this folder held square 1200×1200 environment scenes that were mistakenly documented as portraits. The actual portrait set lived at `portraits-thumb/`. v1.2.2 moved the environment scenes out to `imagery/scenes/companion-environments/` (where they belong) and promoted the real portraits here. The separate `portraits-thumb/` folder was removed; one portrait per companion is enough — CSS sizes them down for card use.
+Until v1.2.1, this folder held square 1200×1200 environment scenes that were mistakenly documented as portraits. The actual portrait set lived at `portraits-thumb/`. v1.2.2 moved the environment scenes out to `imagery/scenes/companion-environments/` (where they belong) and promoted the real portraits here. The separate `portraits-thumb/` folder was removed; one portrait per agent is enough — CSS sizes them down for card use.
 
 ---
 

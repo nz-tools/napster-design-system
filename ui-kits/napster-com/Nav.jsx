@@ -19,7 +19,7 @@ function Nav({ page, setPage }) {
       <a href="#" onClick={(e) => { e.preventDefault(); setPage('home'); }}
          style={{ display: 'flex', alignItems: 'center', marginRight: 40, textDecoration: 'none' }}>
         <img src="../../logos/horizontal/napster-horizontal-white.svg"
-             alt="Napster" style={{ height: 22 }} />
+             alt="Napster" style={{ height: 42, margin: '-10px 0' }} />
       </a>
       <ul style={{
         display: 'flex', gap: 28, listStyle: 'none', margin: 0, padding: 0,

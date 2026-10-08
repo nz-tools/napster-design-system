@@ -1,5 +1,5 @@
 /* FeatureSection — the "Expertise on demand / A specialist for every moment" pattern.
-   Left: heading + 3 short bullets. Right: circular companion image with pink ring. */
+   Left: heading + 3 short bullets. Right: circular agent image with pink ring. */
 function FeatureSection() {
   return (
     <section style={{
@@ -54,7 +54,7 @@ function FeatureSection() {
       <div style={{ position: 'relative', aspectRatio: '1 / 1', width: '100%', maxWidth: 560, justifySelf: 'end' }}>
         <img src="../../imagery/scenes/twin/napster-twin-mayli-ring.avif" alt=""
              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain', animation: 'ring-rotate 40s linear infinite' }} />
-        <img src="../../imagery/scenes/twin/napster-twin-mayli-image.avif" alt="Companion"
+        <img src="../../imagery/scenes/twin/napster-twin-mayli-image.avif" alt="Agent"
              style={{
                position: 'absolute', left: '12%', top: '12%', width: '76%', height: '76%',
                borderRadius: '50%', objectFit: 'cover',

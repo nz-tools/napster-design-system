@@ -79,9 +79,9 @@ For each prompt, score the output against the **Pass criteria**. A bundle that p
 
 ---
 
-## Prompt 4 — Napster Companions feature page
+## Prompt 4 — Napster agents feature page
 
-> **"Generate a product feature page for Napster Companions with a three-column layout and embedded video placeholder. Surface 6–9 of the named companions with portraits, names, and one-line role descriptions."**
+> **"Generate a product feature page for Napster's agents with a three-column layout and embedded video placeholder. Surface 6–9 of the named agents with portraits, names, and one-line role descriptions."**
 
 ### Pass criteria
 
@@ -130,7 +130,7 @@ For each prompt, score the output against the **Pass criteria**. A bundle that p
 | 1. Station landing | ☐ |  |
 | 2. Build 2026 one-pager | ☐ |  |
 | 3. NAPPs pricing | ☐ |  |
-| 4. Companions feature | ☐ |  |
+| 4. Agents feature | ☐ |  |
 | 5. API dashboard | ☐ |  |
 
 **Overall:** ___ / 5.

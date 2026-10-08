@@ -16,7 +16,7 @@
       "serif": {
         "$value": "'Instrument Serif', 'Times New Roman', Georgia, serif",
         "$type": "fontFamily",
-        "$description": "Editorial accent face, italic only. Used for companion names, pull quotes, accent words inside headlines. Loaded from Google Fonts."
+        "$description": "Editorial accent face, italic only. Used for agent names, pull quotes, accent words inside headlines. Loaded from Google Fonts."
       },
       "mono": {
         "$value": "'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace",
@@ -139,7 +139,7 @@
         "letterSpacing": "-0.01em"
       },
       "$type": "typography",
-      "$description": "Inline editorial accent — companion names, pull-quote phrases, accent words in headlines. Use either accent-serif OR gradient-word on a noun, never both."
+      "$description": "Inline editorial accent — agent names, pull-quote phrases, accent words in headlines. Use either accent-serif OR gradient-word on a noun, never both."
     },
     "pull-quote": {
       "$value": {

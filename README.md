@@ -42,7 +42,7 @@ Run the five test prompts in `validation/test-prompts.md` inside Claude Design. 
 - Uses pure `#000000` backgrounds, Napster Pink `#DD52CB` on the load-bearing noun only.
 - Sets headlines in Inter 700, sentence case, ending with a period.
 - Uses the IBM Plex Mono 500 eyebrow at 12px uppercase, `+0.48px` tracking, color `#DD52CB`.
-- Sets companion names and accent words in Instrument Serif italic where editorial gear is called for.
+- Sets agent names and accent words in Instrument Serif italic where editorial gear is called for.
 - Retrieves the right product imagery by filename (Station for Station prompts, View for View prompts).
 - Honors the row-budget rule on fixed-height layouts.
 
@@ -59,7 +59,8 @@ napster-design-system-unified/
 ├── colors_and_type.css             # ⭐ Single-import CSS with all tokens + semantic classes.
 ├── brand/
 │   ├── overview.md                 # Personality, audience, emotional target
-│   └── voice-and-tone.md           # Banned words, preferred vocabulary, five copy patterns
+│   ├── voice-and-tone.md           # Banned words, preferred vocabulary, five copy patterns
+│   └── ai-disclosure/              # AI disclosure marks: the AI mark + "Includes AI-generated actors" (black, white), and the rule for video
 ├── tokens/
 │   ├── colors.json                 # DTCG-format color tokens + gradients + usage ratio
 │   ├── colors-light.json           # DTCG-format light app-surface color peers
@@ -74,9 +75,10 @@ napster-design-system-unified/
 │   ├── tailwind-v4.css             # Tailwind v4 @theme alias adapter
 │   └── tailwind-v3.config.cjs      # Tailwind v3 preset config
 ├── logos/
-│   ├── horizontal/                 # Horizontal lockup (white, black, 256w raster)
-│   ├── icon/                       # n-mark in 3 fidelities + favicons
-│   └── wordmark/                   # Wordmark, vertical white, vertical black
+│   ├── horizontal/                 # Horizontal lockup (white, black) as SVG, PDF, PNG + 256w raster
+│   ├── icon/                       # n-mark in 3 fidelities + glass-mark PNG; icon (white, black) as SVG, PDF, PNG
+│   ├── wordmark/                   # Wordmark; vertical lockup (white, black) as SVG, PDF, PNG
+│   └── README.md                   # Which mark to use, specifications, file formats
 ├── colors/                         # Color specimen HTML (Design System tab)
 ├── typography/
 │   └── specimens/                  # Type ramp specimen HTML (the three Google Fonts in use)
@@ -88,13 +90,13 @@ napster-design-system-unified/
 │   ├── product/                    # Organized by product line
 │   │   ├── station/                # 32 files — environments, specs, hero
 │   │   ├── view/                   # 14 files — hardware, scenes, specs
-│   │   ├── mac/                    # 15 files — UI captures, scenes, companions-at-Mac
+│   │   ├── mac/                    # 15 files — UI captures, scenes, agents-at-Mac
 │   │   ├── app/                    # 5 files — consumer + product card
 │   │   ├── api/                    # 3 files — developer surface
 │   │   ├── spaces/                 # 6 files — Spaces hero + lifestyle
 │   │   └── learn/                  # 4 files — Learn enterprise + cards
 │   ├── people/
-│   │   ├── portraits-hero/         # 9 AVIF companion portraits (vertical 3:4.6). One file per companion; CSS sizes them for both hero and card use. (Amit's portrait pending sourcing.)
+│   │   ├── portraits-hero/         # 9 AVIF agent portraits (vertical 3:4.6) + 6 Tutors portraits (square). One file per agent; CSS sizes them for both hero and card use. (Amit's portrait pending sourcing.)
 │   │   ├── producers/              # 9 music-line producer portraits (Axel, Billie, Jasper, …)
 │   │   └── crew/                   # Group / lifestyle compositions
 │   ├── brand-life/                 # Studio life, creator workstation photography
@@ -107,7 +109,7 @@ napster-design-system-unified/
 ├── icons/                          # 22 SVG line icons (microphone, user, book, code, …)
 ├── ui-kits/
 │   ├── napster-com/                # Marketing site React kit (Nav, Hero, FeatureSection, …)
-│   └── napster-app/                # Mobile companion app kit
+│   └── napster-app/                # Mobile agent app kit
 ├── reference/
 │   └── napster-com-audit.md        # The live-site computed-style audit (April 2026)
 ├── tools/                          # figma_asset_export.py + theme validation
@@ -134,10 +136,14 @@ napster-design-system-unified/
 | Find product imagery for Napster Learn | `imagery/product/learn/` |
 | Find product imagery for Napster App | `imagery/product/app/` |
 | Find product imagery for Napster API | `imagery/product/api/` |
-| Find a Companion portrait (Kai, May, JC, Elena, …) | `imagery/people/portraits-hero/` (one file per companion; CSS sizes for hero or card use) |
-| Find a Companion environment scene ("where this role works") | `imagery/scenes/companion-environments/` (atmospheric, no person — for background plates and layered hero compositions) |
+| Find an agent portrait (Kai, May, JC, Elena, …) | `imagery/people/portraits-hero/` (one file per agent; CSS sizes for hero or card use) |
+| Find an agent environment scene ("where this role works") | `imagery/scenes/companion-environments/` (atmospheric, no person — for background plates and layered hero compositions) |
+| Find a Tutor portrait (Ama, Dara, June, Teo, Ines, Desmond) | `imagery/people/portraits-hero/napster-tutor-*` (rooms in `imagery/scenes/companion-environments/`, lineup in `imagery/people/crew/`) |
 | Find a Music Producer portrait (Luna, Axel, Billie, …) | `imagery/people/producers/` |
 | Find atmospheric / cinematic background | `imagery/scenes/twin/` or `imagery/decorative/` |
+| Send a logo to a printer, manufacturer, or partner | `logos/README.md` § *File formats* (SVG, PDF, PNG) |
+| Answer a logo spec question (color, typeface, minimum size, Pantone) | `logos/README.md` § *Specifications* |
+| Disclose AI-generated actors in a video | `brand/ai-disclosure/` (marks + the placement and timing rule) |
 | Audit a generated artifact | `DESIGN.md` § Do's and Don'ts |
 
 ## Non-negotiable rules
@@ -148,12 +154,12 @@ These rules override everything else, including style intuition.
 2. Napster Pink `#DD52CB` on the load-bearing noun only. On light app surfaces, use pink-deep `#BE369D` for small text accents.
 3. Eyebrows are IBM Plex Mono 500, 12px, uppercase, `+0.48px` tracking, and `var(--eyebrow-fg)`. Every section gets one.
 4. Hero headlines are Inter 700, sentence case, ending with a period.
-5. Companion names and accent words use Instrument Serif italic. Pull quotes, the same.
+5. Agent names and accent words use Instrument Serif italic. Pull quotes, the same.
 6. Metadata (page numbers, timestamps, footer markers, slide chrome) sits in IBM Plex Mono.
 7. Wordmark top-left, clearspace ≥ logo-height.
-8. Banned words: *revolutionize, disrupt, leverage, solution, seamlessly, effortlessly, powerful, unlock, empower, industry-leading, world-class, chatbot, assistant, bot, users, AI-powered, game-changing.*
+8. Banned words: *revolutionize, disrupt, leverage, solution, seamlessly, effortlessly, powerful, unlock, empower, industry-leading, world-class, chatbot, assistant, bot, companion, users, AI-powered, game-changing.* Say **agent**, not companion.
 9. Round every corner you can. The circle is the visual backbone.
-10. Companions have full human names. Never "the AI".
+10. Agents have full human names. Never "the AI".
 11. No emoji. Anywhere.
 12. Fixed-size layouts declare a row budget and re-total when any band grows.
 

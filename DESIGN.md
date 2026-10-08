@@ -108,13 +108,13 @@ tokens:
         - imagery/decorative/*
         - imagery/scenes/sessions/*
     isolated-portraits:
-      description: Companion portraits, 3/4 framing, rim-lit, persona environment behind. Darken pass over dark canvas. One file per companion; CSS sizes for hero or card use.
-      role: Companion Character
+      description: Agent portraits, 3/4 framing, rim-lit, persona environment behind. Darken pass over dark canvas. One file per agent; CSS sizes for hero or card use.
+      role: Agent Character
       paths:
         - imagery/people/portraits-hero/*
         - imagery/people/producers/*
     companion-environments:
-      description: Atmospheric scenes representing where each companion role works (offices, classroom, atrium, lounge). No person in frame. Pairs with the portrait set for layered hero compositions.
+      description: Atmospheric scenes representing where each agent role works (offices, classroom, atrium, lounge). No person in frame. Pairs with the portrait set for layered hero compositions.
       role: Brand Feeling
       paths:
         - imagery/scenes/companion-environments/*
@@ -141,7 +141,7 @@ tokens:
 
 > *Twenty-six years ago, we democratized music. Now we're democratizing expertise.*
 
-Napster is the AI companion platform. Where ordinary voice assistants fail, Napster Companions remember. A chatbot answers questions. A companion mentors.
+Napster is the AI agent platform. Where ordinary voice assistants fail, Napster agents remember. A chatbot answers questions. An agent mentors.
 
 This document is the system. Nine sections plus two extensions. Every token resolves to the YAML above. The tone of the prose is the tone of the brand: declarative, unhedged, no marketing hedges, no emoji.
 
@@ -164,7 +164,7 @@ Napster is dark, cinematic, and quietly confident. Late-night studio rather than
 | napster.com | Consumers + curious developers | Confidence. *Software just became labor.* |
 | Sales decks | Enterprise buyers (operators, integrators) | Inevitability. *This is what comes next.* |
 | Internal comms | Napster team | Pride. *We democratized music. Now we democratize expertise.* |
-| Product UI | Active users | Calm. The interface gets out of the way of the companion. |
+| Product UI | Active users | Calm. The interface gets out of the way of the agent. |
 
 ### Usage ratio
 
@@ -280,7 +280,7 @@ Napster remains dark-canonical. Marketing surfaces, decks, one-pagers, landing p
 | Developer docs / API reference | Both supported; default dark | Yes — readers may prefer light |
 | Product screenshots / mockups inside decks | Capture each screenshot in the product's native mode | Deck or marketing chrome around the screenshot stays dark |
 | Embedded third-party surfaces | Whatever the embed uses | Embed stays as-is; Napster chrome around it stays dark |
-| Companion portraits | Dark canvas | No — frame in a contained dark cell when used on a light surface |
+| Agent portraits | Dark canvas | No — frame in a contained dark cell when used on a light surface |
 
 Brand constants do not change between modes. Role tokens do. On dark, `--accent` resolves to Napster Pink `#DD52CB`. On light, `--accent` resolves to pink-deep `#BE369D` so small text and eyebrows clear AA. Bright pink remains available on light only for large-display accents.
 
@@ -333,13 +333,13 @@ The design system uses three Google Fonts. Nothing self-hosted. Nothing to uploa
 | Family | Role | Notes |
 |---|---|---|
 | **Inter** | Display, headlines, body, buttons, labels, UI chrome | Weights 300–900. Single face owns everything from `display-cover` down to `body-sm`. |
-| **Instrument Serif** *(italic)* | Editorial accents | Italic only. Companion names, pull quotes, accent words inside headlines. The serif provides one editorial gear that sans typography can't reach. |
+| **Instrument Serif** *(italic)* | Editorial accents | Italic only. Agent names, pull quotes, accent words inside headlines. The serif provides one editorial gear that sans typography can't reach. |
 | **IBM Plex Mono** | Metadata | Eyebrows, timestamps, page numbers, slide chrome, footer markers. The mono is the brand's quiet narrator — never a headline voice. |
 | Arial | System fallback only | — |
 
 **A note on Avantt.** Avantt remains the display face on napster.com. It is no longer part of the design system. The reasons: (1) anyone at Napster using Claude Design shouldn't have to install a self-hosted commercial font; (2) the system has to cover product apps that can't ship Avantt. Google Fonts solves both. `reference/napster-com-audit.md` documents the live napster.com state, Avantt included, as a factual record of the marketing site.
 
-**A note on Poppins.** The AKEO Brand Definition Proposal (2026) specifies Poppins as the Google Fonts *alternative* to Avantt — a three-tier stack of Avantt (primary) → Poppins (open-source substitute) → Arial (system fallback). Poppins's role was: *"used only when Avantt is not available."* Since v1.1.0 retired Avantt and adopted Inter — itself a Google Font — as the primary display face, the role Poppins was created to fill no longer exists. Inter is the alternative. Where AKEO sometimes paired Inter and Poppins at display sizes for stylistic contrast, the design system fills that role with Instrument Serif italic (companion names, pull quotes, accent words). Poppins is not a missing piece; it is a workaround for a problem the v1.1.0 typography migration solved differently. If anyone asks "why isn't Poppins in our system?" — this is the answer.
+**A note on Poppins.** The AKEO Brand Definition Proposal (2026) specifies Poppins as the Google Fonts *alternative* to Avantt — a three-tier stack of Avantt (primary) → Poppins (open-source substitute) → Arial (system fallback). Poppins's role was: *"used only when Avantt is not available."* Since v1.1.0 retired Avantt and adopted Inter — itself a Google Font — as the primary display face, the role Poppins was created to fill no longer exists. Inter is the alternative. Where AKEO sometimes paired Inter and Poppins at display sizes for stylistic contrast, the design system fills that role with Instrument Serif italic (agent names, pull quotes, accent words). Poppins is not a missing piece; it is a workaround for a problem the v1.1.0 typography migration solved differently. If anyone asks "why isn't Poppins in our system?" — this is the answer.
 
 ### Type scale
 
@@ -398,7 +398,7 @@ Inter ships at every step: 300 (Light), 400 (Regular), 500 (Medium), 600 (Semibo
 **Button.** Inter 600 / 14px / `#FFFFFF`.
 
 **Editorial accent.** Instrument Serif italic 400. Inline use only. Three places live here:
-- **Companion names** in prose. *"Meet [Kai Mercer]." [Kai Mercer] in italic serif.*
+- **Agent names** in prose. *"Meet [Kai Mercer]." [Kai Mercer] in italic serif.*
 - **Accent words inside headlines.** Alternative to `.gradient-word` on the load-bearing noun. Use one or the other, never both.
 - **Pull quotes.** `.pull-quote` class — 24px / 1.35 / italic / pink left rule.
 
@@ -418,7 +418,7 @@ Napster writes like *a smart magazine about a serious idea* — editorial, decla
 1. **Declarative sentences. Short ones.** *Software just became labor.*
 2. **Contrast pairs** — old state / new state in parallel. *Before: Software = Tool you operate. Now: Software = Worker you manage.*
 3. **Specific numbers**, never vague claims. *$5/hour vs the industry's $1/minute.* Not *"industry-leading"*.
-4. **Rename the category, don't compete inside it.** We aren't a better chatbot — we're a **companion**. A **crew**.
+4. **Rename the category, don't compete inside it.** We aren't a better chatbot — we're a **crew** of **agents**.
 5. **Name the invisible.** Start by naming a tension the reader hasn't articulated. *Every campus has a visible minority and an invisible majority.*
 
 Full voice doctrine: `brand/voice-and-tone.md`.
@@ -456,7 +456,7 @@ Every section follows: **Eyebrow → Title → Subtitle → Body → Action.** S
 - **Horizontal lockup top-left** on every composition. The lockup is `logos/horizontal/napster-horizontal-{black|white}.svg` — the wordmark and n-mark together. This is what we call "the logo" in everyday usage, and it is the default mark on virtually every surface. The standalone wordmark (`logos/wordmark/napster-wordmark.svg`) is included for completeness and used only in deep-brand contexts where the n-mark would feel redundant; treat it as the exception, not the default. Clearspace ≥ lockup-height on all sides.
 - **Pink lands on the load-bearing noun**, not verbs, not modifiers. One pink element per composition.
 - Generous whitespace. If a slide has wall-to-wall text, the voice is also broken.
-- Orbital compositions when content permits (user at center, companions surrounding).
+- Orbital compositions when content permits (user at center, agents surrounding).
 - **Footer band** on every deck slide: ` ◯ ── BRAND DEFINITION PROPOSAL ─── 2026 ── 00 `. Optional but in-system.
 
 ### Row-budget rule (fixed-height layouts)
@@ -591,9 +591,9 @@ Anatomy of a default card: `var(--card-bg)` surface · 1px `var(--card-border)` 
 
 Every section starts with an eyebrow: IBM Plex Mono 500 / 12px / uppercase / `+0.48px` tracking / `var(--eyebrow-fg)`. Single line. No more than 3 words ideally. Examples: **MEET YOUR CREW.** **WHAT WE BUILT.** **PRICING.**
 
-### Companion portraits in light mode
+### Agent portraits in light mode
 
-Companion portraits keep their dark cinematic treatment. Inside a light product surface, wrap the portrait tile in `.portrait-frame` and set `data-theme="dark"` on that wrapper. The surrounding app page stays light; the portrait cell actively resets to the dark token cascade.
+Agent portraits keep their dark cinematic treatment. Inside a light product surface, wrap the portrait tile in `.portrait-frame` and set `data-theme="dark"` on that wrapper. The surrounding app page stays light; the portrait cell actively resets to the dark token cascade.
 
 ### State variants summary
 
@@ -614,7 +614,7 @@ Companion portraits keep their dark cinematic treatment. Inside a light product 
 1. **Start every section with an eyebrow.** IBM Plex Mono 500, 12px, uppercase, `+0.48px` tracking, `#DD52CB`. Single line.
 2. **Put the horizontal lockup top-left.** (`logos/horizontal/`). The lockup, not the bare wordmark, is the default mark. Clearspace ≥ lockup-height on all sides.
 3. **Use sentence case for headlines.** End hero lines with a period.
-4. **Name companions.** Full human names: Kai Mercer. Kevin Jones. Never "your AI" or "the assistant". Set names in Instrument Serif italic when they appear in editorial prose ("Meet *Kai Mercer*.").
+4. **Name agents.** Full human names: Kai Mercer. Kevin Jones. Never "your AI" or "the assistant". Set names in Instrument Serif italic when they appear in editorial prose ("Meet *Kai Mercer*.").
 5. **Be specific with numbers.** `$5/hour`, `under an hour`, `2 million`, `1.5MW`. Never `industry-leading`, never `at scale`. (These are illustrations of the *style*, not real figures — see the Boundary note in §3. Real numbers come from the content library.)
 6. **Reserve the Beam for imagery.** It rides on top of hero photography at `mix-blend-mode: screen`.
 7. **Round every corner you can.** The circle is the visual backbone.
@@ -624,14 +624,14 @@ Companion portraits keep their dark cinematic treatment. Inside a light product 
 ### Don'ts
 
 1. **Use Napster Pink on the load-bearing noun only.** One pink element per composition. If pink occupies more than 5%, the composition is wrong.
-2. **Never set the horizontal lockup below 24px wide.** Below that the n-mark's cat-headphone detail disappears. If you need a mark smaller than that, switch to the standalone n-mark (`logos/icon/`).
+2. **Never set the horizontal lockup below 80px wide on screen, or 20mm in print.** Below that it stops being legible. If you need a mark smaller than that, switch to the standalone n-mark (`logos/icon/`), which holds down to 20px high on screen and 5mm in print.
 3. **Backgrounds are pure `#000000`.** Not `#111`, not `#0a0a0a`, not gradient.
 4. **Default button radius is `10px`.** Pill shape is reserved for chips, tags, and one designated hero CTA per page.
 5. **One headline weight per composition.** Inter 700 is the default for hero and section headlines. Inter 800/900 is reserved for the largest display sizes (`display-1`, `display-cover`). Don't mix 700 and 800 in the same composition — the rhythm breaks.
 6. **Never set Instrument Serif upright.** The serif is italic-only in this system. Use it for editorial accents; never for an entire headline or paragraph.
 7. **Never set body or headlines in IBM Plex Mono.** The mono is for metadata. A mono headline reads as a code sample, not a brand statement.
 8. **No emoji.** Not in product. Not in marketing. Not in decks. Substitute with the bundled icon set or Lucide.
-9. **Banned words:** *revolutionize, disrupt, game-changing, AI-powered, leverage, solution, seamlessly, effortlessly, powerful, unlock, empower, industry-leading, world-class, chatbot, assistant, bot, users.* Name the people: students, operators, counselors, fans.
+9. **Banned words:** *revolutionize, disrupt, game-changing, AI-powered, leverage, solution, seamlessly, effortlessly, powerful, unlock, empower, industry-leading, world-class, chatbot, assistant, bot, companion, users.* Name the people: students, operators, counselors, fans. *Companion* is retired: say **agent**, and **crew** for a group.
 10. **Never put the Napster Beam directly behind text.** Beam is overlay-only, `mix-blend-mode: screen` on imagery.
 11. **Borders are 1px.** Never 2px, never dashed, never full-color solid (except the deep-pink rim on `btn-secondary`).
 12. **Avoid Material Symbols** for UI icons. The geometric fill style fights Napster's circular line vocabulary. Use the bundled 22-icon set; Lucide is the fallback.
@@ -656,6 +656,8 @@ Napster ships a bundled icon set of 22 line icons under `icons/`: microphone, us
 - `napster-n-mark-line.svg` — 1-stroke outline.
 
 Plus the simplified favicon-grade `napster-icon-white.svg` / `napster-icon-black.svg`.
+
+The full n-mark is layered glass artwork, not a single gradient. Its reference rendering is `logos/icon/napster-n-mark-654w.png`. Minimum sizes, the logotype's typeface status, and vendor file formats (PDF, PNG) are in `logos/README.md` § *Specifications*.
 
 **3D icons** referenced by the AKEO deck were not exportable as flat raster and are not in this bundle. Render with a 3D pipeline if needed; do not substitute with a flat icon.
 
@@ -703,14 +705,14 @@ Abstract light, motion blur, purple atmospheric wash. The Beam gradient rides on
 - **Use for:** opening slides, section dividers, brand films, atmospheric headers, backgrounds when no product or person belongs.
 - **Examples:** `imagery/scenes/twin/napster-twin-poster.avif`, `imagery/decorative/napster-element-pink-gradient.avif`, `imagery/decorative/napster-hero-bg.avif`.
 
-### 9.3 Isolated Portraits — Companion Character
+### 9.3 Isolated Portraits — Agent Character
 
 Clean, intimate, 3/4 framing. Single-source rim light, naturalistic. Background is the persona's environment (studio, kitchen, gym), not a void. When portraits sit over the dark canvas they receive a `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))` darken pass, optionally a Beam overlay.
 
-- **Folders:** `imagery/people/portraits-hero/` (companion portraits — one file per companion; CSS sizes for hero or card use), `imagery/people/producers/` (music producers).
-- **Companion role environments:** `imagery/scenes/companion-environments/` — atmospheric "where this role works" scenes (no person in frame). Pairs with the portrait set for layered hero compositions.
-- **Use for:** companion roster pages, persona cards, "Meet the team" treatments, Crew lineups.
-- **Filename convention:** `napster-companion-{firstname}-{surname}-{role}.{ext}` for portraits; `napster-companion-environment-{role}.{ext}` for environments. See `imagery/people/persona-roster.md` for the canonical roster (Amit's portrait is currently unsourced — environment-only).
+- **Folders:** `imagery/people/portraits-hero/` (agent portraits — one file per agent; CSS sizes for hero or card use), `imagery/people/producers/` (music producers).
+- **Agent role environments:** `imagery/scenes/companion-environments/` — atmospheric "where this role works" scenes (no person in frame). Pairs with the portrait set for layered hero compositions.
+- **Use for:** agent roster pages, persona cards, "Meet the team" treatments, Crew lineups.
+- **Filename convention:** `napster-companion-{firstname}-{surname}-{role}.{ext}` for portraits; `napster-companion-environment-{role}.{ext}` for environments. See `imagery/people/persona-roster.md` for the canonical roster (Amit's portrait is currently unsourced — environment-only). The Tutors crew uses `napster-tutor-{firstname}-{surname}-{subject}.{ext}` and `napster-tutor-environment-{subject}.{ext}`; the `tutor` segment is deliberate and tells the crews apart at a glance.
 - **Examples:** `imagery/people/portraits-hero/napster-companion-kai-mercer-chiefofstaff.avif`, `imagery/scenes/companion-environments/napster-companion-environment-creative.avif`, `imagery/people/producers/napster-producer-luna-rnb.avif`.
 
 ### 9.4 Product on Pure Black — Product Clarity
@@ -732,8 +734,10 @@ Hardware shots, product UI captures, spec details. Background is pure `#000000`.
 | Napster Learn, education, higher-ed, L&D | `imagery/product/learn/` |
 | Napster App (consumer mobile/tablet), music app | `imagery/product/app/` |
 | Napster API, platform, developers | `imagery/product/api/` |
-| A specific companion (Kai, May, JC, Elena, Kevin, Alyssa, Jordan, Richard, Jane) | `imagery/people/portraits-hero/` (one file each; CSS handles hero/card sizing). Amit has no portrait in the repo yet. |
-| "Where this companion's role works" atmospheric scene | `imagery/scenes/companion-environments/napster-companion-environment-{role}.avif` |
+| A specific agent (Kai, May, JC, Elena, Kevin, Alyssa, Jordan, Richard, Jane) | `imagery/people/portraits-hero/` (one file each; CSS handles hero/card sizing). Amit has no portrait in the repo yet. |
+| "Where this agent's role works" atmospheric scene | `imagery/scenes/companion-environments/napster-companion-environment-{role}.avif` |
+| A tutor (Ama, Dara, June, Teo, Ines, Desmond) | `imagery/people/portraits-hero/napster-tutor-{firstname}-{surname}-{subject}.avif`. Square 2048×2048 studio headshots. |
+| A tutor's room, or the Tutors crew together | `imagery/scenes/companion-environments/napster-tutor-environment-{subject}.avif`; lineup at `imagery/people/crew/napster-tutors-crew-lineup.avif` |
 | Music producers (Luna, Axel, Billie, Jasper, Mateo, Nyx, Ruby Mae, Sloane, Voltage) | `imagery/people/producers/` |
 | Crew, lifestyle, customer-in-scene, family room, studio | `imagery/people/crew/` |
 | About page, creator portraits, designer at workstation | `imagery/brand-life/` |
@@ -741,6 +745,7 @@ Hardware shots, product UI captures, spec details. Background is pure `#000000`.
 | Session flow, "pick → talk → shape → share" | `imagery/scenes/sessions/` |
 | Use cases (coding, writing, creative) | `imagery/scenes/usecases/` |
 | Decorative element, gradient panel, footer CTA, grain texture | `imagery/decorative/` |
+| AI disclosure on video, "Includes AI-generated actors", the AI mark | `brand/ai-disclosure/` (rule in § 9.8) |
 
 ### 9.6 Treatments
 
@@ -756,6 +761,16 @@ Hardware shots, product UI captures, spec details. Background is pure `#000000`.
 - B&W photography.
 - Photography of devices that don't exist in the Napster product family.
 - Smiles in marketing portraits unless the persona is mid-laugh in candid context.
+
+### 9.8 AI disclosure
+
+Every video Napster publishes discloses its AI-generated actors, with Napster's own marks. Two forms live in `brand/ai-disclosure/`: the **AI mark** (the letters *AI* in a rounded outline) and the **sentence** (*Includes AI-generated actors*, set in IBM Plex Mono, no period). Each ships in white for dark backgrounds and black for light ones.
+
+- **The mark stays up.** Bottom-right, inside the safe area (about 5% in from the right and bottom edges), from the first frame to the last. It never moves.
+- **The sentence opens and closes.** It sits directly left of the mark for the first 3 to 4 seconds, goes away, and comes back for the last 3 to 4 seconds. There is no separate closing card.
+- **Word for word.** *Includes AI-generated actors*. No variants, no paraphrase.
+- Use the files as supplied. Do not redraw the mark, retype the sentence, or recolor either one.
+- Still images have no placement rule yet. Color, size, export and other details are in `brand/ai-disclosure/README.md`.
 
 ---
 

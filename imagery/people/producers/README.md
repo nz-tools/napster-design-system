@@ -1,6 +1,6 @@
 # Music Producers
 
-**Slot:** Isolated Portraits — Companion Character
+**Slot:** Isolated Portraits — Agent Character
 
 ## What's in this folder
 
@@ -8,7 +8,7 @@ Portraits of the Napster Music producer personas — genre specialists who help 
 
 ## Treatment
 
-Filename convention: `napster-producer-{firstname}-{genre}.{ext}`. Same treatment rules as Companion portraits.
+Filename convention: `napster-producer-{firstname}-{genre}.{ext}`. Same treatment rules as agent portraits.
 
 ## Contents
 
