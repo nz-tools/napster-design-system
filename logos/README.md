@@ -79,7 +79,7 @@ Color, typeface and glass-mark answers come from AKEO (2026-10-02). Minimum size
 | Brand typefaces | AKEO's brand materials pair Avantt with Inter. This system uses Inter, Instrument Serif italic and IBM Plex Mono. See `DESIGN.md` § 3. |
 | Smallest lockup | 80px wide on screen. 20mm / 0.8in wide in print. |
 | Smallest icon | 20px high on screen. 5mm / 0.2in high in print. |
-| Registered mark | No logo file carries the ®. It was removed from the horizontal lockup and the standalone wordmark on 2026-10-15; do not add it back. Each canvas was trimmed on the right so the padding stays equal on all sides. |
+| Registered mark | None. No logo file carries the ®, and copy never adds it to the name (`DESIGN.md` § 3). It was removed from the horizontal lockup and the standalone wordmark on 2026-10-15; do not add it back. Each canvas was trimmed on the right so the padding stays equal on all sides. |
 | Pantone and CMYK | Not assigned. The logo is black or white, so it needs no color match. The brand pinks are specified in hex only; neither AKEO's Identity Manual nor this system carries Pantone or CMYK values for them. |
 
 ## File formats
