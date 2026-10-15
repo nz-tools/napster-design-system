@@ -11,7 +11,7 @@ The **horizontal lockup**: wordmark + n-mark together, side by side. This is wha
 - `horizontal/napster-horizontal-black-256w.jpg` — raster fallback at 256px width
 - Each color also ships as `.pdf` and `-2048w.png`. See *File formats* below.
 
-**Place it top-left of every composition.** Clearspace ≥ lockup-height on all sides. Never set the lockup below 80px wide on screen or 20mm in print. Below that it stops being legible; switch to the icon. The minimum applies to the visible artwork. The lockup files carry padding inside their canvas (the artwork is 79% of the canvas width), so an image set 42px tall shows a lockup about 83px wide.
+**Place it top-left of every composition.** Clearspace ≥ lockup-height on all sides. Never set the lockup below 80px wide on screen or 20mm in print. Below that it stops being legible; switch to the icon. The minimum applies to the visible artwork. The lockup files carry padding inside their canvas (the artwork is 79% of the canvas width), so an image set 42px tall shows a lockup about 81px wide.
 
 ## The Vertical Lockup (narrow or centered hero contexts)
 
@@ -79,7 +79,7 @@ Color, typeface and glass-mark answers come from AKEO (2026-10-02). Minimum size
 | Brand typefaces | AKEO's brand materials pair Avantt with Inter. This system uses Inter, Instrument Serif italic and IBM Plex Mono. See `DESIGN.md` § 3. |
 | Smallest lockup | 80px wide on screen. 20mm / 0.8in wide in print. |
 | Smallest icon | 20px high on screen. 5mm / 0.2in high in print. |
-| Registered mark | The horizontal lockup carries the ® beside the wordmark. The vertical lockup and the icon do not. |
+| Registered mark | None. No logo file carries the ®, and copy never adds it to the name (`DESIGN.md` § 3). It was removed from the horizontal lockup and the standalone wordmark on 2026-10-15; do not add it back. Each canvas was trimmed on the right so the padding stays equal on all sides. |
 | Pantone and CMYK | Not assigned. The logo is black or white, so it needs no color match. The brand pinks are specified in hex only; neither AKEO's Identity Manual nor this system carries Pantone or CMYK values for them. |
 
 ## File formats

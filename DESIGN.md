@@ -409,7 +409,7 @@ Inter ships at every step: 300 (Light), 400 (Regular), 500 (Medium), 600 (Semibo
 - **Sentence case** for headlines and body. Title case is for proposal titles only ("A Brand Re-Definition Proposal").
 - **UPPERCASE** for eyebrows, section chrome (page footers, chapter labels).
 - **Buttons** sentence case ("Get started now", "Watch the film"). Never UPPERCASE buttons.
-- Product name is always **Napster** (capital N, registered ®, never *NAPSTER* or *napster*).
+- Product name is always **Napster** (capital N, never *NAPSTER* or *napster*). Never add ® to the name, in copy or on the logo.
 
 ### Voice & tone (load-bearing)
 
@@ -639,6 +639,7 @@ Agent portraits keep their dark cinematic treatment. Inside a light product surf
 14. **Hover by opacity or brightness, never by scale.** Press is the only place scale lives (`0.98`).
 15. **No exclamation marks at the end of CTAs.** No "Try Napster!" Use "Try Napster for free" — the declarative carries its own emphasis.
 16. **Never use Title Case for editorial copy.** Title case is reserved for proposal titles and section chrome.
+17. **No ® on the name or the logo.** Not after "Napster" in copy, not beside the wordmark. The logo files dropped it on 2026-10-15; don't add it back.
 
 ---
 
